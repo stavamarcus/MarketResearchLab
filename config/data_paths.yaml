@@ -1,0 +1,17 @@
+# Market Research Lab — cesty k datovým zdrojům
+#
+# MRL čte z MDSM-Lite READ-ONLY.
+# Nikdy nepíše do MDSM-Lite cache.
+#
+# active_provider: mdsm = aktuálně aktivní zdroj dat
+# Sharadar ponechán jako budoucí možnost (stejný DataProvider interface)
+
+active_provider: mdsm
+
+mdsm:
+  prices_dir:   C:\Users\stava\Projects\MDSM-Lite\data\cache\prices
+  universe_dir: C:\Users\stava\Projects\MDSM-Lite\data\universe
+  signals_dir:  C:\Users\stava\Projects\MDSM-Lite\data\archive
+
+# sharadar:
+#   data_dir: C:\Users\stava\Data\Sharadar

@@ -1,0 +1,17 @@
+{
+  "n_periods": 442,
+  "n_observations": 219554,
+  "lookback_days": 20,
+  "forward_days": 10,
+  "n_deciles": 10,
+  "top_decile_median_ret": 0.00812,
+  "top_decile_mean_ret": 0.014567,
+  "top_decile_win_rate": 0.5525,
+  "top_decile_n": 22100,
+  "bottom_decile_median_ret": 0.004583,
+  "bottom_decile_mean_ret": 0.007007,
+  "bottom_decile_win_rate": 0.5331,
+  "bottom_decile_n": 22100,
+  "top_minus_bottom_spread": 0.003537,
+  "hypothesis_supported": false
+}

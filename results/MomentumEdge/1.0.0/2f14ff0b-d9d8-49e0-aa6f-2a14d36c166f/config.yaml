@@ -1,0 +1,6 @@
+date_from: '2024-08-01'
+date_to: '2026-06-20'
+notes: 'Reference Experiment #1 — Architecture Candidate v1.0 validation'
+parameters: {}
+random_seed: null
+universe: sp500_rank_calendar

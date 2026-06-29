@@ -1,0 +1,19 @@
+# Market Research Lab — globální konfigurace
+
+project:
+  name: MarketResearchLab
+  version: "0.1.0"
+
+logging:
+  level: INFO            # DEBUG | INFO | WARNING | ERROR
+  log_to_file: false
+  log_dir: logs/
+
+results:
+  root: results/
+
+registry:
+  path: registry/experiment_runs.jsonl
+
+reports:
+  output_dir: reports/

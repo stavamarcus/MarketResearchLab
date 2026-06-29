@@ -1,0 +1,16 @@
+name: market_research_lab
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - pyarrow
+  - scipy
+  - pyyaml
+  - pip
+  - pip:
+      - pytest
