@@ -268,3 +268,93 @@ Intraday data (AccessLayer v2 / TWS)
 - Žádný MRL provider nenačítá intraday data
 - `ExperimentContext` neobsahuje intraday série
 - Tato hranice se nezmění bez explicitního architektonického rozhodnutí
+
+---
+
+## 9. Standard metrik pro selekční moduly
+
+**Rozhodnutí architekta, 2026-06-30 (na základě RP-2026-06-30-MLE-IRC-DEPENDENCY):**
+
+```
+Primární metrika pro selekční moduly (MLE, IMS, IRC): alpha vs. SPY.
+Absolutní return: doplňková metrika, nikdy primární pro rozhodování o hypotéze.
+```
+
+**Důvod:** Absolutní return v bull marketu obsahuje tržní drift který
+zkresluje srovnání mezi skupinami. Alpha vs SPY izoluje skutečný edge
+selekčního modulu od pohybu trhu jako celku.
+
+**Implikace pro nové experimenty:**
+- Každý experiment testující selekční modul (MLE, IMS, IRC, budoucí moduly)
+  musí počítat alpha vs SPY jako primární metriku rozhodování o hypotéze
+- SPY (conid=756733) musí být dostupný v `context.prices` —
+  buď přidán do universe, nebo načten separátně (viz ACF-007)
+- Absolutní return se uvádí jako kontext, ne jako základ pro SUPPORTED/NOT SUPPORTED
+
+---
+
+## 10. Hranice scope — MRL vs. Market Strategy Lab
+
+**Rozhodnutí architekta, 2026-06-30:**
+
+MRL po dosažení prvního robustního edge (MLE×IRC) dosáhl hranice
+svého určeného účelu. Další vrstva (portfolio simulace, backtesting
+strategií) NENI soucasti MRL — vznikne jako samostatny sourozenecky
+projekt: **Market Strategy Lab (MSL)**.
+
+### Tri oddelene vrstvy
+
+```
+1. Edge Research (MRL — hotovo, tento projekt)
+   Vstup:  signal (MLE, IMS, IRC, ...)
+   Vystup: Knowledge Record
+   Otazka: "Ma tento signal edge?"
+
+2. Strategy Research (MSL — novy projekt)
+   Vstup:  Knowledge Records z MRL
+   Vystup: Validated Strategy
+   Otazka: "Vydelava tato strategie jako celek?"
+
+3. Decision Resolver (budoucnost)
+   Vstup:  vice strategii z MSL
+   Vystup: dnesni akce (co koupit/prodat)
+```
+
+### Co MSL potrebuje a MRL nikdy nemel
+
+```
+Portfolio Engine     — soucasne otevrene pozice, cash, vahy, rebalancing
+Execution Model       — vstup on open/close, slippage, komise
+Performance Engine    — CAGR, Max Drawdown, Sharpe, Sortino, Calmar
+```
+
+### Proc oddeleny projekt, ne nova vrstva v MRL
+
+MRL zustava zamereny na jediny ucel: objevovat a validovat edge.
+MSL ma jiny ucel: zjistit, zda lze z overenych edge sestavit
+obchodovatelnou strategii. Smichani by poskodilo citelnost obou.
+
+MSL bude cist Knowledge Records z MRL (read-only), stejne jako MRL
+cte MDSM-Lite read-only. Architektura zustava vrstvena:
+
+```
+MDSM-Lite
+    ↓
+Market Research Lab (edge discovery)
+    ↓
+Knowledge Base
+    ↓
+Market Strategy Lab (portfolio simulation)
+    ↓
+Validated Strategies
+    ↓
+Decision Resolver
+    ↓
+Trading Bot
+```
+
+### Status MRL po tomto rozhodnuti
+
+MRL Architecture Baseline v1.0 zustava FROZEN beze zmeny.
+MRL pokracuje v edge research (druhy nezavisly edge, statisticka
+vyznamnost existujicich nalezu) paralelne s vznikem MSL.

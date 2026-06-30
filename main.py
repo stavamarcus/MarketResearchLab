@@ -19,6 +19,11 @@ configure_logging()
 logger = get_logger("mrl.main")
 
 REGISTRY_PATH = Path("registry/experiment_runs.jsonl")
+RESULTS_ROOT  = Path("results")
+
+# Runtime adresáře — vytvoří se automaticky při prvním spuštění
+for _dir in [Path("results"), Path("registry"), Path("logs")]:
+    _dir.mkdir(exist_ok=True)
 RESULTS_ROOT = Path("results")
 
 

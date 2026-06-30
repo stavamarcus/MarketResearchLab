@@ -113,12 +113,17 @@ class ContextBuilder:
         ]
         if feature_keys and self._signal_provider is not None:
             feature_names = [k.removeprefix("feature:") for k in feature_keys]
+            # Sestavení ticker→conid mappingu z universe_df pro load_features()
+            ticker_to_conid = dict(
+                zip(universe_df["ticker"], universe_df.index.astype(int))
+            ) if "ticker" in universe_df.columns else {}
             try:
                 features = self._signal_provider.load_features(
                     feature_names=feature_names,
                     conids=active_conids,
                     date_from=config.date_from,
                     date_to=config.date_to,
+                    ticker_to_conid=ticker_to_conid,
                 )
                 logger.info(f"[{run_id}] features: {len(features)} načteno")
             except NotImplementedError:
@@ -126,7 +131,48 @@ class ContextBuilder:
                     f"[{run_id}] load_features není implementován — features prázdné."
                 )
 
-        # 4. Source hashes
+        # 3b. Benchmark prices — pro alpha výpočet
+        # Experiment deklaruje: "benchmark:SPY" v required_data
+        benchmark_keys = [
+            k for k in definition.required_data
+            if k.startswith("benchmark:")
+        ]
+        for key in benchmark_keys:
+            ticker = key.removeprefix("benchmark:")
+            # Načti conid z universe nebo pevný mapping
+            BENCHMARK_CONIDS = {"SPY": 756733}
+            conid = BENCHMARK_CONIDS.get(ticker)
+            if conid and conid not in prices:
+                bmark = self._price_provider.load_prices(
+                    conids=[conid],
+                    date_from=config.date_from,
+                    date_to=config.date_to,
+                )
+                prices.update(bmark)
+                logger.info(f"[{run_id}] benchmark '{ticker}' (conid={conid}): načteno")
+
+        # 4. Contextual signals — IRC, breadth, market-level (non-asset)
+        # Experiment deklaruje: "signal:IRC", "signal:breadth" v required_data
+        signals: dict = {}
+        signal_keys = [
+            k for k in definition.required_data
+            if k.startswith("signal:")
+        ]
+        if signal_keys and self._signal_provider is not None:
+            for key in signal_keys:
+                module = key.removeprefix("signal:")
+                try:
+                    df = self._signal_provider.load_signals(
+                        module=module,
+                        date_from=config.date_from,
+                        date_to=config.date_to,
+                    )
+                    signals[module] = df
+                    logger.info(f"[{run_id}] signal '{module}': {len(df)} řádků načteno")
+                except (NotImplementedError, Exception) as exc:
+                    logger.warning(f"[{run_id}] signal '{module}' nelze načíst: {exc}")
+
+        # 5. Source hashes
         source_hashes = self._collect_hashes(active_conids, prices)
 
         # 5. Context metadata
@@ -145,6 +191,7 @@ class ContextBuilder:
             universe_provider=self._universe_provider,
             signal_provider=self._signal_provider,
             metadata_provider=self._metadata_provider,
+            signals=signals,
             source_hashes=source_hashes,
             metadata=context_metadata,
         )

@@ -227,6 +227,19 @@ superseded_by: null | KR-...
 source_project: RP-...
 ```
 
+### Důležitá poznámka k interpretaci
+
+`confidence` a `evidence_level` jsou **interní klasifikace MRL governance
+procesu**, ne tvrzení o formální statistické významnosti. Neoznačují
+p-hodnotu, confidence interval ani jiný statistický koncept. Vyjadřují
+relativní sílu evidence v rámci MRL Knowledge Base — kolik nezávislých
+experimentů poznatek podporuje a jak robustně.
+
+I `confidence: HIGH` nenahrazuje formální statistickou validaci
+(bootstrap, permutační testy, out-of-sample). Knowledge Record s
+`confidence: HIGH` může stále čekat na tyto kroky — viz pole
+"Kdy neplatí / nevalidováno" v každém KR.
+
 ### Evidence Level definice
 
 | Level | Kritéria |

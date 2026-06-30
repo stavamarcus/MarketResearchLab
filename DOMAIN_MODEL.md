@@ -344,9 +344,14 @@ price_provider:    PriceProvider | None    # lazy-load
 universe_provider: UniverseProvider | None
 signal_provider:   SignalProvider | None
 metadata_provider: MetadataProvider | None
+signals:       dict[str, pd.DataFrame]   # non-asset kontextuální signály (IRC, breadth)
 source_hashes: dict[str, str]
 metadata:      dict
 ```
+
+**Granularita signálů v ExperimentContext:**
+- `features` (FeatureSet) = asset-level only: MLE, IMS — identifikováno conid
+- `signals` (dict DataFrame) = non-asset: IRC (industry-level), breadth (market-level)
 
 **Pravidlo:** Experiment dostane context — nevytváří si vlastní providery.
 **Pravidlo:** Experiment context pouze čte — nikdy nepíše.

@@ -150,3 +150,82 @@ Tři nalezené issues jsou implementační detaily řešitelné bez ACP.
 
 **Doporučení:** Po opravě ACF-001, 002, 003 a úspěšném dokončení
 Reference Experiment #2 vyhlásit **Architecture Baseline v1.0**.
+
+---
+
+### ACF-005 — IRC a breadth nelze přímo mapovat na Feature.conid
+
+**Severity:** MEDIUM  
+**Status:** OPEN — čeká na rozhodnutí architekta  
+**Odkaz:** SIGNAL_PROVIDER_VALIDATION.md CHECK 3
+
+**Pozorování:**  
+`Feature.conid: int` je povinný dle Domain Model.
+
+IRC je **industry-level** signál — identifikátor je `industry` (string), ne conid.  
+breadth je **market-level** signál — jeden řádek = celý trh, žádný conid.
+
+Přímý převod na `Feature` objekty není možný bez rozhodnutí o identifikaci.
+
+**Dopad:**  
+`load_features()` nelze implementovat pro IRC a breadth
+bez architektonické změny nebo konvence.
+
+**Možná řešení (bez ACP — implementační konvence):**
+
+A) **Sentinel conid** — industry-level: `conid = hash(industry_name)`,
+   market-level: `conid = 0` (rezervovaný identifikátor)
+
+B) **Separátní datový typ** — `IndustryFeature(industry, date, name, value)`
+   a `MarketFeature(date, name, value)` vedle `Feature`. Vyžaduje ACP.
+
+C) **Signály zůstanou jako DataFrame** — IRC a breadth se nekonvertují na Feature.
+   Experimenty je dostanou přes `context.signals["IRC"]` jako raw DataFrame.
+   Feature kontrakt platí pouze pro ticker-level signály (MLE, IMS).
+
+**Doporučení programátora:**  
+Řešení C je nejméně invazivní a nevyžaduje ACP.
+Experimenty pracující s IRC a breadth dostanou raw DataFrame — to je
+konzistentní s tím, jak se IRC používá v auditních skriptech.
+Feature/FeatureSet zůstává pro ticker-level signály.
+
+**Rozhodnutí architekta:** RESOLVED_BY_SCOPE_CLARIFICATION
+
+**Implementace:** Řešení C schváleno. Feature/FeatureSet = asset-level only (MLE, IMS). IRC a breadth → context.signals["IRC"] / context.signals["breadth"] jako raw DataFrame. Implementováno v load_features() a ExperimentContext.signals.
+
+---
+
+### ACF-006 — source_module chybí v raw DataFrame
+
+**Severity:** LOW  
+**Status:** OPEN — implementační úkol
+
+**Pozorování:**  
+`load_signals()` vrací raw DataFrame bez sloupce `source_module`.
+`Feature.source_module` musí být přidán explicitně v `load_features()`.
+
+**Dopad:** Žádný dokud `load_features()` není implementován.
+
+**Doporučení:** Přidat `source_module` jako parametr `load_features()` normalizace.
+Nevyžaduje ACP.
+
+---
+
+### ACF-007 — SPY není dostupný jako benchmark přes sp500_rank_calendar universe
+
+**Severity:** LOW  
+**Status:** OPEN
+
+**Pozorování:**  
+SPY (conid=756733) není součástí sp500_rank_calendar universe — je to benchmark, ne constituent.
+Experimenty vyžadující alpha vs SPY dostanou `validate() WARNING` a nebudou mít SPY v `context.prices`.
+
+**Dopad:**  
+Alpha výpočet není dostupný. Absolutní forward return je použit místo alpha.
+
+**Možná řešení:**  
+A) Přidat SPY do required_data jako speciální `benchmark:SPY` klíč — ContextBuilder ho načte separátně.  
+B) Přidat SPY do universe jako speciální non-constituent řádek.
+
+**Doporučení:** Řešení A — bez ACP, implementační rozšíření ContextBuilderu.  
+**Rozhodnutí architekta:** PENDING

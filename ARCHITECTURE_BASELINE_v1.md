@@ -1,8 +1,50 @@
-# Architecture Candidate v1.0
+# Architecture Baseline v1.0
 
-**Status:** CANDIDATE — čeká na ověření prvním reálným použitím  
+**Status:** FROZEN  
 **Version:** 1.0  
-**Date:** 2026-06-28
+**Date frozen:** 2026-06-30
+
+---
+
+## Důvod zmrazení
+
+```
+Reference experiments completed:
+  - Reference Experiment #1 (MomentumEdge) — OK
+  - Reference Experiment #2 (IMSScoreBucketEdge) — OK
+  - MLEIRCDependencyAudit v1.0 → v1.1 — metodický rozdíl objasněn, ne implementační chyba
+
+Historical audit reproduced:
+  - IRC Audit v4 Test 7 reprodukován v MRL (v1.1.0)
+  - Konzistentní výsledek se stejnou metodikou
+
+No structural architectural deficiencies found.
+```
+
+## Pravidlo
+
+```
+Architecture changes require evidence from research.
+
+Architektura se mění pouze tehdy, když konkrétní experiment
+prokáže konkrétní strukturální omezení.
+
+Ne proto, že nás napadne lepší řešení.
+Ne proto, že "by se to mohlo zlepšit".
+```
+
+## Default activity od 2026-06-30
+
+```
+Run experiments.
+Produce Knowledge Records.
+Build evidence.
+
+NE: nové architektonické nápady, nové vrstvy, nové abstrakce.
+```
+
+Pokud experiment odhalí skutečné architektonické omezení, vznikne
+Architecture Baseline v1.1 — přes ACP proces, ne ad-hoc.
 
 ---
 
@@ -16,6 +58,29 @@ Dokud první experiment skutečně nenačte ceny, universe a signály
 z MDSM-Lite a neprojde end-to-end bez strukturálních změn,
 architektura není zmrazena.
 ```
+
+## Status
+
+
+
+Infrastruktura je uzavřena. Změny pouze na základě objektivního
+architektonického problému odhaleného reálným experimentem.
+
+---
+
+## Status — 2026-06-29
+
+Podmínky splněny:
+- Reference Experiment 1 (MomentumEdge) — OK
+- Reference Experiment 2 (IMSScoreBucketEdge) — OK
+- Žádné strukturální architektonické změny nebyly nutné
+
+**BASELINE CONFIRMED. MRL Infrastructure v1.0 COMPLETED.**
+
+Infrastruktura je uzavřena.
+Změny pouze pokud reálný experiment odhalí objektivní architektonický problém.
+
+---
 
 ## Podmínky pro přechod na Architecture Baseline v1.0
 
@@ -37,7 +102,7 @@ Ne přidávat vrstvy bez důvodu.
 
 ---
 
-## Co je navrženo (candidate)
+## Co je zmrazeno
 
 ### Vrstvová architektura
 
@@ -94,7 +159,7 @@ registry/            experiment_runs.jsonl (append-only)
 
 ---
 
-## Co candidate nepokrývá (záměrně)
+## Co baseline nepokrývá (záměrně)
 
 Následující oblasti jsou mimo scope v1.0:
 
@@ -107,7 +172,7 @@ Následující oblasti jsou mimo scope v1.0:
 
 ---
 
-## Jak probíhá implementace v candidate fázi
+## Jak probíhá implementace v rámci baseline
 
 ```
 Nový experiment:
@@ -135,18 +200,13 @@ Každá z následujících změn musí být odůvodněna před implementací:
 
 ---
 
-## Roadmap ke zmrazení
+## Historie zmrazení
 
 ```
-Architecture Candidate v1.0        ← nyní
-       ↓
-Migrace prvního auditu             ← Fáze 4
-       ↓
-Migrace druhého auditu             ← Fáze 4
-       ↓
-Drobné opravy (pokud potřeba)
-       ↓
-Architecture Baseline v1.0         ← FROZEN
-       ↓
-Implementace dalších experimentů
+2026-06-28  Architecture Candidate v1.0 vyhlášena
+2026-06-29  Reference Experiment #1 (MomentumEdge) — OK
+2026-06-29  Reference Experiment #2 (IMSScoreBucketEdge) — OK
+2026-06-30  MLEIRCDependencyAudit v1.0 → v1.1 — metodika objasněna
+2026-06-30  Historický audit (IRC Test 7) reprodukován
+2026-06-30  Architecture Baseline v1.0 — FROZEN
 ```

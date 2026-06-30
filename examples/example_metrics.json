@@ -1,0 +1,21 @@
+{
+  "n_signals_total": 17408,
+  "n_eligible_days": 188,
+  "n_unique_tickers": 457,
+  "hypothesis_window_d": 30,
+  "hypothesis_spread_threshold": 0.5,
+  "elite_median_ret_30d": 0.017146,
+  "radar_median_ret_30d": 0.005813,
+  "h95_median_ret_30d": 0.022443,
+  "elite_minus_radar_30d": 0.011333,
+  "h001_supported": true,
+  "RADAR_30d_n": 2891,
+  "RADAR_30d_median_ret": 0.005813,
+  "RADAR_30d_win_rate": 0.5439,
+  "H90-94_30d_n": 1205,
+  "H90-94_30d_median_ret": 0.017146,
+  "H90-94_30d_win_rate": 0.6116,
+  "H95+_30d_n": 387,
+  "H95+_30d_median_ret": 0.022443,
+  "H95+_30d_win_rate": 0.6331
+}

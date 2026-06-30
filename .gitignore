@@ -1,5 +1,26 @@
-__pycache__/ 
-*.pyc 
-*.pyo 
-results/ 
-registry/ 
+# Runtime artefakty — neverzovat
+results/
+registry/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Conda / virtualenv
+.env
+.venv
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

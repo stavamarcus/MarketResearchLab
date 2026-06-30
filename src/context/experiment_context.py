@@ -59,10 +59,25 @@ class ExperimentContext:
         source_hashes: dict[klíč -> SHA-256] pro reprodukovatelnost
         metadata:      libovolné dodatečné informace o datech
 
+    Datový model — granularita signálů:
+
+        FeatureSet (asset-level only):
+            context.features.get_value(conid, date, "MLE_Rank_20d")
+            context.features.get_value(conid, date, "IMS_Score")
+            Platí pro: MLE, IMS — ticker/conid level signály.
+
+        signals (contextual, non-asset):
+            context.signals["IRC"]     → pd.DataFrame (industry-level)
+            context.signals["breadth"] → pd.DataFrame (market-level)
+            IRC a breadth NEJSOU asset-level — nemají conid.
+            Experimenty je dostanou jako raw DataFrame.
+
     Pravidla přístupu k datům v experimentu:
         ✓  context.prices[conid]["close"]
         ✓  context.assets.get(conid).ticker
-        ✓  context.features.get_value(conid, date, "MLE_Rank")
+        ✓  context.features.get_value(conid, date, "MLE_Rank_20d")
+        ✓  context.signals["IRC"]       — industry-level DataFrame
+        ✓  context.signals["breadth"]   — market-level DataFrame
         ✓  context.config.parameters["lookback_days"]
         ✗  MDSMPriceProvider(prices_dir=...)   — zakázáno
         ✗  pd.read_parquet(...)                — zakázáno
@@ -83,6 +98,11 @@ class ExperimentContext:
     universe_provider: UniverseProvider | None = None
     signal_provider: SignalProvider | None = None
     metadata_provider: MetadataProvider | None = None
+
+    # Kontextuální signály (non-asset level)
+    # IRC = industry-level DataFrame, breadth = market-level DataFrame
+    # Nemají conid — nelze převést na Feature objekty.
+    signals: dict[str, pd.DataFrame] = field(default_factory=dict)
 
     # Reprodukovatelnost
     source_hashes: dict[str, str] = field(default_factory=dict)
@@ -131,8 +151,16 @@ class ExperimentContext:
         return conid in self.prices and not self.prices[conid].empty
 
     def has_feature(self, feature_name: str) -> bool:
-        """Vrátí True pokud FeatureSet obsahuje danou feature."""
+        """Vrátí True pokud FeatureSet obsahuje danou feature (asset-level only)."""
         return feature_name in self.features.feature_names()
+
+    def has_signal(self, signal_name: str) -> bool:
+        """Vrátí True pokud context obsahuje daný kontextuální signál (IRC, breadth, ...)."""
+        return signal_name in self.signals and not self.signals[signal_name].empty
+
+    def get_signal(self, signal_name: str) -> pd.DataFrame | None:
+        """Vrátí kontextuální signál jako DataFrame, nebo None."""
+        return self.signals.get(signal_name)
 
     def summary(self) -> dict:
         """Souhrn obsahu contextu — pro logování a metadata."""
@@ -146,5 +174,6 @@ class ExperimentContext:
             "conids_with_prices": len(self.prices),
             "features_total": len(self.features),
             "feature_names": sorted(self.features.feature_names()),
-            "source_hashes": self.source_hashes,
+            "signals": list(self.signals.keys()),
+            "source_hashes_count": len(self.source_hashes),
         }

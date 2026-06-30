@@ -84,13 +84,16 @@ class ProviderFactory:
 
         prices_dir   = self._require_path(cfg, "prices_dir",   "mdsm.prices_dir")
         universe_dir = self._require_path(cfg, "universe_dir", "mdsm.universe_dir")
-        signals_dir  = Path(cfg.get("signals_dir", ""))
         metadata_dir = self._derive_metadata_dir(prices_dir)
+
+        # Per-module cesty pro SignalProvider (mdsm.signals.MLE / IMS / IRC / breadth)
+        signals_cfg  = cfg.get("signals", {})
+        module_paths = {m: Path(p) for m, p in signals_cfg.items() if p}
 
         return ProviderBundle(
             price=MDSMPriceProvider(prices_dir=prices_dir),
             universe=MDSMUniverseProvider(universe_dir=universe_dir),
-            signal=MDSMSignalProvider(signals_dir=signals_dir),
+            signal=MDSMSignalProvider(module_paths=module_paths),
             metadata=MDSMMetadataProvider(
                 metadata_dir=metadata_dir,
                 prices_dir=prices_dir,

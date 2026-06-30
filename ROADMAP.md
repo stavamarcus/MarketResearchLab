@@ -5,7 +5,11 @@
 
 ---
 
-## Stav k 2026-06-28
+## Stav k 2026-06-30
+
+
+
+## Historický stav k 2026-06-28
 
 ```
 ✅ Architecture Candidate v1.0
@@ -14,12 +18,48 @@
 ✅ Research Governance (Projects, Knowledge Base)
 ✅ Domain Model specifikace
 ✅ conda env: market_research_lab
-⏳ Architecture Baseline v1.0 — čeká na validaci prvními dvěma migracemi
+✅ Architecture Baseline v1.0 — CONFIRMED 2026-06-29
 ```
 
 ---
 
-## Fáze 4 — První experiment (příští)
+## Aktuální priorita — Druhy nezavisly edge
+
+```
+MLE x IRC dosahl HIGH confidence pres tri nezavisle typy validace
+(single-point, threshold robustness, time-window robustness).
+
+Dalsi rozsirovani MLE x IRC ma klesajici prinos.
+
+Novy cil: najit DRUHY nezavisly edge a provest ho stejnym procesem:
+  1. Hypoteza
+  2. Reprodukce / single-point experiment
+  3. Robustness grid (prahy)
+  4. Rolling validation (cas)
+  5. Knowledge Record
+
+Cil: 2-3 robustne overene edge, aby budouci Decision Resolver mel
+z ceho stavet kombinovanou logiku, ne zavisel na jedinem signalu.
+```
+
+Kandidati k uvaze (zatim nevybráno):
+- IRC persistence (samostatne, bez MLE) — viz KR-2026-06-IRC-persistence-edge
+- Industry rotation patterns (sector_rank_calendar legacy audity)
+- Breadth-based filtr nad existujicim edge
+
+## Historicka priorita — Signal Interaction Study
+
+**RP-0001: Signal Interaction Study**
+
+Otázka: Které kombinace již ověřených signálů (MLE, IMS, IRC, Breadth)
+vytvářejí nejvyšší očekávaný edge?
+
+Nejde o hledání nových signálů. Jde o systematické testování kombinací
+toho, co již víme že funguje.
+
+---
+
+## Fáze 4 — První experiment (dokončeno)
 
 **Cíl:** Provést první reálný výzkumný běh přes framework end-to-end.
 

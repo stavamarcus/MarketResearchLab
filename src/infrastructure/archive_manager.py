@@ -2,16 +2,17 @@
 ArchiveManager — immutable archivace výsledků experimentů.
 
 Pravidla:
-- Každý běh dostane vlastní adresář: results/{name}/{version}/{run_id}/
+- Každý běh dostane vlastní adresář: results/{name}/{version}/{folder_name}/
+- folder_name = YYYYMMDD_HHMMSS_<8 znaků run_id>  (např. 20260629_195658_8958d279)
+- run_id (plné UUID) zůstává v metadatech a registry pro reprodukovatelnost.
 - Existující výsledky se NIKDY nepřepisují.
-- Pokud run_id již existuje, vyhodí výjimku.
 
 Struktura běhu:
     results/
     └── {experiment_name}/
         └── {version}/
-            └── {run_id}/
-                ├── metadata.json   ← reprodukovatelnost
+            └── {YYYYMMDD_HHMMSS_shortid}/   ← čitelný název složky
+                ├── metadata.json   ← reprodukovatelnost (obsahuje run_id)
                 ├── config.yaml     ← parametry běhu
                 ├── metrics.json    ← číselné výstupy
                 ├── tables/         ← DataFrame výstupy (CSV)
@@ -20,6 +21,7 @@ Struktura běhu:
 """
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -64,7 +66,12 @@ class ArchiveManager:
         Raises:
             ArchiveConflictError: pokud run_id již existuje.
         """
-        run_path = self.results_root / experiment_name / version / run_id
+        # Název složky: YYYYMMDD_HHMMSS_<8 znaků run_id>
+        # run_id (plné UUID) zůstává v metadatech a registry
+        ts = datetime.now(tz=timezone.utc).strftime("%Y%m%d_%H%M%S")
+        short_id = run_id.replace("-", "")[:8]
+        folder_name = f"{ts}_{short_id}"
+        run_path = self.results_root / experiment_name / version / folder_name
 
         if run_path.exists():
             raise ArchiveConflictError(
@@ -76,7 +83,7 @@ class ArchiveManager:
         (run_path / "tables").mkdir()
         (run_path / "artifacts").mkdir()
 
-        logger.info(f"Archivuji run '{run_id}' → {run_path}")
+        logger.info(f"Archivuji run '{run_id}' → {run_path} (folder: {folder_name})")
 
         # metadata.json
         (run_path / "metadata.json").write_text(

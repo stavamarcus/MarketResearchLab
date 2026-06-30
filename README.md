@@ -13,14 +13,25 @@ Decision Resolver  → strategie vykonává
 
 ---
 
+## Stav projektu
+
+```
+Architecture Baseline v1.0 — FROZEN (2026-06-30)
+```
+
+Architektura je zmrazena. Změny vyžadují konkrétní evidenci z výzkumu.
+Aktuální fokus: experimenty, Knowledge Records, evidence — ne nová architektura.
+
 ## Klíčové dokumenty
 
 | Dokument | Obsah |
 |---|---|
+| `ARCHITECTURE_BASELINE_v1.md` | Frozen baseline — co je zmrazeno, pravidlo pro změny |
 | `RESEARCH_GOVERNANCE.md` | Proces výzkumu: lifecycle, governance, DR gate |
 | `SYSTEM_ARCHITECTURE.md` | Vztahy mezi komponentami (bez implementace) |
 | `DOMAIN_MODEL.md` | Všechny doménové objekty: data, vztahy, lifecycle, pravidla |
 | `ARCHITECTURE_REVIEW.md` | Audit, duplicity, Architectural Debt Register |
+| `knowledge_base/` | Ověřené poznatky — nejcennější výstup projektu |
 
 ---
 
