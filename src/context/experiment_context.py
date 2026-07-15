@@ -104,6 +104,12 @@ class ExperimentContext:
     # Nemají conid — nelze převést na Feature objekty.
     signals: dict[str, pd.DataFrame] = field(default_factory=dict)
 
+    # Fundamentals (MRL-FUND-01): lazy read-only zdroj PIT SF1 snapshotů
+    # (MRLSharadarFundamentalSource). None = fundamentals nejsou konfigurovány;
+    # existující experimenty se bez něj chovají beze změny.
+    # Typ Any: adapter je optional dependency — žádný import zde.
+    fundamental_source: Any | None = None
+
     # Reprodukovatelnost
     source_hashes: dict[str, str] = field(default_factory=dict)
     metadata: dict[str, Any] = field(default_factory=dict)
@@ -157,6 +163,10 @@ class ExperimentContext:
     def has_signal(self, signal_name: str) -> bool:
         """Vrátí True pokud context obsahuje daný kontextuální signál (IRC, breadth, ...)."""
         return signal_name in self.signals and not self.signals[signal_name].empty
+
+    def has_fundamental_source(self) -> bool:
+        """Vrátí True pokud je nakonfigurován fundamental source (MRL-FUND-01)."""
+        return self.fundamental_source is not None
 
     def get_signal(self, signal_name: str) -> pd.DataFrame | None:
         """Vrátí kontextuální signál jako DataFrame, nebo None."""

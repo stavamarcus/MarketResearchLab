@@ -1,0 +1,313 @@
+{
+  "alias_cases": {
+    "129348130": {
+      "conid": "129348130",
+      "expected_mdsm_ticker": "NWS",
+      "expected_sharadar_ticker": "NWSA",
+      "ticker": "NWS",
+      "sharadar_ticker": "NWSA",
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "identity_tier": "WHITELIST_COMPANY_LEVEL",
+      "evidence": "share-class alias NWS->NWSA",
+      "source": "WHITELIST",
+      "classification": "identity_alias_class_mismatch"
+    },
+    "208813720": {
+      "conid": "208813720",
+      "expected_mdsm_ticker": "GOOG",
+      "expected_sharadar_ticker": "GOOGL",
+      "ticker": "GOOG",
+      "sharadar_ticker": "GOOGL",
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "identity_tier": "WHITELIST_COMPANY_LEVEL",
+      "evidence": "share-class alias GOOG->GOOGL",
+      "source": "WHITELIST",
+      "classification": "identity_alias_class_mismatch"
+    },
+    "356858007": {
+      "conid": "356858007",
+      "expected_mdsm_ticker": "FOX",
+      "expected_sharadar_ticker": "FOXA",
+      "ticker": "FOX",
+      "sharadar_ticker": "FOXA",
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "identity_tier": "WHITELIST_COMPANY_LEVEL",
+      "evidence": "share-class alias FOX->FOXA",
+      "source": "WHITELIST",
+      "classification": "identity_alias_class_mismatch"
+    }
+  },
+  "bdx": {
+    "conid": "4886",
+    "ticker": "BDX",
+    "bdx_ticker_rows": 124,
+    "bdx_all_labels": {
+      "dividend": 114,
+      "acquisitionof": 4,
+      "relation": 2,
+      "spinoffdividend": 1,
+      "spinoff": 1,
+      "split": 1,
+      "initiated": 1
+    },
+    "bdx_events_in_window": [
+      {
+        "date": "2026-06-09",
+        "action": "dividend",
+        "value": "1.05",
+        "contraticker": "N/A"
+      },
+      {
+        "date": "2026-03-10",
+        "action": "dividend",
+        "value": "1.05",
+        "contraticker": "N/A"
+      },
+      {
+        "date": "2025-12-08",
+        "action": "dividend",
+        "value": "1.05",
+        "contraticker": "N/A"
+      },
+      {
+        "date": "2025-09-08",
+        "action": "dividend",
+        "value": "1.04",
+        "contraticker": "N/A"
+      },
+      {
+        "date": "2025-06-09",
+        "action": "dividend",
+        "value": "1.04",
+        "contraticker": "N/A"
+      },
+      {
+        "date": "2025-03-10",
+        "action": "dividend",
+        "value": "1.04",
+        "contraticker": "N/A"
+      }
+    ],
+    "near_boundary_events": [
+      {
+        "date": "2026-03-10",
+        "action": "dividend",
+        "value": "1.05"
+      }
+    ],
+    "name_based_hits": [
+      {
+        "date": "2026-06-09",
+        "action": "dividend",
+        "ticker": "BDX",
+        "name": "BECTON DICKINSON & CO",
+        "value": "1.05"
+      },
+      {
+        "date": "2026-05-18",
+        "action": "acquisitionof",
+        "ticker": "NBIX",
+        "name": "NEUROCRINE BIOSCIENCES INC",
+        "value": "2762.9"
+      },
+      {
+        "date": "2026-04-17",
+        "action": "listed",
+        "ticker": "ALMR",
+        "name": "ALAMAR BIOSCIENCES INC",
+        "value": "nan"
+      },
+      {
+        "date": "2026-04-08",
+        "action": "dividend",
+        "ticker": "WSBF",
+        "name": "WATERSTONE FINANCIAL INC",
+        "value": "0.17"
+      },
+      {
+        "date": "2026-03-10",
+        "action": "dividend",
+        "ticker": "BDX",
+        "name": "BECTON DICKINSON & CO",
+        "value": "1.05"
+      },
+      {
+        "date": "2026-03-10",
+        "action": "split",
+        "ticker": "ARTL",
+        "name": "ARTELO BIOSCIENCES INC",
+        "value": "0.33333"
+      },
+      {
+        "date": "2026-03-04",
+        "action": "delisted",
+        "ticker": "VTYX",
+        "name": "VENTYX BIOSCIENCES INC",
+        "value": "999.0"
+      },
+      {
+        "date": "2026-03-04",
+        "action": "acquisitionby",
+        "ticker": "VTYX",
+        "name": "VENTYX BIOSCIENCES INC",
+        "value": "999.0"
+      },
+      {
+        "date": "2026-02-26",
+        "action": "tickerchangeto",
+        "ticker": "RNAM",
+        "name": "AVIDITY BIOSCIENCES INC",
+        "value": "nan"
+      },
+      {
+        "date": "2026-02-26",
+        "action": "tickerchangefrom",
+        "ticker": "RNAM",
+        "name": "AVIDITY BIOSCIENCES INC",
+        "value": "nan"
+      },
+      {
+        "date": "2026-02-26",
+        "action": "spinoff",
+        "ticker": "RNAM",
+        "name": "AVIDITY BIOSCIENCES INC",
+        "value": "0.1"
+      },
+      {
+        "date": "2026-02-26",
+        "action": "delisted",
+        "ticker": "RNAM",
+        "name": "AVIDITY BIOSCIENCES INC",
+        "value": "11298.0"
+      },
+      {
+        "date": "2026-02-26",
+        "action": "acquisitionby",
+        "ticker": "RNAM",
+        "name": "AVIDITY BIOSCIENCES INC",
+        "value": "11298.0"
+      },
+      {
+        "date": "2026-01-28",
+        "action": "split",
+        "ticker": "REVB",
+        "name": "REVELATION BIOSCIENCES INC",
+        "value": "0.25"
+      },
+      {
+        "date": "2026-01-08",
+        "action": "dividend",
+        "ticker": "WSBF",
+        "name": "WATERSTONE FINANCIAL INC",
+        "value": "0.15"
+      },
+      {
+        "date": "2025-12-31",
+        "action": "dividend",
+        "ticker": "BOUT",
+        "name": "INNOVATOR IBD BREAKOUT OPPORTUNITIES ETF",
+        "value": "0.125"
+      },
+      {
+        "date": "2025-12-08",
+        "action": "dividend",
+        "ticker": "BDX",
+        "name": "BECTON DICKINSON & CO",
+        "value": "1.05"
+      },
+      {
+        "date": "2025-10-30",
+        "action": "tickerchangeto",
+        "ticker": "NBP",
+        "name": "NOVABRIDGE BIOSCIENCES",
+        "value": "nan"
+      },
+      {
+        "date": "2025-10-30",
+        "action": "tickerchangefrom",
+        "ticker": "NBP",
+        "name": "NOVABRIDGE BIOSCIENCES",
+        "value": "nan"
+      },
+      {
+        "date": "2025-10-28",
+        "action": "split",
+        "ticker": "ENVB",
+        "name": "ENVERIC BIOSCIENCES INC",
+        "value": "0.08333"
+      },
+      {
+        "date": "2025-10-08",
+        "action": "dividend",
+        "ticker": "WSBF",
+        "name": "WATERSTONE FINANCIAL INC",
+        "value": "0.15"
+      },
+      {
+        "date": "2025-09-08",
+        "action": "dividend",
+        "ticker": "BDX",
+        "name": "BECTON DICKINSON & CO",
+        "value": "1.04"
+      },
+      {
+        "date": "2025-08-29",
+        "action": "acquisitionof",
+        "ticker": "N/A",
+        "name": "CONCENTRA BIOSCIENCES LLC",
+        "value": "448.7"
+      },
+      {
+        "date": "2025-08-19",
+        "action": "acquisitionof",
+        "ticker": "N/A",
+        "name": "CONCENTRA BIOSCIENCES LLC",
+        "value": "216.2"
+      },
+      {
+        "date": "2025-08-13",
+        "action": "acquisitionof",
+        "ticker": "N/A",
+        "name": "CONCENTRA BIOSCIENCES LLC",
+        "value": "76.6"
+      },
+      {
+        "date": "2025-08-13",
+        "action": "delisted",
+        "ticker": "IGMS",
+        "name": "IGM BIOSCIENCES INC",
+        "value": "76.6"
+      },
+      {
+        "date": "2025-08-13",
+        "action": "acquisitionby",
+        "ticker": "IGMS",
+        "name": "IGM BIOSCIENCES INC",
+        "value": "76.6"
+      },
+      {
+        "date": "2025-08-07",
+        "action": "split",
+        "ticker": "SPRB",
+        "name": "SPRUCE BIOSCIENCES INC",
+        "value": "0.01333"
+      },
+      {
+        "date": "2025-07-22",
+        "action": "acquisitionof",
+        "ticker": "N/A",
+        "name": "CONCENTRA BIOSCIENCES LLC",
+        "value": "21.6"
+      },
+      {
+        "date": "2025-07-08",
+        "action": "dividend",
+        "ticker": "WSBF",
+        "name": "WATERSTONE FINANCIAL INC",
+        "value": "0.15"
+      }
+    ],
+    "contraticker_hits": [],
+    "classification": "corporate_action_found_extended_lookup"
+  }
+}

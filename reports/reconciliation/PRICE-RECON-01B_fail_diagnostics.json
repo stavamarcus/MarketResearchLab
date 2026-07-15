@@ -1,0 +1,1805 @@
+{
+  "summary": {
+    "systematic_vendor_or_adjustment_mismatch": 4,
+    "corporate_action_cache_artifact": 6
+  },
+  "diagnostics": [
+    {
+      "conid": "129348130",
+      "ticker": "NWS",
+      "sharadar_ticker": "NWSA",
+      "permaticker": "191637",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 3.719631,
+        "max_abs_diff": 4.82,
+        "match_rate": 0.0,
+        "n_days_diff_ge_005": 244,
+        "n_days_diff_ge_1": 244,
+        "pct_days_diff_ge_005": 1.0,
+        "max_diff_date": "2025-07-14",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-26"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-07-09",
+          "mdsm_close": 34.07,
+          "sharadar_view_close": 29.39,
+          "abs_diff": 4.68,
+          "rel_diff": 0.137364
+        },
+        {
+          "date": "2025-07-10",
+          "mdsm_close": 34.45,
+          "sharadar_view_close": 29.66,
+          "abs_diff": 4.79,
+          "rel_diff": 0.139042
+        },
+        {
+          "date": "2025-07-11",
+          "mdsm_close": 34.29,
+          "sharadar_view_close": 29.54,
+          "abs_diff": 4.75,
+          "rel_diff": 0.138524
+        },
+        {
+          "date": "2025-07-14",
+          "mdsm_close": 34.55,
+          "sharadar_view_close": 29.73,
+          "abs_diff": 4.82,
+          "rel_diff": 0.139508
+        },
+        {
+          "date": "2025-07-15",
+          "mdsm_close": 34.2,
+          "sharadar_view_close": 29.67,
+          "abs_diff": 4.53,
+          "rel_diff": 0.132456
+        },
+        {
+          "date": "2025-07-16",
+          "mdsm_close": 34.44,
+          "sharadar_view_close": 29.88,
+          "abs_diff": 4.56,
+          "rel_diff": 0.132404
+        },
+        {
+          "date": "2025-07-17",
+          "mdsm_close": 34.82,
+          "sharadar_view_close": 30.17,
+          "abs_diff": 4.65,
+          "rel_diff": 0.133544
+        },
+        {
+          "date": "2025-07-18",
+          "mdsm_close": 34.46,
+          "sharadar_view_close": 29.86,
+          "abs_diff": 4.6,
+          "rel_diff": 0.133488
+        },
+        {
+          "date": "2025-07-21",
+          "mdsm_close": 33.55,
+          "sharadar_view_close": 29.16,
+          "abs_diff": 4.39,
+          "rel_diff": 0.130849
+        },
+        {
+          "date": "2025-07-22",
+          "mdsm_close": 33.67,
+          "sharadar_view_close": 29.43,
+          "abs_diff": 4.24,
+          "rel_diff": 0.125928
+        },
+        {
+          "date": "2025-07-23",
+          "mdsm_close": 33.75,
+          "sharadar_view_close": 29.42,
+          "abs_diff": 4.33,
+          "rel_diff": 0.128296
+        },
+        {
+          "date": "2025-07-24",
+          "mdsm_close": 33.55,
+          "sharadar_view_close": 29.35,
+          "abs_diff": 4.2,
+          "rel_diff": 0.125186
+        },
+        {
+          "date": "2025-07-25",
+          "mdsm_close": 33.69,
+          "sharadar_view_close": 29.53,
+          "abs_diff": 4.16,
+          "rel_diff": 0.123479
+        },
+        {
+          "date": "2025-07-28",
+          "mdsm_close": 33.72,
+          "sharadar_view_close": 29.37,
+          "abs_diff": 4.35,
+          "rel_diff": 0.129004
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 780.5694,
+        "volume_max_abs_pct_diff": 2769.9377
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [],
+      "classification": "systematic_vendor_or_adjustment_mismatch"
+    },
+    {
+      "conid": "208813720",
+      "ticker": "GOOG",
+      "sharadar_ticker": "GOOGL",
+      "permaticker": "195146",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 1.130656,
+        "max_abs_diff": 4.19,
+        "match_rate": 0.1516,
+        "n_days_diff_ge_005": 239,
+        "n_days_diff_ge_1": 90,
+        "pct_days_diff_ge_005": 0.9795,
+        "max_diff_date": "2026-05-21",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-26"
+      },
+      "sample_rows": [
+        {
+          "date": "2026-05-07",
+          "mdsm_close": 395.3,
+          "sharadar_view_close": 397.99,
+          "abs_diff": 2.69,
+          "rel_diff": 0.006805
+        },
+        {
+          "date": "2026-05-08",
+          "mdsm_close": 397.05,
+          "sharadar_view_close": 400.8,
+          "abs_diff": 3.75,
+          "rel_diff": 0.009445
+        },
+        {
+          "date": "2026-05-11",
+          "mdsm_close": 386.77,
+          "sharadar_view_close": 388.64,
+          "abs_diff": 1.87,
+          "rel_diff": 0.004835
+        },
+        {
+          "date": "2026-05-12",
+          "mdsm_close": 383.82,
+          "sharadar_view_close": 387.35,
+          "abs_diff": 3.53,
+          "rel_diff": 0.009197
+        },
+        {
+          "date": "2026-05-13",
+          "mdsm_close": 399.04,
+          "sharadar_view_close": 402.62,
+          "abs_diff": 3.58,
+          "rel_diff": 0.008972
+        },
+        {
+          "date": "2026-05-14",
+          "mdsm_close": 397.17,
+          "sharadar_view_close": 401.07,
+          "abs_diff": 3.9,
+          "rel_diff": 0.009819
+        },
+        {
+          "date": "2026-05-15",
+          "mdsm_close": 393.32,
+          "sharadar_view_close": 396.78,
+          "abs_diff": 3.46,
+          "rel_diff": 0.008797
+        },
+        {
+          "date": "2026-05-18",
+          "mdsm_close": 393.11,
+          "sharadar_view_close": 396.94,
+          "abs_diff": 3.83,
+          "rel_diff": 0.009743
+        },
+        {
+          "date": "2026-05-19",
+          "mdsm_close": 384.9,
+          "sharadar_view_close": 387.66,
+          "abs_diff": 2.76,
+          "rel_diff": 0.007171
+        },
+        {
+          "date": "2026-05-20",
+          "mdsm_close": 384.9,
+          "sharadar_view_close": 388.91,
+          "abs_diff": 4.01,
+          "rel_diff": 0.010418
+        },
+        {
+          "date": "2026-05-21",
+          "mdsm_close": 383.47,
+          "sharadar_view_close": 387.66,
+          "abs_diff": 4.19,
+          "rel_diff": 0.010927
+        },
+        {
+          "date": "2026-05-22",
+          "mdsm_close": 379.38,
+          "sharadar_view_close": 382.97,
+          "abs_diff": 3.59,
+          "rel_diff": 0.009463
+        },
+        {
+          "date": "2026-05-26",
+          "mdsm_close": 384.84,
+          "sharadar_view_close": 388.88,
+          "abs_diff": 4.04,
+          "rel_diff": 0.010498
+        },
+        {
+          "date": "2026-05-27",
+          "mdsm_close": 384.83,
+          "sharadar_view_close": 388.83,
+          "abs_diff": 4.0,
+          "rel_diff": 0.010394
+        },
+        {
+          "date": "2026-05-28",
+          "mdsm_close": 386.12,
+          "sharadar_view_close": 390.13,
+          "abs_diff": 4.01,
+          "rel_diff": 0.010385
+        },
+        {
+          "date": "2026-05-29",
+          "mdsm_close": 376.43,
+          "sharadar_view_close": 380.34,
+          "abs_diff": 3.91,
+          "rel_diff": 0.010387
+        },
+        {
+          "date": "2026-06-01",
+          "mdsm_close": 372.58,
+          "sharadar_view_close": 376.37,
+          "abs_diff": 3.79,
+          "rel_diff": 0.010172
+        },
+        {
+          "date": "2026-06-02",
+          "mdsm_close": 358.39,
+          "sharadar_view_close": 361.85,
+          "abs_diff": 3.46,
+          "rel_diff": 0.009654
+        },
+        {
+          "date": "2026-06-03",
+          "mdsm_close": 355.68,
+          "sharadar_view_close": 358.99,
+          "abs_diff": 3.31,
+          "rel_diff": 0.009306
+        },
+        {
+          "date": "2026-06-04",
+          "mdsm_close": 369.27,
+          "sharadar_view_close": 372.19,
+          "abs_diff": 2.92,
+          "rel_diff": 0.007907
+        },
+        {
+          "date": "2026-06-05",
+          "mdsm_close": 365.76,
+          "sharadar_view_close": 368.53,
+          "abs_diff": 2.77,
+          "rel_diff": 0.007573
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 122.4473,
+        "volume_max_abs_pct_diff": 212.4771
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [],
+      "classification": "systematic_vendor_or_adjustment_mismatch"
+    },
+    {
+      "conid": "270957",
+      "ticker": "KLAC",
+      "sharadar_ticker": "KLAC",
+      "permaticker": "199070",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 1149.483578,
+        "max_abs_diff": 2170.476,
+        "match_rate": 0.041,
+        "n_days_diff_ge_005": 234,
+        "n_days_diff_ge_1": 234,
+        "pct_days_diff_ge_005": 0.959,
+        "max_diff_date": "2026-06-11",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-11"
+      },
+      "sample_rows": [
+        {
+          "date": "2026-05-28",
+          "mdsm_close": 1927.63,
+          "sharadar_view_close": 192.763,
+          "abs_diff": 1734.867,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-05-29",
+          "mdsm_close": 1921.71,
+          "sharadar_view_close": 192.171,
+          "abs_diff": 1729.539,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-01",
+          "mdsm_close": 1940.04,
+          "sharadar_view_close": 194.004,
+          "abs_diff": 1746.036,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-02",
+          "mdsm_close": 2045.2,
+          "sharadar_view_close": 204.52,
+          "abs_diff": 1840.68,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-03",
+          "mdsm_close": 2125.11,
+          "sharadar_view_close": 212.511,
+          "abs_diff": 1912.599,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-04",
+          "mdsm_close": 2131.1,
+          "sharadar_view_close": 213.11,
+          "abs_diff": 1917.99,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-05",
+          "mdsm_close": 1929.2,
+          "sharadar_view_close": 192.92,
+          "abs_diff": 1736.28,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-08",
+          "mdsm_close": 2108.06,
+          "sharadar_view_close": 210.806,
+          "abs_diff": 1897.254,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-09",
+          "mdsm_close": 2139.37,
+          "sharadar_view_close": 213.937,
+          "abs_diff": 1925.433,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-10",
+          "mdsm_close": 2135.64,
+          "sharadar_view_close": 213.564,
+          "abs_diff": 1922.076,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-11",
+          "mdsm_close": 2411.64,
+          "sharadar_view_close": 241.164,
+          "abs_diff": 2170.476,
+          "rel_diff": 0.9
+        },
+        {
+          "date": "2026-06-12",
+          "mdsm_close": 254.54,
+          "sharadar_view_close": 254.54,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-15",
+          "mdsm_close": 256.42,
+          "sharadar_view_close": 256.42,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-16",
+          "mdsm_close": 237.33,
+          "sharadar_view_close": 237.33,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-17",
+          "mdsm_close": 238.73,
+          "sharadar_view_close": 238.73,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-18",
+          "mdsm_close": 259.56,
+          "sharadar_view_close": 259.56,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-22",
+          "mdsm_close": 269.16,
+          "sharadar_view_close": 269.16,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-23",
+          "mdsm_close": 244.49,
+          "sharadar_view_close": 244.49,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-24",
+          "mdsm_close": 240.48,
+          "sharadar_view_close": 240.48,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-25",
+          "mdsm_close": 258.8,
+          "sharadar_view_close": 258.8,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-06-26",
+          "mdsm_close": 248.64,
+          "sharadar_view_close": 248.64,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 265.3432,
+        "volume_max_abs_pct_diff": 520.3357
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-06-12",
+          "action": "split",
+          "value": "10.0",
+          "actions_ticker": "KLAC",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "conid": "356858007",
+      "ticker": "FOX",
+      "sharadar_ticker": "FOXA",
+      "permaticker": "111125",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 6.125984,
+        "max_abs_diff": 9.21,
+        "match_rate": 0.0,
+        "n_days_diff_ge_005": 244,
+        "n_days_diff_ge_1": 244,
+        "pct_days_diff_ge_005": 1.0,
+        "max_diff_date": "2025-12-23",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-26"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-12-09",
+          "mdsm_close": 62.2,
+          "sharadar_view_close": 70.3,
+          "abs_diff": 8.1,
+          "rel_diff": 0.130225
+        },
+        {
+          "date": "2025-12-10",
+          "mdsm_close": 63.43,
+          "sharadar_view_close": 71.74,
+          "abs_diff": 8.31,
+          "rel_diff": 0.131011
+        },
+        {
+          "date": "2025-12-11",
+          "mdsm_close": 63.44,
+          "sharadar_view_close": 71.82,
+          "abs_diff": 8.38,
+          "rel_diff": 0.132093
+        },
+        {
+          "date": "2025-12-12",
+          "mdsm_close": 63.08,
+          "sharadar_view_close": 71.1,
+          "abs_diff": 8.02,
+          "rel_diff": 0.12714
+        },
+        {
+          "date": "2025-12-15",
+          "mdsm_close": 63.21,
+          "sharadar_view_close": 71.23,
+          "abs_diff": 8.02,
+          "rel_diff": 0.126879
+        },
+        {
+          "date": "2025-12-16",
+          "mdsm_close": 62.57,
+          "sharadar_view_close": 70.36,
+          "abs_diff": 7.79,
+          "rel_diff": 0.124501
+        },
+        {
+          "date": "2025-12-17",
+          "mdsm_close": 63.12,
+          "sharadar_view_close": 71.17,
+          "abs_diff": 8.05,
+          "rel_diff": 0.127535
+        },
+        {
+          "date": "2025-12-18",
+          "mdsm_close": 63.41,
+          "sharadar_view_close": 71.26,
+          "abs_diff": 7.85,
+          "rel_diff": 0.123798
+        },
+        {
+          "date": "2025-12-19",
+          "mdsm_close": 63.6,
+          "sharadar_view_close": 71.77,
+          "abs_diff": 8.17,
+          "rel_diff": 0.128459
+        },
+        {
+          "date": "2025-12-22",
+          "mdsm_close": 64.55,
+          "sharadar_view_close": 73.62,
+          "abs_diff": 9.07,
+          "rel_diff": 0.140511
+        },
+        {
+          "date": "2025-12-23",
+          "mdsm_close": 64.5,
+          "sharadar_view_close": 73.71,
+          "abs_diff": 9.21,
+          "rel_diff": 0.142791
+        },
+        {
+          "date": "2025-12-24",
+          "mdsm_close": 64.94,
+          "sharadar_view_close": 73.91,
+          "abs_diff": 8.97,
+          "rel_diff": 0.138128
+        },
+        {
+          "date": "2025-12-26",
+          "mdsm_close": 65.42,
+          "sharadar_view_close": 74.3,
+          "abs_diff": 8.88,
+          "rel_diff": 0.135738
+        },
+        {
+          "date": "2025-12-29",
+          "mdsm_close": 65.12,
+          "sharadar_view_close": 73.82,
+          "abs_diff": 8.7,
+          "rel_diff": 0.1336
+        },
+        {
+          "date": "2025-12-30",
+          "mdsm_close": 65.39,
+          "sharadar_view_close": 73.7,
+          "abs_diff": 8.31,
+          "rel_diff": 0.127084
+        },
+        {
+          "date": "2025-12-31",
+          "mdsm_close": 64.93,
+          "sharadar_view_close": 73.07,
+          "abs_diff": 8.14,
+          "rel_diff": 0.125366
+        },
+        {
+          "date": "2026-01-02",
+          "mdsm_close": 65.96,
+          "sharadar_view_close": 73.76,
+          "abs_diff": 7.8,
+          "rel_diff": 0.118253
+        },
+        {
+          "date": "2026-01-05",
+          "mdsm_close": 67.76,
+          "sharadar_view_close": 75.67,
+          "abs_diff": 7.91,
+          "rel_diff": 0.116736
+        },
+        {
+          "date": "2026-01-06",
+          "mdsm_close": 67.73,
+          "sharadar_view_close": 76.11,
+          "abs_diff": 8.38,
+          "rel_diff": 0.123727
+        },
+        {
+          "date": "2026-01-07",
+          "mdsm_close": 67.07,
+          "sharadar_view_close": 75.03,
+          "abs_diff": 7.96,
+          "rel_diff": 0.118682
+        },
+        {
+          "date": "2026-01-08",
+          "mdsm_close": 67.55,
+          "sharadar_view_close": 75.69,
+          "abs_diff": 8.14,
+          "rel_diff": 0.120503
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 661.1947,
+        "volume_max_abs_pct_diff": 1557.7302
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [],
+      "classification": "systematic_vendor_or_adjustment_mismatch"
+    },
+    {
+      "conid": "370757467",
+      "ticker": "CRWD",
+      "sharadar_ticker": "CRWD",
+      "permaticker": "110725",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 365.051238,
+        "max_abs_diff": 586.628,
+        "match_rate": 0.0,
+        "n_days_diff_ge_005": 244,
+        "n_days_diff_ge_1": 244,
+        "pct_days_diff_ge_005": 1.0,
+        "max_diff_date": "2026-06-01",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-26"
+      },
+      "sample_rows": [
+        {
+          "date": "2026-05-15",
+          "mdsm_close": 594.08,
+          "sharadar_view_close": 148.52,
+          "abs_diff": 445.56,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-05-18",
+          "mdsm_close": 618.83,
+          "sharadar_view_close": 154.708,
+          "abs_diff": 464.122,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-05-19",
+          "mdsm_close": 616.88,
+          "sharadar_view_close": 154.22,
+          "abs_diff": 462.66,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-05-20",
+          "mdsm_close": 650.11,
+          "sharadar_view_close": 162.528,
+          "abs_diff": 487.582,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-05-21",
+          "mdsm_close": 648.23,
+          "sharadar_view_close": 162.058,
+          "abs_diff": 486.172,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-05-22",
+          "mdsm_close": 663.46,
+          "sharadar_view_close": 165.865,
+          "abs_diff": 497.595,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-05-26",
+          "mdsm_close": 671.55,
+          "sharadar_view_close": 167.887,
+          "abs_diff": 503.663,
+          "rel_diff": 0.750001
+        },
+        {
+          "date": "2026-05-27",
+          "mdsm_close": 645.36,
+          "sharadar_view_close": 161.34,
+          "abs_diff": 484.02,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-05-28",
+          "mdsm_close": 671.0,
+          "sharadar_view_close": 167.75,
+          "abs_diff": 503.25,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-05-29",
+          "mdsm_close": 731.0,
+          "sharadar_view_close": 182.75,
+          "abs_diff": 548.25,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-06-01",
+          "mdsm_close": 782.17,
+          "sharadar_view_close": 195.542,
+          "abs_diff": 586.628,
+          "rel_diff": 0.750001
+        },
+        {
+          "date": "2026-06-02",
+          "mdsm_close": 768.95,
+          "sharadar_view_close": 192.238,
+          "abs_diff": 576.712,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-06-03",
+          "mdsm_close": 747.61,
+          "sharadar_view_close": 186.903,
+          "abs_diff": 560.707,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-06-04",
+          "mdsm_close": 719.09,
+          "sharadar_view_close": 179.773,
+          "abs_diff": 539.317,
+          "rel_diff": 0.749999
+        },
+        {
+          "date": "2026-06-05",
+          "mdsm_close": 671.02,
+          "sharadar_view_close": 167.755,
+          "abs_diff": 503.265,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-06-08",
+          "mdsm_close": 658.79,
+          "sharadar_view_close": 164.697,
+          "abs_diff": 494.093,
+          "rel_diff": 0.750001
+        },
+        {
+          "date": "2026-06-09",
+          "mdsm_close": 644.93,
+          "sharadar_view_close": 161.232,
+          "abs_diff": 483.698,
+          "rel_diff": 0.750001
+        },
+        {
+          "date": "2026-06-10",
+          "mdsm_close": 647.74,
+          "sharadar_view_close": 161.935,
+          "abs_diff": 485.805,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-06-11",
+          "mdsm_close": 691.53,
+          "sharadar_view_close": 172.882,
+          "abs_diff": 518.648,
+          "rel_diff": 0.750001
+        },
+        {
+          "date": "2026-06-12",
+          "mdsm_close": 682.8,
+          "sharadar_view_close": 170.7,
+          "abs_diff": 512.1,
+          "rel_diff": 0.75
+        },
+        {
+          "date": "2026-06-15",
+          "mdsm_close": 692.91,
+          "sharadar_view_close": 173.227,
+          "abs_diff": 519.683,
+          "rel_diff": 0.750001
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 315.518,
+        "volume_max_abs_pct_diff": 551.1565
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-07-02",
+          "action": "split",
+          "value": "4.0",
+          "actions_ticker": "CRWD",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "conid": "4350",
+      "ticker": "HON",
+      "sharadar_ticker": "HON",
+      "permaticker": "198566",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 221.652705,
+        "max_abs_diff": 253.1,
+        "match_rate": 0.0,
+        "n_days_diff_ge_005": 244,
+        "n_days_diff_ge_1": 244,
+        "pct_days_diff_ge_005": 1.0,
+        "max_diff_date": "2025-07-23",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-06-26"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-07-09",
+          "mdsm_close": 224.92,
+          "sharadar_view_close": 477.44,
+          "abs_diff": 252.52,
+          "rel_diff": 1.12271
+        },
+        {
+          "date": "2025-07-10",
+          "mdsm_close": 223.08,
+          "sharadar_view_close": 473.54,
+          "abs_diff": 250.46,
+          "rel_diff": 1.122736
+        },
+        {
+          "date": "2025-07-11",
+          "mdsm_close": 222.29,
+          "sharadar_view_close": 471.86,
+          "abs_diff": 249.57,
+          "rel_diff": 1.122723
+        },
+        {
+          "date": "2025-07-14",
+          "mdsm_close": 224.3,
+          "sharadar_view_close": 476.12,
+          "abs_diff": 251.82,
+          "rel_diff": 1.122693
+        },
+        {
+          "date": "2025-07-15",
+          "mdsm_close": 221.7,
+          "sharadar_view_close": 470.6,
+          "abs_diff": 248.9,
+          "rel_diff": 1.122688
+        },
+        {
+          "date": "2025-07-16",
+          "mdsm_close": 223.19,
+          "sharadar_view_close": 473.76,
+          "abs_diff": 250.57,
+          "rel_diff": 1.122676
+        },
+        {
+          "date": "2025-07-17",
+          "mdsm_close": 224.59,
+          "sharadar_view_close": 476.74,
+          "abs_diff": 252.15,
+          "rel_diff": 1.122712
+        },
+        {
+          "date": "2025-07-18",
+          "mdsm_close": 222.87,
+          "sharadar_view_close": 473.08,
+          "abs_diff": 250.21,
+          "rel_diff": 1.122672
+        },
+        {
+          "date": "2025-07-21",
+          "mdsm_close": 221.62,
+          "sharadar_view_close": 470.44,
+          "abs_diff": 248.82,
+          "rel_diff": 1.122733
+        },
+        {
+          "date": "2025-07-22",
+          "mdsm_close": 222.91,
+          "sharadar_view_close": 473.16,
+          "abs_diff": 250.25,
+          "rel_diff": 1.12265
+        },
+        {
+          "date": "2025-07-23",
+          "mdsm_close": 225.44,
+          "sharadar_view_close": 478.54,
+          "abs_diff": 253.1,
+          "rel_diff": 1.122693
+        },
+        {
+          "date": "2025-07-24",
+          "mdsm_close": 211.51,
+          "sharadar_view_close": 448.96,
+          "abs_diff": 237.45,
+          "rel_diff": 1.122642
+        },
+        {
+          "date": "2025-07-25",
+          "mdsm_close": 211.28,
+          "sharadar_view_close": 448.48,
+          "abs_diff": 237.2,
+          "rel_diff": 1.122681
+        },
+        {
+          "date": "2025-07-28",
+          "mdsm_close": 212.07,
+          "sharadar_view_close": 450.16,
+          "abs_diff": 238.09,
+          "rel_diff": 1.122695
+        },
+        {
+          "date": "2025-07-29",
+          "mdsm_close": 208.9,
+          "sharadar_view_close": 443.44,
+          "abs_diff": 234.54,
+          "rel_diff": 1.122738
+        },
+        {
+          "date": "2025-07-30",
+          "mdsm_close": 209.32,
+          "sharadar_view_close": 444.32,
+          "abs_diff": 235.0,
+          "rel_diff": 1.122683
+        },
+        {
+          "date": "2025-07-31",
+          "mdsm_close": 209.5,
+          "sharadar_view_close": 444.7,
+          "abs_diff": 235.2,
+          "rel_diff": 1.122673
+        },
+        {
+          "date": "2025-08-01",
+          "mdsm_close": 205.13,
+          "sharadar_view_close": 435.42,
+          "abs_diff": 230.29,
+          "rel_diff": 1.122654
+        },
+        {
+          "date": "2025-08-04",
+          "mdsm_close": 208.03,
+          "sharadar_view_close": 441.58,
+          "abs_diff": 233.55,
+          "rel_diff": 1.122675
+        },
+        {
+          "date": "2025-08-05",
+          "mdsm_close": 208.28,
+          "sharadar_view_close": 442.12,
+          "abs_diff": 233.84,
+          "rel_diff": 1.122719
+        },
+        {
+          "date": "2025-08-06",
+          "mdsm_close": 206.56,
+          "sharadar_view_close": 438.46,
+          "abs_diff": 231.9,
+          "rel_diff": 1.122676
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 120.0966,
+        "volume_max_abs_pct_diff": 223.2237
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-06-29",
+          "action": "split",
+          "value": "0.5",
+          "actions_ticker": "HON",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2026-06-29",
+          "action": "spinoffdividend",
+          "value": "221.01",
+          "actions_ticker": "HON",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2026-06-29",
+          "action": "spinoff",
+          "value": "1.0",
+          "actions_ticker": "HON",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2025-10-30",
+          "action": "spinoffdividend",
+          "value": "24.625",
+          "actions_ticker": "HON",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2025-10-30",
+          "action": "spinoff",
+          "value": "0.25",
+          "actions_ticker": "HON",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "conid": "4886",
+      "ticker": "BDX",
+      "sharadar_ticker": "BDX",
+      "permaticker": "199909",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 23.325246,
+        "max_abs_diff": 41.94,
+        "match_rate": 0.3893,
+        "n_days_diff_ge_005": 149,
+        "n_days_diff_ge_1": 149,
+        "pct_days_diff_ge_005": 0.6107,
+        "max_diff_date": "2026-02-06",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-02-09"
+      },
+      "sample_rows": [
+        {
+          "date": "2026-01-23",
+          "mdsm_close": 161.49,
+          "sharadar_view_close": 201.79,
+          "abs_diff": 40.3,
+          "rel_diff": 0.249551
+        },
+        {
+          "date": "2026-01-26",
+          "mdsm_close": 162.8,
+          "sharadar_view_close": 203.42,
+          "abs_diff": 40.62,
+          "rel_diff": 0.249509
+        },
+        {
+          "date": "2026-01-27",
+          "mdsm_close": 162.78,
+          "sharadar_view_close": 203.4,
+          "abs_diff": 40.62,
+          "rel_diff": 0.249539
+        },
+        {
+          "date": "2026-01-28",
+          "mdsm_close": 161.6,
+          "sharadar_view_close": 201.92,
+          "abs_diff": 40.32,
+          "rel_diff": 0.249505
+        },
+        {
+          "date": "2026-01-29",
+          "mdsm_close": 160.93,
+          "sharadar_view_close": 201.09,
+          "abs_diff": 40.16,
+          "rel_diff": 0.249549
+        },
+        {
+          "date": "2026-01-30",
+          "mdsm_close": 162.85,
+          "sharadar_view_close": 203.48,
+          "abs_diff": 40.63,
+          "rel_diff": 0.249493
+        },
+        {
+          "date": "2026-02-02",
+          "mdsm_close": 161.59,
+          "sharadar_view_close": 201.91,
+          "abs_diff": 40.32,
+          "rel_diff": 0.24952
+        },
+        {
+          "date": "2026-02-03",
+          "mdsm_close": 165.26,
+          "sharadar_view_close": 206.5,
+          "abs_diff": 41.24,
+          "rel_diff": 0.249546
+        },
+        {
+          "date": "2026-02-04",
+          "mdsm_close": 166.36,
+          "sharadar_view_close": 207.87,
+          "abs_diff": 41.51,
+          "rel_diff": 0.249519
+        },
+        {
+          "date": "2026-02-05",
+          "mdsm_close": 165.27,
+          "sharadar_view_close": 206.51,
+          "abs_diff": 41.24,
+          "rel_diff": 0.249531
+        },
+        {
+          "date": "2026-02-06",
+          "mdsm_close": 168.08,
+          "sharadar_view_close": 210.02,
+          "abs_diff": 41.94,
+          "rel_diff": 0.249524
+        },
+        {
+          "date": "2026-02-09",
+          "mdsm_close": 165.97,
+          "sharadar_view_close": 207.39,
+          "abs_diff": 41.42,
+          "rel_diff": 0.249563
+        },
+        {
+          "date": "2026-02-10",
+          "mdsm_close": 171.68,
+          "sharadar_view_close": 171.68,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-11",
+          "mdsm_close": 180.62,
+          "sharadar_view_close": 180.62,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-12",
+          "mdsm_close": 177.81,
+          "sharadar_view_close": 177.81,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-13",
+          "mdsm_close": 175.89,
+          "sharadar_view_close": 175.89,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-17",
+          "mdsm_close": 177.38,
+          "sharadar_view_close": 177.38,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-18",
+          "mdsm_close": 182.68,
+          "sharadar_view_close": 182.68,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-19",
+          "mdsm_close": 182.47,
+          "sharadar_view_close": 182.47,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-20",
+          "mdsm_close": 185.39,
+          "sharadar_view_close": 185.39,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2026-02-23",
+          "mdsm_close": 184.34,
+          "sharadar_view_close": 184.34,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 175.6994,
+        "volume_max_abs_pct_diff": 403.649
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [],
+      "classification": "systematic_vendor_or_adjustment_mismatch"
+    },
+    {
+      "conid": "748351585",
+      "ticker": "APTV",
+      "sharadar_ticker": "APTV",
+      "permaticker": "192339",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 8.965,
+        "max_abs_diff": 13.56,
+        "match_rate": 0.2459,
+        "n_days_diff_ge_005": 184,
+        "n_days_diff_ge_1": 184,
+        "pct_days_diff_ge_005": 0.7541,
+        "max_diff_date": "2026-01-09",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2026-03-31"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-12-24",
+          "mdsm_close": 65.03,
+          "sharadar_view_close": 76.77,
+          "abs_diff": 11.74,
+          "rel_diff": 0.180532
+        },
+        {
+          "date": "2025-12-26",
+          "mdsm_close": 65.15,
+          "sharadar_view_close": 76.91,
+          "abs_diff": 11.76,
+          "rel_diff": 0.180507
+        },
+        {
+          "date": "2025-12-29",
+          "mdsm_close": 65.05,
+          "sharadar_view_close": 76.79,
+          "abs_diff": 11.74,
+          "rel_diff": 0.180477
+        },
+        {
+          "date": "2025-12-30",
+          "mdsm_close": 65.14,
+          "sharadar_view_close": 76.9,
+          "abs_diff": 11.76,
+          "rel_diff": 0.180534
+        },
+        {
+          "date": "2025-12-31",
+          "mdsm_close": 64.46,
+          "sharadar_view_close": 76.09,
+          "abs_diff": 11.63,
+          "rel_diff": 0.180422
+        },
+        {
+          "date": "2026-01-02",
+          "mdsm_close": 66.45,
+          "sharadar_view_close": 78.44,
+          "abs_diff": 11.99,
+          "rel_diff": 0.180436
+        },
+        {
+          "date": "2026-01-05",
+          "mdsm_close": 68.21,
+          "sharadar_view_close": 80.52,
+          "abs_diff": 12.31,
+          "rel_diff": 0.180472
+        },
+        {
+          "date": "2026-01-06",
+          "mdsm_close": 69.98,
+          "sharadar_view_close": 82.61,
+          "abs_diff": 12.63,
+          "rel_diff": 0.18048
+        },
+        {
+          "date": "2026-01-07",
+          "mdsm_close": 69.59,
+          "sharadar_view_close": 82.15,
+          "abs_diff": 12.56,
+          "rel_diff": 0.180486
+        },
+        {
+          "date": "2026-01-08",
+          "mdsm_close": 73.23,
+          "sharadar_view_close": 86.45,
+          "abs_diff": 13.22,
+          "rel_diff": 0.180527
+        },
+        {
+          "date": "2026-01-09",
+          "mdsm_close": 75.11,
+          "sharadar_view_close": 88.67,
+          "abs_diff": 13.56,
+          "rel_diff": 0.180535
+        },
+        {
+          "date": "2026-01-12",
+          "mdsm_close": 73.55,
+          "sharadar_view_close": 86.83,
+          "abs_diff": 13.28,
+          "rel_diff": 0.180557
+        },
+        {
+          "date": "2026-01-13",
+          "mdsm_close": 74.76,
+          "sharadar_view_close": 88.25,
+          "abs_diff": 13.49,
+          "rel_diff": 0.180444
+        },
+        {
+          "date": "2026-01-14",
+          "mdsm_close": 70.25,
+          "sharadar_view_close": 82.93,
+          "abs_diff": 12.68,
+          "rel_diff": 0.180498
+        },
+        {
+          "date": "2026-01-15",
+          "mdsm_close": 69.98,
+          "sharadar_view_close": 82.61,
+          "abs_diff": 12.63,
+          "rel_diff": 0.18048
+        },
+        {
+          "date": "2026-01-16",
+          "mdsm_close": 66.59,
+          "sharadar_view_close": 78.61,
+          "abs_diff": 12.02,
+          "rel_diff": 0.180508
+        },
+        {
+          "date": "2026-01-20",
+          "mdsm_close": 65.37,
+          "sharadar_view_close": 77.17,
+          "abs_diff": 11.8,
+          "rel_diff": 0.180511
+        },
+        {
+          "date": "2026-01-21",
+          "mdsm_close": 68.0,
+          "sharadar_view_close": 80.27,
+          "abs_diff": 12.27,
+          "rel_diff": 0.180441
+        },
+        {
+          "date": "2026-01-22",
+          "mdsm_close": 65.68,
+          "sharadar_view_close": 77.53,
+          "abs_diff": 11.85,
+          "rel_diff": 0.18042
+        },
+        {
+          "date": "2026-01-23",
+          "mdsm_close": 64.78,
+          "sharadar_view_close": 76.47,
+          "abs_diff": 11.69,
+          "rel_diff": 0.180457
+        },
+        {
+          "date": "2026-01-26",
+          "mdsm_close": 65.26,
+          "sharadar_view_close": 77.04,
+          "abs_diff": 11.78,
+          "rel_diff": 0.180509
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 169.336,
+        "volume_max_abs_pct_diff": 389.5664
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-04-01",
+          "action": "spinoffdividend",
+          "value": "10.6167",
+          "actions_ticker": "APTV",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2026-04-01",
+          "action": "spinoff",
+          "value": "0.33333",
+          "actions_ticker": "APTV",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "conid": "887235923",
+      "ticker": "DD",
+      "sharadar_ticker": "DD",
+      "permaticker": "199776",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 44.85,
+        "max_abs_diff": 143.4,
+        "match_rate": 0.6639,
+        "n_days_diff_ge_005": 82,
+        "n_days_diff_ge_1": 82,
+        "pct_days_diff_ge_005": 0.3361,
+        "max_diff_date": "2025-10-29",
+        "first_diff_date": "2025-07-09",
+        "last_diff_date": "2025-10-31"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-10-15",
+          "mdsm_close": 98.52,
+          "sharadar_view_close": 235.59,
+          "abs_diff": 137.07,
+          "rel_diff": 1.391291
+        },
+        {
+          "date": "2025-10-16",
+          "mdsm_close": 98.02,
+          "sharadar_view_close": 234.39,
+          "abs_diff": 136.37,
+          "rel_diff": 1.391247
+        },
+        {
+          "date": "2025-10-17",
+          "mdsm_close": 99.83,
+          "sharadar_view_close": 238.71,
+          "abs_diff": 138.88,
+          "rel_diff": 1.391165
+        },
+        {
+          "date": "2025-10-20",
+          "mdsm_close": 101.56,
+          "sharadar_view_close": 242.85,
+          "abs_diff": 141.29,
+          "rel_diff": 1.391197
+        },
+        {
+          "date": "2025-10-21",
+          "mdsm_close": 101.79,
+          "sharadar_view_close": 243.39,
+          "abs_diff": 141.6,
+          "rel_diff": 1.391099
+        },
+        {
+          "date": "2025-10-22",
+          "mdsm_close": 100.0,
+          "sharadar_view_close": 239.13,
+          "abs_diff": 139.13,
+          "rel_diff": 1.3913
+        },
+        {
+          "date": "2025-10-23",
+          "mdsm_close": 101.99,
+          "sharadar_view_close": 243.87,
+          "abs_diff": 141.88,
+          "rel_diff": 1.391117
+        },
+        {
+          "date": "2025-10-24",
+          "mdsm_close": 101.64,
+          "sharadar_view_close": 243.03,
+          "abs_diff": 141.39,
+          "rel_diff": 1.391086
+        },
+        {
+          "date": "2025-10-27",
+          "mdsm_close": 102.1,
+          "sharadar_view_close": 244.14,
+          "abs_diff": 142.04,
+          "rel_diff": 1.391185
+        },
+        {
+          "date": "2025-10-28",
+          "mdsm_close": 102.75,
+          "sharadar_view_close": 245.7,
+          "abs_diff": 142.95,
+          "rel_diff": 1.391241
+        },
+        {
+          "date": "2025-10-29",
+          "mdsm_close": 103.08,
+          "sharadar_view_close": 246.48,
+          "abs_diff": 143.4,
+          "rel_diff": 1.391153
+        },
+        {
+          "date": "2025-10-30",
+          "mdsm_close": 102.21,
+          "sharadar_view_close": 244.41,
+          "abs_diff": 142.2,
+          "rel_diff": 1.391253
+        },
+        {
+          "date": "2025-10-31",
+          "mdsm_close": 102.44,
+          "sharadar_view_close": 244.95,
+          "abs_diff": 142.51,
+          "rel_diff": 1.391156
+        },
+        {
+          "date": "2025-11-03",
+          "mdsm_close": 104.07,
+          "sharadar_view_close": 104.07,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-04",
+          "mdsm_close": 113.28,
+          "sharadar_view_close": 113.28,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-05",
+          "mdsm_close": 118.89,
+          "sharadar_view_close": 118.89,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-06",
+          "mdsm_close": 117.45,
+          "sharadar_view_close": 117.45,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-07",
+          "mdsm_close": 119.4,
+          "sharadar_view_close": 119.4,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-10",
+          "mdsm_close": 120.72,
+          "sharadar_view_close": 120.72,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-11",
+          "mdsm_close": 121.2,
+          "sharadar_view_close": 121.2,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-11-12",
+          "mdsm_close": 122.37,
+          "sharadar_view_close": 122.37,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 154.5053,
+        "volume_max_abs_pct_diff": 377.9987
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-06-24",
+          "action": "split",
+          "value": "0.33333",
+          "actions_ticker": "DD",
+          "matches_sharadar_ticker": true
+        },
+        {
+          "action_date": "2025-11-03",
+          "action": "spinoffdividend",
+          "value": "142.50014",
+          "actions_ticker": "DD",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        },
+        {
+          "action_date": "2025-11-03",
+          "action": "spinoff",
+          "value": "0.5",
+          "actions_ticker": "DD",
+          "matches_sharadar_ticker": true,
+          "near_diff": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "conid": "274144952",
+      "ticker": "CVNA",
+      "sharadar_ticker": "CVNA",
+      "permaticker": "124118",
+      "view_file_exists": true,
+      "mdsm_file_exists": true,
+      "diff_profile": {
+        "overlap_rows": 244,
+        "mean_abs_diff": 0.002066,
+        "max_abs_diff": 0.004,
+        "match_rate": 1.0,
+        "n_days_diff_ge_005": 0,
+        "n_days_diff_ge_1": 0,
+        "pct_days_diff_ge_005": 0.0,
+        "max_diff_date": "2025-07-18"
+      },
+      "sample_rows": [
+        {
+          "date": "2025-07-09",
+          "mdsm_close": 70.22,
+          "sharadar_view_close": 70.218,
+          "abs_diff": 0.002,
+          "rel_diff": 2.8e-05
+        },
+        {
+          "date": "2025-07-10",
+          "mdsm_close": 69.11,
+          "sharadar_view_close": 69.11,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-07-11",
+          "mdsm_close": 68.73,
+          "sharadar_view_close": 68.734,
+          "abs_diff": 0.004,
+          "rel_diff": 5.8e-05
+        },
+        {
+          "date": "2025-07-14",
+          "mdsm_close": 69.47,
+          "sharadar_view_close": 69.468,
+          "abs_diff": 0.002,
+          "rel_diff": 2.9e-05
+        },
+        {
+          "date": "2025-07-15",
+          "mdsm_close": 69.68,
+          "sharadar_view_close": 69.682,
+          "abs_diff": 0.002,
+          "rel_diff": 2.9e-05
+        },
+        {
+          "date": "2025-07-16",
+          "mdsm_close": 70.4,
+          "sharadar_view_close": 70.404,
+          "abs_diff": 0.004,
+          "rel_diff": 5.7e-05
+        },
+        {
+          "date": "2025-07-17",
+          "mdsm_close": 69.22,
+          "sharadar_view_close": 69.22,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-07-18",
+          "mdsm_close": 69.5,
+          "sharadar_view_close": 69.504,
+          "abs_diff": 0.004,
+          "rel_diff": 5.8e-05
+        },
+        {
+          "date": "2025-07-21",
+          "mdsm_close": 68.38,
+          "sharadar_view_close": 68.384,
+          "abs_diff": 0.004,
+          "rel_diff": 5.8e-05
+        },
+        {
+          "date": "2025-07-22",
+          "mdsm_close": 68.31,
+          "sharadar_view_close": 68.312,
+          "abs_diff": 0.002,
+          "rel_diff": 2.9e-05
+        },
+        {
+          "date": "2025-07-23",
+          "mdsm_close": 68.6,
+          "sharadar_view_close": 68.6,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-07-24",
+          "mdsm_close": 65.22,
+          "sharadar_view_close": 65.218,
+          "abs_diff": 0.002,
+          "rel_diff": 3.1e-05
+        },
+        {
+          "date": "2025-07-25",
+          "mdsm_close": 66.42,
+          "sharadar_view_close": 66.424,
+          "abs_diff": 0.004,
+          "rel_diff": 6e-05
+        },
+        {
+          "date": "2025-07-28",
+          "mdsm_close": 67.27,
+          "sharadar_view_close": 67.266,
+          "abs_diff": 0.004,
+          "rel_diff": 5.9e-05
+        },
+        {
+          "date": "2025-07-29",
+          "mdsm_close": 67.3,
+          "sharadar_view_close": 67.3,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        },
+        {
+          "date": "2025-07-30",
+          "mdsm_close": 66.72,
+          "sharadar_view_close": 66.718,
+          "abs_diff": 0.002,
+          "rel_diff": 3e-05
+        },
+        {
+          "date": "2025-07-31",
+          "mdsm_close": 78.03,
+          "sharadar_view_close": 78.034,
+          "abs_diff": 0.004,
+          "rel_diff": 5.1e-05
+        },
+        {
+          "date": "2025-08-01",
+          "mdsm_close": 73.56,
+          "sharadar_view_close": 73.556,
+          "abs_diff": 0.004,
+          "rel_diff": 5.4e-05
+        }
+      ],
+      "volume": {
+        "volume_mean_abs_pct_diff": 65.9869,
+        "volume_max_abs_pct_diff": 251.4327
+      },
+      "actions_ticker_found": true,
+      "corporate_actions": [
+        {
+          "action_date": "2026-05-08",
+          "action": "split",
+          "value": "5.0",
+          "actions_ticker": "CVNA",
+          "matches_sharadar_ticker": true
+        }
+      ],
+      "classification": "corporate_action_cache_artifact",
+      "note": "CA v okne, diff mimo +-10d cluster; pravdepodobne split za koncem overlapu"
+    }
+  ]
+}

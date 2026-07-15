@@ -1,0 +1,5 @@
+,variant,N,mean_pct,median_pct,win_pct,avg_winner_pct,avg_loser_pct,expectancy_pct,early_exit_pct,hold_mean_d,paired_diff_pp,ci_lo_pp,ci_hi_pp,significant,avoided_losers,missed_winners,missed_winner_mean_pct,avoided_loser_mean_pct,fill_gap_n,fill_gap_unresolved_n
+0,TIME_20,1044,7.233,4.393,65.04,15.213,-7.613,7.233,0.0,20.0,,,,,,,,,,
+1,RANK_50,1044,2.88,0.488,53.35,9.295,-4.457,2.88,98.08,8.23,-4.353,-6.32,-2.256,True,391.0,633.0,10.86,-6.28,0.0,0.0
+2,RANK_25,1044,2.294,0.421,54.21,7.649,-4.048,2.294,98.95,6.94,-4.939,-7.644,-2.247,True,402.0,630.0,12.15,-6.38,0.0,0.0
+3,RANK_100,1044,3.739,0.515,53.26,11.336,-4.917,3.739,93.97,9.85,-3.494,-5.266,-1.724,True,358.0,623.0,9.46,-6.15,0.0,0.0

@@ -1,0 +1,13 @@
+metric,scope,n,median,p05,p95,min,max
+ratio_candidate,suspect,493,1.4192,1.2608,2.6893,1.2501,13.9377
+ratio_candidate,all,1143,1.2154,1.0,1.7804,0.8266,13.9377
+ratio_sharefactor_mult,suspect,493,1.4192,1.2608,2.6893,1.2501,13.9377
+ratio_sharefactor_mult,all,1143,1.2154,1.0,1.7804,0.8266,13.9377
+ratio_sharefactor_div,suspect,493,1.4192,1.2608,2.6893,1.2501,13.9377
+ratio_sharefactor_div,all,1143,1.2154,1.0,1.7804,0.8266,13.9377
+price_ratio,suspect,493,1.4021,1.258,1.9495,1.137,2.9766
+price_ratio,all,1143,1.2139,1.0,1.7157,0.8266,2.9766
+anchor_adjusted_ratio,suspect,493,1.0,1.0,1.0,1.0,10.0
+anchor_adjusted_ratio,all,1143,1.0,1.0,1.0,0.9367,10.0
+relative_diff_pct,suspect,493,41.92,26.08,168.924,25.01,1293.77
+relative_diff_pct,all,1143,21.54,0.664,78.036,0.0,1293.77

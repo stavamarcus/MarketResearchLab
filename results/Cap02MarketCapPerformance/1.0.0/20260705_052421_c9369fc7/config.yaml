@@ -1,0 +1,8 @@
+date_from: '2025-07-09'
+date_to: '2026-08-01'
+notes: MRL-CAP-02 signal-level market-cap performance
+parameters:
+  market_cap_output_csv: C:\Users\stava\Projects\MarketResearchLab\results\diagnostics\cap01_market_cap_coverage_20260705_050531_sf1art_20260704_005521\market_cap_output.csv
+  market_cap_sha256: 70d392b4d242c3f832c4f446579774d51572fa7e4aeee98fdc34110fcd1acb26
+random_seed: null
+universe: sp500_rank_calendar

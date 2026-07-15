@@ -44,12 +44,20 @@ class ProviderBundle:
     Čtveřice specializovaných providerů pro jeden zdroj dat.
 
     ExperimentRunner dostane ProviderBundle a předá ho ContextBuilderu.
+
+    fundamental (MRL-FUND-01): optional MRLSharadarFundamentalSource;
+    None = fundamentals nekonfigurovány. build() ho NEsestavuje —
+    konstrukce (store load + full hash check) je explicitní přes
+    build_fundamental_source(), aby běhy bez fundamentals nenesly
+    žádný overhead a nemohly selhat na Sharadar konfiguraci.
+    Typ object: adapter je optional dependency (žádný import zde).
     """
     price: PriceProvider
     universe: UniverseProvider
     signal: SignalProvider
     metadata: MetadataProvider
     source_name: str
+    fundamental: object | None = None
 
 
 class ProviderFactory:
@@ -71,10 +79,56 @@ class ProviderFactory:
         logger.info(f"ProviderFactory: sestavuji '{active}' provider bundle")
 
         if active == "mdsm":
-            return self._build_mdsm(config)
+            bundle = self._build_mdsm(config)
+            # MRL-FUND-02: optional fundamentals — POUZE při explicitní
+            # aktivaci (enabled: true). Default false = nulový overhead,
+            # žádný experiment nedostane fundamentals náhodně. Chyba
+            # konstrukce (CACHE_MISSING, ...) je setup-level → build()
+            # selže a run se nespustí.
+            fundamental = self.build_fundamental_source()
+            if fundamental is not None:
+                bundle.fundamental = fundamental
+            return bundle
 
         raise ProviderFactoryError(
             f"Neznámý provider: '{active}'. Dostupné: ['mdsm']"
+        )
+
+    def build_fundamental_source(self, allow_latest: bool = False):
+        """
+        MRL-FUND-01: sestaví MRLSharadarFundamentalSource z optional sekce
+        `sharadar_fundamentals` v data_paths.yaml.
+
+        Returns:
+            MRLSharadarFundamentalSource | None
+            None pokud sekce chybí nebo enabled != true — existující
+            experimenty bez fundamentals se nesmí rozbít (schválený požadavek).
+
+        Raises:
+            ProviderFactoryError: sekce enabled, ale nekompletní
+            (adapter_config / snapshot_id chybí). Chyby konstrukce
+            (adapter neimportovatelný, CACHE_MISSING, ...) propadají
+            volajícímu — jsou setup-level a run se nesmí spustit.
+        """
+        config = self._load_config()
+        cfg = config.get("sharadar_fundamentals")
+        if not cfg or not cfg.get("enabled", False):
+            return None
+        adapter_config = cfg.get("adapter_config", "")
+        snapshot_id = cfg.get("snapshot_id", "")
+        if not adapter_config or not snapshot_id:
+            raise ProviderFactoryError(
+                "sharadar_fundamentals: enabled, ale chybí adapter_config "
+                "nebo snapshot_id v data_paths.yaml."
+            )
+        # Lazy import — adapter je optional dependency MRL.
+        from src.providers.sharadar_fundamental_source import (
+            build_fundamental_source,
+        )
+        return build_fundamental_source(
+            adapter_config_path=adapter_config,
+            snapshot_id=str(snapshot_id),
+            allow_latest=allow_latest,
         )
 
     def _build_mdsm(self, config: dict) -> ProviderBundle:

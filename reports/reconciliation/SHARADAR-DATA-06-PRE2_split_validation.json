@@ -1,0 +1,162 @@
+{
+  "actions_columns": [
+    "date",
+    "action",
+    "ticker",
+    "name",
+    "value",
+    "contraticker",
+    "contraname"
+  ],
+  "action_labels": {
+    "dividend": 547397,
+    "listed": 23128,
+    "delisted": 19138,
+    "tickerchangeto": 13360,
+    "tickerchangefrom": 13360,
+    "split": 12813,
+    "relation": 8568,
+    "initiated": 8401,
+    "acquisitionby": 8230,
+    "acquisitionof": 8230,
+    "bankruptcyliquidation": 3342,
+    "regulatorydelisting": 867,
+    "spinoff": 564,
+    "spunofffrom": 564,
+    "spinoffdividend": 520,
+    "adrratiosplit": 380,
+    "voluntarydelisting": 375,
+    "mergerto": 134,
+    "mergerfrom": 134
+  },
+  "n_split_events": 855,
+  "split_labels_used": "substring 'split'",
+  "candidates": [
+    {
+      "ticker": "CRWD",
+      "conid": "370757467",
+      "sharadar_ticker": "CRWD",
+      "split_date": "2026-07-02",
+      "split_value": "4.0",
+      "overlap_rows": 14,
+      "close": {
+        "mean_abs_diff": 446.689143,
+        "max_abs_diff": 572.355,
+        "match_rate": 0.1429
+      },
+      "closeunadj": {
+        "mean_abs_diff": 41.396429,
+        "max_abs_diff": 579.55,
+        "match_rate": 0.9286
+      },
+      "closeadj": {
+        "mean_abs_diff": 446.689143,
+        "max_abs_diff": 572.355,
+        "match_rate": 0.1429
+      },
+      "best_field": "closeunadj"
+    },
+    {
+      "ticker": "HON",
+      "conid": "4350",
+      "sharadar_ticker": "HON",
+      "split_date": "2026-06-29",
+      "split_value": "0.5",
+      "overlap_rows": 14,
+      "close": {
+        "mean_abs_diff": 208.348571,
+        "max_abs_diff": 232.21,
+        "match_rate": 0.0714
+      },
+      "closeunadj": {
+        "mean_abs_diff": 0.0,
+        "max_abs_diff": 0.0,
+        "match_rate": 1.0
+      },
+      "closeadj": {
+        "mean_abs_diff": 3.152071,
+        "max_abs_diff": 3.513,
+        "match_rate": 0.0714
+      },
+      "best_field": "closeunadj"
+    },
+    {
+      "ticker": "DD",
+      "conid": "887235923",
+      "sharadar_ticker": "DD",
+      "split_date": "2026-06-24",
+      "split_value": "0.33333",
+      "overlap_rows": 20,
+      "close": {
+        "mean_abs_diff": 0.0,
+        "max_abs_diff": 0.0,
+        "match_rate": 1.0
+      },
+      "closeunadj": {
+        "mean_abs_diff": 61.581,
+        "max_abs_diff": 97.08,
+        "match_rate": 0.35
+      },
+      "closeadj": {
+        "mean_abs_diff": 0.0,
+        "max_abs_diff": 0.0,
+        "match_rate": 1.0
+      },
+      "best_field": "close"
+    },
+    {
+      "ticker": "KLAC",
+      "conid": "270957",
+      "sharadar_ticker": "KLAC",
+      "split_date": "2026-06-12",
+      "split_value": "10.0",
+      "overlap_rows": 27,
+      "close": {
+        "mean_abs_diff": 892.776,
+        "max_abs_diff": 2170.476,
+        "match_rate": 0.5185
+      },
+      "closeunadj": {
+        "mean_abs_diff": 0.0,
+        "max_abs_diff": 0.0,
+        "match_rate": 1.0
+      },
+      "closeadj": {
+        "mean_abs_diff": 892.776,
+        "max_abs_diff": 2170.476,
+        "match_rate": 0.5185
+      },
+      "best_field": "closeunadj"
+    },
+    {
+      "ticker": "CVNA",
+      "conid": "274144952",
+      "sharadar_ticker": "CVNA",
+      "split_date": "2026-05-08",
+      "split_value": "5.0",
+      "overlap_rows": 28,
+      "close": {
+        "mean_abs_diff": 0.001286,
+        "max_abs_diff": 0.004,
+        "match_rate": 1.0
+      },
+      "closeunadj": {
+        "mean_abs_diff": 158.999286,
+        "max_abs_diff": 333.43,
+        "match_rate": 0.5
+      },
+      "closeadj": {
+        "mean_abs_diff": 0.001286,
+        "max_abs_diff": 0.004,
+        "match_rate": 1.0
+      },
+      "best_field": "close"
+    }
+  ],
+  "n_candidates_compared": 5,
+  "verdict": "MIXED",
+  "best_field_distribution": {
+    "closeunadj": 3,
+    "close": 2
+  }
+}

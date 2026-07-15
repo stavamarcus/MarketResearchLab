@@ -1,0 +1,48 @@
+# EXIT_002 — preregistrace RP-0012-LEADERSHIP-LOSS-EXIT
+# ZAMČENO 2026-07-02 (PM approval). Neupravovat podle výsledku.
+#
+# Launcher před během ověří shodu s LOCKED_PARAMS
+# v leadership_loss_edge.py — divergence = abort.
+
+experiment: LeadershipLossEdge
+version: "1.0.0"
+research_project: RP-0012-LEADERSHIP-LOSS-EXIT
+locked: "2026-07-02"
+
+params:
+  mle_top: 10
+  irc_top: 10
+  irc_lookback: 20
+  hold_days: 20
+  min_future_days: 22
+  rank_feature: "MLE_Rank_10d"
+  primary_threshold: 50
+  sensitivity_thresholds: [25, 100]
+  survival_days: [5, 10, 15, 20]
+  missing_rank_policy: "censored"
+  censor_investigate_pct: 1.0
+  bootstrap_b: 10000
+  bootstrap_seed: 42
+  min_observations: 100
+  entry: "close(D)"
+
+decision_criterion:
+  hypothesis: H1a
+  variant: RANK_50
+  test: "paired diff (RANK_50 - TIME_20), ticker-clustered bootstrap"
+  pass: "95% CI cele > 0"
+
+non_hypotheses:
+  - "RANK_25, RANK_100: sensitivity only, zadny a-posteriori prah"
+  - "prah 30 se dodatecne NEPRIDAVA (byl by sweep)"
+  - "IRC / kombinovane varianty VYLOUCENY — jiny mechanismus, samostatny RP"
+  - "survival statistika: deskriptivni, bez kriteria"
+
+locks:
+  - rank serie = MLE_Rank_10d, taz jako selekce
+  - rank as-of close(k), signal close, fill next open; baseline TIME_20 close-to-close
+  - missing rank v signal window D+1..D+19 = trade CENSORED ze vsech
+    variant i baseline (identicky matched set, zadna imputace);
+    report n + pct; pct > 1 % = investigace
+  - zadny price warmup (rank rule nepotrebuje)
+  - CACHE_ONLY, regime split DEFERRED, deterministic result_hash

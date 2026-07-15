@@ -1,0 +1,50 @@
+{
+  "run_id": "cap01_market_cap_coverage_20260705_050531_sf1art_20260704_005521",
+  "input": {
+    "path": "results\\diagnostics\\fund03_candidate_days_20260704_225140\\candidate_days.csv",
+    "sha256": "31747e692a7ab72c38ea5e88569c949ea91038b1e5f692da937583c09e186dd1",
+    "rows": 1144
+  },
+  "snapshot": {
+    "snapshot_id": "sf1art_20260704_005521",
+    "data_hash": "8438e5077ad91602215258664b257e5ece7d3c94e5fd02a329c92f46c7f436b0"
+  },
+  "fields": {
+    "sharesbas": true,
+    "sharefactor": true,
+    "marketcap_anchor": true
+  },
+  "tolerance_pct": 25.0,
+  "boundary_band_pct": 10.0,
+  "buckets": [
+    [
+      "Mega",
+      200000000000.0,
+      "inf"
+    ],
+    [
+      "Large-high",
+      50000000000.0,
+      200000000000.0
+    ],
+    [
+      "Large-low",
+      10000000000.0,
+      50000000000.0
+    ],
+    [
+      "Mid",
+      2000000000.0,
+      10000000000.0
+    ],
+    [
+      "Small",
+      0.0,
+      2000000000.0
+    ]
+  ],
+  "coverage_pct": 98.16,
+  "result": "PASS",
+  "forward_returns_used": false,
+  "current_market_cap_used": false
+}

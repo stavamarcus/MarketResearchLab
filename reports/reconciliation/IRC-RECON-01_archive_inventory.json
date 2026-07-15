@@ -1,0 +1,124 @@
+{
+  "schema": {
+    "columns": [
+      "date",
+      "lookback",
+      "rank",
+      "industry",
+      "sector",
+      "median_return",
+      "mean_return",
+      "member_count",
+      "advance_ratio",
+      "top_1_ticker",
+      "top_1_return",
+      "top_2_ticker",
+      "top_2_return",
+      "top_3_ticker",
+      "top_3_return",
+      "status"
+    ],
+    "row_count": 63720,
+    "has_lookback_col": true,
+    "has_rank_col": true,
+    "has_rank_20d_wide": false
+  },
+  "date": {
+    "min": "2025-06-02",
+    "max": "2026-06-27",
+    "unique_dates": 270,
+    "overlap_rows": 57820,
+    "overlap_unique_dates": 245
+  },
+  "rows_per_date": {
+    "min": 236,
+    "median": 236,
+    "max": 236
+  },
+  "taxonomy": {
+    "unique_industry": 59,
+    "industry_sample": [
+      "Advertising",
+      "Aerospace/Defense",
+      "Agriculture",
+      "Airlines",
+      "Apparel",
+      "Auto Manufacturers",
+      "Auto Parts&Equipment",
+      "Banks",
+      "Beverages",
+      "Biotechnology",
+      "Building Materials",
+      "Chemicals",
+      "Commercial Services",
+      "Computers",
+      "Cosmetics/Personal Care",
+      "Distribution/Wholesale",
+      "Diversified Finan Serv",
+      "Electric",
+      "Electrical Compo&Equip",
+      "Electronics",
+      "Energy-Alternate Sources",
+      "Engineering&Construction",
+      "Entertainment",
+      "Environmental Control",
+      "Food",
+      "Forest Products&Paper",
+      "Gas",
+      "Hand/Machine Tools",
+      "Healthcare-Products",
+      "Healthcare-Services"
+    ],
+    "unique_sector": 9,
+    "sector_sample": [
+      "Basic Materials",
+      "Communications",
+      "Consumer, Cyclical",
+      "Consumer, Non-cyclical",
+      "Energy",
+      "Financial",
+      "Industrial",
+      "Technology",
+      "Utilities"
+    ],
+    "has_subcategory": false
+  },
+  "duplicates": {
+    "by_date_industry_lookback": 0
+  },
+  "missing_dates": {
+    "mle_overlap_dates": 248,
+    "irc_overlap_dates": 245,
+    "in_mle_not_irc": [
+      "2026-05-31",
+      "2026-06-06",
+      "2026-06-13"
+    ],
+    "n_in_mle_not_irc": 3,
+    "in_irc_not_mle": [],
+    "n_in_irc_not_mle": 0
+  },
+  "rank20d": {
+    "format": "long (lookback col)",
+    "rank20_rows": 15930,
+    "rank20_dates": 270
+  },
+  "top10": {
+    "per_date_min": 10,
+    "per_date_median": 10,
+    "per_date_max": 10,
+    "dates_with_top10": 245,
+    "unique_industries_in_top10": 44
+  },
+  "mle_join": {
+    "mle_unique_industries": 59,
+    "irc_unique_industries": 59,
+    "common_industries": 59,
+    "irc_only_industries": [],
+    "mle_only_industries": [],
+    "industry_join_rate": 1.0
+  },
+  "mismatch_risks": [],
+  "warnings": [],
+  "verdict": "PASS"
+}

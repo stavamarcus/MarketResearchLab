@@ -1,0 +1,14 @@
+{
+  "N_candidate_days": 976,
+  "unique_tickers": 142,
+  "spearman_rho": -0.0905,
+  "rho_ci_lo": -0.1993,
+  "rho_ci_hi": 0.032,
+  "rho_significant": false,
+  "H1_supported": false,
+  "H0_rejected": false,
+  "quantile_spread_top_minus_bottom_pp": -5.264,
+  "rs_accel_min": -1.6015,
+  "rs_accel_median": -0.1439,
+  "rs_accel_max": 0.3406
+}

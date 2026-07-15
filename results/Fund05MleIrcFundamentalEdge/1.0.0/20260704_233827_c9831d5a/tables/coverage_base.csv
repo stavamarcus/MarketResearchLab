@@ -1,0 +1,2 @@
+,snapshot_id,contract_versions,requested_candidate_days,returned_snapshots,identity_excluded,missing_sf1,no_asof_date,stale_warnings,alias_count,coverage_pct,excluded_candidate_days,reason_code_counts
+0,sf1art_20260704_005521,"{'identity_contract_version': 'v1.0', 'provider_contract_version': 'v1.0'}",1144,1144,0,0,0,0,1,100.0,0,"{'IDENTITY_MISSING': 0, 'IDENTITY_AMBIGUOUS': 0, 'IDENTITY_TIER_NOT_ALLOWED': 0, 'NO_SF1_ROWS': 0, 'NO_SF1_ASOF_DATE': 0, 'ALIAS_PRICE_FIELD_FORBIDDEN': 0, 'CACHE_MISSING': 0, 'SCHEMA_MISMATCH': 0, 'UNKNOWN_ERROR': 0}"

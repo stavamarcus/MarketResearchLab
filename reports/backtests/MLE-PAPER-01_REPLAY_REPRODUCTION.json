@@ -1,0 +1,47 @@
+{
+  "task": "MLE-PAPER-01 replay reproduction (Faze 1B)",
+  "pandas_version": "3.0.3",
+  "sim_start": "2021-07-01",
+  "sim_end": "2026-07-02",
+  "sim_days": 1256,
+  "targets_bt04r": {
+    "total_return_pct": 337.652,
+    "cagr_pct": 34.504,
+    "max_drawdown_pct": -32.7,
+    "sharpe": 1.182,
+    "trades": 990,
+    "avg_exposure": 0.787
+  },
+  "replay_metrics": {
+    "total_return_pct": 337.652,
+    "cagr_pct": 34.504,
+    "max_drawdown_pct": -32.7,
+    "sharpe": 1.182,
+    "trades": 990,
+    "avg_exposure": 0.787
+  },
+  "golden_metrics": {
+    "total_return_pct": 337.652,
+    "cagr_pct": 34.504,
+    "max_drawdown_pct": -32.7,
+    "sharpe": 1.182,
+    "trades": 990,
+    "avg_exposure": 0.787
+  },
+  "sanity_anchor_golden_matches_published": true,
+  "replay_matches_targets": true,
+  "comparison": {
+    "equity_identical": true,
+    "first_diff_date": null,
+    "max_abs_diff": 0.0,
+    "n_diff_days": 0,
+    "trades_replay": 990,
+    "trades_golden": 990,
+    "trades_only_replay": [],
+    "trades_only_golden": [],
+    "trades_identical": true
+  },
+  "warnings": [],
+  "n_warnings": 0,
+  "VERDICT": "PASS"
+}

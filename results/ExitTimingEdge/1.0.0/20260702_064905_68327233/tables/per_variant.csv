@@ -1,0 +1,5 @@
+,variant,N,mean_pct,median_pct,win_pct,avg_winner_pct,avg_loser_pct,expectancy_pct,early_exit_pct,hold_mean_d,paired_diff_pp,ci_lo_pp,ci_hi_pp,significant,avoided_losers,missed_winners,missed_winner_mean_pct,avoided_loser_mean_pct,fill_gap_n,fill_gap_unresolved_n
+0,TIME_20,620,8.572,5.117,64.35,17.842,-8.164,8.572,0.0,20.0,,,,,,,,,,
+1,EMA_20,620,5.853,-0.745,47.26,19.712,-6.565,5.853,63.23,14.61,-2.719,-4.548,-1.112,True,143.0,249.0,10.3,-5.11,0.0,0.0
+2,EMA_10,620,4.101,-0.053,49.68,13.429,-5.107,4.101,89.68,10.62,-4.471,-7.088,-1.878,True,212.0,344.0,12.05,-6.31,0.0,0.0
+3,EMA_30,620,6.704,1.854,53.87,19.224,-7.918,6.704,42.9,16.59,-1.868,-3.056,-0.816,True,93.0,173.0,9.79,-4.43,0.0,0.0

@@ -54,11 +54,15 @@ class ContextBuilder:
         universe_provider: UniverseProvider,
         signal_provider: SignalProvider | None = None,
         metadata_provider: MetadataProvider | None = None,
+        fundamental_source=None,
     ) -> None:
         self._price_provider = price_provider
         self._universe_provider = universe_provider
         self._signal_provider = signal_provider
         self._metadata_provider = metadata_provider
+        # MRL-FUND-02: optional fundamentals (MRLSharadarFundamentalSource);
+        # None = fundamentals nekonfigurovány, chování beze změny.
+        self._fundamental_source = fundamental_source
 
     def build(
         self,
@@ -174,6 +178,13 @@ class ContextBuilder:
 
         # 5. Source hashes
         source_hashes = self._collect_hashes(active_conids, prices)
+        # MRL-FUND-02: reprodukovatelnost fundamentals — pinned snapshot
+        if self._fundamental_source is not None:
+            source_hashes["sf1_snapshot_id"] = \
+                self._fundamental_source.snapshot_id
+            dh = self._fundamental_source.snapshot_data_hash
+            if dh:
+                source_hashes["sf1_data_hash"] = dh
 
         # 5. Context metadata
         context_metadata = {}
@@ -192,6 +203,7 @@ class ContextBuilder:
             signal_provider=self._signal_provider,
             metadata_provider=self._metadata_provider,
             signals=signals,
+            fundamental_source=self._fundamental_source,
             source_hashes=source_hashes,
             metadata=context_metadata,
         )

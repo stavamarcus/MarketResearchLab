@@ -1,0 +1,6 @@
+market_cap_bucket,candidate_days,unique_conids,unique_dates
+Large-high,223,53,152
+Large-low,293,72,170
+Mega,118,26,90
+Mid,17,7,15
+UNBUCKETED,493,77,180

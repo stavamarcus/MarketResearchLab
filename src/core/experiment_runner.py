@@ -67,6 +67,7 @@ class ExperimentRunner:
             universe_provider=provider_bundle.universe,
             signal_provider=provider_bundle.signal,
             metadata_provider=provider_bundle.metadata,
+            fundamental_source=getattr(provider_bundle, "fundamental", None),
         )
 
     def run(

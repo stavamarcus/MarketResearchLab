@@ -1,0 +1,4 @@
+IRC_state_at_breach,N,pct,irc_rank_mean,irc_delta5_mean,reentry50_pct,post_breach_mean_pct,post_breach_med_pct,win_pct
+STRONG,772,72.8,3.8,-0.5,55.7,5.15,2.64,60.4
+WEAKENING,180,17.0,14.5,5.9,61.1,5.9,3.86,68.9
+COLLAPSED,109,10.3,27.8,16.5,45.9,0.53,0.52,57.0

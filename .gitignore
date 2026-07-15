@@ -1,26 +1,19 @@
-# Runtime artefakty — neverzovat
-results/
-registry/
-logs/
-
-# Python
+# ===== MarketResearchLab .gitignore =====
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
-*.pyd
-.Python
-*.egg-info/
-
-# Conda / virtualenv
-.env
-.venv
-env/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
+.pytest_cache/
+.ipynb_checkpoints/
+paper_trading/config/execution_profile_paper.json
+**/execution_profile_live*.json
+**/*credentials*
+**/*secret*
+paper_trading/logs/
+**/logs/
+*.log
+*.parquet
+*.feather
+*.h5
+data/cache/
+**/data/cache/
+*.tmp

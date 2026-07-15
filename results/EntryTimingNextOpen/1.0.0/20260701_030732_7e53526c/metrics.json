@@ -1,0 +1,15 @@
+{
+  "N_candidate_days": 1049,
+  "unique_tickers": 147,
+  "fill_pct": 100.0,
+  "entry_001_mean_ret_pct": 7.167,
+  "entry_001_median_pct": 4.336,
+  "entry_001_win_pct": 64.92,
+  "entry_004_mean_ret_pct": 7.141,
+  "entry_004_median_pct": 4.489,
+  "entry_004_win_pct": 65.11,
+  "matched_alpha_004_minus_001_pp": -0.026,
+  "matched_alpha_ci_lo": -0.3,
+  "matched_alpha_ci_hi": 0.234,
+  "matched_alpha_significant": false
+}

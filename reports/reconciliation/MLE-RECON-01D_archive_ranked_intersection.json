@@ -1,0 +1,664 @@
+{
+  "verdict": "WARN",
+  "range": [
+    "2025-07-09",
+    "2026-07-04"
+  ],
+  "archive_ranked_raw": {
+    "compared_cells": 1366717,
+    "ret_exact": 1332637,
+    "ret_micro": 3258,
+    "ret_mismatch": 30822,
+    "rank_exact": 1064143,
+    "rank_mismatch": 302574,
+    "gate10_rank_exact": 93423,
+    "gate10_rank_total": 124247,
+    "recon_missing": 0,
+    "top10_overlap_sum": 247.70000000000005,
+    "top10_overlap_days": 250,
+    "ret_exact_rate": 0.975064,
+    "ret_micro_rate": 0.002384,
+    "ret_mismatch_rate": 0.022552,
+    "rank_exact_rate": 0.778613,
+    "gate10_rank_exact_rate": 0.751914,
+    "archive_ranked_min": 493,
+    "archive_ranked_median": 497,
+    "archive_ranked_max": 499,
+    "top10_overlap_rate": 0.9908,
+    "mismatch_by_category": {
+      "corporate_action_cache_artifact": 330,
+      "clean": 29723,
+      "needs_manual_review_or_unmapped_adjustment_artifact": 73,
+      "identity_alias_class_mismatch": 698
+    },
+    "top_mismatches": [
+      {
+        "date": "2026-06-24",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 1,
+        "recon_rank": 338,
+        "arch_ret": 192.86,
+        "recon_ret": -2.38,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 1,
+        "recon_rank": 251,
+        "arch_ret": 192.86,
+        "recon_ret": 1.94,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-22",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 5,
+        "arch_ret": -86.05,
+        "recon_ret": 39.52,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-12",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 1,
+        "arch_ret": -86.75,
+        "recon_ret": 32.45,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-13",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 1,
+        "arch_ret": -86.75,
+        "recon_ret": 32.45,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-15",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 1,
+        "arch_ret": -86.78,
+        "recon_ret": 32.17,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 18,
+        "arch_ret": -88.76,
+        "recon_ret": 21.18,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-18",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 5,
+        "arch_ret": -87.82,
+        "recon_ret": 21.8,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-23",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 8,
+        "arch_ret": -88.4,
+        "recon_ret": 15.98,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 4,
+        "arch_ret": -86.78,
+        "recon_ret": 16.04,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-24",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 19,
+        "arch_ret": -88.76,
+        "recon_ret": 12.41,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-17",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 15,
+        "arch_ret": -88.77,
+        "recon_ret": 12.34,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-26",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 493,
+        "recon_rank": 219,
+        "arch_ret": -89.69,
+        "recon_ret": 3.1,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-27",
+        "ticker": "KLAC",
+        "lookback": 10,
+        "arch_rank": 496,
+        "recon_rank": 220,
+        "arch_ret": -89.69,
+        "recon_ret": 3.1,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-07-04",
+        "ticker": "CRWD",
+        "lookback": 10,
+        "arch_rank": 497,
+        "recon_rank": 32,
+        "arch_ret": -71.6,
+        "recon_ret": 13.61,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-13",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 4,
+        "recon_rank": 497,
+        "arch_ret": 19.17,
+        "recon_ret": -50.17,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-05",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 13,
+        "recon_rank": 497,
+        "arch_ret": 18.9,
+        "recon_ret": -50.28,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-12",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 8,
+        "recon_rank": 497,
+        "arch_ret": 18.71,
+        "recon_ret": -50.35,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-10",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 9,
+        "recon_rank": 497,
+        "arch_ret": 18.25,
+        "recon_ret": -50.55,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-11",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 10,
+        "recon_rank": 497,
+        "arch_ret": 17.96,
+        "recon_ret": -50.67,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-07",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 10,
+        "recon_rank": 497,
+        "arch_ret": 17.47,
+        "recon_ret": -50.87,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-14",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 4,
+        "recon_rank": 497,
+        "arch_ret": 16.28,
+        "recon_ret": -51.37,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-06",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 14,
+        "recon_rank": 497,
+        "arch_ret": 15.15,
+        "recon_ret": -51.84,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-04",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 17,
+        "recon_rank": 497,
+        "arch_ret": 11.29,
+        "recon_ret": -53.46,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2025-11-03",
+        "ticker": "DD",
+        "lookback": 10,
+        "arch_rank": 121,
+        "recon_rank": 497,
+        "arch_ret": 2.48,
+        "recon_ret": -57.15,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-30",
+        "ticker": "HON",
+        "lookback": 10,
+        "arch_rank": 175,
+        "recon_rank": 499,
+        "arch_ret": 3.4,
+        "recon_ret": -50.77,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "SMCI",
+        "lookback": 10,
+        "arch_rank": 491,
+        "recon_rank": 99,
+        "arch_ret": -20.15,
+        "recon_ret": 8.23,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "TECH",
+        "lookback": 10,
+        "arch_rank": 51,
+        "recon_rank": 5,
+        "arch_ret": 8.22,
+        "recon_ret": 34.67,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-10",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 380,
+        "recon_rank": 496,
+        "arch_ret": 0.49,
+        "recon_ret": -24.29,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-09",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 376,
+        "recon_rank": 496,
+        "arch_ret": -0.47,
+        "recon_ret": -25.02,
+        "category": "clean"
+      }
+    ]
+  },
+  "exception_neutral_clean": {
+    "compared_cells": 1342011,
+    "ret_exact": 1318923,
+    "ret_micro": 2361,
+    "ret_mismatch": 20727,
+    "rank_exact": 1293301,
+    "rank_mismatch": 48710,
+    "gate10_rank_exact": 117382,
+    "gate10_rank_total": 122001,
+    "recon_missing": 0,
+    "top10_overlap_sum": 249.1,
+    "top10_overlap_days": 250,
+    "ret_exact_rate": 0.982796,
+    "ret_micro_rate": 0.001759,
+    "ret_mismatch_rate": 0.015445,
+    "rank_exact_rate": 0.963704,
+    "gate10_rank_exact_rate": 0.96214,
+    "archive_ranked_min": 486,
+    "archive_ranked_median": 488,
+    "archive_ranked_max": 490,
+    "top10_overlap_rate": 0.9964,
+    "mismatch_by_category": {
+      "clean": 4619
+    },
+    "top_mismatches": [
+      {
+        "date": "2026-06-25",
+        "ticker": "SMCI",
+        "lookback": 10,
+        "arch_rank": 484,
+        "recon_rank": 97,
+        "arch_ret": -20.15,
+        "recon_ret": 8.23,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "TECH",
+        "lookback": 10,
+        "arch_rank": 50,
+        "recon_rank": 5,
+        "arch_ret": 8.22,
+        "recon_ret": 34.67,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-10",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 372,
+        "recon_rank": 487,
+        "arch_ret": 0.49,
+        "recon_ret": -24.29,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-09",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 368,
+        "recon_rank": 487,
+        "arch_ret": -0.47,
+        "recon_ret": -25.02,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "COHR",
+        "lookback": 10,
+        "arch_rank": 10,
+        "recon_rank": 452,
+        "arch_ret": 14.04,
+        "recon_ret": -10.33,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-11",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 412,
+        "recon_rank": 487,
+        "arch_ret": -1.81,
+        "recon_ret": -26.02,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "MU",
+        "lookback": 10,
+        "arch_rank": 20,
+        "recon_rank": 2,
+        "arch_ret": 12.03,
+        "recon_ret": 36.07,
+        "category": "clean"
+      },
+      {
+        "date": "2025-07-14",
+        "ticker": "FTV",
+        "lookback": 10,
+        "arch_rank": 448,
+        "recon_rank": 487,
+        "arch_ret": -3.28,
+        "recon_ret": -27.14,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "LITE",
+        "lookback": 10,
+        "arch_rank": 122,
+        "recon_rank": 475,
+        "arch_ret": 5.77,
+        "recon_ret": -14.94,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "TER",
+        "lookback": 10,
+        "arch_rank": 10,
+        "recon_rank": 3,
+        "arch_ret": 15.71,
+        "recon_ret": 35.78,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "CASY",
+        "lookback": 10,
+        "arch_rank": 97,
+        "recon_rank": 468,
+        "arch_ret": 5.28,
+        "recon_ret": -14.3,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-30",
+        "ticker": "FOXA",
+        "lookback": 10,
+        "arch_rank": 486,
+        "recon_rank": 377,
+        "arch_ret": -23.48,
+        "recon_ret": -4.75,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "HPE",
+        "lookback": 10,
+        "arch_rank": 196,
+        "recon_rank": 470,
+        "arch_ret": 4.3,
+        "recon_ret": -13.84,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-30",
+        "ticker": "WDC",
+        "lookback": 10,
+        "arch_rank": 15,
+        "recon_rank": 333,
+        "arch_ret": 15.8,
+        "recon_ret": -2.27,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "GLW",
+        "lookback": 10,
+        "arch_rank": 99,
+        "recon_rank": 464,
+        "arch_ret": 6.33,
+        "recon_ret": -11.47,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "GLW",
+        "lookback": 10,
+        "arch_rank": 5,
+        "recon_rank": 4,
+        "arch_ret": 18.33,
+        "recon_ret": 35.58,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "AMAT",
+        "lookback": 10,
+        "arch_rank": 7,
+        "recon_rank": 6,
+        "arch_ret": 17.98,
+        "recon_ret": 34.4,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "MPWR",
+        "lookback": 10,
+        "arch_rank": 81,
+        "recon_rank": 442,
+        "arch_ret": 7.13,
+        "recon_ret": -7.77,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "CAT",
+        "lookback": 10,
+        "arch_rank": 49,
+        "recon_rank": 14,
+        "arch_ret": 8.72,
+        "recon_ret": 23.46,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "GNRC",
+        "lookback": 10,
+        "arch_rank": 48,
+        "recon_rank": 15,
+        "arch_ret": 8.87,
+        "recon_ret": 23.44,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "WDC",
+        "lookback": 10,
+        "arch_rank": 2,
+        "recon_rank": 1,
+        "arch_ret": 24.36,
+        "recon_ret": 37.81,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-30",
+        "ticker": "DASH",
+        "lookback": 10,
+        "arch_rank": 4,
+        "recon_rank": 33,
+        "arch_ret": 22.74,
+        "recon_ret": 9.78,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "TER",
+        "lookback": 10,
+        "arch_rank": 4,
+        "recon_rank": 180,
+        "arch_ret": 17.04,
+        "recon_ret": 4.26,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "CIEN",
+        "lookback": 10,
+        "arch_rank": 478,
+        "recon_rank": 487,
+        "arch_ret": -18.64,
+        "recon_ret": -31.37,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "NRG",
+        "lookback": 10,
+        "arch_rank": 42,
+        "recon_rank": 17,
+        "arch_ret": 9.43,
+        "recon_ret": 21.93,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "ON",
+        "lookback": 10,
+        "arch_rank": 202,
+        "recon_rank": 444,
+        "arch_ret": 4.12,
+        "recon_ret": -8.08,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "LRCX",
+        "lookback": 10,
+        "arch_rank": 2,
+        "recon_rank": 24,
+        "arch_ret": 22.64,
+        "recon_ret": 10.45,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-16",
+        "ticker": "AMAT",
+        "lookback": 10,
+        "arch_rank": 1,
+        "recon_rank": 4,
+        "arch_ret": 27.85,
+        "recon_ret": 15.95,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "UAL",
+        "lookback": 10,
+        "arch_rank": 4,
+        "recon_rank": 7,
+        "arch_ret": 19.07,
+        "recon_ret": 30.96,
+        "category": "clean"
+      },
+      {
+        "date": "2026-06-25",
+        "ticker": "MOS",
+        "lookback": 10,
+        "arch_rank": 324,
+        "recon_rank": 75,
+        "arch_ret": -1.97,
+        "recon_ret": 9.64,
+        "category": "clean"
+      }
+    ]
+  }
+}

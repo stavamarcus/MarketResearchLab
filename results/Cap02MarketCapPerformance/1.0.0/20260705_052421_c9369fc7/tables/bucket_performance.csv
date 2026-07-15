@@ -1,0 +1,8 @@
+bucket,status,n_rows,unique_conids,unique_dates,n_ret_20d,median_20d,mean_20d,hit_20d,spyrel_median_20d,median_5d,median_10d,nonoverlap_n,nonoverlap_median_20d,detail
+ALL (baseline),BASELINE,1144,151,244,1111,2.4037,4.4432,0.5995,1.8638,0.6579,1.4147,266,1.9699,referenční celý vzorek
+Mega,PASS,263,32,129,247,6.8871,10.9612,0.7166,5.5607,1.6191,3.5121,43,3.3086,median20 6.8871 vs vzorek 2.4037 (diff +4.4834); 5/10D konzist=True; non-overlap 3.3086 vs 1.9699
+Large-high,FAIL,355,64,189,353,3.6541,4.2887,0.6459,2.4806,0.5125,1.4939,82,1.9447,median20 3.6541 vs vzorek 2.4037 (diff +1.2504); 5/10D konzist=False; non-overlap 1.9447 vs 1.9699
+Large-low,PASS,487,77,215,475,0.0652,1.28,0.5032,-0.2159,0.5159,0.5948,127,1.0791,median20 0.0652 vs vzorek 2.4037 (diff -2.3385); 5/10D konzist=True; non-overlap 1.0791 vs 1.9699
+Mid,INCONCLUSIVE,18,7,16,18,4.8227,5.4623,0.7778,2.5434,0.2722,2.5666,9,4.8172,N_20d=18 < 30
+Small,NOT_INTERPRETED,0,0,0,0,,,,,,,0,,Small se neinterpretuje
+UNBUCKETED,NOT_INTERPRETED,21,5,19,18,-0.4362,0.486,0.4444,-0.2061,-0.0474,4.7096,5,-1.7839,UNBUCKETED se neinterpretuje

@@ -1,0 +1,13 @@
+{
+  "mode": "paper",
+  "broker": "ibkr",
+  "host": "127.0.0.1",
+  "port": 7497,
+  "port_note": "TWS paper default. IB Gateway paper would typically use 4002, but Phase 2A default is TWS paper.",
+  "client_id": 101,
+  "client_id_note": "Execution client_id NESMI kolidovat s GDU/MDSM-Lite client_id z jeho configu ani s MDSM-Lite/scripts/test_ibkr_connection.py (99). Dve session se stejnym id se navzajem vykopnou.",
+  "expected_account_id": "",
+  "expected_account_id_note": "POVINNE doplnit rucne ID paper uctu (typicky zacina DU...). Connection test FAILne, dokud je prazdne.",
+  "allow_live_orders": false,
+  "read_only_test_mode": true
+}

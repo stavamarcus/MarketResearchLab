@@ -1,0 +1,2381 @@
+{
+  "tested_files": 503,
+  "matched_files": 503,
+  "missing_old_mdsm": [],
+  "missing_new_view": [],
+  "total_overlap_rows": 122193,
+  "categories": {
+    "exact_match": 354,
+    "pass_micro": 125,
+    "warn": 15,
+    "corporate_action_cache_artifact": 5,
+    "identity_alias_class_mismatch": 3,
+    "needs_manual_review_or_unmapped_adjustment_artifact": 1,
+    "true_reconciliation_fail": 0
+  },
+  "per_file_flagged": [
+    {
+      "file": "10672_D1.parquet",
+      "conid": "10672",
+      "close_mean_abs_diff": 0.000783,
+      "close_max_abs_diff": 0.191,
+      "close_match_rate": 0.9959,
+      "classification": "warn"
+    },
+    {
+      "file": "129348130_D1.parquet",
+      "conid": "129348130",
+      "close_mean_abs_diff": 3.719631,
+      "close_max_abs_diff": 4.82,
+      "close_match_rate": 0.0,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "NWS",
+      "sharadar_ticker": "NWSA",
+      "classification": "identity_alias_class_mismatch"
+    },
+    {
+      "file": "208813720_D1.parquet",
+      "conid": "208813720",
+      "close_mean_abs_diff": 1.130656,
+      "close_max_abs_diff": 4.19,
+      "close_match_rate": 0.1516,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "GOOG",
+      "sharadar_ticker": "GOOGL",
+      "classification": "identity_alias_class_mismatch"
+    },
+    {
+      "file": "2586035_D1.parquet",
+      "conid": "2586035",
+      "close_mean_abs_diff": 0.00041,
+      "close_max_abs_diff": 0.05,
+      "close_match_rate": 0.9918,
+      "classification": "warn"
+    },
+    {
+      "file": "262397910_D1.parquet",
+      "conid": "262397910",
+      "close_mean_abs_diff": 0.000246,
+      "close_max_abs_diff": 0.06,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "265598_D1.parquet",
+      "conid": "265598",
+      "close_mean_abs_diff": 0.000484,
+      "close_max_abs_diff": 0.118,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "267748_D1.parquet",
+      "conid": "267748",
+      "close_mean_abs_diff": 0.989713,
+      "close_max_abs_diff": 2.26,
+      "close_match_rate": 0.4918,
+      "classification": "warn"
+    },
+    {
+      "file": "269315_D1.parquet",
+      "conid": "269315",
+      "close_mean_abs_diff": 0.01,
+      "close_max_abs_diff": 2.43,
+      "close_match_rate": 0.9959,
+      "classification": "warn"
+    },
+    {
+      "file": "269318_D1.parquet",
+      "conid": "269318",
+      "close_mean_abs_diff": 0.011619,
+      "close_max_abs_diff": 1.31,
+      "close_match_rate": 0.9877,
+      "classification": "warn"
+    },
+    {
+      "file": "270957_D1.parquet",
+      "conid": "270957",
+      "close_mean_abs_diff": 1149.483578,
+      "close_max_abs_diff": 2170.476,
+      "close_match_rate": 0.041,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-06-12",
+        "value": "10.0"
+      },
+      "boundary": "2026-06-12",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "274499_D1.parquet",
+      "conid": "274499",
+      "close_mean_abs_diff": 0.000922,
+      "close_max_abs_diff": 0.21,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "356858007_D1.parquet",
+      "conid": "356858007",
+      "close_mean_abs_diff": 6.125984,
+      "close_max_abs_diff": 9.21,
+      "close_match_rate": 0.0,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "FOX",
+      "sharadar_ticker": "FOXA",
+      "classification": "identity_alias_class_mismatch"
+    },
+    {
+      "file": "370757467_D1.parquet",
+      "conid": "370757467",
+      "close_mean_abs_diff": 365.051238,
+      "close_max_abs_diff": 586.628,
+      "close_match_rate": 0.0,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-07-02",
+        "value": "4.0"
+      },
+      "boundary": null,
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "4350_D1.parquet",
+      "conid": "4350",
+      "close_mean_abs_diff": 221.652705,
+      "close_max_abs_diff": 253.1,
+      "close_match_rate": 0.0,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-06-29",
+        "value": "0.5"
+      },
+      "boundary": null,
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "47965865_D1.parquet",
+      "conid": "47965865",
+      "close_mean_abs_diff": 0.002377,
+      "close_max_abs_diff": 0.42,
+      "close_match_rate": 0.9959,
+      "classification": "warn"
+    },
+    {
+      "file": "4886_D1.parquet",
+      "conid": "4886",
+      "close_mean_abs_diff": 23.325246,
+      "close_max_abs_diff": 41.94,
+      "close_match_rate": 0.3893,
+      "boundary": "2026-02-10",
+      "note": "large diff bez alias a bez price-impact CA v okne",
+      "classification": "needs_manual_review_or_unmapped_adjustment_artifact"
+    },
+    {
+      "file": "491932113_D1.parquet",
+      "conid": "491932113",
+      "close_mean_abs_diff": 0.002377,
+      "close_max_abs_diff": 0.55,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "6442_D1.parquet",
+      "conid": "6442",
+      "close_mean_abs_diff": 0.000328,
+      "close_max_abs_diff": 0.07,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "691984365_D1.parquet",
+      "conid": "691984365",
+      "close_mean_abs_diff": 0.0025,
+      "close_max_abs_diff": 0.25,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "748351585_D1.parquet",
+      "conid": "748351585",
+      "close_mean_abs_diff": 8.965,
+      "close_max_abs_diff": 13.56,
+      "close_match_rate": 0.2459,
+      "price_impact_ca": {
+        "action": "spinoffdividend",
+        "date": "2026-04-01",
+        "value": "10.6167"
+      },
+      "boundary": "2026-04-01",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "8377_D1.parquet",
+      "conid": "8377",
+      "close_mean_abs_diff": 0.001025,
+      "close_max_abs_diff": 0.09,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "887235923_D1.parquet",
+      "conid": "887235923",
+      "close_mean_abs_diff": 44.85,
+      "close_max_abs_diff": 143.4,
+      "close_match_rate": 0.6639,
+      "price_impact_ca": {
+        "action": "spinoffdividend",
+        "date": "2025-11-03",
+        "value": "142.50014"
+      },
+      "boundary": "2025-11-03",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "9199_D1.parquet",
+      "conid": "9199",
+      "close_mean_abs_diff": 0.000369,
+      "close_max_abs_diff": 0.09,
+      "close_match_rate": 1.0,
+      "classification": "warn"
+    },
+    {
+      "file": "95703740_D1.parquet",
+      "conid": "95703740",
+      "close_mean_abs_diff": 0.001762,
+      "close_max_abs_diff": 0.43,
+      "close_match_rate": 0.9959,
+      "classification": "warn"
+    }
+  ],
+  "top_20_largest_diffs": [
+    {
+      "file": "270957_D1.parquet",
+      "conid": "270957",
+      "close_mean_abs_diff": 1149.483578,
+      "close_max_abs_diff": 2170.476,
+      "close_match_rate": 0.041,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-06-12",
+        "value": "10.0"
+      },
+      "boundary": "2026-06-12",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "370757467_D1.parquet",
+      "conid": "370757467",
+      "close_mean_abs_diff": 365.051238,
+      "close_max_abs_diff": 586.628,
+      "close_match_rate": 0.0,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-07-02",
+        "value": "4.0"
+      },
+      "boundary": null,
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "4350_D1.parquet",
+      "conid": "4350",
+      "close_mean_abs_diff": 221.652705,
+      "close_max_abs_diff": 253.1,
+      "close_match_rate": 0.0,
+      "price_impact_ca": {
+        "action": "split",
+        "date": "2026-06-29",
+        "value": "0.5"
+      },
+      "boundary": null,
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "887235923_D1.parquet",
+      "conid": "887235923",
+      "close_mean_abs_diff": 44.85,
+      "close_max_abs_diff": 143.4,
+      "close_match_rate": 0.6639,
+      "price_impact_ca": {
+        "action": "spinoffdividend",
+        "date": "2025-11-03",
+        "value": "142.50014"
+      },
+      "boundary": "2025-11-03",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "4886_D1.parquet",
+      "conid": "4886",
+      "close_mean_abs_diff": 23.325246,
+      "close_max_abs_diff": 41.94,
+      "close_match_rate": 0.3893,
+      "boundary": "2026-02-10",
+      "note": "large diff bez alias a bez price-impact CA v okne",
+      "classification": "needs_manual_review_or_unmapped_adjustment_artifact"
+    },
+    {
+      "file": "748351585_D1.parquet",
+      "conid": "748351585",
+      "close_mean_abs_diff": 8.965,
+      "close_max_abs_diff": 13.56,
+      "close_match_rate": 0.2459,
+      "price_impact_ca": {
+        "action": "spinoffdividend",
+        "date": "2026-04-01",
+        "value": "10.6167"
+      },
+      "boundary": "2026-04-01",
+      "classification": "corporate_action_cache_artifact"
+    },
+    {
+      "file": "356858007_D1.parquet",
+      "conid": "356858007",
+      "close_mean_abs_diff": 6.125984,
+      "close_max_abs_diff": 9.21,
+      "close_match_rate": 0.0,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "FOX",
+      "sharadar_ticker": "FOXA",
+      "classification": "identity_alias_class_mismatch"
+    },
+    {
+      "file": "129348130_D1.parquet",
+      "conid": "129348130",
+      "close_mean_abs_diff": 3.719631,
+      "close_max_abs_diff": 4.82,
+      "close_match_rate": 0.0,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "NWS",
+      "sharadar_ticker": "NWSA",
+      "classification": "identity_alias_class_mismatch"
+    },
+    {
+      "file": "208813720_D1.parquet",
+      "conid": "208813720",
+      "close_mean_abs_diff": 1.130656,
+      "close_max_abs_diff": 4.19,
+      "close_match_rate": 0.1516,
+      "alias_flag": "COMPANY_LEVEL_ALIAS",
+      "ticker": "GOOG",
+      "sharadar_ticker": "GOOGL",
+      "classification": "identity_alias_class_mismatch"
+    }
+  ],
+  "volume": [
+    {
+      "file": "10098_D1.parquet",
+      "volume_mean_abs_pct_diff": 150.4444
+    },
+    {
+      "file": "10174_D1.parquet",
+      "volume_mean_abs_pct_diff": 180.4295
+    },
+    {
+      "file": "10188791_D1.parquet",
+      "volume_mean_abs_pct_diff": 205.9443
+    },
+    {
+      "file": "101898880_D1.parquet",
+      "volume_mean_abs_pct_diff": 225.2369
+    },
+    {
+      "file": "10260_D1.parquet",
+      "volume_mean_abs_pct_diff": 176.4449
+    },
+    {
+      "file": "10291_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.0904
+    },
+    {
+      "file": "1035459_D1.parquet",
+      "volume_mean_abs_pct_diff": 236.667
+    },
+    {
+      "file": "10375_D1.parquet",
+      "volume_mean_abs_pct_diff": 164.1363
+    },
+    {
+      "file": "10376_D1.parquet",
+      "volume_mean_abs_pct_diff": 97.8123
+    },
+    {
+      "file": "10497_D1.parquet",
+      "volume_mean_abs_pct_diff": 91.2483
+    },
+    {
+      "file": "10517_D1.parquet",
+      "volume_mean_abs_pct_diff": 234.8413
+    },
+    {
+      "file": "10557_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.3589
+    },
+    {
+      "file": "105669270_D1.parquet",
+      "volume_mean_abs_pct_diff": 230.0178
+    },
+    {
+      "file": "10672_D1.parquet",
+      "volume_mean_abs_pct_diff": 175.8918
+    },
+    {
+      "file": "107113386_D1.parquet",
+      "volume_mean_abs_pct_diff": 76.1667
+    },
+    {
+      "file": "10763362_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.2083
+    },
+    {
+      "file": "10794_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.0378
+    },
+    {
+      "file": "10811_D1.parquet",
+      "volume_mean_abs_pct_diff": 199.9504
+    },
+    {
+      "file": "10880_D1.parquet",
+      "volume_mean_abs_pct_diff": 150.0802
+    },
+    {
+      "file": "10885_D1.parquet",
+      "volume_mean_abs_pct_diff": 196.0364
+    },
+    {
+      "file": "109911821_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.5068
+    },
+    {
+      "file": "11000_D1.parquet",
+      "volume_mean_abs_pct_diff": 191.5861
+    },
+    {
+      "file": "11005_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.0946
+    },
+    {
+      "file": "110176011_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.728
+    },
+    {
+      "file": "11017_D1.parquet",
+      "volume_mean_abs_pct_diff": 243.2342
+    },
+    {
+      "file": "11020_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.5616
+    },
+    {
+      "file": "11031_D1.parquet",
+      "volume_mean_abs_pct_diff": 128.8119
+    },
+    {
+      "file": "11032_D1.parquet",
+      "volume_mean_abs_pct_diff": 248.5641
+    },
+    {
+      "file": "11054_D1.parquet",
+      "volume_mean_abs_pct_diff": 203.2287
+    },
+    {
+      "file": "110619459_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.4583
+    },
+    {
+      "file": "11080_D1.parquet",
+      "volume_mean_abs_pct_diff": 221.0816
+    },
+    {
+      "file": "11094_D1.parquet",
+      "volume_mean_abs_pct_diff": 98.8613
+    },
+    {
+      "file": "11109_D1.parquet",
+      "volume_mean_abs_pct_diff": 210.0616
+    },
+    {
+      "file": "11240_D1.parquet",
+      "volume_mean_abs_pct_diff": 233.8249
+    },
+    {
+      "file": "11257_D1.parquet",
+      "volume_mean_abs_pct_diff": 264.4907
+    },
+    {
+      "file": "11295_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.0001
+    },
+    {
+      "file": "113599091_D1.parquet",
+      "volume_mean_abs_pct_diff": 180.1856
+    },
+    {
+      "file": "11459264_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.8703
+    },
+    {
+      "file": "11477774_D1.parquet",
+      "volume_mean_abs_pct_diff": 233.2822
+    },
+    {
+      "file": "11520_D1.parquet",
+      "volume_mean_abs_pct_diff": 73.369
+    },
+    {
+      "file": "115324104_D1.parquet",
+      "volume_mean_abs_pct_diff": 209.2657
+    },
+    {
+      "file": "115441080_D1.parquet",
+      "volume_mean_abs_pct_diff": 223.9417
+    },
+    {
+      "file": "11574_D1.parquet",
+      "volume_mean_abs_pct_diff": 248.155
+    },
+    {
+      "file": "11656_D1.parquet",
+      "volume_mean_abs_pct_diff": 242.361
+    },
+    {
+      "file": "11669769_D1.parquet",
+      "volume_mean_abs_pct_diff": 162.0484
+    },
+    {
+      "file": "11697_D1.parquet",
+      "volume_mean_abs_pct_diff": 89.7113
+    },
+    {
+      "file": "11700_D1.parquet",
+      "volume_mean_abs_pct_diff": 208.3779
+    },
+    {
+      "file": "118017869_D1.parquet",
+      "volume_mean_abs_pct_diff": 77.3201
+    },
+    {
+      "file": "118089500_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.552
+    },
+    {
+      "file": "11899_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.6399
+    },
+    {
+      "file": "11905_D1.parquet",
+      "volume_mean_abs_pct_diff": 176.3633
+    },
+    {
+      "file": "12002_D1.parquet",
+      "volume_mean_abs_pct_diff": 90.7976
+    },
+    {
+      "file": "120643512_D1.parquet",
+      "volume_mean_abs_pct_diff": 131.9754
+    },
+    {
+      "file": "12120_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.063
+    },
+    {
+      "file": "121507047_D1.parquet",
+      "volume_mean_abs_pct_diff": 232.2402
+    },
+    {
+      "file": "121665622_D1.parquet",
+      "volume_mean_abs_pct_diff": 198.2809
+    },
+    {
+      "file": "1217009_D1.parquet",
+      "volume_mean_abs_pct_diff": 235.1272
+    },
+    {
+      "file": "12200_D1.parquet",
+      "volume_mean_abs_pct_diff": 157.0421
+    },
+    {
+      "file": "12225_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.9495
+    },
+    {
+      "file": "12259_D1.parquet",
+      "volume_mean_abs_pct_diff": 102.259
+    },
+    {
+      "file": "12300_D1.parquet",
+      "volume_mean_abs_pct_diff": 185.05
+    },
+    {
+      "file": "12581_D1.parquet",
+      "volume_mean_abs_pct_diff": 220.2747
+    },
+    {
+      "file": "125980227_D1.parquet",
+      "volume_mean_abs_pct_diff": 220.9789
+    },
+    {
+      "file": "12729_D1.parquet",
+      "volume_mean_abs_pct_diff": 92.7742
+    },
+    {
+      "file": "12814_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.4251
+    },
+    {
+      "file": "12851783_D1.parquet",
+      "volume_mean_abs_pct_diff": 190.9049
+    },
+    {
+      "file": "12869_D1.parquet",
+      "volume_mean_abs_pct_diff": 75.8215
+    },
+    {
+      "file": "129348126_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.1261
+    },
+    {
+      "file": "129348130_D1.parquet",
+      "volume_mean_abs_pct_diff": 780.5694
+    },
+    {
+      "file": "130432552_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.7498
+    },
+    {
+      "file": "13096_D1.parquet",
+      "volume_mean_abs_pct_diff": 238.0094
+    },
+    {
+      "file": "13101_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.3376
+    },
+    {
+      "file": "13116_D1.parquet",
+      "volume_mean_abs_pct_diff": 97.3393
+    },
+    {
+      "file": "13181_D1.parquet",
+      "volume_mean_abs_pct_diff": 260.1123
+    },
+    {
+      "file": "13206_D1.parquet",
+      "volume_mean_abs_pct_diff": 242.264
+    },
+    {
+      "file": "13272_D1.parquet",
+      "volume_mean_abs_pct_diff": 69.6224
+    },
+    {
+      "file": "13284_D1.parquet",
+      "volume_mean_abs_pct_diff": 212.3853
+    },
+    {
+      "file": "13379_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.9453
+    },
+    {
+      "file": "134280621_D1.parquet",
+      "volume_mean_abs_pct_diff": 252.9993
+    },
+    {
+      "file": "13497_D1.parquet",
+      "volume_mean_abs_pct_diff": 215.2241
+    },
+    {
+      "file": "13515_D1.parquet",
+      "volume_mean_abs_pct_diff": 81.1653
+    },
+    {
+      "file": "136254493_D1.parquet",
+      "volume_mean_abs_pct_diff": 198.9086
+    },
+    {
+      "file": "136370275_D1.parquet",
+      "volume_mean_abs_pct_diff": 202.3021
+    },
+    {
+      "file": "13681_D1.parquet",
+      "volume_mean_abs_pct_diff": 69.9076
+    },
+    {
+      "file": "13805_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.2904
+    },
+    {
+      "file": "13824_D1.parquet",
+      "volume_mean_abs_pct_diff": 190.3456
+    },
+    {
+      "file": "138438437_D1.parquet",
+      "volume_mean_abs_pct_diff": 220.8612
+    },
+    {
+      "file": "13865082_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.4457
+    },
+    {
+      "file": "13878278_D1.parquet",
+      "volume_mean_abs_pct_diff": 166.034
+    },
+    {
+      "file": "13909_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.9921
+    },
+    {
+      "file": "13949_D1.parquet",
+      "volume_mean_abs_pct_diff": 147.4101
+    },
+    {
+      "file": "13977_D1.parquet",
+      "volume_mean_abs_pct_diff": 191.6446
+    },
+    {
+      "file": "1448477_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.1631
+    },
+    {
+      "file": "1448494_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.8643
+    },
+    {
+      "file": "15124833_D1.parquet",
+      "volume_mean_abs_pct_diff": 185.6609
+    },
+    {
+      "file": "15130038_D1.parquet",
+      "volume_mean_abs_pct_diff": 231.6973
+    },
+    {
+      "file": "1520593_D1.parquet",
+      "volume_mean_abs_pct_diff": 77.6874
+    },
+    {
+      "file": "153068487_D1.parquet",
+      "volume_mean_abs_pct_diff": 214.0509
+    },
+    {
+      "file": "162231797_D1.parquet",
+      "volume_mean_abs_pct_diff": 199.7119
+    },
+    {
+      "file": "16454492_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.1124
+    },
+    {
+      "file": "167955370_D1.parquet",
+      "volume_mean_abs_pct_diff": 175.1619
+    },
+    {
+      "file": "170167160_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.2797
+    },
+    {
+      "file": "1714996_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.0847
+    },
+    {
+      "file": "1715006_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.8415
+    },
+    {
+      "file": "172729810_D1.parquet",
+      "volume_mean_abs_pct_diff": 184.3765
+    },
+    {
+      "file": "173962302_D1.parquet",
+      "volume_mean_abs_pct_diff": 85.0572
+    },
+    {
+      "file": "176571182_D1.parquet",
+      "volume_mean_abs_pct_diff": 185.6266
+    },
+    {
+      "file": "180350774_D1.parquet",
+      "volume_mean_abs_pct_diff": 231.2852
+    },
+    {
+      "file": "181387075_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.0559
+    },
+    {
+      "file": "181764593_D1.parquet",
+      "volume_mean_abs_pct_diff": 115.6012
+    },
+    {
+      "file": "182880167_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.6491
+    },
+    {
+      "file": "1847145_D1.parquet",
+      "volume_mean_abs_pct_diff": 231.0678
+    },
+    {
+      "file": "188986978_D1.parquet",
+      "volume_mean_abs_pct_diff": 229.0012
+    },
+    {
+      "file": "196986496_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.3612
+    },
+    {
+      "file": "198560237_D1.parquet",
+      "volume_mean_abs_pct_diff": 235.4896
+    },
+    {
+      "file": "199169586_D1.parquet",
+      "volume_mean_abs_pct_diff": 141.7661
+    },
+    {
+      "file": "199169591_D1.parquet",
+      "volume_mean_abs_pct_diff": 163.6832
+    },
+    {
+      "file": "2009113_D1.parquet",
+      "volume_mean_abs_pct_diff": 238.4513
+    },
+    {
+      "file": "201113895_D1.parquet",
+      "volume_mean_abs_pct_diff": 73.3348
+    },
+    {
+      "file": "207739931_D1.parquet",
+      "volume_mean_abs_pct_diff": 225.3261
+    },
+    {
+      "file": "208813719_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.6623
+    },
+    {
+      "file": "208813720_D1.parquet",
+      "volume_mean_abs_pct_diff": 122.4473
+    },
+    {
+      "file": "209411798_D1.parquet",
+      "volume_mean_abs_pct_diff": 140.2562
+    },
+    {
+      "file": "209411801_D1.parquet",
+      "volume_mean_abs_pct_diff": 146.5101
+    },
+    {
+      "file": "212671971_D1.parquet",
+      "volume_mean_abs_pct_diff": 173.8505
+    },
+    {
+      "file": "216386790_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.4711
+    },
+    {
+      "file": "217947855_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.6622
+    },
+    {
+      "file": "218939694_D1.parquet",
+      "volume_mean_abs_pct_diff": 82.5537
+    },
+    {
+      "file": "229629397_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.7922
+    },
+    {
+      "file": "233674866_D1.parquet",
+      "volume_mean_abs_pct_diff": 197.6862
+    },
+    {
+      "file": "236074120_D1.parquet",
+      "volume_mean_abs_pct_diff": 176.0333
+    },
+    {
+      "file": "244164913_D1.parquet",
+      "volume_mean_abs_pct_diff": 219.8955
+    },
+    {
+      "file": "2459465_D1.parquet",
+      "volume_mean_abs_pct_diff": 251.4811
+    },
+    {
+      "file": "248755440_D1.parquet",
+      "volume_mean_abs_pct_diff": 157.4685
+    },
+    {
+      "file": "254457731_D1.parquet",
+      "volume_mean_abs_pct_diff": 179.8461
+    },
+    {
+      "file": "2560358_D1.parquet",
+      "volume_mean_abs_pct_diff": 131.0814
+    },
+    {
+      "file": "257944570_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.8182
+    },
+    {
+      "file": "2585323_D1.parquet",
+      "volume_mean_abs_pct_diff": 226.9718
+    },
+    {
+      "file": "2585629_D1.parquet",
+      "volume_mean_abs_pct_diff": 91.8299
+    },
+    {
+      "file": "2585769_D1.parquet",
+      "volume_mean_abs_pct_diff": 184.7686
+    },
+    {
+      "file": "2586035_D1.parquet",
+      "volume_mean_abs_pct_diff": 138.4344
+    },
+    {
+      "file": "262397910_D1.parquet",
+      "volume_mean_abs_pct_diff": 238.409
+    },
+    {
+      "file": "264405214_D1.parquet",
+      "volume_mean_abs_pct_diff": 156.1744
+    },
+    {
+      "file": "265598_D1.parquet",
+      "volume_mean_abs_pct_diff": 75.0817
+    },
+    {
+      "file": "265681_D1.parquet",
+      "volume_mean_abs_pct_diff": 240.5142
+    },
+    {
+      "file": "265768_D1.parquet",
+      "volume_mean_abs_pct_diff": 74.4142
+    },
+    {
+      "file": "266093_D1.parquet",
+      "volume_mean_abs_pct_diff": 89.0158
+    },
+    {
+      "file": "266145_D1.parquet",
+      "volume_mean_abs_pct_diff": 94.4167
+    },
+    {
+      "file": "266822_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.7427
+    },
+    {
+      "file": "267265_D1.parquet",
+      "volume_mean_abs_pct_diff": 104.6344
+    },
+    {
+      "file": "26734397_D1.parquet",
+      "volume_mean_abs_pct_diff": 240.7277
+    },
+    {
+      "file": "267661_D1.parquet",
+      "volume_mean_abs_pct_diff": 319.8922
+    },
+    {
+      "file": "267748_D1.parquet",
+      "volume_mean_abs_pct_diff": 149.4731
+    },
+    {
+      "file": "268084_D1.parquet",
+      "volume_mean_abs_pct_diff": 194.2587
+    },
+    {
+      "file": "268149_D1.parquet",
+      "volume_mean_abs_pct_diff": 285.5236
+    },
+    {
+      "file": "268376_D1.parquet",
+      "volume_mean_abs_pct_diff": 196.9972
+    },
+    {
+      "file": "268627_D1.parquet",
+      "volume_mean_abs_pct_diff": 199.9974
+    },
+    {
+      "file": "268995_D1.parquet",
+      "volume_mean_abs_pct_diff": 226.4487
+    },
+    {
+      "file": "269082_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.6328
+    },
+    {
+      "file": "269120_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.6318
+    },
+    {
+      "file": "269280_D1.parquet",
+      "volume_mean_abs_pct_diff": 21.6921
+    },
+    {
+      "file": "269315_D1.parquet",
+      "volume_mean_abs_pct_diff": 181.948
+    },
+    {
+      "file": "269318_D1.parquet",
+      "volume_mean_abs_pct_diff": 177.1385
+    },
+    {
+      "file": "269753_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.4854
+    },
+    {
+      "file": "270018_D1.parquet",
+      "volume_mean_abs_pct_diff": 130.773
+    },
+    {
+      "file": "270413_D1.parquet",
+      "volume_mean_abs_pct_diff": 106.9233
+    },
+    {
+      "file": "270639_D1.parquet",
+      "volume_mean_abs_pct_diff": 134.8152
+    },
+    {
+      "file": "270662_D1.parquet",
+      "volume_mean_abs_pct_diff": 86.4105
+    },
+    {
+      "file": "270825_D1.parquet",
+      "volume_mean_abs_pct_diff": 234.1997
+    },
+    {
+      "file": "270869_D1.parquet",
+      "volume_mean_abs_pct_diff": 245.8408
+    },
+    {
+      "file": "270957_D1.parquet",
+      "volume_mean_abs_pct_diff": 265.3432
+    },
+    {
+      "file": "271556_D1.parquet",
+      "volume_mean_abs_pct_diff": 193.3816
+    },
+    {
+      "file": "271568_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.7645
+    },
+    {
+      "file": "272093_D1.parquet",
+      "volume_mean_abs_pct_diff": 79.6656
+    },
+    {
+      "file": "272104927_D1.parquet",
+      "volume_mean_abs_pct_diff": 96.1328
+    },
+    {
+      "file": "272314_D1.parquet",
+      "volume_mean_abs_pct_diff": 125.3171
+    },
+    {
+      "file": "272565_D1.parquet",
+      "volume_mean_abs_pct_diff": 252.2183
+    },
+    {
+      "file": "272667_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.6548
+    },
+    {
+      "file": "272800_D1.parquet",
+      "volume_mean_abs_pct_diff": 156.1763
+    },
+    {
+      "file": "272942_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.0404
+    },
+    {
+      "file": "272992_D1.parquet",
+      "volume_mean_abs_pct_diff": 238.9403
+    },
+    {
+      "file": "272997_D1.parquet",
+      "volume_mean_abs_pct_diff": 107.2373
+    },
+    {
+      "file": "2730877_D1.parquet",
+      "volume_mean_abs_pct_diff": 228.0372
+    },
+    {
+      "file": "2730980_D1.parquet",
+      "volume_mean_abs_pct_diff": 230.7023
+    },
+    {
+      "file": "273544_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.0811
+    },
+    {
+      "file": "273733_D1.parquet",
+      "volume_mean_abs_pct_diff": 96.4979
+    },
+    {
+      "file": "273815_D1.parquet",
+      "volume_mean_abs_pct_diff": 127.7381
+    },
+    {
+      "file": "273939_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.8038
+    },
+    {
+      "file": "274105_D1.parquet",
+      "volume_mean_abs_pct_diff": 185.6009
+    },
+    {
+      "file": "274144952_D1.parquet",
+      "volume_mean_abs_pct_diff": 65.9869
+    },
+    {
+      "file": "274499_D1.parquet",
+      "volume_mean_abs_pct_diff": 81.0675
+    },
+    {
+      "file": "275294_D1.parquet",
+      "volume_mean_abs_pct_diff": 221.7412
+    },
+    {
+      "file": "275321_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.0317
+    },
+    {
+      "file": "275405_D1.parquet",
+      "volume_mean_abs_pct_diff": 203.0108
+    },
+    {
+      "file": "275850_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.3239
+    },
+    {
+      "file": "276066_D1.parquet",
+      "volume_mean_abs_pct_diff": 203.4679
+    },
+    {
+      "file": "276304_D1.parquet",
+      "volume_mean_abs_pct_diff": 229.8269
+    },
+    {
+      "file": "27727424_D1.parquet",
+      "volume_mean_abs_pct_diff": 257.4314
+    },
+    {
+      "file": "281316445_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.5269
+    },
+    {
+      "file": "2841574_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.3058
+    },
+    {
+      "file": "292080616_D1.parquet",
+      "volume_mean_abs_pct_diff": 162.7823
+    },
+    {
+      "file": "292491487_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.0887
+    },
+    {
+      "file": "29380756_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.4362
+    },
+    {
+      "file": "295757261_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.9897
+    },
+    {
+      "file": "29624264_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.6482
+    },
+    {
+      "file": "29831612_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.7186
+    },
+    {
+      "file": "30351205_D1.parquet",
+      "volume_mean_abs_pct_diff": 214.1354
+    },
+    {
+      "file": "308728373_D1.parquet",
+      "volume_mean_abs_pct_diff": 34.9344
+    },
+    {
+      "file": "313130367_D1.parquet",
+      "volume_mean_abs_pct_diff": 73.8868
+    },
+    {
+      "file": "31832526_D1.parquet",
+      "volume_mean_abs_pct_diff": 229.1746
+    },
+    {
+      "file": "320106069_D1.parquet",
+      "volume_mean_abs_pct_diff": 244.7858
+    },
+    {
+      "file": "3206042_D1.parquet",
+      "volume_mean_abs_pct_diff": 205.9382
+    },
+    {
+      "file": "32106121_D1.parquet",
+      "volume_mean_abs_pct_diff": 28.2653
+    },
+    {
+      "file": "321328198_D1.parquet",
+      "volume_mean_abs_pct_diff": 178.1307
+    },
+    {
+      "file": "324057162_D1.parquet",
+      "volume_mean_abs_pct_diff": 158.9862
+    },
+    {
+      "file": "32602412_D1.parquet",
+      "volume_mean_abs_pct_diff": 181.7327
+    },
+    {
+      "file": "3265376_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.7405
+    },
+    {
+      "file": "33191300_D1.parquet",
+      "volume_mean_abs_pct_diff": 194.5126
+    },
+    {
+      "file": "33837089_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.4208
+    },
+    {
+      "file": "341904548_D1.parquet",
+      "volume_mean_abs_pct_diff": 180.846
+    },
+    {
+      "file": "344809106_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.8724
+    },
+    {
+      "file": "346218218_D1.parquet",
+      "volume_mean_abs_pct_diff": 173.997
+    },
+    {
+      "file": "346403540_D1.parquet",
+      "volume_mean_abs_pct_diff": 81.4254
+    },
+    {
+      "file": "34851874_D1.parquet",
+      "volume_mean_abs_pct_diff": 185.5596
+    },
+    {
+      "file": "35447205_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.8834
+    },
+    {
+      "file": "356576040_D1.parquet",
+      "volume_mean_abs_pct_diff": 140.2719
+    },
+    {
+      "file": "356858007_D1.parquet",
+      "volume_mean_abs_pct_diff": 661.1947
+    },
+    {
+      "file": "356858008_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.6584
+    },
+    {
+      "file": "358060563_D1.parquet",
+      "volume_mean_abs_pct_diff": 249.6082
+    },
+    {
+      "file": "35970258_D1.parquet",
+      "volume_mean_abs_pct_diff": 94.6368
+    },
+    {
+      "file": "3629755_D1.parquet",
+      "volume_mean_abs_pct_diff": 91.6482
+    },
+    {
+      "file": "36320731_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.408
+    },
+    {
+      "file": "365207014_D1.parquet",
+      "volume_mean_abs_pct_diff": 157.2888
+    },
+    {
+      "file": "3655640_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.8353
+    },
+    {
+      "file": "366239371_D1.parquet",
+      "volume_mean_abs_pct_diff": 194.0266
+    },
+    {
+      "file": "3691937_D1.parquet",
+      "volume_mean_abs_pct_diff": 179.4127
+    },
+    {
+      "file": "37018770_D1.parquet",
+      "volume_mean_abs_pct_diff": 137.951
+    },
+    {
+      "file": "370757467_D1.parquet",
+      "volume_mean_abs_pct_diff": 315.518
+    },
+    {
+      "file": "371886040_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.2452
+    },
+    {
+      "file": "372834689_D1.parquet",
+      "volume_mean_abs_pct_diff": 196.3587
+    },
+    {
+      "file": "37511786_D1.parquet",
+      "volume_mean_abs_pct_diff": 219.0741
+    },
+    {
+      "file": "375868349_D1.parquet",
+      "volume_mean_abs_pct_diff": 262.7571
+    },
+    {
+      "file": "37655664_D1.parquet",
+      "volume_mean_abs_pct_diff": 140.9414
+    },
+    {
+      "file": "37866641_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.4465
+    },
+    {
+      "file": "38285434_D1.parquet",
+      "volume_mean_abs_pct_diff": 21.0936
+    },
+    {
+      "file": "383858515_D1.parquet",
+      "volume_mean_abs_pct_diff": 197.1398
+    },
+    {
+      "file": "38685693_D1.parquet",
+      "volume_mean_abs_pct_diff": 80.2111
+    },
+    {
+      "file": "389700396_D1.parquet",
+      "volume_mean_abs_pct_diff": 137.3041
+    },
+    {
+      "file": "390332324_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.4972
+    },
+    {
+      "file": "39195389_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.5578
+    },
+    {
+      "file": "393460310_D1.parquet",
+      "volume_mean_abs_pct_diff": 169.7359
+    },
+    {
+      "file": "402783527_D1.parquet",
+      "volume_mean_abs_pct_diff": 67.5983
+    },
+    {
+      "file": "403121976_D1.parquet",
+      "volume_mean_abs_pct_diff": 213.3717
+    },
+    {
+      "file": "4044062_D1.parquet",
+      "volume_mean_abs_pct_diff": 214.2763
+    },
+    {
+      "file": "404509190_D1.parquet",
+      "volume_mean_abs_pct_diff": 182.3849
+    },
+    {
+      "file": "4065_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.8292
+    },
+    {
+      "file": "406709270_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.7882
+    },
+    {
+      "file": "41045553_D1.parquet",
+      "volume_mean_abs_pct_diff": 75.6774
+    },
+    {
+      "file": "410755397_D1.parquet",
+      "volume_mean_abs_pct_diff": 178.1369
+    },
+    {
+      "file": "410755402_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.6918
+    },
+    {
+      "file": "414366114_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.6621
+    },
+    {
+      "file": "415342104_D1.parquet",
+      "volume_mean_abs_pct_diff": 226.1435
+    },
+    {
+      "file": "4157_D1.parquet",
+      "volume_mean_abs_pct_diff": 98.5146
+    },
+    {
+      "file": "41622169_D1.parquet",
+      "volume_mean_abs_pct_diff": 198.9465
+    },
+    {
+      "file": "4165_D1.parquet",
+      "volume_mean_abs_pct_diff": 204.4784
+    },
+    {
+      "file": "4173050_D1.parquet",
+      "volume_mean_abs_pct_diff": 264.642
+    },
+    {
+      "file": "4211_D1.parquet",
+      "volume_mean_abs_pct_diff": 267.0677
+    },
+    {
+      "file": "4227_D1.parquet",
+      "volume_mean_abs_pct_diff": 236.914
+    },
+    {
+      "file": "43150617_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.4347
+    },
+    {
+      "file": "4325_D1.parquet",
+      "volume_mean_abs_pct_diff": 193.092
+    },
+    {
+      "file": "43274444_D1.parquet",
+      "volume_mean_abs_pct_diff": 184.3424
+    },
+    {
+      "file": "4347086_D1.parquet",
+      "volume_mean_abs_pct_diff": 204.3373
+    },
+    {
+      "file": "4347_D1.parquet",
+      "volume_mean_abs_pct_diff": 199.7643
+    },
+    {
+      "file": "4350_D1.parquet",
+      "volume_mean_abs_pct_diff": 120.0966
+    },
+    {
+      "file": "43523793_D1.parquet",
+      "volume_mean_abs_pct_diff": 249.7281
+    },
+    {
+      "file": "4357_D1.parquet",
+      "volume_mean_abs_pct_diff": 241.3237
+    },
+    {
+      "file": "43645865_D1.parquet",
+      "volume_mean_abs_pct_diff": 191.7872
+    },
+    {
+      "file": "4369855_D1.parquet",
+      "volume_mean_abs_pct_diff": 224.29
+    },
+    {
+      "file": "4391_D1.parquet",
+      "volume_mean_abs_pct_diff": 151.5395
+    },
+    {
+      "file": "4392_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.6602
+    },
+    {
+      "file": "44001820_D1.parquet",
+      "volume_mean_abs_pct_diff": 160.3689
+    },
+    {
+      "file": "44061838_D1.parquet",
+      "volume_mean_abs_pct_diff": 225.6745
+    },
+    {
+      "file": "4430948_D1.parquet",
+      "volume_mean_abs_pct_diff": 82.0813
+    },
+    {
+      "file": "444857009_D1.parquet",
+      "volume_mean_abs_pct_diff": 146.2562
+    },
+    {
+      "file": "4457282_D1.parquet",
+      "volume_mean_abs_pct_diff": 91.1623
+    },
+    {
+      "file": "4457287_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.0555
+    },
+    {
+      "file": "4487_D1.parquet",
+      "volume_mean_abs_pct_diff": 84.0471
+    },
+    {
+      "file": "4493_D1.parquet",
+      "volume_mean_abs_pct_diff": 182.1128
+    },
+    {
+      "file": "44986804_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.0701
+    },
+    {
+      "file": "45127739_D1.parquet",
+      "volume_mean_abs_pct_diff": 81.6759
+    },
+    {
+      "file": "45157951_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.4867
+    },
+    {
+      "file": "454859695_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.8826
+    },
+    {
+      "file": "459309417_D1.parquet",
+      "volume_mean_abs_pct_diff": 191.6262
+    },
+    {
+      "file": "459530964_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.0255
+    },
+    {
+      "file": "4627828_D1.parquet",
+      "volume_mean_abs_pct_diff": 89.1304
+    },
+    {
+      "file": "463654490_D1.parquet",
+      "volume_mean_abs_pct_diff": 135.1932
+    },
+    {
+      "file": "4644_D1.parquet",
+      "volume_mean_abs_pct_diff": 285.8288
+    },
+    {
+      "file": "4661_D1.parquet",
+      "volume_mean_abs_pct_diff": 249.9272
+    },
+    {
+      "file": "4694_D1.parquet",
+      "volume_mean_abs_pct_diff": 252.3397
+    },
+    {
+      "file": "46970422_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.8806
+    },
+    {
+      "file": "470458975_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.2067
+    },
+    {
+      "file": "47101335_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.7384
+    },
+    {
+      "file": "4721_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.8856
+    },
+    {
+      "file": "4726021_D1.parquet",
+      "volume_mean_abs_pct_diff": 236.8467
+    },
+    {
+      "file": "4728523_D1.parquet",
+      "volume_mean_abs_pct_diff": 170.469
+    },
+    {
+      "file": "4728759_D1.parquet",
+      "volume_mean_abs_pct_diff": 209.1398
+    },
+    {
+      "file": "4730254_D1.parquet",
+      "volume_mean_abs_pct_diff": 373.6698
+    },
+    {
+      "file": "474515500_D1.parquet",
+      "volume_mean_abs_pct_diff": 159.5522
+    },
+    {
+      "file": "4750_D1.parquet",
+      "volume_mean_abs_pct_diff": 32.8359
+    },
+    {
+      "file": "47550606_D1.parquet",
+      "volume_mean_abs_pct_diff": 168.0345
+    },
+    {
+      "file": "4762_D1.parquet",
+      "volume_mean_abs_pct_diff": 177.9695
+    },
+    {
+      "file": "47965865_D1.parquet",
+      "volume_mean_abs_pct_diff": 177.6789
+    },
+    {
+      "file": "4815747_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.0084
+    },
+    {
+      "file": "481691285_D1.parquet",
+      "volume_mean_abs_pct_diff": 159.5698
+    },
+    {
+      "file": "4817352_D1.parquet",
+      "volume_mean_abs_pct_diff": 212.1945
+    },
+    {
+      "file": "4817_D1.parquet",
+      "volume_mean_abs_pct_diff": 199.4425
+    },
+    {
+      "file": "481863646_D1.parquet",
+      "volume_mean_abs_pct_diff": 63.8264
+    },
+    {
+      "file": "4886_D1.parquet",
+      "volume_mean_abs_pct_diff": 175.6994
+    },
+    {
+      "file": "4901_D1.parquet",
+      "volume_mean_abs_pct_diff": 142.6827
+    },
+    {
+      "file": "4906_D1.parquet",
+      "volume_mean_abs_pct_diff": 160.9548
+    },
+    {
+      "file": "491932113_D1.parquet",
+      "volume_mean_abs_pct_diff": 77.4369
+    },
+    {
+      "file": "4931_D1.parquet",
+      "volume_mean_abs_pct_diff": 168.9857
+    },
+    {
+      "file": "49388062_D1.parquet",
+      "volume_mean_abs_pct_diff": 213.2198
+    },
+    {
+      "file": "49462172_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.1585
+    },
+    {
+      "file": "49588376_D1.parquet",
+      "volume_mean_abs_pct_diff": 196.6908
+    },
+    {
+      "file": "498843743_D1.parquet",
+      "volume_mean_abs_pct_diff": 73.527
+    },
+    {
+      "file": "49921110_D1.parquet",
+      "volume_mean_abs_pct_diff": 252.0417
+    },
+    {
+      "file": "5019164_D1.parquet",
+      "volume_mean_abs_pct_diff": 236.4139
+    },
+    {
+      "file": "5021340_D1.parquet",
+      "volume_mean_abs_pct_diff": 202.8201
+    },
+    {
+      "file": "5026974_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.841
+    },
+    {
+      "file": "5026984_D1.parquet",
+      "volume_mean_abs_pct_diff": 224.2849
+    },
+    {
+      "file": "504546674_D1.parquet",
+      "volume_mean_abs_pct_diff": 141.55
+    },
+    {
+      "file": "5052_D1.parquet",
+      "volume_mean_abs_pct_diff": 201.305
+    },
+    {
+      "file": "50530752_D1.parquet",
+      "volume_mean_abs_pct_diff": 236.0239
+    },
+    {
+      "file": "5100583_D1.parquet",
+      "volume_mean_abs_pct_diff": 85.4144
+    },
+    {
+      "file": "5111_D1.parquet",
+      "volume_mean_abs_pct_diff": 178.8154
+    },
+    {
+      "file": "5270_D1.parquet",
+      "volume_mean_abs_pct_diff": 167.9065
+    },
+    {
+      "file": "535271307_D1.parquet",
+      "volume_mean_abs_pct_diff": 256.4236
+    },
+    {
+      "file": "535288388_D1.parquet",
+      "volume_mean_abs_pct_diff": 183.646
+    },
+    {
+      "file": "538132976_D1.parquet",
+      "volume_mean_abs_pct_diff": 76.1734
+    },
+    {
+      "file": "5402_D1.parquet",
+      "volume_mean_abs_pct_diff": 135.5093
+    },
+    {
+      "file": "5407_D1.parquet",
+      "volume_mean_abs_pct_diff": 237.2977
+    },
+    {
+      "file": "5437_D1.parquet",
+      "volume_mean_abs_pct_diff": 80.6352
+    },
+    {
+      "file": "554208351_D1.parquet",
+      "volume_mean_abs_pct_diff": 135.7433
+    },
+    {
+      "file": "5552_D1.parquet",
+      "volume_mean_abs_pct_diff": 86.2232
+    },
+    {
+      "file": "5651_D1.parquet",
+      "volume_mean_abs_pct_diff": 210.7558
+    },
+    {
+      "file": "5684_D1.parquet",
+      "volume_mean_abs_pct_diff": 214.9399
+    },
+    {
+      "file": "5749_D1.parquet",
+      "volume_mean_abs_pct_diff": 191.6177
+    },
+    {
+      "file": "57698865_D1.parquet",
+      "volume_mean_abs_pct_diff": 171.4876
+    },
+    {
+      "file": "5794_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.4161
+    },
+    {
+      "file": "582332987_D1.parquet",
+      "volume_mean_abs_pct_diff": 247.9831
+    },
+    {
+      "file": "5840_D1.parquet",
+      "volume_mean_abs_pct_diff": 222.6466
+    },
+    {
+      "file": "584127832_D1.parquet",
+      "volume_mean_abs_pct_diff": 66.0917
+    },
+    {
+      "file": "5941_D1.parquet",
+      "volume_mean_abs_pct_diff": 202.4493
+    },
+    {
+      "file": "5980_D1.parquet",
+      "volume_mean_abs_pct_diff": 156.2659
+    },
+    {
+      "file": "6004_D1.parquet",
+      "volume_mean_abs_pct_diff": 227.9462
+    },
+    {
+      "file": "601776309_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.6558
+    },
+    {
+      "file": "611191_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.9317
+    },
+    {
+      "file": "61319701_D1.parquet",
+      "volume_mean_abs_pct_diff": 201.7546
+    },
+    {
+      "file": "6150_D1.parquet",
+      "volume_mean_abs_pct_diff": 161.4893
+    },
+    {
+      "file": "617155599_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.411
+    },
+    {
+      "file": "6207_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.8214
+    },
+    {
+      "file": "6220356_D1.parquet",
+      "volume_mean_abs_pct_diff": 233.541
+    },
+    {
+      "file": "6231002_D1.parquet",
+      "volume_mean_abs_pct_diff": 182.5166
+    },
+    {
+      "file": "6248713_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.562
+    },
+    {
+      "file": "629043863_D1.parquet",
+      "volume_mean_abs_pct_diff": 139.0129
+    },
+    {
+      "file": "6327_D1.parquet",
+      "volume_mean_abs_pct_diff": 193.8742
+    },
+    {
+      "file": "6340773_D1.parquet",
+      "volume_mean_abs_pct_diff": 100.9631
+    },
+    {
+      "file": "6393_D1.parquet",
+      "volume_mean_abs_pct_diff": 84.0465
+    },
+    {
+      "file": "6437_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.3643
+    },
+    {
+      "file": "6442_D1.parquet",
+      "volume_mean_abs_pct_diff": 190.2677
+    },
+    {
+      "file": "6459_D1.parquet",
+      "volume_mean_abs_pct_diff": 179.7018
+    },
+    {
+      "file": "6477725_D1.parquet",
+      "volume_mean_abs_pct_diff": 97.2855
+    },
+    {
+      "file": "6477908_D1.parquet",
+      "volume_mean_abs_pct_diff": 26.678
+    },
+    {
+      "file": "6478024_D1.parquet",
+      "volume_mean_abs_pct_diff": 231.0074
+    },
+    {
+      "file": "6478095_D1.parquet",
+      "volume_mean_abs_pct_diff": 226.6731
+    },
+    {
+      "file": "6478131_D1.parquet",
+      "volume_mean_abs_pct_diff": 260.7043
+    },
+    {
+      "file": "6497_D1.parquet",
+      "volume_mean_abs_pct_diff": 96.9876
+    },
+    {
+      "file": "6517_D1.parquet",
+      "volume_mean_abs_pct_diff": 238.2549
+    },
+    {
+      "file": "652841542_D1.parquet",
+      "volume_mean_abs_pct_diff": 243.7766
+    },
+    {
+      "file": "655276609_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.6958
+    },
+    {
+      "file": "655276622_D1.parquet",
+      "volume_mean_abs_pct_diff": 234.4229
+    },
+    {
+      "file": "6585_D1.parquet",
+      "volume_mean_abs_pct_diff": 237.8031
+    },
+    {
+      "file": "6607487_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.5725
+    },
+    {
+      "file": "6607613_D1.parquet",
+      "volume_mean_abs_pct_diff": 187.5214
+    },
+    {
+      "file": "6607708_D1.parquet",
+      "volume_mean_abs_pct_diff": 25.2135
+    },
+    {
+      "file": "6608113_D1.parquet",
+      "volume_mean_abs_pct_diff": 93.5996
+    },
+    {
+      "file": "6608432_D1.parquet",
+      "volume_mean_abs_pct_diff": 81.2901
+    },
+    {
+      "file": "661440_D1.parquet",
+      "volume_mean_abs_pct_diff": 219.3251
+    },
+    {
+      "file": "661547_D1.parquet",
+      "volume_mean_abs_pct_diff": 186.5212
+    },
+    {
+      "file": "661633_D1.parquet",
+      "volume_mean_abs_pct_diff": 234.2263
+    },
+    {
+      "file": "663174498_D1.parquet",
+      "volume_mean_abs_pct_diff": 230.1302
+    },
+    {
+      "file": "6682_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.3332
+    },
+    {
+      "file": "6691_D1.parquet",
+      "volume_mean_abs_pct_diff": 239.0611
+    },
+    {
+      "file": "6726677_D1.parquet",
+      "volume_mean_abs_pct_diff": 203.9485
+    },
+    {
+      "file": "6735_D1.parquet",
+      "volume_mean_abs_pct_diff": 190.9002
+    },
+    {
+      "file": "6737_D1.parquet",
+      "volume_mean_abs_pct_diff": 209.7519
+    },
+    {
+      "file": "67889930_D1.parquet",
+      "volume_mean_abs_pct_diff": 197.9361
+    },
+    {
+      "file": "6820_D1.parquet",
+      "volume_mean_abs_pct_diff": 113.2673
+    },
+    {
+      "file": "6842_D1.parquet",
+      "volume_mean_abs_pct_diff": 205.0737
+    },
+    {
+      "file": "685217803_D1.parquet",
+      "volume_mean_abs_pct_diff": 201.9123
+    },
+    {
+      "file": "6858322_D1.parquet",
+      "volume_mean_abs_pct_diff": 180.2467
+    },
+    {
+      "file": "6890_D1.parquet",
+      "volume_mean_abs_pct_diff": 202.1212
+    },
+    {
+      "file": "6917_D1.parquet",
+      "volume_mean_abs_pct_diff": 195.4817
+    },
+    {
+      "file": "691984360_D1.parquet",
+      "volume_mean_abs_pct_diff": 233.6245
+    },
+    {
+      "file": "691984365_D1.parquet",
+      "volume_mean_abs_pct_diff": 72.7346
+    },
+    {
+      "file": "691994611_D1.parquet",
+      "volume_mean_abs_pct_diff": 86.0841
+    },
+    {
+      "file": "69293559_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.2535
+    },
+    {
+      "file": "6946_D1.parquet",
+      "volume_mean_abs_pct_diff": 244.1663
+    },
+    {
+      "file": "6969_D1.parquet",
+      "volume_mean_abs_pct_diff": 209.0355
+    },
+    {
+      "file": "70101545_D1.parquet",
+      "volume_mean_abs_pct_diff": 201.5252
+    },
+    {
+      "file": "70212228_D1.parquet",
+      "volume_mean_abs_pct_diff": 207.1319
+    },
+    {
+      "file": "70236214_D1.parquet",
+      "volume_mean_abs_pct_diff": 219.6048
+    },
+    {
+      "file": "703660032_D1.parquet",
+      "volume_mean_abs_pct_diff": 87.1968
+    },
+    {
+      "file": "7089_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.1978
+    },
+    {
+      "file": "713434903_D1.parquet",
+      "volume_mean_abs_pct_diff": 170.4121
+    },
+    {
+      "file": "72063691_D1.parquet",
+      "volume_mean_abs_pct_diff": 82.0986
+    },
+    {
+      "file": "72529783_D1.parquet",
+      "volume_mean_abs_pct_diff": 212.3598
+    },
+    {
+      "file": "729193719_D1.parquet",
+      "volume_mean_abs_pct_diff": 101.0591
+    },
+    {
+      "file": "731466408_D1.parquet",
+      "volume_mean_abs_pct_diff": 204.2054
+    },
+    {
+      "file": "731466419_D1.parquet",
+      "volume_mean_abs_pct_diff": 139.238
+    },
+    {
+      "file": "732440574_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.0952
+    },
+    {
+      "file": "73354293_D1.parquet",
+      "volume_mean_abs_pct_diff": 202.0128
+    },
+    {
+      "file": "740948854_D1.parquet",
+      "volume_mean_abs_pct_diff": 177.265
+    },
+    {
+      "file": "748351585_D1.parquet",
+      "volume_mean_abs_pct_diff": 169.336
+    },
+    {
+      "file": "74866700_D1.parquet",
+      "volume_mean_abs_pct_diff": 165.8279
+    },
+    {
+      "file": "7496_D1.parquet",
+      "volume_mean_abs_pct_diff": 91.7023
+    },
+    {
+      "file": "754442_D1.parquet",
+      "volume_mean_abs_pct_diff": 155.2193
+    },
+    {
+      "file": "754956_D1.parquet",
+      "volume_mean_abs_pct_diff": 220.4514
+    },
+    {
+      "file": "755864_D1.parquet",
+      "volume_mean_abs_pct_diff": 33.6203
+    },
+    {
+      "file": "75960201_D1.parquet",
+      "volume_mean_abs_pct_diff": 189.6699
+    },
+    {
+      "file": "760250490_D1.parquet",
+      "volume_mean_abs_pct_diff": 63.0317
+    },
+    {
+      "file": "7616_D1.parquet",
+      "volume_mean_abs_pct_diff": 157.45
+    },
+    {
+      "file": "76227954_D1.parquet",
+      "volume_mean_abs_pct_diff": 89.9887
+    },
+    {
+      "file": "7655_D1.parquet",
+      "volume_mean_abs_pct_diff": 171.3661
+    },
+    {
+      "file": "76791198_D1.parquet",
+      "volume_mean_abs_pct_diff": 278.2183
+    },
+    {
+      "file": "76792991_D1.parquet",
+      "volume_mean_abs_pct_diff": 53.511
+    },
+    {
+      "file": "7740411_D1.parquet",
+      "volume_mean_abs_pct_diff": 250.3437
+    },
+    {
+      "file": "7745_D1.parquet",
+      "volume_mean_abs_pct_diff": 245.1088
+    },
+    {
+      "file": "77791077_D1.parquet",
+      "volume_mean_abs_pct_diff": 268.2858
+    },
+    {
+      "file": "7867_D1.parquet",
+      "volume_mean_abs_pct_diff": 26.9945
+    },
+    {
+      "file": "7890_D1.parquet",
+      "volume_mean_abs_pct_diff": 149.5722
+    },
+    {
+      "file": "7930_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.6641
+    },
+    {
+      "file": "79498203_D1.parquet",
+      "volume_mean_abs_pct_diff": 165.9952
+    },
+    {
+      "file": "804144296_D1.parquet",
+      "volume_mean_abs_pct_diff": 139.0648
+    },
+    {
+      "file": "8057_D1.parquet",
+      "volume_mean_abs_pct_diff": 159.8804
+    },
+    {
+      "file": "8093509_D1.parquet",
+      "volume_mean_abs_pct_diff": 217.5581
+    },
+    {
+      "file": "8093_D1.parquet",
+      "volume_mean_abs_pct_diff": 173.4813
+    },
+    {
+      "file": "80986742_D1.parquet",
+      "volume_mean_abs_pct_diff": 176.7987
+    },
+    {
+      "file": "8101142_D1.parquet",
+      "volume_mean_abs_pct_diff": 183.5509
+    },
+    {
+      "file": "8111188_D1.parquet",
+      "volume_mean_abs_pct_diff": 146.2253
+    },
+    {
+      "file": "8153_D1.parquet",
+      "volume_mean_abs_pct_diff": 170.6144
+    },
+    {
+      "file": "81581011_D1.parquet",
+      "volume_mean_abs_pct_diff": 94.3193
+    },
+    {
+      "file": "81671838_D1.parquet",
+      "volume_mean_abs_pct_diff": 230.9418
+    },
+    {
+      "file": "8199_D1.parquet",
+      "volume_mean_abs_pct_diff": 216.5253
+    },
+    {
+      "file": "82457808_D1.parquet",
+      "volume_mean_abs_pct_diff": 212.2321
+    },
+    {
+      "file": "824788107_D1.parquet",
+      "volume_mean_abs_pct_diff": 181.7731
+    },
+    {
+      "file": "8251_D1.parquet",
+      "volume_mean_abs_pct_diff": 203.9054
+    },
+    {
+      "file": "8314_D1.parquet",
+      "volume_mean_abs_pct_diff": 188.6085
+    },
+    {
+      "file": "8377_D1.parquet",
+      "volume_mean_abs_pct_diff": 245.7421
+    },
+    {
+      "file": "8385_D1.parquet",
+      "volume_mean_abs_pct_diff": 206.2584
+    },
+    {
+      "file": "83975037_D1.parquet",
+      "volume_mean_abs_pct_diff": 142.8046
+    },
+    {
+      "file": "845305949_D1.parquet",
+      "volume_mean_abs_pct_diff": 153.916
+    },
+    {
+      "file": "85076790_D1.parquet",
+      "volume_mean_abs_pct_diff": 77.2083
+    },
+    {
+      "file": "8511_D1.parquet",
+      "volume_mean_abs_pct_diff": 175.2758
+    },
+    {
+      "file": "86033355_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.3398
+    },
+    {
+      "file": "8620_D1.parquet",
+      "volume_mean_abs_pct_diff": 82.4978
+    },
+    {
+      "file": "8677881_D1.parquet",
+      "volume_mean_abs_pct_diff": 196.9054
+    },
+    {
+      "file": "8719_D1.parquet",
+      "volume_mean_abs_pct_diff": 229.6197
+    },
+    {
+      "file": "87335484_D1.parquet",
+      "volume_mean_abs_pct_diff": 177.6782
+    },
+    {
+      "file": "878372298_D1.parquet",
+      "volume_mean_abs_pct_diff": 138.5218
+    },
+    {
+      "file": "8809_D1.parquet",
+      "volume_mean_abs_pct_diff": 125.8508
+    },
+    {
+      "file": "88292752_D1.parquet",
+      "volume_mean_abs_pct_diff": 156.9917
+    },
+    {
+      "file": "8845_D1.parquet",
+      "volume_mean_abs_pct_diff": 165.7076
+    },
+    {
+      "file": "8864_D1.parquet",
+      "volume_mean_abs_pct_diff": 204.194
+    },
+    {
+      "file": "887235923_D1.parquet",
+      "volume_mean_abs_pct_diff": 154.5053
+    },
+    {
+      "file": "88819288_D1.parquet",
+      "volume_mean_abs_pct_diff": 255.3561
+    },
+    {
+      "file": "8894_D1.parquet",
+      "volume_mean_abs_pct_diff": 171.3007
+    },
+    {
+      "file": "8908_D1.parquet",
+      "volume_mean_abs_pct_diff": 187.0307
+    },
+    {
+      "file": "89495776_D1.parquet",
+      "volume_mean_abs_pct_diff": 235.1944
+    },
+    {
+      "file": "9063285_D1.parquet",
+      "volume_mean_abs_pct_diff": 88.6572
+    },
+    {
+      "file": "9091_D1.parquet",
+      "volume_mean_abs_pct_diff": 211.0347
+    },
+    {
+      "file": "9160_D1.parquet",
+      "volume_mean_abs_pct_diff": 83.6589
+    },
+    {
+      "file": "9199_D1.parquet",
+      "volume_mean_abs_pct_diff": 200.0607
+    },
+    {
+      "file": "92306678_D1.parquet",
+      "volume_mean_abs_pct_diff": 90.1631
+    },
+    {
+      "file": "9252_D1.parquet",
+      "volume_mean_abs_pct_diff": 268.3506
+    },
+    {
+      "file": "9282_D1.parquet",
+      "volume_mean_abs_pct_diff": 160.1227
+    },
+    {
+      "file": "9317_D1.parquet",
+      "volume_mean_abs_pct_diff": 225.5515
+    },
+    {
+      "file": "9358_D1.parquet",
+      "volume_mean_abs_pct_diff": 84.3591
+    },
+    {
+      "file": "9360_D1.parquet",
+      "volume_mean_abs_pct_diff": 210.176
+    },
+    {
+      "file": "9408_D1.parquet",
+      "volume_mean_abs_pct_diff": 78.7869
+    },
+    {
+      "file": "95514904_D1.parquet",
+      "volume_mean_abs_pct_diff": 209.2703
+    },
+    {
+      "file": "9560_D1.parquet",
+      "volume_mean_abs_pct_diff": 165.5462
+    },
+    {
+      "file": "95703740_D1.parquet",
+      "volume_mean_abs_pct_diff": 221.7409
+    },
+    {
+      "file": "9599491_D1.parquet",
+      "volume_mean_abs_pct_diff": 119.5806
+    },
+    {
+      "file": "9657_D1.parquet",
+      "volume_mean_abs_pct_diff": 95.3494
+    },
+    {
+      "file": "9690_D1.parquet",
+      "volume_mean_abs_pct_diff": 98.8852
+    },
+    {
+      "file": "9705_D1.parquet",
+      "volume_mean_abs_pct_diff": 192.6034
+    },
+    {
+      "file": "9720_D1.parquet",
+      "volume_mean_abs_pct_diff": 218.9296
+    },
+    {
+      "file": "9769_D1.parquet",
+      "volume_mean_abs_pct_diff": 175.6739
+    },
+    {
+      "file": "98542021_D1.parquet",
+      "volume_mean_abs_pct_diff": 221.8773
+    },
+    {
+      "file": "9939_D1.parquet",
+      "volume_mean_abs_pct_diff": 63.3735
+    },
+    {
+      "file": "99831145_D1.parquet",
+      "volume_mean_abs_pct_diff": 213.7459
+    }
+  ],
+  "overall": "WARN"
+}

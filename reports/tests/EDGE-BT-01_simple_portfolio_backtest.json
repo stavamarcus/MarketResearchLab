@@ -1,0 +1,1821 @@
+{
+  "overlap": [
+    "2025-07-09",
+    "2026-06-27"
+  ],
+  "trading_days": 244,
+  "max_positions": 10,
+  "universe_baseline": {
+    "total_return_pct": 16.7561,
+    "max_drawdown_pct": -7.8709,
+    "sharpe_annualized_orientacni": 1.401,
+    "daily_vol_pct": 0.7512
+  },
+  "spy_benchmark": "NENI v DATA-06 (universe=S&P clenove, ne ETF); proxy = universe_baseline",
+  "results": {
+    "all": {
+      "hold_10D": {
+        "cost_0bps": {
+          "edge": {
+            "n_trades": 233,
+            "avg_trade_gross": 4.2186,
+            "avg_trade_net": 4.2186,
+            "median_trade_net": 2.1494,
+            "win_rate": 0.5923,
+            "trade_vol": 13.3647,
+            "avg_exposure": 0.0321,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-09-03",
+              "exit_date": "2025-09-17",
+              "hold_days": 10,
+              "gross_ret": 80.99,
+              "net_ret": 80.99,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.5506,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 159.2812,
+            "max_drawdown_pct": -7.481,
+            "sharpe_annualized_orientacni": 0.739,
+            "daily_vol_pct": 0.2945,
+            "turnover_trades_per_day": 0.0325,
+            "trades_by_sector": {
+              "Technology": 92,
+              "Consumer, Cyclical": 31,
+              "Industrial": 30,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 24,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 50,
+              "Computers": 35,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 10,
+              "Internet": 9,
+              "Healthcare-Services": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 4.1544,
+            "avg_trade_net": 4.1544,
+            "median_trade_net": 1.886,
+            "win_rate": 0.564,
+            "trade_vol": 12.8114,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-14",
+              "hold_days": 10,
+              "gross_ret": 57.7297,
+              "net_ret": 57.7297,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.7283,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 165.4319,
+            "max_drawdown_pct": -5.2228,
+            "sharpe_annualized_orientacni": 0.53,
+            "daily_vol_pct": 0.4342,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 100,
+              "Communications": 36,
+              "Consumer, Non-cyclical": 29,
+              "Consumer, Cyclical": 27,
+              "Industrial": 23,
+              "Energy": 14,
+              "Basic Materials": 13,
+              "Financial": 5
+            },
+            "trades_by_industry_top": {
+              "Computers": 49,
+              "Semiconductors": 39,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 10,
+              "Oil&Gas": 8,
+              "Media": 7
+            }
+          }
+        },
+        "cost_5bps": {
+          "edge": {
+            "n_trades": 233,
+            "avg_trade_gross": 4.2186,
+            "avg_trade_net": 4.1686,
+            "median_trade_net": 2.0994,
+            "win_rate": 0.5923,
+            "trade_vol": 13.3647,
+            "avg_exposure": 0.0321,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-09-03",
+              "exit_date": "2025-09-17",
+              "hold_days": 10,
+              "gross_ret": 80.99,
+              "net_ret": 80.94,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.6006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 156.303,
+            "max_drawdown_pct": -7.5416,
+            "sharpe_annualized_orientacni": 0.731,
+            "daily_vol_pct": 0.294,
+            "turnover_trades_per_day": 0.0325,
+            "trades_by_sector": {
+              "Technology": 92,
+              "Consumer, Cyclical": 31,
+              "Industrial": 30,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 24,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 50,
+              "Computers": 35,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 10,
+              "Internet": 9,
+              "Healthcare-Services": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 4.1544,
+            "avg_trade_net": 4.1044,
+            "median_trade_net": 1.8359,
+            "win_rate": 0.564,
+            "trade_vol": 12.8114,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-14",
+              "hold_days": 10,
+              "gross_ret": 57.7297,
+              "net_ret": 57.6797,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.7783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 162.2543,
+            "max_drawdown_pct": -5.3201,
+            "sharpe_annualized_orientacni": 0.525,
+            "daily_vol_pct": 0.4325,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 100,
+              "Communications": 36,
+              "Consumer, Non-cyclical": 29,
+              "Consumer, Cyclical": 27,
+              "Industrial": 23,
+              "Energy": 14,
+              "Basic Materials": 13,
+              "Financial": 5
+            },
+            "trades_by_industry_top": {
+              "Computers": 49,
+              "Semiconductors": 39,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 10,
+              "Oil&Gas": 8,
+              "Media": 7
+            }
+          }
+        },
+        "cost_15bps": {
+          "edge": {
+            "n_trades": 233,
+            "avg_trade_gross": 4.2186,
+            "avg_trade_net": 4.0686,
+            "median_trade_net": 1.9994,
+            "win_rate": 0.5837,
+            "trade_vol": 13.3647,
+            "avg_exposure": 0.0321,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-09-03",
+              "exit_date": "2025-09-17",
+              "hold_days": 10,
+              "gross_ret": 80.99,
+              "net_ret": 80.84,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.7006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 150.448,
+            "max_drawdown_pct": -7.6627,
+            "sharpe_annualized_orientacni": 0.716,
+            "daily_vol_pct": 0.2931,
+            "turnover_trades_per_day": 0.0325,
+            "trades_by_sector": {
+              "Technology": 92,
+              "Consumer, Cyclical": 31,
+              "Industrial": 30,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 24,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 50,
+              "Computers": 35,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 10,
+              "Internet": 9,
+              "Healthcare-Services": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 4.1544,
+            "avg_trade_net": 4.0044,
+            "median_trade_net": 1.7359,
+            "win_rate": 0.564,
+            "trade_vol": 12.8114,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-14",
+              "hold_days": 10,
+              "gross_ret": 57.7297,
+              "net_ret": 57.5797,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.8783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 156.0083,
+            "max_drawdown_pct": -5.5147,
+            "sharpe_annualized_orientacni": 0.516,
+            "daily_vol_pct": 0.4293,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 100,
+              "Communications": 36,
+              "Consumer, Non-cyclical": 29,
+              "Consumer, Cyclical": 27,
+              "Industrial": 23,
+              "Energy": 14,
+              "Basic Materials": 13,
+              "Financial": 5
+            },
+            "trades_by_industry_top": {
+              "Computers": 49,
+              "Semiconductors": 39,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 10,
+              "Oil&Gas": 8,
+              "Media": 7
+            }
+          }
+        },
+        "cost_25bps": {
+          "edge": {
+            "n_trades": 233,
+            "avg_trade_gross": 4.2186,
+            "avg_trade_net": 3.9686,
+            "median_trade_net": 1.8994,
+            "win_rate": 0.5708,
+            "trade_vol": 13.3647,
+            "avg_exposure": 0.0321,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-09-03",
+              "exit_date": "2025-09-17",
+              "hold_days": 10,
+              "gross_ret": 80.99,
+              "net_ret": 80.74,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.8006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 144.7254,
+            "max_drawdown_pct": -7.7836,
+            "sharpe_annualized_orientacni": 0.701,
+            "daily_vol_pct": 0.2921,
+            "turnover_trades_per_day": 0.0325,
+            "trades_by_sector": {
+              "Technology": 92,
+              "Consumer, Cyclical": 31,
+              "Industrial": 30,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 24,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 50,
+              "Computers": 35,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 10,
+              "Internet": 9,
+              "Healthcare-Services": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 4.1544,
+            "avg_trade_net": 3.9044,
+            "median_trade_net": 1.636,
+            "win_rate": 0.552,
+            "trade_vol": 12.8114,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-14",
+              "hold_days": 10,
+              "gross_ret": 57.7297,
+              "net_ret": 57.4797,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.9783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 149.9052,
+            "max_drawdown_pct": -5.709,
+            "sharpe_annualized_orientacni": 0.507,
+            "daily_vol_pct": 0.4261,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 100,
+              "Communications": 36,
+              "Consumer, Non-cyclical": 29,
+              "Consumer, Cyclical": 27,
+              "Industrial": 23,
+              "Energy": 14,
+              "Basic Materials": 13,
+              "Financial": 5
+            },
+            "trades_by_industry_top": {
+              "Computers": 49,
+              "Semiconductors": 39,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 10,
+              "Oil&Gas": 8,
+              "Media": 7
+            }
+          }
+        }
+      },
+      "hold_20D": {
+        "cost_0bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.5089,
+            "avg_trade_net": 6.5089,
+            "median_trade_net": 2.5404,
+            "win_rate": 0.5984,
+            "trade_vol": 19.9353,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.3614,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -39.8586,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 115.0997,
+            "max_drawdown_pct": -9.8579,
+            "sharpe_annualized_orientacni": 0.616,
+            "daily_vol_pct": 0.2854,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Industrial": 14,
+              "Communications": 12,
+              "Consumer, Non-cyclical": 10,
+              "Energy": 8,
+              "Basic Materials": 4,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 27,
+              "Computers": 19,
+              "Airlines": 8,
+              "Telecommunications": 8,
+              "Software": 6,
+              "Internet": 4,
+              "Oil&Gas": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 8.0277,
+            "avg_trade_net": 8.0277,
+            "median_trade_net": 3.2271,
+            "win_rate": 0.5846,
+            "trade_vol": 21.1771,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-29",
+              "hold_days": 20,
+              "gross_ret": 119.3436,
+              "net_ret": 119.3436,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.496,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 155.8071,
+            "max_drawdown_pct": -7.0568,
+            "sharpe_annualized_orientacni": 0.401,
+            "daily_vol_pct": 0.5763,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 57,
+              "Communications": 21,
+              "Consumer, Cyclical": 13,
+              "Consumer, Non-cyclical": 12,
+              "Industrial": 10,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 3
+            },
+            "trades_by_industry_top": {
+              "Computers": 29,
+              "Semiconductors": 21,
+              "Telecommunications": 10,
+              "Internet": 9,
+              "Software": 7,
+              "Healthcare-Products": 4,
+              "Electronics": 4,
+              "Biotechnology": 3
+            }
+          }
+        },
+        "cost_5bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.5089,
+            "avg_trade_net": 6.4589,
+            "median_trade_net": 2.4905,
+            "win_rate": 0.5984,
+            "trade_vol": 19.9353,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.3114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -39.9086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 113.7979,
+            "max_drawdown_pct": -9.8946,
+            "sharpe_annualized_orientacni": 0.612,
+            "daily_vol_pct": 0.2853,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Industrial": 14,
+              "Communications": 12,
+              "Consumer, Non-cyclical": 10,
+              "Energy": 8,
+              "Basic Materials": 4,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 27,
+              "Computers": 19,
+              "Airlines": 8,
+              "Telecommunications": 8,
+              "Software": 6,
+              "Internet": 4,
+              "Oil&Gas": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 8.0277,
+            "avg_trade_net": 7.9777,
+            "median_trade_net": 3.177,
+            "win_rate": 0.5846,
+            "trade_vol": 21.1771,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-29",
+              "hold_days": 20,
+              "gross_ret": 119.3436,
+              "net_ret": 119.2936,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.546,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 154.2571,
+            "max_drawdown_pct": -7.1068,
+            "sharpe_annualized_orientacni": 0.399,
+            "daily_vol_pct": 0.575,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 57,
+              "Communications": 21,
+              "Consumer, Cyclical": 13,
+              "Consumer, Non-cyclical": 12,
+              "Industrial": 10,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 3
+            },
+            "trades_by_industry_top": {
+              "Computers": 29,
+              "Semiconductors": 21,
+              "Telecommunications": 10,
+              "Internet": 9,
+              "Software": 7,
+              "Healthcare-Products": 4,
+              "Electronics": 4,
+              "Biotechnology": 3
+            }
+          }
+        },
+        "cost_15bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.5089,
+            "avg_trade_net": 6.3589,
+            "median_trade_net": 2.3905,
+            "win_rate": 0.5984,
+            "trade_vol": 19.9353,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.2114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -40.0086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 111.2173,
+            "max_drawdown_pct": -9.9678,
+            "sharpe_annualized_orientacni": 0.603,
+            "daily_vol_pct": 0.2849,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Industrial": 14,
+              "Communications": 12,
+              "Consumer, Non-cyclical": 10,
+              "Energy": 8,
+              "Basic Materials": 4,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 27,
+              "Computers": 19,
+              "Airlines": 8,
+              "Telecommunications": 8,
+              "Software": 6,
+              "Internet": 4,
+              "Oil&Gas": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 8.0277,
+            "avg_trade_net": 7.8777,
+            "median_trade_net": 3.077,
+            "win_rate": 0.5846,
+            "trade_vol": 21.1771,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-29",
+              "hold_days": 20,
+              "gross_ret": 119.3436,
+              "net_ret": 119.1936,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.646,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 151.1831,
+            "max_drawdown_pct": -7.2068,
+            "sharpe_annualized_orientacni": 0.396,
+            "daily_vol_pct": 0.5725,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 57,
+              "Communications": 21,
+              "Consumer, Cyclical": 13,
+              "Consumer, Non-cyclical": 12,
+              "Industrial": 10,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 3
+            },
+            "trades_by_industry_top": {
+              "Computers": 29,
+              "Semiconductors": 21,
+              "Telecommunications": 10,
+              "Internet": 9,
+              "Software": 7,
+              "Healthcare-Products": 4,
+              "Electronics": 4,
+              "Biotechnology": 3
+            }
+          }
+        },
+        "cost_25bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.5089,
+            "avg_trade_net": 6.2589,
+            "median_trade_net": 2.2904,
+            "win_rate": 0.5902,
+            "trade_vol": 19.9353,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.1114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -40.1086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 108.6672,
+            "max_drawdown_pct": -10.0411,
+            "sharpe_annualized_orientacni": 0.594,
+            "daily_vol_pct": 0.2846,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Industrial": 14,
+              "Communications": 12,
+              "Consumer, Non-cyclical": 10,
+              "Energy": 8,
+              "Basic Materials": 4,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 27,
+              "Computers": 19,
+              "Airlines": 8,
+              "Telecommunications": 8,
+              "Software": 6,
+              "Internet": 4,
+              "Oil&Gas": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 8.0277,
+            "avg_trade_net": 7.7777,
+            "median_trade_net": 2.9771,
+            "win_rate": 0.5769,
+            "trade_vol": 21.1771,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "SNDK",
+              "entry_date": "2025-12-30",
+              "exit_date": "2026-01-29",
+              "hold_days": 20,
+              "gross_ret": 119.3436,
+              "net_ret": 119.0936,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.746,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 148.1433,
+            "max_drawdown_pct": -7.3068,
+            "sharpe_annualized_orientacni": 0.393,
+            "daily_vol_pct": 0.57,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 57,
+              "Communications": 21,
+              "Consumer, Cyclical": 13,
+              "Consumer, Non-cyclical": 12,
+              "Industrial": 10,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 3
+            },
+            "trades_by_industry_top": {
+              "Computers": 29,
+              "Semiconductors": 21,
+              "Telecommunications": 10,
+              "Internet": 9,
+              "Software": 7,
+              "Healthcare-Products": 4,
+              "Electronics": 4,
+              "Biotechnology": 3
+            }
+          }
+        }
+      }
+    },
+    "ex_exceptions": {
+      "hold_10D": {
+        "cost_0bps": {
+          "edge": {
+            "n_trades": 230,
+            "avg_trade_gross": 3.0792,
+            "avg_trade_net": 3.0792,
+            "median_trade_net": 1.9084,
+            "win_rate": 0.5957,
+            "trade_vol": 10.8179,
+            "avg_exposure": 0.0316,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.814,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.5506,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 99.1998,
+            "max_drawdown_pct": -8.9358,
+            "sharpe_annualized_orientacni": 0.676,
+            "daily_vol_pct": 0.232,
+            "turnover_trades_per_day": 0.0321,
+            "trades_by_sector": {
+              "Technology": 85,
+              "Consumer, Cyclical": 35,
+              "Industrial": 31,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 23,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 52,
+              "Computers": 26,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 11,
+              "Healthcare-Services": 10,
+              "Internet": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 3.2754,
+            "avg_trade_net": 3.2754,
+            "median_trade_net": 1.0422,
+            "win_rate": 0.56,
+            "trade_vol": 11.4579,
+            "avg_exposure": 0.0342,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.814,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.7283,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 120.0286,
+            "max_drawdown_pct": -6.6123,
+            "sharpe_annualized_orientacni": 0.613,
+            "daily_vol_pct": 0.2957,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 91,
+              "Consumer, Non-cyclical": 39,
+              "Communications": 36,
+              "Consumer, Cyclical": 25,
+              "Industrial": 25,
+              "Basic Materials": 13,
+              "Energy": 12,
+              "Financial": 6
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 43,
+              "Computers": 36,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 11,
+              "Healthcare-Services": 10,
+              "Electronics": 8
+            }
+          }
+        },
+        "cost_5bps": {
+          "edge": {
+            "n_trades": 230,
+            "avg_trade_gross": 3.0792,
+            "avg_trade_net": 3.0292,
+            "median_trade_net": 1.8584,
+            "win_rate": 0.5957,
+            "trade_vol": 10.8179,
+            "avg_exposure": 0.0316,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.764,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.6006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 96.9323,
+            "max_drawdown_pct": -9.0335,
+            "sharpe_annualized_orientacni": 0.666,
+            "daily_vol_pct": 0.2316,
+            "turnover_trades_per_day": 0.0321,
+            "trades_by_sector": {
+              "Technology": 85,
+              "Consumer, Cyclical": 35,
+              "Industrial": 31,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 23,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 52,
+              "Computers": 26,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 11,
+              "Healthcare-Services": 10,
+              "Internet": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 3.2754,
+            "avg_trade_net": 3.2254,
+            "median_trade_net": 0.9922,
+            "win_rate": 0.556,
+            "trade_vol": 11.4579,
+            "avg_exposure": 0.0342,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.764,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.7783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 117.3336,
+            "max_drawdown_pct": -6.6983,
+            "sharpe_annualized_orientacni": 0.606,
+            "daily_vol_pct": 0.2948,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 91,
+              "Consumer, Non-cyclical": 39,
+              "Communications": 36,
+              "Consumer, Cyclical": 25,
+              "Industrial": 25,
+              "Basic Materials": 13,
+              "Energy": 12,
+              "Financial": 6
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 43,
+              "Computers": 36,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 11,
+              "Healthcare-Services": 10,
+              "Electronics": 8
+            }
+          }
+        },
+        "cost_15bps": {
+          "edge": {
+            "n_trades": 230,
+            "avg_trade_gross": 3.0792,
+            "avg_trade_net": 2.9292,
+            "median_trade_net": 1.7584,
+            "win_rate": 0.5783,
+            "trade_vol": 10.8179,
+            "avg_exposure": 0.0316,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.664,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.7006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 92.4738,
+            "max_drawdown_pct": -9.2287,
+            "sharpe_annualized_orientacni": 0.646,
+            "daily_vol_pct": 0.231,
+            "turnover_trades_per_day": 0.0321,
+            "trades_by_sector": {
+              "Technology": 85,
+              "Consumer, Cyclical": 35,
+              "Industrial": 31,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 23,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 52,
+              "Computers": 26,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 11,
+              "Healthcare-Services": 10,
+              "Internet": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 3.2754,
+            "avg_trade_net": 3.1254,
+            "median_trade_net": 0.8922,
+            "win_rate": 0.556,
+            "trade_vol": 11.4579,
+            "avg_exposure": 0.0342,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.664,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.8783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 112.0397,
+            "max_drawdown_pct": -6.8701,
+            "sharpe_annualized_orientacni": 0.59,
+            "daily_vol_pct": 0.293,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 91,
+              "Consumer, Non-cyclical": 39,
+              "Communications": 36,
+              "Consumer, Cyclical": 25,
+              "Industrial": 25,
+              "Basic Materials": 13,
+              "Energy": 12,
+              "Financial": 6
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 43,
+              "Computers": 36,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 11,
+              "Healthcare-Services": 10,
+              "Electronics": 8
+            }
+          }
+        },
+        "cost_25bps": {
+          "edge": {
+            "n_trades": 230,
+            "avg_trade_gross": 3.0792,
+            "avg_trade_net": 2.8292,
+            "median_trade_net": 1.6584,
+            "win_rate": 0.5652,
+            "trade_vol": 10.8179,
+            "avg_exposure": 0.0316,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.564,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-05-29",
+              "exit_date": "2026-06-12",
+              "hold_days": 10,
+              "gross_ret": -31.5506,
+              "net_ret": -31.8006,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 88.1152,
+            "max_drawdown_pct": -9.4235,
+            "sharpe_annualized_orientacni": 0.626,
+            "daily_vol_pct": 0.2304,
+            "turnover_trades_per_day": 0.0321,
+            "trades_by_sector": {
+              "Technology": 85,
+              "Consumer, Cyclical": 35,
+              "Industrial": 31,
+              "Consumer, Non-cyclical": 29,
+              "Communications": 23,
+              "Energy": 18,
+              "Basic Materials": 5,
+              "Utilities": 3
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 52,
+              "Computers": 26,
+              "Telecommunications": 13,
+              "Oil&Gas": 12,
+              "Airlines": 11,
+              "Healthcare-Services": 10,
+              "Internet": 9,
+              "Software": 7
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 250,
+            "avg_trade_gross": 3.2754,
+            "avg_trade_net": 3.0254,
+            "median_trade_net": 0.7922,
+            "win_rate": 0.548,
+            "trade_vol": 11.4579,
+            "avg_exposure": 0.0342,
+            "avg_holding_days": 10,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-27",
+              "exit_date": "2026-05-11",
+              "hold_days": 10,
+              "gross_ret": 54.814,
+              "net_ret": 54.564,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-09",
+              "exit_date": "2026-06-24",
+              "hold_days": 10,
+              "gross_ret": -27.7283,
+              "net_ret": -27.9783,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 106.8718,
+            "max_drawdown_pct": -7.0417,
+            "sharpe_annualized_orientacni": 0.575,
+            "daily_vol_pct": 0.2913,
+            "turnover_trades_per_day": 0.0349,
+            "trades_by_sector": {
+              "Technology": 91,
+              "Consumer, Non-cyclical": 39,
+              "Communications": 36,
+              "Consumer, Cyclical": 25,
+              "Industrial": 25,
+              "Basic Materials": 13,
+              "Energy": 12,
+              "Financial": 6
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 43,
+              "Computers": 36,
+              "Telecommunications": 16,
+              "Software": 12,
+              "Internet": 12,
+              "Chemicals": 11,
+              "Healthcare-Services": 10,
+              "Electronics": 8
+            }
+          }
+        }
+      },
+      "hold_20D": {
+        "cost_0bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.0584,
+            "avg_trade_net": 6.0584,
+            "median_trade_net": 3.2198,
+            "win_rate": 0.6066,
+            "trade_vol": 17.7502,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.3614,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -39.8586,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 105.0176,
+            "max_drawdown_pct": -10.3701,
+            "sharpe_annualized_orientacni": 0.663,
+            "daily_vol_pct": 0.2468,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Consumer, Non-cyclical": 14,
+              "Communications": 13,
+              "Industrial": 12,
+              "Energy": 6,
+              "Basic Materials": 3,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 32,
+              "Computers": 14,
+              "Telecommunications": 9,
+              "Airlines": 8,
+              "Software": 6,
+              "Leisure Time": 4,
+              "Internet": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 6.301,
+            "avg_trade_net": 6.301,
+            "median_trade_net": 3.1658,
+            "win_rate": 0.5846,
+            "trade_vol": 17.1613,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "MU",
+              "entry_date": "2026-04-28",
+              "exit_date": "2026-05-27",
+              "hold_days": 20,
+              "gross_ret": 84.212,
+              "net_ret": 84.212,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.496,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 115.261,
+            "max_drawdown_pct": -6.5847,
+            "sharpe_annualized_orientacni": 0.456,
+            "daily_vol_pct": 0.3974,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Communications": 21,
+              "Consumer, Non-cyclical": 14,
+              "Consumer, Cyclical": 14,
+              "Industrial": 12,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 4
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 24,
+              "Computers": 22,
+              "Telecommunications": 11,
+              "Internet": 7,
+              "Software": 6,
+              "Electronics": 6,
+              "Biotechnology": 4,
+              "Chemicals": 4
+            }
+          }
+        },
+        "cost_5bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.0584,
+            "avg_trade_net": 6.0084,
+            "median_trade_net": 3.1698,
+            "win_rate": 0.6066,
+            "trade_vol": 17.7502,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.3114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -39.9086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 103.7765,
+            "max_drawdown_pct": -10.4066,
+            "sharpe_annualized_orientacni": 0.658,
+            "daily_vol_pct": 0.2466,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Consumer, Non-cyclical": 14,
+              "Communications": 13,
+              "Industrial": 12,
+              "Energy": 6,
+              "Basic Materials": 3,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 32,
+              "Computers": 14,
+              "Telecommunications": 9,
+              "Airlines": 8,
+              "Software": 6,
+              "Leisure Time": 4,
+              "Internet": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 6.301,
+            "avg_trade_net": 6.251,
+            "median_trade_net": 3.1159,
+            "win_rate": 0.5846,
+            "trade_vol": 17.1613,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "MU",
+              "entry_date": "2026-04-28",
+              "exit_date": "2026-05-27",
+              "hold_days": 20,
+              "gross_ret": 84.212,
+              "net_ret": 84.162,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.546,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 113.9148,
+            "max_drawdown_pct": -6.6813,
+            "sharpe_annualized_orientacni": 0.454,
+            "daily_vol_pct": 0.3965,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Communications": 21,
+              "Consumer, Non-cyclical": 14,
+              "Consumer, Cyclical": 14,
+              "Industrial": 12,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 4
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 24,
+              "Computers": 22,
+              "Telecommunications": 11,
+              "Internet": 7,
+              "Software": 6,
+              "Electronics": 6,
+              "Biotechnology": 4,
+              "Chemicals": 4
+            }
+          }
+        },
+        "cost_15bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.0584,
+            "avg_trade_net": 5.9084,
+            "median_trade_net": 3.0698,
+            "win_rate": 0.6066,
+            "trade_vol": 17.7502,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.2114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -40.0086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 101.3164,
+            "max_drawdown_pct": -10.4794,
+            "sharpe_annualized_orientacni": 0.648,
+            "daily_vol_pct": 0.2462,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Consumer, Non-cyclical": 14,
+              "Communications": 13,
+              "Industrial": 12,
+              "Energy": 6,
+              "Basic Materials": 3,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 32,
+              "Computers": 14,
+              "Telecommunications": 9,
+              "Airlines": 8,
+              "Software": 6,
+              "Leisure Time": 4,
+              "Internet": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 6.301,
+            "avg_trade_net": 6.151,
+            "median_trade_net": 3.0158,
+            "win_rate": 0.5846,
+            "trade_vol": 17.1613,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "MU",
+              "entry_date": "2026-04-28",
+              "exit_date": "2026-05-27",
+              "hold_days": 20,
+              "gross_ret": 84.212,
+              "net_ret": 84.062,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.646,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 111.246,
+            "max_drawdown_pct": -6.8745,
+            "sharpe_annualized_orientacni": 0.449,
+            "daily_vol_pct": 0.3947,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Communications": 21,
+              "Consumer, Non-cyclical": 14,
+              "Consumer, Cyclical": 14,
+              "Industrial": 12,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 4
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 24,
+              "Computers": 22,
+              "Telecommunications": 11,
+              "Internet": 7,
+              "Software": 6,
+              "Electronics": 6,
+              "Biotechnology": 4,
+              "Chemicals": 4
+            }
+          }
+        },
+        "cost_25bps": {
+          "edge": {
+            "n_trades": 122,
+            "avg_trade_gross": 6.0584,
+            "avg_trade_net": 5.8084,
+            "median_trade_net": 2.9698,
+            "win_rate": 0.5984,
+            "trade_vol": 17.7502,
+            "avg_exposure": 0.0332,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "INTC",
+              "entry_date": "2026-04-07",
+              "exit_date": "2026-05-05",
+              "hold_days": 20,
+              "gross_ret": 108.3614,
+              "net_ret": 108.1114,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "SMCI",
+              "entry_date": "2026-06-04",
+              "exit_date": "2026-07-02",
+              "hold_days": 20,
+              "gross_ret": -39.8586,
+              "net_ret": -40.1086,
+              "industry": "Computers",
+              "sector": "Technology"
+            },
+            "total_return_pct": 98.8855,
+            "max_drawdown_pct": -10.5523,
+            "sharpe_annualized_orientacni": 0.638,
+            "daily_vol_pct": 0.2459,
+            "turnover_trades_per_day": 0.017,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Consumer, Cyclical": 20,
+              "Consumer, Non-cyclical": 14,
+              "Communications": 13,
+              "Industrial": 12,
+              "Energy": 6,
+              "Basic Materials": 3,
+              "Utilities": 2
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 32,
+              "Computers": 14,
+              "Telecommunications": 9,
+              "Airlines": 8,
+              "Software": 6,
+              "Leisure Time": 4,
+              "Internet": 4,
+              "Oil&Gas Services": 4
+            }
+          },
+          "mle_top10_only": {
+            "n_trades": 130,
+            "avg_trade_gross": 6.301,
+            "avg_trade_net": 6.051,
+            "median_trade_net": 2.9158,
+            "win_rate": 0.5769,
+            "trade_vol": 17.1613,
+            "avg_exposure": 0.0343,
+            "avg_holding_days": 20,
+            "best_trade": {
+              "ticker": "MU",
+              "entry_date": "2026-04-28",
+              "exit_date": "2026-05-27",
+              "hold_days": 20,
+              "gross_ret": 84.212,
+              "net_ret": 83.962,
+              "industry": "Semiconductors",
+              "sector": "Technology"
+            },
+            "worst_trade": {
+              "ticker": "MRNA",
+              "entry_date": "2025-07-10",
+              "exit_date": "2025-08-07",
+              "hold_days": 20,
+              "gross_ret": -20.496,
+              "net_ret": -20.746,
+              "industry": "Biotechnology",
+              "sector": "Consumer, Non-cyclical"
+            },
+            "total_return_pct": 108.6087,
+            "max_drawdown_pct": -7.0674,
+            "sharpe_annualized_orientacni": 0.443,
+            "daily_vol_pct": 0.3929,
+            "turnover_trades_per_day": 0.0181,
+            "trades_by_sector": {
+              "Technology": 52,
+              "Communications": 21,
+              "Consumer, Non-cyclical": 14,
+              "Consumer, Cyclical": 14,
+              "Industrial": 12,
+              "Energy": 7,
+              "Basic Materials": 5,
+              "Financial": 4
+            },
+            "trades_by_industry_top": {
+              "Semiconductors": 24,
+              "Computers": 22,
+              "Telecommunications": 11,
+              "Internet": 7,
+              "Software": 6,
+              "Electronics": 6,
+              "Biotechnology": 4,
+              "Chemicals": 4
+            }
+          }
+        }
+      }
+    }
+  }
+}

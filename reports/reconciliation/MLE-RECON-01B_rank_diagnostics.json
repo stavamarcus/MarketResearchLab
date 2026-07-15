@@ -1,0 +1,1434 @@
+{
+  "clean_day": {
+    "date": "2026-03-20",
+    "archive_ranked_count": 497,
+    "recon_ranked_count": 503,
+    "intersection_count": 497,
+    "archive_only_ranked": [],
+    "recon_only_ranked": [
+      "BF.B",
+      "BRK.B",
+      "EXE",
+      "PSKY",
+      "Q",
+      "SNDK"
+    ],
+    "ret_exact_but_rank_mismatch": 492,
+    "ret_mismatch_and_rank_mismatch": 4,
+    "rank_diff_distribution": {
+      "min": -32,
+      "max": 51,
+      "mean": 3.3,
+      "abs_le_1": 106,
+      "abs_le_5": 493,
+      "abs_gt_50": 1,
+      "zero": 0
+    },
+    "top_50_rank_diff": [
+      {
+        "ticker": "NWS",
+        "arch_ret": -1.12,
+        "recon_ret": -2.32,
+        "ret_diff": 1.2,
+        "arch_rank": 96,
+        "recon_rank": 147,
+        "rank_diff": 51,
+        "category": "identity_alias_class_mismatch"
+      },
+      {
+        "ticker": "FOX",
+        "arch_ret": -3.92,
+        "recon_ret": -3.28,
+        "ret_diff": 0.64,
+        "arch_rank": 215,
+        "recon_rank": 183,
+        "rank_diff": -32,
+        "category": "identity_alias_class_mismatch"
+      },
+      {
+        "ticker": "SMCI",
+        "arch_ret": -34.43,
+        "recon_ret": -34.43,
+        "ret_diff": 0.0,
+        "arch_rank": 497,
+        "recon_rank": 503,
+        "rank_diff": 6,
+        "category": "clean"
+      },
+      {
+        "ticker": "GOOG",
+        "arch_ret": 0.16,
+        "recon_ret": 0.83,
+        "ret_diff": 0.67,
+        "arch_rank": 65,
+        "recon_rank": 59,
+        "rank_diff": -6,
+        "category": "identity_alias_class_mismatch"
+      },
+      {
+        "ticker": "NEM",
+        "arch_ret": -17.62,
+        "recon_ret": -17.62,
+        "ret_diff": 0.0,
+        "arch_rank": 489,
+        "recon_rank": 494,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "FTV",
+        "arch_ret": -3.78,
+        "recon_ret": -3.78,
+        "ret_diff": 0.0,
+        "arch_rank": 208,
+        "recon_rank": 213,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "ARES",
+        "arch_ret": -3.76,
+        "recon_ret": -3.76,
+        "ret_diff": 0.0,
+        "arch_rank": 206,
+        "recon_rank": 211,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "MCK",
+        "arch_ret": -3.64,
+        "recon_ret": -3.64,
+        "ret_diff": 0.0,
+        "arch_rank": 195,
+        "recon_rank": 200,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "KHC",
+        "arch_ret": -12.1,
+        "recon_ret": -12.1,
+        "ret_diff": 0.0,
+        "arch_rank": 473,
+        "recon_rank": 478,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CVNA",
+        "arch_ret": -11.46,
+        "recon_ret": -11.46,
+        "ret_diff": 0.0,
+        "arch_rank": 465,
+        "recon_rank": 470,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "BA",
+        "arch_ret": -15.57,
+        "recon_ret": -15.57,
+        "ret_diff": 0.0,
+        "arch_rank": 486,
+        "recon_rank": 491,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "LOW",
+        "arch_ret": -10.82,
+        "recon_ret": -10.82,
+        "ret_diff": 0.0,
+        "arch_rank": 455,
+        "recon_rank": 460,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "SJM",
+        "arch_ret": -10.65,
+        "recon_ret": -10.65,
+        "ret_diff": 0.0,
+        "arch_rank": 454,
+        "recon_rank": 459,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "PSA",
+        "arch_ret": -13.74,
+        "recon_ret": -13.74,
+        "ret_diff": 0.0,
+        "arch_rank": 481,
+        "recon_rank": 486,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "OTIS",
+        "arch_ret": -10.85,
+        "recon_ret": -10.85,
+        "ret_diff": 0.0,
+        "arch_rank": 456,
+        "recon_rank": 461,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "TTD",
+        "arch_ret": -17.66,
+        "recon_ret": -17.66,
+        "ret_diff": 0.0,
+        "arch_rank": 490,
+        "recon_rank": 495,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "WMT",
+        "arch_ret": -3.86,
+        "recon_ret": -3.86,
+        "ret_diff": 0.0,
+        "arch_rank": 211,
+        "recon_rank": 216,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CEG",
+        "arch_ret": -11.62,
+        "recon_ret": -11.62,
+        "ret_diff": 0.0,
+        "arch_rank": 468,
+        "recon_rank": 473,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "ADBE",
+        "arch_ret": -12.51,
+        "recon_ret": -12.51,
+        "ret_diff": 0.0,
+        "arch_rank": 476,
+        "recon_rank": 481,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "SBAC",
+        "arch_ret": -11.41,
+        "recon_ret": -11.41,
+        "ret_diff": 0.0,
+        "arch_rank": 463,
+        "recon_rank": 468,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "DG",
+        "arch_ret": -14.89,
+        "recon_ret": -14.89,
+        "ret_diff": 0.0,
+        "arch_rank": 484,
+        "recon_rank": 489,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "LHX",
+        "arch_ret": -3.75,
+        "recon_ret": -3.75,
+        "ret_diff": 0.0,
+        "arch_rank": 204,
+        "recon_rank": 209,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "APH",
+        "arch_ret": -3.89,
+        "recon_ret": -3.89,
+        "ret_diff": 0.0,
+        "arch_rank": 213,
+        "recon_rank": 218,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "EXR",
+        "arch_ret": -11.16,
+        "recon_ret": -11.16,
+        "ret_diff": 0.0,
+        "arch_rank": 458,
+        "recon_rank": 463,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CTAS",
+        "arch_ret": -11.92,
+        "recon_ret": -11.92,
+        "ret_diff": 0.0,
+        "arch_rank": 471,
+        "recon_rank": 476,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "RMD",
+        "arch_ret": -10.63,
+        "recon_ret": -10.63,
+        "ret_diff": 0.0,
+        "arch_rank": 453,
+        "recon_rank": 458,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "FCX",
+        "arch_ret": -12.25,
+        "recon_ret": -12.25,
+        "ret_diff": 0.0,
+        "arch_rank": 475,
+        "recon_rank": 480,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "GPC",
+        "arch_ret": -16.57,
+        "recon_ret": -16.57,
+        "ret_diff": 0.0,
+        "arch_rank": 488,
+        "recon_rank": 493,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "AMCR",
+        "arch_ret": -11.55,
+        "recon_ret": -11.55,
+        "ret_diff": 0.0,
+        "arch_rank": 466,
+        "recon_rank": 471,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "BLDR",
+        "arch_ret": -12.78,
+        "recon_ret": -12.78,
+        "ret_diff": 0.0,
+        "arch_rank": 478,
+        "recon_rank": 483,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "ES",
+        "arch_ret": -10.44,
+        "recon_ret": -10.44,
+        "ret_diff": 0.0,
+        "arch_rank": 449,
+        "recon_rank": 454,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "GL",
+        "arch_ret": -3.78,
+        "recon_ret": -3.78,
+        "ret_diff": 0.0,
+        "arch_rank": 209,
+        "recon_rank": 214,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "URI",
+        "arch_ret": -12.24,
+        "recon_ret": -12.24,
+        "ret_diff": 0.0,
+        "arch_rank": 474,
+        "recon_rank": 479,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CRL",
+        "arch_ret": -11.96,
+        "recon_ret": -11.96,
+        "ret_diff": 0.0,
+        "arch_rank": 472,
+        "recon_rank": 477,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "PHM",
+        "arch_ret": -10.4,
+        "recon_ret": -10.4,
+        "ret_diff": 0.0,
+        "arch_rank": 448,
+        "recon_rank": 453,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "HD",
+        "arch_ret": -10.39,
+        "recon_ret": -10.39,
+        "ret_diff": 0.0,
+        "arch_rank": 447,
+        "recon_rank": 452,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "AXON",
+        "arch_ret": -13.54,
+        "recon_ret": -13.54,
+        "ret_diff": 0.0,
+        "arch_rank": 480,
+        "recon_rank": 485,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "NDSN",
+        "arch_ret": -3.71,
+        "recon_ret": -3.71,
+        "ret_diff": 0.0,
+        "arch_rank": 201,
+        "recon_rank": 206,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "BR",
+        "arch_ret": -11.44,
+        "recon_ret": -11.44,
+        "ret_diff": 0.0,
+        "arch_rank": 464,
+        "recon_rank": 469,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "ADSK",
+        "arch_ret": -4.98,
+        "recon_ret": -4.98,
+        "ret_diff": 0.0,
+        "arch_rank": 267,
+        "recon_rank": 272,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "AMZN",
+        "arch_ret": -3.68,
+        "recon_ret": -3.68,
+        "ret_diff": 0.0,
+        "arch_rank": 198,
+        "recon_rank": 203,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "UNH",
+        "arch_ret": -3.8,
+        "recon_ret": -3.8,
+        "ret_diff": 0.0,
+        "arch_rank": 210,
+        "recon_rank": 215,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CPRT",
+        "arch_ret": -12.93,
+        "recon_ret": -12.93,
+        "ret_diff": 0.0,
+        "arch_rank": 479,
+        "recon_rank": 484,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "CNC",
+        "arch_ret": -21.19,
+        "recon_ret": -21.19,
+        "ret_diff": 0.0,
+        "arch_rank": 495,
+        "recon_rank": 500,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "ABBV",
+        "arch_ret": -10.88,
+        "recon_ret": -10.88,
+        "ret_diff": 0.0,
+        "arch_rank": 457,
+        "recon_rank": 462,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "GPN",
+        "arch_ret": -10.34,
+        "recon_ret": -10.34,
+        "ret_diff": 0.0,
+        "arch_rank": 445,
+        "recon_rank": 450,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "LEN",
+        "arch_ret": -10.5,
+        "recon_ret": -10.5,
+        "ret_diff": 0.0,
+        "arch_rank": 451,
+        "recon_rank": 456,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "NOW",
+        "arch_ret": -11.23,
+        "recon_ret": -11.23,
+        "ret_diff": 0.0,
+        "arch_rank": 460,
+        "recon_rank": 465,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "XYZ",
+        "arch_ret": -10.49,
+        "recon_ret": -10.49,
+        "ret_diff": 0.0,
+        "arch_rank": 450,
+        "recon_rank": 455,
+        "rank_diff": 5,
+        "category": "clean"
+      },
+      {
+        "ticker": "OMC",
+        "arch_ret": -11.62,
+        "recon_ret": -11.62,
+        "ret_diff": 0.0,
+        "arch_rank": 469,
+        "recon_rank": 474,
+        "rank_diff": 5,
+        "category": "clean"
+      }
+    ],
+    "clean_reranking": {
+      "clean_ticker_count": 488,
+      "clean_rank_match": 192,
+      "clean_rank_mismatch": 296,
+      "clean_match_rate": 0.3934,
+      "top_clean_mismatch": [
+        {
+          "ticker": "NEM",
+          "arch_clean_rank": 480,
+          "recon_clean_rank": 482,
+          "diff": 2
+        },
+        {
+          "ticker": "KHC",
+          "arch_clean_rank": 464,
+          "recon_clean_rank": 466,
+          "diff": 2
+        },
+        {
+          "ticker": "CVNA",
+          "arch_clean_rank": 456,
+          "recon_clean_rank": 458,
+          "diff": 2
+        },
+        {
+          "ticker": "BA",
+          "arch_clean_rank": 477,
+          "recon_clean_rank": 479,
+          "diff": 2
+        },
+        {
+          "ticker": "LOW",
+          "arch_clean_rank": 446,
+          "recon_clean_rank": 448,
+          "diff": 2
+        },
+        {
+          "ticker": "SJM",
+          "arch_clean_rank": 445,
+          "recon_clean_rank": 447,
+          "diff": 2
+        },
+        {
+          "ticker": "PSA",
+          "arch_clean_rank": 472,
+          "recon_clean_rank": 474,
+          "diff": 2
+        },
+        {
+          "ticker": "OTIS",
+          "arch_clean_rank": 447,
+          "recon_clean_rank": 449,
+          "diff": 2
+        },
+        {
+          "ticker": "TTD",
+          "arch_clean_rank": 481,
+          "recon_clean_rank": 483,
+          "diff": 2
+        },
+        {
+          "ticker": "ADBE",
+          "arch_clean_rank": 467,
+          "recon_clean_rank": 469,
+          "diff": 2
+        },
+        {
+          "ticker": "CEG",
+          "arch_clean_rank": 459,
+          "recon_clean_rank": 461,
+          "diff": 2
+        },
+        {
+          "ticker": "SBAC",
+          "arch_clean_rank": 454,
+          "recon_clean_rank": 456,
+          "diff": 2
+        },
+        {
+          "ticker": "DG",
+          "arch_clean_rank": 475,
+          "recon_clean_rank": 477,
+          "diff": 2
+        },
+        {
+          "ticker": "EXR",
+          "arch_clean_rank": 449,
+          "recon_clean_rank": 451,
+          "diff": 2
+        },
+        {
+          "ticker": "CTAS",
+          "arch_clean_rank": 462,
+          "recon_clean_rank": 464,
+          "diff": 2
+        },
+        {
+          "ticker": "SMCI",
+          "arch_clean_rank": 488,
+          "recon_clean_rank": 490,
+          "diff": 2
+        },
+        {
+          "ticker": "RMD",
+          "arch_clean_rank": 444,
+          "recon_clean_rank": 446,
+          "diff": 2
+        },
+        {
+          "ticker": "FCX",
+          "arch_clean_rank": 466,
+          "recon_clean_rank": 468,
+          "diff": 2
+        },
+        {
+          "ticker": "GPC",
+          "arch_clean_rank": 479,
+          "recon_clean_rank": 481,
+          "diff": 2
+        },
+        {
+          "ticker": "AMCR",
+          "arch_clean_rank": 457,
+          "recon_clean_rank": 459,
+          "diff": 2
+        },
+        {
+          "ticker": "BLDR",
+          "arch_clean_rank": 469,
+          "recon_clean_rank": 471,
+          "diff": 2
+        },
+        {
+          "ticker": "ES",
+          "arch_clean_rank": 440,
+          "recon_clean_rank": 442,
+          "diff": 2
+        },
+        {
+          "ticker": "URI",
+          "arch_clean_rank": 465,
+          "recon_clean_rank": 467,
+          "diff": 2
+        },
+        {
+          "ticker": "CRL",
+          "arch_clean_rank": 463,
+          "recon_clean_rank": 465,
+          "diff": 2
+        },
+        {
+          "ticker": "PHM",
+          "arch_clean_rank": 439,
+          "recon_clean_rank": 441,
+          "diff": 2
+        },
+        {
+          "ticker": "HD",
+          "arch_clean_rank": 438,
+          "recon_clean_rank": 440,
+          "diff": 2
+        },
+        {
+          "ticker": "AXON",
+          "arch_clean_rank": 471,
+          "recon_clean_rank": 473,
+          "diff": 2
+        },
+        {
+          "ticker": "BR",
+          "arch_clean_rank": 455,
+          "recon_clean_rank": 457,
+          "diff": 2
+        },
+        {
+          "ticker": "ADSK",
+          "arch_clean_rank": 262,
+          "recon_clean_rank": 264,
+          "diff": 2
+        },
+        {
+          "ticker": "CPRT",
+          "arch_clean_rank": 470,
+          "recon_clean_rank": 472,
+          "diff": 2
+        }
+      ]
+    }
+  },
+  "contaminated_day": {
+    "date": "2026-06-12",
+    "archive_ranked_count": 497,
+    "recon_ranked_count": 503,
+    "intersection_count": 497,
+    "archive_only_ranked": [],
+    "recon_only_ranked": [
+      "BF.B",
+      "BRK.B",
+      "EXE",
+      "PSKY",
+      "Q",
+      "SNDK"
+    ],
+    "ret_exact_but_rank_mismatch": 484,
+    "ret_mismatch_and_rank_mismatch": 12,
+    "rank_diff_distribution": {
+      "min": -496,
+      "max": 51,
+      "mean": 2.93,
+      "abs_le_1": 52,
+      "abs_le_5": 404,
+      "abs_gt_50": 2,
+      "zero": 0
+    },
+    "top_50_rank_diff": [
+      {
+        "ticker": "KLAC",
+        "arch_ret": -86.75,
+        "recon_ret": 32.45,
+        "ret_diff": 119.2,
+        "arch_rank": 497,
+        "recon_rank": 1,
+        "rank_diff": -496,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "ticker": "FITB",
+        "arch_ret": 9.61,
+        "recon_ret": 6.99,
+        "ret_diff": 2.62,
+        "arch_rank": 17,
+        "recon_rank": 68,
+        "rank_diff": 51,
+        "category": "clean"
+      },
+      {
+        "ticker": "FOX",
+        "arch_ret": 2.67,
+        "recon_ret": 3.02,
+        "ret_diff": 0.35,
+        "arch_rank": 225,
+        "recon_rank": 209,
+        "rank_diff": -16,
+        "category": "identity_alias_class_mismatch"
+      },
+      {
+        "ticker": "GOOG",
+        "arch_ret": -4.85,
+        "recon_ret": -5.43,
+        "ret_diff": 0.58,
+        "arch_rank": 420,
+        "recon_rank": 436,
+        "rank_diff": 16,
+        "category": "identity_alias_class_mismatch"
+      },
+      {
+        "ticker": "TYL",
+        "arch_ret": -4.57,
+        "recon_ret": -4.57,
+        "ret_diff": 0.0,
+        "arch_rank": 416,
+        "recon_rank": 424,
+        "rank_diff": 8,
+        "category": "clean"
+      },
+      {
+        "ticker": "NEM",
+        "arch_ret": -8.72,
+        "recon_ret": -8.72,
+        "ret_diff": 0.0,
+        "arch_rank": 463,
+        "recon_rank": 470,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CRWD",
+        "arch_ret": -6.59,
+        "recon_ret": -6.59,
+        "ret_diff": 0.0,
+        "arch_rank": 446,
+        "recon_rank": 453,
+        "rank_diff": 7,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "ticker": "ORCL",
+        "arch_ret": -18.45,
+        "recon_ret": -18.45,
+        "ret_diff": 0.0,
+        "arch_rank": 492,
+        "recon_rank": 499,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "NTAP",
+        "arch_ret": -7.28,
+        "recon_ret": -7.28,
+        "ret_diff": 0.0,
+        "arch_rank": 454,
+        "recon_rank": 461,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "PLTR",
+        "arch_ret": -18.24,
+        "recon_ret": -18.24,
+        "ret_diff": 0.0,
+        "arch_rank": 491,
+        "recon_rank": 498,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CVNA",
+        "arch_ret": -12.19,
+        "recon_ret": -12.19,
+        "ret_diff": 0.0,
+        "arch_rank": 478,
+        "recon_rank": 485,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TTD",
+        "arch_ret": -10.58,
+        "recon_ret": -10.58,
+        "ret_diff": 0.0,
+        "arch_rank": 470,
+        "recon_rank": 477,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "FSLR",
+        "arch_ret": -12.87,
+        "recon_ret": -12.87,
+        "ret_diff": 0.0,
+        "arch_rank": 479,
+        "recon_rank": 486,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CEG",
+        "arch_ret": -11.81,
+        "recon_ret": -11.81,
+        "ret_diff": 0.0,
+        "arch_rank": 476,
+        "recon_rank": 483,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TRMB",
+        "arch_ret": -10.62,
+        "recon_ret": -10.62,
+        "ret_diff": 0.0,
+        "arch_rank": 471,
+        "recon_rank": 478,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "ADBE",
+        "arch_ret": -21.29,
+        "recon_ret": -21.29,
+        "ret_diff": 0.0,
+        "arch_rank": 494,
+        "recon_rank": 501,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CIEN",
+        "arch_ret": -23.14,
+        "recon_ret": -23.14,
+        "ret_diff": 0.0,
+        "arch_rank": 495,
+        "recon_rank": 502,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "COIN",
+        "arch_ret": -15.47,
+        "recon_ret": -15.47,
+        "ret_diff": 0.0,
+        "arch_rank": 485,
+        "recon_rank": 492,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "FDX",
+        "arch_ret": -17.84,
+        "recon_ret": -17.84,
+        "ret_diff": 0.0,
+        "arch_rank": 488,
+        "recon_rank": 495,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "DELL",
+        "arch_ret": -6.02,
+        "recon_ret": -6.02,
+        "ret_diff": 0.0,
+        "arch_rank": 439,
+        "recon_rank": 446,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "WAT",
+        "arch_ret": -7.31,
+        "recon_ret": -7.31,
+        "ret_diff": 0.0,
+        "arch_rank": 455,
+        "recon_rank": 462,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "GDDY",
+        "arch_ret": -11.17,
+        "recon_ret": -11.17,
+        "ret_diff": 0.0,
+        "arch_rank": 473,
+        "recon_rank": 480,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "HON",
+        "arch_ret": -7.38,
+        "recon_ret": -7.38,
+        "ret_diff": 0.0,
+        "arch_rank": 456,
+        "recon_rank": 463,
+        "rank_diff": 7,
+        "category": "corporate_action_cache_artifact"
+      },
+      {
+        "ticker": "IT",
+        "arch_ret": -8.65,
+        "recon_ret": -8.65,
+        "ret_diff": 0.0,
+        "arch_rank": 462,
+        "recon_rank": 469,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "PYPL",
+        "arch_ret": -7.2,
+        "recon_ret": -7.2,
+        "ret_diff": 0.0,
+        "arch_rank": 453,
+        "recon_rank": 460,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TSLA",
+        "arch_ret": -6.74,
+        "recon_ret": -6.74,
+        "ret_diff": 0.0,
+        "arch_rank": 450,
+        "recon_rank": 457,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "SMCI",
+        "arch_ret": -33.93,
+        "recon_ret": -33.91,
+        "ret_diff": 0.02,
+        "arch_rank": 496,
+        "recon_rank": 503,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "DDOG",
+        "arch_ret": -7.05,
+        "recon_ret": -7.05,
+        "ret_diff": 0.0,
+        "arch_rank": 452,
+        "recon_rank": 459,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "NRG",
+        "arch_ret": -6.42,
+        "recon_ret": -6.42,
+        "ret_diff": 0.0,
+        "arch_rank": 443,
+        "recon_rank": 450,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "VST",
+        "arch_ret": -7.62,
+        "recon_ret": -7.62,
+        "ret_diff": 0.0,
+        "arch_rank": 457,
+        "recon_rank": 464,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "F",
+        "arch_ret": -14.91,
+        "recon_ret": -14.91,
+        "ret_diff": 0.0,
+        "arch_rank": 484,
+        "recon_rank": 491,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "HPQ",
+        "arch_ret": -6.66,
+        "recon_ret": -6.66,
+        "ret_diff": 0.0,
+        "arch_rank": 448,
+        "recon_rank": 455,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "ACN",
+        "arch_ret": -8.98,
+        "recon_ret": -8.98,
+        "ret_diff": 0.0,
+        "arch_rank": 465,
+        "recon_rank": 472,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "EQT",
+        "arch_ret": -5.44,
+        "recon_ret": -5.44,
+        "ret_diff": 0.0,
+        "arch_rank": 430,
+        "recon_rank": 437,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "VEEV",
+        "arch_ret": -8.49,
+        "recon_ret": -8.49,
+        "ret_diff": 0.0,
+        "arch_rank": 460,
+        "recon_rank": 467,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "PTC",
+        "arch_ret": -18.06,
+        "recon_ret": -18.06,
+        "ret_diff": 0.0,
+        "arch_rank": 490,
+        "recon_rank": 497,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "FIS",
+        "arch_ret": -8.82,
+        "recon_ret": -8.82,
+        "ret_diff": 0.0,
+        "arch_rank": 464,
+        "recon_rank": 471,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "GILD",
+        "arch_ret": -6.58,
+        "recon_ret": -6.58,
+        "ret_diff": 0.0,
+        "arch_rank": 445,
+        "recon_rank": 452,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TSN",
+        "arch_ret": -5.88,
+        "recon_ret": -5.88,
+        "ret_diff": 0.0,
+        "arch_rank": 437,
+        "recon_rank": 444,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "QCOM",
+        "arch_ret": -15.66,
+        "recon_ret": -15.66,
+        "ret_diff": 0.0,
+        "arch_rank": 486,
+        "recon_rank": 493,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "BR",
+        "arch_ret": -5.76,
+        "recon_ret": -5.76,
+        "ret_diff": 0.0,
+        "arch_rank": 436,
+        "recon_rank": 443,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "ADSK",
+        "arch_ret": -14.21,
+        "recon_ret": -14.21,
+        "ret_diff": 0.0,
+        "arch_rank": 482,
+        "recon_rank": 489,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TTWO",
+        "arch_ret": -5.54,
+        "recon_ret": -5.54,
+        "ret_diff": 0.0,
+        "arch_rank": 432,
+        "recon_rank": 439,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "AMZN",
+        "arch_ret": -11.86,
+        "recon_ret": -11.86,
+        "ret_diff": 0.0,
+        "arch_rank": 477,
+        "recon_rank": 484,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CPRT",
+        "arch_ret": -6.16,
+        "recon_ret": -6.16,
+        "ret_diff": 0.0,
+        "arch_rank": 440,
+        "recon_rank": 447,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "INTU",
+        "arch_ret": -16.53,
+        "recon_ret": -16.53,
+        "ret_diff": 0.0,
+        "arch_rank": 487,
+        "recon_rank": 494,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "GPN",
+        "arch_ret": -10.33,
+        "recon_ret": -10.33,
+        "ret_diff": 0.0,
+        "arch_rank": 467,
+        "recon_rank": 474,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "NOW",
+        "arch_ret": -17.87,
+        "recon_ret": -17.87,
+        "ret_diff": 0.0,
+        "arch_rank": 489,
+        "recon_rank": 496,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "CBOE",
+        "arch_ret": -11.59,
+        "recon_ret": -11.59,
+        "ret_diff": 0.0,
+        "arch_rank": 474,
+        "recon_rank": 481,
+        "rank_diff": 7,
+        "category": "clean"
+      },
+      {
+        "ticker": "TMO",
+        "arch_ret": -4.7,
+        "recon_ret": -4.7,
+        "ret_diff": 0.0,
+        "arch_rank": 419,
+        "recon_rank": 426,
+        "rank_diff": 7,
+        "category": "clean"
+      }
+    ],
+    "clean_reranking": {
+      "clean_ticker_count": 488,
+      "clean_rank_match": 72,
+      "clean_rank_mismatch": 416,
+      "clean_match_rate": 0.1475,
+      "top_clean_mismatch": [
+        {
+          "ticker": "FITB",
+          "arch_clean_rank": 17,
+          "recon_clean_rank": 66,
+          "diff": 49
+        },
+        {
+          "ticker": "NEM",
+          "arch_clean_rank": 455,
+          "recon_clean_rank": 457,
+          "diff": 2
+        },
+        {
+          "ticker": "MCO",
+          "arch_clean_rank": 365,
+          "recon_clean_rank": 367,
+          "diff": 2
+        },
+        {
+          "ticker": "CCI",
+          "arch_clean_rank": 306,
+          "recon_clean_rank": 308,
+          "diff": 2
+        },
+        {
+          "ticker": "IQV",
+          "arch_clean_rank": 342,
+          "recon_clean_rank": 344,
+          "diff": 2
+        },
+        {
+          "ticker": "BMY",
+          "arch_clean_rank": 335,
+          "recon_clean_rank": 337,
+          "diff": 2
+        },
+        {
+          "ticker": "CVX",
+          "arch_clean_rank": 226,
+          "recon_clean_rank": 228,
+          "diff": 2
+        },
+        {
+          "ticker": "KHC",
+          "arch_clean_rank": 273,
+          "recon_clean_rank": 275,
+          "diff": 2
+        },
+        {
+          "ticker": "REGN",
+          "arch_clean_rank": 343,
+          "recon_clean_rank": 345,
+          "diff": 2
+        },
+        {
+          "ticker": "VTR",
+          "arch_clean_rank": 325,
+          "recon_clean_rank": 327,
+          "diff": 2
+        },
+        {
+          "ticker": "PPL",
+          "arch_clean_rank": 287,
+          "recon_clean_rank": 289,
+          "diff": 2
+        },
+        {
+          "ticker": "LII",
+          "arch_clean_rank": 259,
+          "recon_clean_rank": 261,
+          "diff": 2
+        },
+        {
+          "ticker": "MLM",
+          "arch_clean_rank": 351,
+          "recon_clean_rank": 353,
+          "diff": 2
+        },
+        {
+          "ticker": "HIG",
+          "arch_clean_rank": 262,
+          "recon_clean_rank": 264,
+          "diff": 2
+        },
+        {
+          "ticker": "CMG",
+          "arch_clean_rank": 293,
+          "recon_clean_rank": 295,
+          "diff": 2
+        },
+        {
+          "ticker": "ORCL",
+          "arch_clean_rank": 484,
+          "recon_clean_rank": 486,
+          "diff": 2
+        },
+        {
+          "ticker": "NTAP",
+          "arch_clean_rank": 447,
+          "recon_clean_rank": 449,
+          "diff": 2
+        },
+        {
+          "ticker": "PLTR",
+          "arch_clean_rank": 483,
+          "recon_clean_rank": 485,
+          "diff": 2
+        },
+        {
+          "ticker": "PSX",
+          "arch_clean_rank": 251,
+          "recon_clean_rank": 253,
+          "diff": 2
+        },
+        {
+          "ticker": "CVNA",
+          "arch_clean_rank": 470,
+          "recon_clean_rank": 472,
+          "diff": 2
+        },
+        {
+          "ticker": "ISRG",
+          "arch_clean_rank": 402,
+          "recon_clean_rank": 404,
+          "diff": 2
+        },
+        {
+          "ticker": "ALB",
+          "arch_clean_rank": 403,
+          "recon_clean_rank": 405,
+          "diff": 2
+        },
+        {
+          "ticker": "BA",
+          "arch_clean_rank": 422,
+          "recon_clean_rank": 424,
+          "diff": 2
+        },
+        {
+          "ticker": "O",
+          "arch_clean_rank": 237,
+          "recon_clean_rank": 239,
+          "diff": 2
+        },
+        {
+          "ticker": "TT",
+          "arch_clean_rank": 275,
+          "recon_clean_rank": 277,
+          "diff": 2
+        },
+        {
+          "ticker": "AMP",
+          "arch_clean_rank": 206,
+          "recon_clean_rank": 208,
+          "diff": 2
+        },
+        {
+          "ticker": "ALGN",
+          "arch_clean_rank": 334,
+          "recon_clean_rank": 336,
+          "diff": 2
+        },
+        {
+          "ticker": "AMD",
+          "arch_clean_rank": 357,
+          "recon_clean_rank": 359,
+          "diff": 2
+        },
+        {
+          "ticker": "DOW",
+          "arch_clean_rank": 323,
+          "recon_clean_rank": 325,
+          "diff": 2
+        },
+        {
+          "ticker": "BLK",
+          "arch_clean_rank": 371,
+          "recon_clean_rank": 373,
+          "diff": 2
+        }
+      ]
+    }
+  }
+}

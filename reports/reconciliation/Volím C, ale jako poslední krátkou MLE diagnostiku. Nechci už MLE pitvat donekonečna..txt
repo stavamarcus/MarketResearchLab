@@ -1,0 +1,154 @@
+Volím C, ale jako poslední krátkou MLE diagnostiku. Nechci už MLE pitvat donekonečna.
+
+Hlavní důvod `data06_only_ranked_total = 514` je přesně ten typ čísla, který může vysvětlit nízký `rank_exact`. Musíme vědět, jestli jde opravdu o neúplné MDSM cache coverage, nebo o chybu v recon konstrukci. Report zároveň ukazuje, že 10D return shoda je vysoká `ret_exact 0.986831 + ret_micro 0.002997 ≈ 98.98 %`, zatímco `rank_exact` je jen `0.367225`, a `top10_overlap_rate` je `0.9628`. To přesně ukazuje ceny většinově sedí, ranky trpí universe rozdílem. 
+
+## Rozhodnutí
+
+```text id=qoflm3
+Udělat C diagnostiku data06_only_ranked.
+Pokud se potvrdí MDSM cache coverage limit, MLE uzavřít jako WARNACCEPTED.
+Pak pokračovat na IRC reconciliation.
+```
+
+## Důležitá korekce
+
+`data06_only_ranked_total = 514` bych nečetl jako „514 tickerů“. Spíš jako
+
+```text id=tdh0aj
+514 datelookbackticker ranked observations,
+kde DATA-06 má rank a MDSM cache ne
+```
+
+Je potřeba zjistit
+
+```text id=hfj4sy
+kolik je to unikátních tickerů
+na kterých dnech
+na kterých lookbacích
+proč MDSM nemá rank
+```
+
+## Co má C potvrdit
+
+Pro každý `data06_only_ranked` případ zjistit
+
+```text id=hmpvhv
+1. chybí MDSM close_now
+2. chybí MDSM close_past
+3. nemá MDSM dost 45d window
+4. je ticker v MDSM cache, ale má gap
+5. je ticker v DATA-06, ale ne v MDSM cache
+6. je problém v tickerconid mapování
+```
+
+Pokud většina spadne do
+
+```text id=epd97k
+MDSM_missing_close_past
+MDSM_insufficient_window
+MDSM_cache_gap
+```
+
+pak je závěr jasný
+
+```text id=xhbfjp
+MDSM cache není kompletní rank oracle.
+Rank reconciliation proti MDSM cache je metodicky omezená.
+```
+
+## Zadání pro Claude
+
+```text id=vr75w6
+Claude, udělej MLE-RECON-02B_data06_only_ranked_diagnostics.
+
+Cíl
+Vysvětlit data06_only_ranked_total = 514 z MLE-RECON-02.
+
+Neopravuj MLE-RECON-02.
+Nedělej IRC ani backtest.
+
+Vstupy
+- současná MDSM cache
+- DATA-06 mdsm_price_view
+- MLE universe CSV
+- stejný MLE compute engine
+- stejné lookbacks [1,2,3,4,5,6,7,8,9,10,20]
+- 45 calendar day window
+
+Pro všechny případy, kde
+DATA-06 má rank
+MDSM current cache nemá rank
+
+reportuj
+- date
+- lookback
+- ticker
+- conid
+- universe_order
+- data06_close_now exists
+- data06_close_past exists
+- data06_past_date
+- mdsm_close_now exists
+- mdsm_close_past exists
+- mdsm_past_date
+- mdsm file exists
+- mdsm first_date  last_date
+- data06 first_date  last_date
+- reason classification
+  - MDSM_file_missing
+  - MDSM_missing_close_now
+  - MDSM_missing_close_past
+  - MDSM_insufficient_45d_window
+  - MDSM_cache_gap
+  - ticker_mapping_issue
+  - unknown
+
+Souhrn
+- total data06_only observations
+- unique tickers
+- count by reason
+- count by lookback
+- count by date
+- top affected tickers
+- zda se problém zhoršuje s delším lookbackem
+- zda jsou dotčené případy koncentrované na EXEPSKYQSNDK nebo širší množinu
+
+Výstup
+- MLE-RECON-02B_data06_only_ranked_diagnostics.md
+- MLE-RECON-02B_data06_only_ranked_diagnostics.json
+
+Nedělat
+- IRC reconciliation
+- backtest
+- MLE archive overwrite
+- APITWS calls
+- změny rawoptimizedderived dat
+```
+
+## Jak rozhodneme po C
+
+### Pokud C potvrdí MDSM coverage limit
+
+Pak MLE uzavřít takto
+
+```text id=bxi3o4
+MLE pricereturn compatibility PASSWARN
+MLE rank reproduction against MDSMarchive WARN, limited by reference coverage
+Backtest source freshly recomputed DATA-06 MLE ranks
+Next step IRC reconciliation
+```
+
+### Pokud C najde ticker mapping bug
+
+Pak opravit mapování a přepočítat 02.
+
+### Pokud C najde skutečný price mismatch mimo CA
+
+Pak rozšířit `manual_review` seznam, ale jen pro konkrétní tickerydny.
+
+## Můj praktický verdikt
+
+Nevolil bych A hned, protože `514` je moc konkrétní stopa.
+Nevolil bych B hned, protože už víme, že průnik ranky zlepší, ale neřekne proč.
+
+Teď C jedním cíleným reportem. Pokud potvrdí neúplné MDSM cache, MLE uzavřít a jít na IRC.

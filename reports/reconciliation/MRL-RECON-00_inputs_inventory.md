@@ -1,0 +1,135 @@
+# MRL-RECON-00 — Reconciliation Inputs Inventory
+
+Generated: 2026-07-07T02:10:37
+MRL root: C:\Users\stava\Projects\MarketResearchLab
+Primarni zdroj cest: config/data_paths.yaml
+
+READ-ONLY. FOUND/MISSING pro vstupy reconciliation gate.
+
+## METODICKE PRAVIDLO
+- 250denni reconciliation (2025-07 -> 2026-06): pouzit MDSM universe, NE historical SP500 membership.
+- IRC: pouzit industry taxonomy z industry_rank_calendar, NE Sharadar TICKERS industry labels.
+
+## Config resolved paths
+
+- MDSM_prices: `C:\Users\stava\Projects\MDSM-Lite\data\cache\prices`
+- MDSM_universe: `C:\Users\stava\Projects\MDSM-Lite\data\universe`
+- MLE_archive_dir: `C:\Users\stava\Projects\MarketLeadershipEngine\output\archive`
+- IRC_archive_dir: `C:\Users\stava\Projects\industry_rank_calendar\output\archive`
+- IMS_archive_dir: `C:\Users\stava\Projects\InstitutionalMomentumScanner\output\archive`
+
+## Souhrn
+
+- MLE_archive: **FOUND** (config/data_paths.yaml)
+- IRC_archive: **FOUND** (config/data_paths.yaml)
+- IMS_archive: **FOUND** (config/data_paths.yaml)
+- MDSM_prices: **FOUND** (config/data_paths.yaml)
+- MDSM_universe: **FOUND** (config/data_paths.yaml)
+- identity_mapping: **FOUND** (fallback (hardcoded))
+
+## Detail
+
+### MLE_archive
+- status: **FOUND**
+- note: truth pro MLE reconciliation; universe = MDSM (NE Sharadar SP500 membership)
+- source: config/data_paths.yaml
+- path: `C:\Users\stava\Projects\MarketLeadershipEngine\output\archive\rank_matrix_archive.csv`
+- archive_dir: `C:\Users\stava\Projects\MarketLeadershipEngine\output\archive`
+- type: csv
+- columns: ['date', 'ticker', 'sector', 'industry', 'subcategory', 'rank_1d', 'ret_1d', 'rank_2d', 'ret_2d', 'rank_3d', 'ret_3d', 'rank_4d', 'ret_4d', 'rank_5d', 'ret_5d', 'rank_6d', 'ret_6d', 'rank_7d', 'ret_7d', 'rank_8d', 'ret_8d', 'rank_9d', 'ret_9d', 'rank_10d', 'ret_10d', 'rank_20d', 'ret_20d']
+- row_count: 124247
+- date_range: {'date': ['2025-07-09', '2026-07-04']}
+
+### IRC_archive
+- status: **FOUND**
+- note: truth pro IRC reconciliation; industry taxonomy z industry_rank_calendar (NE Sharadar TICKERS)
+- source: config/data_paths.yaml
+- path: `C:\Users\stava\Projects\industry_rank_calendar\output\archive\industry_rank_calendar_archive.csv`
+- archive_dir: `C:\Users\stava\Projects\industry_rank_calendar\output\archive`
+- type: csv
+- columns: ['date', 'lookback', 'rank', 'industry', 'sector', 'median_return', 'mean_return', 'member_count', 'advance_ratio', 'top_1_ticker', 'top_1_return', 'top_2_ticker', 'top_2_return', 'top_3_ticker', 'top_3_return', 'status']
+- row_count: 63720
+- date_range: {'date': ['2025-06-02', '2026-06-27']}
+
+### IMS_archive
+- status: **FOUND**
+- note: IMS archiv (mimo reconciliation baseline v0.1)
+- source: config/data_paths.yaml
+- path: `C:\Users\stava\Projects\InstitutionalMomentumScanner\output\archive\ims_candidates_archive.csv`
+- archive_dir: `C:\Users\stava\Projects\InstitutionalMomentumScanner\output\archive`
+- type: csv
+- columns: ['date', 'ticker', 'sector', 'industry', 'subcategory', 'priority_group', 'score', 'rank_today', 'rank_improvement_20d', 'rank_improvement_40d', 'rs_vs_spy_20d', 'up_down_volume_ratio_20d', 'rank_stability_20d', 'avg_volume_20d', 'close', 'ema200', 'price_vs_52w_high', 'negative_extreme_days_60d', 'is_new_entry']
+- row_count: 23329
+- date_range: {'date': ['2025-07-09', '2026-07-04']}
+
+### MDSM_prices
+- status: **FOUND**
+- note: kratka price reference (parquet) pro Faze 1 price view reconciliation; zjistit schema/identifikatory/price fields
+- source: config/data_paths.yaml
+- path: `C:\Users\stava\Projects\MDSM-Lite\data\cache\prices`
+- type: parquet_dir
+- columns: ['open', 'high', 'low', 'close', 'volume', 'date']
+- total_rows: 292799
+- n_parquet: 516
+
+### MDSM_universe
+- status: **FOUND**
+- note: MDSM universe — KRITICKE pro MLE reconciliation (stejny universe jako puvodni archiv)
+- source: config/data_paths.yaml
+- path: `C:\Users\stava\Projects\MDSM-Lite\data\universe`
+- type: dir
+- files: ['market_breadth_universe.csv', 'market_breadth_universe.meta.json', 'module_universe.csv', 'sector_internals_rank_calendar_universe.csv', 'sector_internals_rank_calendar_universe.meta.json', 'sector_rank_calendar_universe.csv', 'sector_rank_calendar_universe.meta.json', 'sector_rs_universe.csv', 'sector_rs_universe.meta.json', 'sp500_rank_calendar_universe.csv', 'sp500_rank_calendar_universe.meta.json', 'test_module_universe.csv', 'test_module_universe.meta.json', 'universe.csv']
+
+### identity_mapping
+- status: **FOUND**
+- note: ticker<->conid<->permaticker mapping
+- source: fallback (hardcoded)
+- path: `C:\Users\stava\Projects\sharadar_mdsm_adapter\identity\identity_map_resolved_v2.csv`
+- type: csv
+- columns: ['conid', 'permaticker', 'ticker', 'sharadar_ticker', 'identity_tier', 'alias_flag', 'source', 'evidence', 'identity_contract_version', 'identity_artifact_version']
+- row_count: 503
+
+## A) MDSM filename inspection
+
+- n_files: 516
+- pattern: numeric (pravdepodobne conid) po strippu suffixu
+- detected suffixes: ['D1']
+- sample names (raw): ['10098_D1', '10174_D1', '10188791_D1', '101898880_D1', '10260_D1', '10291_D1', '1035459_D1', '10375_D1', '10376_D1', '10497_D1', '10517_D1', '10557_D1', '105669270_D1', '10672_D1', '107113386_D1', '10763362_D1', '10794_D1', '10811_D1', '10880_D1', '10885_D1']
+- stripped sample: ['10098', '10174', '10188791', '101898880', '10260', '10291', '1035459', '10375', '10376', '10497', '10517', '10557', '105669270', '10672', '107113386', '10763362', '10794', '10811', '10880', '10885']
+- match proti identity_map:
+  - conid: 503 souboru (rate 0.9748)
+  - ticker: 0 souboru (rate 0.0)
+  - permaticker: 0 souboru (rate 0.0)
+  - sharadar_ticker: 0 souboru (rate 0.0)
+- **best_id_column: conid**
+- unmatched: 13
+- unmatched sample: ['209048377', '322317077', '365921621', '4215200', '4215205', '4215210', '4215215', '4215217', '4215220', '4215227', '4215230', '4215235', '756733']
+
+## B) MDSM vs Sharadar close comparison
+
+- **best_matching_field: close**
+- mean_abs_diff by field: {'close': 0.0, 'closeadj': 0.238622, 'closeunadj': 0.0}
+- tested: ['AAPL', 'MSFT', 'NVDA']
+### AAPL
+- status: OK
+- best_field: close (n=60)
+  - close: mad=0.0 max=0.0 match_rate=1.0
+  - closeadj: mad=0.09595 max=0.27 match_rate=1.0
+  - closeunadj: mad=0.0 max=0.0 match_rate=1.0
+### MSFT
+- status: OK
+- best_field: close (n=60)
+  - close: mad=0.0 max=0.0 match_rate=1.0
+  - closeadj: mad=0.4608 max=0.938 match_rate=0.4833
+  - closeunadj: mad=0.0 max=0.0 match_rate=1.0
+### NVDA
+- status: OK
+- best_field: close (n=60)
+  - close: mad=0.0 max=0.0 match_rate=1.0
+  - closeadj: mad=0.159117 max=0.269 match_rate=0.3333
+  - closeunadj: mad=0.0 max=0.0 match_rate=1.0
+
+## Dalsi krok
+- FOUND kriticke vstupy (MLE/IRC archive, MDSM prices+universe) -> lze navrhnout DATA-06 price view dle MDSM schema.
+- MISSING -> doplnit pred prislusnou fazi reconciliation.
+- DATA-06 price view: navrhnout AZ podle zjisteneho MDSM prices schema (sloupce, identifikatory, price fields).

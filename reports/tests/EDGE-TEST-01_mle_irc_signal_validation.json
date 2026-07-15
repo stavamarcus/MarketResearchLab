@@ -1,0 +1,7665 @@
+{
+  "verdict": "PASS",
+  "trading_days": 245,
+  "overlap": [
+    "2025-07-09",
+    "2026-06-27"
+  ],
+  "results_all": {
+    "universe_baseline": {
+      "avg_candidates_per_day": 502.62,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 122640,
+            "mean": 0.0652,
+            "median": 0.0468,
+            "std": 2.2767,
+            "win_rate": 0.5115,
+            "t_stat": 10.023,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0262,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                434.81
+              ],
+              [
+                "LITE",
+                262.84
+              ],
+              [
+                "WDC",
+                256.61
+              ],
+              [
+                "MU",
+                251.76
+              ],
+              [
+                "STX",
+                214.37
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -116.7
+              ],
+              [
+                "FISV",
+                -104.39
+              ],
+              [
+                "CSGP",
+                -97.57
+              ],
+              [
+                "INTU",
+                -95.4
+              ],
+              [
+                "IT",
+                -93.22
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1585.88
+              ],
+              [
+                "Computers",
+                1195.16
+              ],
+              [
+                "Telecommunications",
+                604.94
+              ],
+              [
+                "Banks",
+                530.38
+              ],
+              [
+                "Electric",
+                475.42
+              ]
+            ]
+          },
+          "oc": {
+            "n": 122640,
+            "mean": 0.0151,
+            "median": 0.018,
+            "std": 1.8531,
+            "win_rate": 0.5042,
+            "t_stat": 2.862,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0206,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                231.99
+              ],
+              [
+                "CIEN",
+                124.57
+              ],
+              [
+                "WDC",
+                122.04
+              ],
+              [
+                "LITE",
+                102.93
+              ],
+              [
+                "STX",
+                95.63
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "CSGP",
+                -83.98
+              ],
+              [
+                "PODD",
+                -83.34
+              ],
+              [
+                "CHTR",
+                -83.3
+              ],
+              [
+                "NOW",
+                -75.05
+              ],
+              [
+                "BSX",
+                -73.0
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                541.67
+              ],
+              [
+                "Computers",
+                527.11
+              ],
+              [
+                "Banks",
+                312.72
+              ],
+              [
+                "Healthcare-Services",
+                303.36
+              ],
+              [
+                "Oil&Gas",
+                273.53
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 122137,
+            "mean": 0.3337,
+            "median": 0.2066,
+            "std": 5.0875,
+            "win_rate": 0.5225,
+            "t_stat": 22.922,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0273,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                2216.03
+              ],
+              [
+                "MU",
+                1257.91
+              ],
+              [
+                "LITE",
+                1243.56
+              ],
+              [
+                "WDC",
+                1236.18
+              ],
+              [
+                "STX",
+                1035.35
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -588.39
+              ],
+              [
+                "FISV",
+                -490.47
+              ],
+              [
+                "CSGP",
+                -484.54
+              ],
+              [
+                "INTU",
+                -454.43
+              ],
+              [
+                "CHTR",
+                -434.86
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7709.38
+              ],
+              [
+                "Computers",
+                6193.95
+              ],
+              [
+                "Telecommunications",
+                3053.37
+              ],
+              [
+                "Banks",
+                2621.85
+              ],
+              [
+                "Electric",
+                2148.71
+              ]
+            ]
+          },
+          "oc": {
+            "n": 122137,
+            "mean": 0.283,
+            "median": 0.1658,
+            "std": 4.8862,
+            "win_rate": 0.5177,
+            "t_stat": 20.24,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.027,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                1997.83
+              ],
+              [
+                "WDC",
+                1096.09
+              ],
+              [
+                "MU",
+                1079.71
+              ],
+              [
+                "LITE",
+                1070.34
+              ],
+              [
+                "STX",
+                911.01
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -532.86
+              ],
+              [
+                "CSGP",
+                -469.36
+              ],
+              [
+                "FISV",
+                -417.53
+              ],
+              [
+                "CHTR",
+                -409.47
+              ],
+              [
+                "INTU",
+                -393.25
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                6641.6
+              ],
+              [
+                "Computers",
+                5482.76
+              ],
+              [
+                "Telecommunications",
+                2609.45
+              ],
+              [
+                "Banks",
+                2401.08
+              ],
+              [
+                "Healthcare-Services",
+                1904.61
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 119622,
+            "mean": 0.6462,
+            "median": 0.37,
+            "std": 7.2706,
+            "win_rate": 0.5301,
+            "t_stat": 30.74,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0287,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                4660.2
+              ],
+              [
+                "MU",
+                2588.71
+              ],
+              [
+                "WDC",
+                2533.14
+              ],
+              [
+                "LITE",
+                2497.01
+              ],
+              [
+                "STX",
+                2147.8
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -1216.53
+              ],
+              [
+                "FISV",
+                -998.82
+              ],
+              [
+                "CSGP",
+                -970.52
+              ],
+              [
+                "INTU",
+                -928.16
+              ],
+              [
+                "CHTR",
+                -892.88
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                16091.45
+              ],
+              [
+                "Computers",
+                12828.96
+              ],
+              [
+                "Telecommunications",
+                6247.38
+              ],
+              [
+                "Banks",
+                5195.65
+              ],
+              [
+                "Electric",
+                3807.09
+              ]
+            ]
+          },
+          "oc": {
+            "n": 119622,
+            "mean": 0.595,
+            "median": 0.3293,
+            "std": 7.1193,
+            "win_rate": 0.5272,
+            "t_stat": 28.907,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0285,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                4430.08
+              ],
+              [
+                "MU",
+                2416.84
+              ],
+              [
+                "WDC",
+                2395.36
+              ],
+              [
+                "LITE",
+                2311.85
+              ],
+              [
+                "STX",
+                2022.8
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -1162.11
+              ],
+              [
+                "CSGP",
+                -954.3
+              ],
+              [
+                "FISV",
+                -926.03
+              ],
+              [
+                "INTU",
+                -871.98
+              ],
+              [
+                "CHTR",
+                -869.41
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                14956.47
+              ],
+              [
+                "Computers",
+                12098.57
+              ],
+              [
+                "Telecommunications",
+                5749.44
+              ],
+              [
+                "Banks",
+                4989.39
+              ],
+              [
+                "Healthcare-Services",
+                3750.79
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 114592,
+            "mean": 1.3012,
+            "median": 0.6359,
+            "std": 10.7189,
+            "win_rate": 0.5341,
+            "t_stat": 41.094,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0319,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                10138.77
+              ],
+              [
+                "MU",
+                5346.12
+              ],
+              [
+                "LITE",
+                5219.03
+              ],
+              [
+                "WDC",
+                4994.18
+              ],
+              [
+                "INTC",
+                4363.83
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -2505.02
+              ],
+              [
+                "CSGP",
+                -1940.1
+              ],
+              [
+                "INTU",
+                -1775.87
+              ],
+              [
+                "FISV",
+                -1749.14
+              ],
+              [
+                "BSX",
+                -1525.41
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                33080.63
+              ],
+              [
+                "Computers",
+                28254.86
+              ],
+              [
+                "Telecommunications",
+                12444.54
+              ],
+              [
+                "Banks",
+                9772.52
+              ],
+              [
+                "Oil&Gas",
+                7807.69
+              ]
+            ]
+          },
+          "oc": {
+            "n": 114592,
+            "mean": 1.2563,
+            "median": 0.6055,
+            "std": 10.5745,
+            "win_rate": 0.5328,
+            "t_stat": 40.216,
+            "unique_tickers": 503,
+            "unique_industries": 59,
+            "top1_ticker_share_of_abs": 0.0317,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                9868.93
+              ],
+              [
+                "MU",
+                5167.04
+              ],
+              [
+                "LITE",
+                5021.76
+              ],
+              [
+                "WDC",
+                4866.53
+              ],
+              [
+                "INTC",
+                4245.32
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -2455.76
+              ],
+              [
+                "CSGP",
+                -1930.27
+              ],
+              [
+                "INTU",
+                -1732.2
+              ],
+              [
+                "FISV",
+                -1687.11
+              ],
+              [
+                "BSX",
+                -1517.23
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                32099.93
+              ],
+              [
+                "Computers",
+                27422.51
+              ],
+              [
+                "Telecommunications",
+                11997.14
+              ],
+              [
+                "Banks",
+                9683.08
+              ],
+              [
+                "Oil&Gas",
+                7610.71
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top10": {
+      "avg_candidates_per_day": 10.0,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 2440,
+            "mean": 0.3454,
+            "median": 0.1278,
+            "std": 4.0181,
+            "win_rate": 0.5238,
+            "t_stat": 4.246,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.1472,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                253.93
+              ],
+              [
+                "INTC",
+                82.41
+              ],
+              [
+                "AMD",
+                68.45
+              ],
+              [
+                "LITE",
+                54.5
+              ],
+              [
+                "SATS",
+                53.26
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -28.8
+              ],
+              [
+                "HOOD",
+                -23.17
+              ],
+              [
+                "KLAC",
+                -23.06
+              ],
+              [
+                "EXPE",
+                -20.75
+              ],
+              [
+                "AXON",
+                -18.73
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                420.45
+              ],
+              [
+                "Semiconductors",
+                201.65
+              ],
+              [
+                "Telecommunications",
+                98.82
+              ],
+              [
+                "Oil&Gas",
+                44.72
+              ],
+              [
+                "Healthcare-Services",
+                37.52
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2440,
+            "mean": 0.1516,
+            "median": 0.0535,
+            "std": 3.2134,
+            "win_rate": 0.5102,
+            "t_stat": 2.33,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.0951,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                127.03
+              ],
+              [
+                "INTC",
+                53.49
+              ],
+              [
+                "FTNT",
+                28.61
+              ],
+              [
+                "MRNA",
+                28.58
+              ],
+              [
+                "ALB",
+                26.09
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ORCL",
+                -24.55
+              ],
+              [
+                "HOOD",
+                -22.66
+              ],
+              [
+                "SMCI",
+                -21.81
+              ],
+              [
+                "HPE",
+                -17.52
+              ],
+              [
+                "KLAC",
+                -16.76
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                134.9
+              ],
+              [
+                "Semiconductors",
+                77.04
+              ],
+              [
+                "Oil&Gas",
+                44.92
+              ],
+              [
+                "Healthcare-Services",
+                33.5
+              ],
+              [
+                "Biotechnology",
+                32.33
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 2430,
+            "mean": 1.5855,
+            "median": 0.8329,
+            "std": 8.9899,
+            "win_rate": 0.5519,
+            "t_stat": 8.694,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.1631,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                1249.8
+              ],
+              [
+                "LITE",
+                521.55
+              ],
+              [
+                "INTC",
+                386.85
+              ],
+              [
+                "AMD",
+                324.68
+              ],
+              [
+                "MU",
+                171.91
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -208.88
+              ],
+              [
+                "AXON",
+                -120.9
+              ],
+              [
+                "COHR",
+                -99.04
+              ],
+              [
+                "HOOD",
+                -86.32
+              ],
+              [
+                "ORCL",
+                -75.46
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                2093.2
+              ],
+              [
+                "Semiconductors",
+                1393.7
+              ],
+              [
+                "Telecommunications",
+                386.93
+              ],
+              [
+                "Oil&Gas",
+                197.97
+              ],
+              [
+                "Biotechnology",
+                132.28
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2430,
+            "mean": 1.3904,
+            "median": 0.6923,
+            "std": 8.6329,
+            "win_rate": 0.5453,
+            "t_stat": 7.939,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.1575,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                1114.19
+              ],
+              [
+                "LITE",
+                468.85
+              ],
+              [
+                "INTC",
+                358.64
+              ],
+              [
+                "AMD",
+                275.08
+              ],
+              [
+                "MU",
+                150.12
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -202.37
+              ],
+              [
+                "AXON",
+                -115.11
+              ],
+              [
+                "COHR",
+                -95.73
+              ],
+              [
+                "HOOD",
+                -86.43
+              ],
+              [
+                "ORCL",
+                -83.64
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                1799.67
+              ],
+              [
+                "Semiconductors",
+                1272.25
+              ],
+              [
+                "Telecommunications",
+                316.27
+              ],
+              [
+                "Oil&Gas",
+                198.89
+              ],
+              [
+                "Biotechnology",
+                128.73
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 2380,
+            "mean": 3.3135,
+            "median": 1.9299,
+            "std": 12.639,
+            "win_rate": 0.5798,
+            "t_stat": 12.79,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.1812,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                2549.57
+              ],
+              [
+                "LITE",
+                955.35
+              ],
+              [
+                "INTC",
+                733.84
+              ],
+              [
+                "MU",
+                626.46
+              ],
+              [
+                "AMD",
+                579.11
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -311.34
+              ],
+              [
+                "COIN",
+                -175.06
+              ],
+              [
+                "AXON",
+                -174.28
+              ],
+              [
+                "HOOD",
+                -123.46
+              ],
+              [
+                "FSLR",
+                -112.26
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                4172.2
+              ],
+              [
+                "Semiconductors",
+                2767.58
+              ],
+              [
+                "Telecommunications",
+                740.75
+              ],
+              [
+                "Healthcare-Services",
+                374.95
+              ],
+              [
+                "Chemicals",
+                233.49
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2380,
+            "mean": 3.099,
+            "median": 1.7034,
+            "std": 12.3902,
+            "win_rate": 0.5697,
+            "t_stat": 12.202,
+            "unique_tickers": 222,
+            "unique_industries": 48,
+            "top1_ticker_share_of_abs": 0.178,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                2405.58
+              ],
+              [
+                "LITE",
+                902.01
+              ],
+              [
+                "INTC",
+                707.37
+              ],
+              [
+                "MU",
+                589.91
+              ],
+              [
+                "AMD",
+                531.48
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -301.03
+              ],
+              [
+                "COIN",
+                -170.11
+              ],
+              [
+                "AXON",
+                -168.63
+              ],
+              [
+                "HOOD",
+                -125.49
+              ],
+              [
+                "FSLR",
+                -102.9
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                3878.81
+              ],
+              [
+                "Semiconductors",
+                2597.52
+              ],
+              [
+                "Telecommunications",
+                671.6
+              ],
+              [
+                "Healthcare-Services",
+                372.64
+              ],
+              [
+                "Chemicals",
+                258.24
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 2280,
+            "mean": 6.632,
+            "median": 2.6665,
+            "std": 20.4389,
+            "win_rate": 0.5829,
+            "t_stat": 15.494,
+            "unique_tickers": 216,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.2092,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                5002.93
+              ],
+              [
+                "LITE",
+                1577.01
+              ],
+              [
+                "MU",
+                1524.39
+              ],
+              [
+                "INTC",
+                1421.09
+              ],
+              [
+                "WDC",
+                966.53
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -351.81
+              ],
+              [
+                "AXON",
+                -294.0
+              ],
+              [
+                "COIN",
+                -284.01
+              ],
+              [
+                "LUV",
+                -196.11
+              ],
+              [
+                "AKAM",
+                -178.29
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                8657.71
+              ],
+              [
+                "Semiconductors",
+                5247.81
+              ],
+              [
+                "Telecommunications",
+                1314.78
+              ],
+              [
+                "Healthcare-Services",
+                478.93
+              ],
+              [
+                "Chemicals",
+                418.1
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2280,
+            "mean": 6.3873,
+            "median": 2.4598,
+            "std": 19.9498,
+            "win_rate": 0.5833,
+            "t_stat": 15.288,
+            "unique_tickers": 216,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.2069,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                4832.34
+              ],
+              [
+                "LITE",
+                1514.33
+              ],
+              [
+                "MU",
+                1479.04
+              ],
+              [
+                "INTC",
+                1386.99
+              ],
+              [
+                "WDC",
+                943.54
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -339.94
+              ],
+              [
+                "AXON",
+                -289.56
+              ],
+              [
+                "COIN",
+                -279.53
+              ],
+              [
+                "LUV",
+                -202.1
+              ],
+              [
+                "AKAM",
+                -172.59
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                8332.37
+              ],
+              [
+                "Semiconductors",
+                5069.99
+              ],
+              [
+                "Telecommunications",
+                1241.76
+              ],
+              [
+                "Healthcare-Services",
+                475.32
+              ],
+              [
+                "Chemicals",
+                442.1
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "irc_top10_industry": {
+      "avg_candidates_per_day": 92.52,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 22575,
+            "mean": 0.0804,
+            "median": 0.0329,
+            "std": 2.5601,
+            "win_rate": 0.5072,
+            "t_stat": 4.719,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0237,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                142.59
+              ],
+              [
+                "MU",
+                132.75
+              ],
+              [
+                "AMD",
+                130.86
+              ],
+              [
+                "INTC",
+                99.3
+              ],
+              [
+                "FIX",
+                94.91
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -65.44
+              ],
+              [
+                "ACN",
+                -44.89
+              ],
+              [
+                "LDOS",
+                -43.59
+              ],
+              [
+                "FICO",
+                -42.57
+              ],
+              [
+                "IT",
+                -38.11
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                725.52
+              ],
+              [
+                "Banks",
+                444.11
+              ],
+              [
+                "Computers",
+                371.38
+              ],
+              [
+                "Telecommunications",
+                201.34
+              ],
+              [
+                "Chemicals",
+                172.04
+              ]
+            ]
+          },
+          "oc": {
+            "n": 22575,
+            "mean": -0.0097,
+            "median": -0.0064,
+            "std": 2.0025,
+            "win_rate": 0.4955,
+            "t_stat": -0.727,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0178,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                75.34
+              ],
+              [
+                "FTNT",
+                49.37
+              ],
+              [
+                "CRWD",
+                46.4
+              ],
+              [
+                "AMD",
+                45.24
+              ],
+              [
+                "PANW",
+                43.15
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -41.02
+              ],
+              [
+                "FICO",
+                -38.38
+              ],
+              [
+                "AVGO",
+                -37.29
+              ],
+              [
+                "DASH",
+                -35.61
+              ],
+              [
+                "LDOS",
+                -35.42
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Banks",
+                200.12
+              ],
+              [
+                "Chemicals",
+                129.08
+              ],
+              [
+                "Oil&Gas",
+                76.31
+              ],
+              [
+                "Airlines",
+                69.7
+              ],
+              [
+                "Leisure Time",
+                59.73
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 22481,
+            "mean": 0.4765,
+            "median": 0.1352,
+            "std": 5.7689,
+            "win_rate": 0.515,
+            "t_stat": 12.384,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0311,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                862.32
+              ],
+              [
+                "SNDK",
+                775.29
+              ],
+              [
+                "AMD",
+                635.98
+              ],
+              [
+                "SATS",
+                544.01
+              ],
+              [
+                "FIX",
+                500.55
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -188.41
+              ],
+              [
+                "ACN",
+                -180.5
+              ],
+              [
+                "LDOS",
+                -140.66
+              ],
+              [
+                "IT",
+                -139.79
+              ],
+              [
+                "FICO",
+                -137.97
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4225.4
+              ],
+              [
+                "Computers",
+                2679.31
+              ],
+              [
+                "Banks",
+                1843.12
+              ],
+              [
+                "Telecommunications",
+                975.36
+              ],
+              [
+                "Machinery-Constr&Mining",
+                793.91
+              ]
+            ]
+          },
+          "oc": {
+            "n": 22481,
+            "mean": 0.3817,
+            "median": 0.0782,
+            "std": 5.4586,
+            "win_rate": 0.5079,
+            "t_stat": 10.483,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0296,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                743.17
+              ],
+              [
+                "SNDK",
+                702.63
+              ],
+              [
+                "AMD",
+                543.88
+              ],
+              [
+                "FIX",
+                418.72
+              ],
+              [
+                "SATS",
+                415.19
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -164.92
+              ],
+              [
+                "ACN",
+                -156.73
+              ],
+              [
+                "FICO",
+                -134.5
+              ],
+              [
+                "LDOS",
+                -132.52
+              ],
+              [
+                "IT",
+                -132.07
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                3485.95
+              ],
+              [
+                "Computers",
+                2240.07
+              ],
+              [
+                "Banks",
+                1594.49
+              ],
+              [
+                "Telecommunications",
+                809.68
+              ],
+              [
+                "Chemicals",
+                673.85
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 22138,
+            "mean": 1.1387,
+            "median": 0.3197,
+            "std": 8.5607,
+            "win_rate": 0.5247,
+            "t_stat": 19.79,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0337,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1796.48
+              ],
+              [
+                "SNDK",
+                1782.35
+              ],
+              [
+                "SATS",
+                1313.15
+              ],
+              [
+                "AMD",
+                1230.7
+              ],
+              [
+                "INTC",
+                1025.93
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ACN",
+                -265.45
+              ],
+              [
+                "LDOS",
+                -227.75
+              ],
+              [
+                "NOW",
+                -221.88
+              ],
+              [
+                "IT",
+                -214.02
+              ],
+              [
+                "INTU",
+                -211.3
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9759.16
+              ],
+              [
+                "Computers",
+                6148.65
+              ],
+              [
+                "Telecommunications",
+                2459.11
+              ],
+              [
+                "Banks",
+                2438.58
+              ],
+              [
+                "Machinery-Constr&Mining",
+                1626.19
+              ]
+            ]
+          },
+          "oc": {
+            "n": 22138,
+            "mean": 1.037,
+            "median": 0.2518,
+            "std": 8.3156,
+            "win_rate": 0.5206,
+            "t_stat": 18.555,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0335,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                1702.85
+              ],
+              [
+                "MU",
+                1670.19
+              ],
+              [
+                "SATS",
+                1160.92
+              ],
+              [
+                "AMD",
+                1132.92
+              ],
+              [
+                "INTC",
+                936.39
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ACN",
+                -240.53
+              ],
+              [
+                "NOW",
+                -221.63
+              ],
+              [
+                "LDOS",
+                -220.01
+              ],
+              [
+                "IT",
+                -206.37
+              ],
+              [
+                "INTU",
+                -201.76
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                8928.36
+              ],
+              [
+                "Computers",
+                5739.57
+              ],
+              [
+                "Telecommunications",
+                2266.74
+              ],
+              [
+                "Banks",
+                2197.34
+              ],
+              [
+                "Machinery-Constr&Mining",
+                1482.25
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 21150,
+            "mean": 2.7532,
+            "median": 0.8961,
+            "std": 12.8814,
+            "win_rate": 0.5483,
+            "t_stat": 31.083,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0394,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3774.56
+              ],
+              [
+                "SNDK",
+                3485.71
+              ],
+              [
+                "SATS",
+                2361.16
+              ],
+              [
+                "AMD",
+                2231.62
+              ],
+              [
+                "INTC",
+                2229.49
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LDOS",
+                -331.74
+              ],
+              [
+                "INTU",
+                -322.47
+              ],
+              [
+                "TMUS",
+                -314.22
+              ],
+              [
+                "COIN",
+                -299.73
+              ],
+              [
+                "IT",
+                -282.82
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                19937.7
+              ],
+              [
+                "Computers",
+                13084.93
+              ],
+              [
+                "Telecommunications",
+                4754.76
+              ],
+              [
+                "Internet",
+                3503.05
+              ],
+              [
+                "Machinery-Constr&Mining",
+                2956.03
+              ]
+            ]
+          },
+          "oc": {
+            "n": 21150,
+            "mean": 2.651,
+            "median": 0.8259,
+            "std": 12.6449,
+            "win_rate": 0.5468,
+            "t_stat": 30.49,
+            "unique_tickers": 480,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0387,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3621.18
+              ],
+              [
+                "SNDK",
+                3398.83
+              ],
+              [
+                "SATS",
+                2228.12
+              ],
+              [
+                "INTC",
+                2120.91
+              ],
+              [
+                "AMD",
+                2113.51
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LDOS",
+                -327.07
+              ],
+              [
+                "COIN",
+                -316.94
+              ],
+              [
+                "INTU",
+                -312.91
+              ],
+              [
+                "TMUS",
+                -311.01
+              ],
+              [
+                "IT",
+                -282.56
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                18942.64
+              ],
+              [
+                "Computers",
+                12642.3
+              ],
+              [
+                "Telecommunications",
+                4580.82
+              ],
+              [
+                "Internet",
+                3482.36
+              ],
+              [
+                "Machinery-Constr&Mining",
+                2813.17
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top10_x_irc_top10": {
+      "avg_candidates_per_day": 4.61,
+      "days_zero_candidates": 3,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 1124,
+            "mean": 0.3361,
+            "median": 0.2046,
+            "std": 4.1147,
+            "win_rate": 0.532,
+            "t_stat": 2.738,
+            "unique_tickers": 149,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0855,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                75.16
+              ],
+              [
+                "SNDK",
+                75.07
+              ],
+              [
+                "AMD",
+                64.6
+              ],
+              [
+                "SATS",
+                29.16
+              ],
+              [
+                "WDC",
+                25.38
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "KLAC",
+                -29.15
+              ],
+              [
+                "CF",
+                -13.23
+              ],
+              [
+                "HOOD",
+                -12.95
+              ],
+              [
+                "HAL",
+                -11.56
+              ],
+              [
+                "LITE",
+                -10.32
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                135.58
+              ],
+              [
+                "Semiconductors",
+                124.3
+              ],
+              [
+                "Telecommunications",
+                49.18
+              ],
+              [
+                "Oil&Gas",
+                37.36
+              ],
+              [
+                "Pharmaceuticals",
+                24.8
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1124,
+            "mean": 0.1126,
+            "median": 0.0524,
+            "std": 3.1765,
+            "win_rate": 0.5107,
+            "t_stat": 1.188,
+            "unique_tickers": 149,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0747,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                56.79
+              ],
+              [
+                "SNDK",
+                42.21
+              ],
+              [
+                "FTNT",
+                28.61
+              ],
+              [
+                "AMD",
+                21.4
+              ],
+              [
+                "APA",
+                18.95
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LITE",
+                -28.66
+              ],
+              [
+                "HPE",
+                -25.24
+              ],
+              [
+                "MU",
+                -16.85
+              ],
+              [
+                "KLAC",
+                -15.84
+              ],
+              [
+                "SMCI",
+                -13.55
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                45.24
+              ],
+              [
+                "Oil&Gas",
+                40.3
+              ],
+              [
+                "Pharmaceuticals",
+                27.87
+              ],
+              [
+                "Electrical Compo&Equip",
+                18.41
+              ],
+              [
+                "Electronics",
+                12.87
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 1121,
+            "mean": 1.9395,
+            "median": 1.096,
+            "std": 9.3038,
+            "win_rate": 0.5647,
+            "t_stat": 6.98,
+            "unique_tickers": 148,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0978,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                377.02
+              ],
+              [
+                "INTC",
+                373.11
+              ],
+              [
+                "AMD",
+                302.96
+              ],
+              [
+                "MU",
+                159.33
+              ],
+              [
+                "LITE",
+                151.79
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -177.18
+              ],
+              [
+                "HOOD",
+                -44.11
+              ],
+              [
+                "COHR",
+                -39.49
+              ],
+              [
+                "XYZ",
+                -39.43
+              ],
+              [
+                "IBM",
+                -36.59
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1193.66
+              ],
+              [
+                "Computers",
+                669.02
+              ],
+              [
+                "Telecommunications",
+                196.55
+              ],
+              [
+                "Oil&Gas",
+                189.37
+              ],
+              [
+                "Pharmaceuticals",
+                71.69
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1121,
+            "mean": 1.7236,
+            "median": 0.8859,
+            "std": 9.0421,
+            "win_rate": 0.5584,
+            "t_stat": 6.382,
+            "unique_tickers": 148,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0986,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                354.75
+              ],
+              [
+                "SNDK",
+                342.31
+              ],
+              [
+                "AMD",
+                258.1
+              ],
+              [
+                "MU",
+                150.22
+              ],
+              [
+                "LITE",
+                133.82
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -181.45
+              ],
+              [
+                "IBM",
+                -45.14
+              ],
+              [
+                "HOOD",
+                -39.43
+              ],
+              [
+                "NOW",
+                -36.94
+              ],
+              [
+                "COHR",
+                -36.55
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1121.77
+              ],
+              [
+                "Computers",
+                537.55
+              ],
+              [
+                "Oil&Gas",
+                193.03
+              ],
+              [
+                "Telecommunications",
+                154.87
+              ],
+              [
+                "Pharmaceuticals",
+                74.83
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 1103,
+            "mean": 4.0117,
+            "median": 2.4084,
+            "std": 12.7047,
+            "win_rate": 0.6038,
+            "t_stat": 10.487,
+            "unique_tickers": 147,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1425,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                1003.04
+              ],
+              [
+                "INTC",
+                734.09
+              ],
+              [
+                "MU",
+                551.08
+              ],
+              [
+                "AMD",
+                547.72
+              ],
+              [
+                "LITE",
+                412.39
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -270.84
+              ],
+              [
+                "IBM",
+                -72.34
+              ],
+              [
+                "NOW",
+                -52.43
+              ],
+              [
+                "XYZ",
+                -49.66
+              ],
+              [
+                "HOOD",
+                -48.66
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2457.12
+              ],
+              [
+                "Computers",
+                1505.73
+              ],
+              [
+                "Telecommunications",
+                337.93
+              ],
+              [
+                "Oil&Gas",
+                186.61
+              ],
+              [
+                "Machinery-Constr&Mining",
+                128.78
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1103,
+            "mean": 3.7608,
+            "median": 2.1479,
+            "std": 12.5933,
+            "win_rate": 0.5884,
+            "t_stat": 9.918,
+            "unique_tickers": 147,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1431,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                965.67
+              ],
+              [
+                "INTC",
+                711.49
+              ],
+              [
+                "MU",
+                533.25
+              ],
+              [
+                "AMD",
+                505.09
+              ],
+              [
+                "LITE",
+                392.55
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -269.89
+              ],
+              [
+                "IBM",
+                -80.24
+              ],
+              [
+                "NOW",
+                -54.89
+              ],
+              [
+                "LUV",
+                -48.99
+              ],
+              [
+                "XYZ",
+                -46.89
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2337.99
+              ],
+              [
+                "Computers",
+                1381.54
+              ],
+              [
+                "Telecommunications",
+                294.33
+              ],
+              [
+                "Oil&Gas",
+                190.56
+              ],
+              [
+                "Machinery-Constr&Mining",
+                120.82
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 1057,
+            "mean": 8.1684,
+            "median": 4.4813,
+            "std": 20.4271,
+            "win_rate": 0.6395,
+            "t_stat": 13.001,
+            "unique_tickers": 146,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1665,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                2056.13
+              ],
+              [
+                "INTC",
+                1307.0
+              ],
+              [
+                "MU",
+                1200.9
+              ],
+              [
+                "AMD",
+                804.42
+              ],
+              [
+                "LITE",
+                649.18
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -306.21
+              ],
+              [
+                "SW",
+                -92.95
+              ],
+              [
+                "AXON",
+                -72.23
+              ],
+              [
+                "RCL",
+                -70.33
+              ],
+              [
+                "OXY",
+                -70.3
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4576.02
+              ],
+              [
+                "Computers",
+                3482.02
+              ],
+              [
+                "Telecommunications",
+                587.47
+              ],
+              [
+                "Oil&Gas Services",
+                183.99
+              ],
+              [
+                "Electronics",
+                160.53
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1057,
+            "mean": 7.8797,
+            "median": 4.3859,
+            "std": 20.0543,
+            "win_rate": 0.6367,
+            "t_stat": 12.774,
+            "unique_tickers": 146,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1679,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                2015.89
+              ],
+              [
+                "INTC",
+                1277.57
+              ],
+              [
+                "MU",
+                1172.22
+              ],
+              [
+                "AMD",
+                753.79
+              ],
+              [
+                "LITE",
+                628.76
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -302.14
+              ],
+              [
+                "SW",
+                -90.42
+              ],
+              [
+                "AXON",
+                -69.77
+              ],
+              [
+                "INTU",
+                -68.08
+              ],
+              [
+                "RCL",
+                -67.73
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4422.97
+              ],
+              [
+                "Computers",
+                3367.07
+              ],
+              [
+                "Telecommunications",
+                542.97
+              ],
+              [
+                "Oil&Gas Services",
+                179.49
+              ],
+              [
+                "Electronics",
+                167.52
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top25_x_irc_top10": {
+      "avg_candidates_per_day": 11.09,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 2705,
+            "mean": 0.2705,
+            "median": 0.0882,
+            "std": 3.609,
+            "win_rate": 0.5146,
+            "t_stat": 3.897,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0509,
+            "top_contrib_tickers": [
+              [
+                "SNDK",
+                81.43
+              ],
+              [
+                "AMD",
+                80.65
+              ],
+              [
+                "INTC",
+                68.75
+              ],
+              [
+                "MU",
+                59.67
+              ],
+              [
+                "DELL",
+                43.03
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ORCL",
+                -18.73
+              ],
+              [
+                "CF",
+                -15.04
+              ],
+              [
+                "LYB",
+                -14.98
+              ],
+              [
+                "ANET",
+                -13.63
+              ],
+              [
+                "BKR",
+                -12.18
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                317.48
+              ],
+              [
+                "Semiconductors",
+                297.8
+              ],
+              [
+                "Telecommunications",
+                52.24
+              ],
+              [
+                "Airlines",
+                28.11
+              ],
+              [
+                "Biotechnology",
+                26.65
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2705,
+            "mean": 0.1287,
+            "median": 0.0439,
+            "std": 2.7501,
+            "win_rate": 0.5087,
+            "t_stat": 2.434,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0447,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                57.83
+              ],
+              [
+                "SNDK",
+                57.71
+              ],
+              [
+                "CRWD",
+                45.63
+              ],
+              [
+                "AMD",
+                39.83
+              ],
+              [
+                "WDC",
+                37.14
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "VRT",
+                -27.26
+              ],
+              [
+                "LITE",
+                -21.98
+              ],
+              [
+                "HOOD",
+                -17.13
+              ],
+              [
+                "ORCL",
+                -13.77
+              ],
+              [
+                "NOW",
+                -13.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                159.7
+              ],
+              [
+                "Computers",
+                149.44
+              ],
+              [
+                "Oil&Gas",
+                57.54
+              ],
+              [
+                "Electrical Compo&Equip",
+                23.12
+              ],
+              [
+                "Biotechnology",
+                22.23
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 2698,
+            "mean": 1.2962,
+            "median": 0.5653,
+            "std": 8.2277,
+            "win_rate": 0.5415,
+            "t_stat": 8.183,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0762,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                512.23
+              ],
+              [
+                "SNDK",
+                419.03
+              ],
+              [
+                "INTC",
+                391.89
+              ],
+              [
+                "AMD",
+                345.86
+              ],
+              [
+                "DELL",
+                245.41
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -114.11
+              ],
+              [
+                "HOOD",
+                -84.45
+              ],
+              [
+                "NOW",
+                -67.28
+              ],
+              [
+                "ORCL",
+                -62.36
+              ],
+              [
+                "XYZ",
+                -39.43
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1932.0
+              ],
+              [
+                "Computers",
+                1302.2
+              ],
+              [
+                "Oil&Gas",
+                252.29
+              ],
+              [
+                "Telecommunications",
+                227.89
+              ],
+              [
+                "Aerospace/Defense",
+                109.11
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2698,
+            "mean": 1.1502,
+            "median": 0.4181,
+            "std": 7.8291,
+            "win_rate": 0.5319,
+            "t_stat": 7.631,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0751,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                463.26
+              ],
+              [
+                "SNDK",
+                395.67
+              ],
+              [
+                "INTC",
+                381.75
+              ],
+              [
+                "AMD",
+                301.05
+              ],
+              [
+                "DELL",
+                196.28
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -119.98
+              ],
+              [
+                "HOOD",
+                -92.5
+              ],
+              [
+                "NOW",
+                -70.46
+              ],
+              [
+                "ORCL",
+                -58.19
+              ],
+              [
+                "COHR",
+                -44.94
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1795.19
+              ],
+              [
+                "Computers",
+                1126.98
+              ],
+              [
+                "Oil&Gas",
+                285.75
+              ],
+              [
+                "Telecommunications",
+                185.88
+              ],
+              [
+                "Aerospace/Defense",
+                98.51
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 2658,
+            "mean": 3.0403,
+            "median": 1.3645,
+            "std": 11.5256,
+            "win_rate": 0.576,
+            "t_stat": 13.6,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0981,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1245.95
+              ],
+              [
+                "SNDK",
+                1178.07
+              ],
+              [
+                "INTC",
+                734.76
+              ],
+              [
+                "AMD",
+                726.38
+              ],
+              [
+                "LITE",
+                457.83
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -117.72
+              ],
+              [
+                "LUV",
+                -92.02
+              ],
+              [
+                "ORCL",
+                -87.84
+              ],
+              [
+                "HOOD",
+                -75.64
+              ],
+              [
+                "HPQ",
+                -73.46
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4012.38
+              ],
+              [
+                "Computers",
+                3029.04
+              ],
+              [
+                "Telecommunications",
+                454.96
+              ],
+              [
+                "Machinery-Constr&Mining",
+                356.54
+              ],
+              [
+                "Oil&Gas",
+                262.95
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2658,
+            "mean": 2.8817,
+            "median": 1.2686,
+            "std": 11.4042,
+            "win_rate": 0.5677,
+            "t_stat": 13.028,
+            "unique_tickers": 264,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0973,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1192.28
+              ],
+              [
+                "SNDK",
+                1152.38
+              ],
+              [
+                "INTC",
+                720.2
+              ],
+              [
+                "AMD",
+                676.09
+              ],
+              [
+                "LITE",
+                419.45
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -120.52
+              ],
+              [
+                "LUV",
+                -101.41
+              ],
+              [
+                "ORCL",
+                -83.87
+              ],
+              [
+                "HOOD",
+                -82.52
+              ],
+              [
+                "HPQ",
+                -79.44
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                3814.15
+              ],
+              [
+                "Computers",
+                2885.58
+              ],
+              [
+                "Telecommunications",
+                412.33
+              ],
+              [
+                "Machinery-Constr&Mining",
+                322.47
+              ],
+              [
+                "Oil&Gas",
+                296.18
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 2558,
+            "mean": 5.7361,
+            "median": 2.5583,
+            "std": 17.5051,
+            "win_rate": 0.6001,
+            "t_stat": 16.573,
+            "unique_tickers": 260,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.1125,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2515.08
+              ],
+              [
+                "SNDK",
+                2380.42
+              ],
+              [
+                "INTC",
+                1362.41
+              ],
+              [
+                "AMD",
+                1214.34
+              ],
+              [
+                "LITE",
+                710.22
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -208.52
+              ],
+              [
+                "NOW",
+                -176.42
+              ],
+              [
+                "RCL",
+                -128.91
+              ],
+              [
+                "INTU",
+                -122.5
+              ],
+              [
+                "HPQ",
+                -121.19
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7503.75
+              ],
+              [
+                "Computers",
+                5291.24
+              ],
+              [
+                "Telecommunications",
+                952.24
+              ],
+              [
+                "Machinery-Constr&Mining",
+                455.34
+              ],
+              [
+                "Oil&Gas Services",
+                379.65
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2558,
+            "mean": 5.5551,
+            "median": 2.4442,
+            "std": 17.2613,
+            "win_rate": 0.5958,
+            "t_stat": 16.277,
+            "unique_tickers": 260,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.1116,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2442.75
+              ],
+              [
+                "SNDK",
+                2347.82
+              ],
+              [
+                "INTC",
+                1341.19
+              ],
+              [
+                "AMD",
+                1154.27
+              ],
+              [
+                "WDC",
+                676.27
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -203.72
+              ],
+              [
+                "NOW",
+                -179.29
+              ],
+              [
+                "HPQ",
+                -128.1
+              ],
+              [
+                "RCL",
+                -125.44
+              ],
+              [
+                "INTU",
+                -123.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7249.49
+              ],
+              [
+                "Computers",
+                5142.82
+              ],
+              [
+                "Telecommunications",
+                917.4
+              ],
+              [
+                "Machinery-Constr&Mining",
+                422.2
+              ],
+              [
+                "Oil&Gas Services",
+                375.79
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top50_x_irc_top10": {
+      "avg_candidates_per_day": 20.48,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 4996,
+            "mean": 0.1502,
+            "median": 0.0441,
+            "std": 3.2168,
+            "win_rate": 0.5088,
+            "t_stat": 3.301,
+            "unique_tickers": 376,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0477,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                112.94
+              ],
+              [
+                "SNDK",
+                94.31
+              ],
+              [
+                "AMD",
+                69.61
+              ],
+              [
+                "INTC",
+                54.52
+              ],
+              [
+                "WDC",
+                50.58
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SWKS",
+                -24.03
+              ],
+              [
+                "SMCI",
+                -21.35
+              ],
+              [
+                "ANET",
+                -20.76
+              ],
+              [
+                "NVDA",
+                -19.58
+              ],
+              [
+                "NOW",
+                -18.25
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                370.18
+              ],
+              [
+                "Semiconductors",
+                301.85
+              ],
+              [
+                "Telecommunications",
+                59.82
+              ],
+              [
+                "Oil&Gas",
+                54.24
+              ],
+              [
+                "Airlines",
+                39.95
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4996,
+            "mean": 0.0353,
+            "median": 0.0,
+            "std": 2.4905,
+            "win_rate": 0.499,
+            "t_stat": 1.001,
+            "unique_tickers": 376,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0343,
+            "top_contrib_tickers": [
+              [
+                "CRWD",
+                64.81
+              ],
+              [
+                "SNDK",
+                56.68
+              ],
+              [
+                "INTC",
+                39.87
+              ],
+              [
+                "AMD",
+                33.72
+              ],
+              [
+                "PANW",
+                31.37
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "VRT",
+                -26.48
+              ],
+              [
+                "GEV",
+                -23.43
+              ],
+              [
+                "LRCX",
+                -23.25
+              ],
+              [
+                "NVDA",
+                -21.09
+              ],
+              [
+                "NOW",
+                -21.0
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Computers",
+                167.2
+              ],
+              [
+                "Oil&Gas",
+                84.63
+              ],
+              [
+                "Semiconductors",
+                57.72
+              ],
+              [
+                "Leisure Time",
+                32.6
+              ],
+              [
+                "Airlines",
+                31.37
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 4980,
+            "mean": 0.9194,
+            "median": 0.3647,
+            "std": 7.2701,
+            "win_rate": 0.5317,
+            "t_stat": 8.925,
+            "unique_tickers": 376,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.069,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                693.99
+              ],
+              [
+                "SNDK",
+                490.69
+              ],
+              [
+                "AMD",
+                371.82
+              ],
+              [
+                "INTC",
+                356.84
+              ],
+              [
+                "DELL",
+                352.26
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -97.15
+              ],
+              [
+                "FICO",
+                -90.7
+              ],
+              [
+                "CHRW",
+                -79.95
+              ],
+              [
+                "ORCL",
+                -76.97
+              ],
+              [
+                "SMCI",
+                -66.54
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2343.96
+              ],
+              [
+                "Computers",
+                1847.63
+              ],
+              [
+                "Oil&Gas",
+                397.63
+              ],
+              [
+                "Telecommunications",
+                343.65
+              ],
+              [
+                "Banks",
+                177.49
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4980,
+            "mean": 0.798,
+            "median": 0.2187,
+            "std": 6.9006,
+            "win_rate": 0.5223,
+            "t_stat": 8.16,
+            "unique_tickers": 376,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0648,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                598.58
+              ],
+              [
+                "SNDK",
+                451.26
+              ],
+              [
+                "INTC",
+                342.82
+              ],
+              [
+                "AMD",
+                331.8
+              ],
+              [
+                "DELL",
+                307.82
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -98.84
+              ],
+              [
+                "FICO",
+                -86.11
+              ],
+              [
+                "CHRW",
+                -77.95
+              ],
+              [
+                "HOOD",
+                -74.55
+              ],
+              [
+                "ORCL",
+                -70.53
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2095.68
+              ],
+              [
+                "Computers",
+                1631.13
+              ],
+              [
+                "Oil&Gas",
+                429.21
+              ],
+              [
+                "Telecommunications",
+                279.84
+              ],
+              [
+                "Aerospace/Defense",
+                157.2
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 4900,
+            "mean": 2.2448,
+            "median": 0.9301,
+            "std": 10.5542,
+            "win_rate": 0.5539,
+            "t_stat": 14.888,
+            "unique_tickers": 373,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.085,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1601.98
+              ],
+              [
+                "SNDK",
+                1248.7
+              ],
+              [
+                "AMD",
+                767.14
+              ],
+              [
+                "DELL",
+                723.54
+              ],
+              [
+                "INTC",
+                688.54
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -162.77
+              ],
+              [
+                "ORCL",
+                -136.92
+              ],
+              [
+                "TEL",
+                -108.32
+              ],
+              [
+                "WDAY",
+                -97.52
+              ],
+              [
+                "LUV",
+                -95.6
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                5076.75
+              ],
+              [
+                "Computers",
+                4153.99
+              ],
+              [
+                "Telecommunications",
+                585.82
+              ],
+              [
+                "Oil&Gas",
+                539.23
+              ],
+              [
+                "Machinery-Constr&Mining",
+                489.51
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4900,
+            "mean": 2.1084,
+            "median": 0.7771,
+            "std": 10.375,
+            "win_rate": 0.5498,
+            "t_stat": 14.225,
+            "unique_tickers": 373,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0829,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1498.55
+              ],
+              [
+                "SNDK",
+                1206.23
+              ],
+              [
+                "AMD",
+                721.97
+              ],
+              [
+                "DELL",
+                684.83
+              ],
+              [
+                "INTC",
+                670.79
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -163.56
+              ],
+              [
+                "ORCL",
+                -130.5
+              ],
+              [
+                "LUV",
+                -97.49
+              ],
+              [
+                "TEL",
+                -97.31
+              ],
+              [
+                "WDAY",
+                -91.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4757.46
+              ],
+              [
+                "Computers",
+                3969.68
+              ],
+              [
+                "Oil&Gas",
+                568.86
+              ],
+              [
+                "Telecommunications",
+                520.43
+              ],
+              [
+                "Machinery-Constr&Mining",
+                448.24
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 4701,
+            "mean": 4.2766,
+            "median": 1.7846,
+            "std": 15.845,
+            "win_rate": 0.5722,
+            "t_stat": 18.506,
+            "unique_tickers": 368,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0935,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3169.66
+              ],
+              [
+                "SNDK",
+                2554.61
+              ],
+              [
+                "INTC",
+                1414.58
+              ],
+              [
+                "AMD",
+                1330.7
+              ],
+              [
+                "WDC",
+                1107.93
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -223.71
+              ],
+              [
+                "SMCI",
+                -187.78
+              ],
+              [
+                "CEG",
+                -184.28
+              ],
+              [
+                "RCL",
+                -152.09
+              ],
+              [
+                "INTU",
+                -151.01
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9915.3
+              ],
+              [
+                "Computers",
+                6977.72
+              ],
+              [
+                "Telecommunications",
+                1256.46
+              ],
+              [
+                "Machinery-Constr&Mining",
+                900.47
+              ],
+              [
+                "Oil&Gas Services",
+                554.94
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4701,
+            "mean": 4.1215,
+            "median": 1.6494,
+            "std": 15.5636,
+            "win_rate": 0.5692,
+            "t_stat": 18.157,
+            "unique_tickers": 368,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0922,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3043.62
+              ],
+              [
+                "SNDK",
+                2504.1
+              ],
+              [
+                "INTC",
+                1388.94
+              ],
+              [
+                "AMD",
+                1269.46
+              ],
+              [
+                "WDC",
+                1080.65
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -224.23
+              ],
+              [
+                "SMCI",
+                -182.62
+              ],
+              [
+                "CEG",
+                -177.92
+              ],
+              [
+                "INTU",
+                -151.3
+              ],
+              [
+                "RCL",
+                -150.58
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9500.15
+              ],
+              [
+                "Computers",
+                6786.15
+              ],
+              [
+                "Telecommunications",
+                1198.49
+              ],
+              [
+                "Machinery-Constr&Mining",
+                859.33
+              ],
+              [
+                "Oil&Gas Services",
+                541.54
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "results_ex_exceptions": {
+    "universe_baseline": {
+      "avg_candidates_per_day": 502.62,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 119560,
+            "mean": 0.0615,
+            "median": 0.0461,
+            "std": 2.2385,
+            "win_rate": 0.5114,
+            "t_stat": 9.501,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0167,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                262.84
+              ],
+              [
+                "WDC",
+                256.61
+              ],
+              [
+                "MU",
+                251.76
+              ],
+              [
+                "STX",
+                214.37
+              ],
+              [
+                "CIEN",
+                202.9
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -116.7
+              ],
+              [
+                "FISV",
+                -104.39
+              ],
+              [
+                "CSGP",
+                -97.57
+              ],
+              [
+                "INTU",
+                -95.4
+              ],
+              [
+                "IT",
+                -93.22
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1461.11
+              ],
+              [
+                "Computers",
+                713.18
+              ],
+              [
+                "Telecommunications",
+                604.94
+              ],
+              [
+                "Banks",
+                530.38
+              ],
+              [
+                "Electric",
+                475.42
+              ]
+            ]
+          },
+          "oc": {
+            "n": 119560,
+            "mean": 0.0121,
+            "median": 0.0171,
+            "std": 1.8292,
+            "win_rate": 0.5039,
+            "t_stat": 2.285,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0116,
+            "top_contrib_tickers": [
+              [
+                "CIEN",
+                124.57
+              ],
+              [
+                "WDC",
+                122.04
+              ],
+              [
+                "LITE",
+                102.93
+              ],
+              [
+                "STX",
+                95.63
+              ],
+              [
+                "COHR",
+                94.63
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "CSGP",
+                -83.98
+              ],
+              [
+                "PODD",
+                -83.34
+              ],
+              [
+                "CHTR",
+                -83.3
+              ],
+              [
+                "NOW",
+                -75.05
+              ],
+              [
+                "BSX",
+                -73.0
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                452.83
+              ],
+              [
+                "Banks",
+                312.72
+              ],
+              [
+                "Oil&Gas",
+                309.16
+              ],
+              [
+                "Healthcare-Services",
+                303.36
+              ],
+              [
+                "Computers",
+                254.72
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 119070,
+            "mean": 0.3147,
+            "median": 0.1984,
+            "std": 4.9987,
+            "win_rate": 0.5218,
+            "t_stat": 21.727,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0164,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1257.91
+              ],
+              [
+                "LITE",
+                1243.56
+              ],
+              [
+                "WDC",
+                1236.18
+              ],
+              [
+                "STX",
+                1035.35
+              ],
+              [
+                "INTC",
+                1000.22
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -588.39
+              ],
+              [
+                "FISV",
+                -490.47
+              ],
+              [
+                "CSGP",
+                -484.54
+              ],
+              [
+                "INTU",
+                -454.43
+              ],
+              [
+                "CHTR",
+                -434.86
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7125.42
+              ],
+              [
+                "Computers",
+                3699.7
+              ],
+              [
+                "Telecommunications",
+                3053.37
+              ],
+              [
+                "Banks",
+                2621.85
+              ],
+              [
+                "Electric",
+                2148.71
+              ]
+            ]
+          },
+          "oc": {
+            "n": 119070,
+            "mean": 0.2651,
+            "median": 0.1582,
+            "std": 4.8029,
+            "win_rate": 0.5171,
+            "t_stat": 19.044,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0156,
+            "top_contrib_tickers": [
+              [
+                "WDC",
+                1096.09
+              ],
+              [
+                "MU",
+                1079.71
+              ],
+              [
+                "LITE",
+                1070.34
+              ],
+              [
+                "STX",
+                911.01
+              ],
+              [
+                "CIEN",
+                909.45
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -532.86
+              ],
+              [
+                "CSGP",
+                -469.36
+              ],
+              [
+                "FISV",
+                -417.53
+              ],
+              [
+                "CHTR",
+                -409.47
+              ],
+              [
+                "INTU",
+                -393.25
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                6092.89
+              ],
+              [
+                "Computers",
+                3212.5
+              ],
+              [
+                "Telecommunications",
+                2609.45
+              ],
+              [
+                "Banks",
+                2401.08
+              ],
+              [
+                "Healthcare-Services",
+                1904.61
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 116620,
+            "mean": 0.6043,
+            "median": 0.3598,
+            "std": 7.1188,
+            "win_rate": 0.5294,
+            "t_stat": 28.99,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0168,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2588.71
+              ],
+              [
+                "WDC",
+                2533.14
+              ],
+              [
+                "LITE",
+                2497.01
+              ],
+              [
+                "STX",
+                2147.8
+              ],
+              [
+                "INTC",
+                2106.81
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -1216.53
+              ],
+              [
+                "FISV",
+                -998.82
+              ],
+              [
+                "CSGP",
+                -970.52
+              ],
+              [
+                "INTU",
+                -928.16
+              ],
+              [
+                "CHTR",
+                -892.88
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                14951.23
+              ],
+              [
+                "Computers",
+                7652.01
+              ],
+              [
+                "Telecommunications",
+                6247.38
+              ],
+              [
+                "Banks",
+                5195.65
+              ],
+              [
+                "Electronics",
+                3960.02
+              ]
+            ]
+          },
+          "oc": {
+            "n": 116620,
+            "mean": 0.5543,
+            "median": 0.3193,
+            "std": 6.9727,
+            "win_rate": 0.5264,
+            "t_stat": 27.149,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0165,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2416.84
+              ],
+              [
+                "WDC",
+                2395.36
+              ],
+              [
+                "LITE",
+                2311.85
+              ],
+              [
+                "STX",
+                2022.8
+              ],
+              [
+                "INTC",
+                1970.37
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -1162.11
+              ],
+              [
+                "CSGP",
+                -954.3
+              ],
+              [
+                "FISV",
+                -926.03
+              ],
+              [
+                "INTU",
+                -871.98
+              ],
+              [
+                "CHTR",
+                -869.41
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                13856.65
+              ],
+              [
+                "Computers",
+                7156.26
+              ],
+              [
+                "Telecommunications",
+                5749.44
+              ],
+              [
+                "Banks",
+                4989.39
+              ],
+              [
+                "Healthcare-Services",
+                3750.79
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 111720,
+            "mean": 1.2023,
+            "median": 0.6119,
+            "std": 10.3695,
+            "win_rate": 0.533,
+            "t_stat": 38.754,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0178,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                5346.12
+              ],
+              [
+                "LITE",
+                5219.03
+              ],
+              [
+                "WDC",
+                4994.18
+              ],
+              [
+                "INTC",
+                4363.83
+              ],
+              [
+                "STX",
+                4339.49
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -2505.02
+              ],
+              [
+                "CSGP",
+                -1940.1
+              ],
+              [
+                "INTU",
+                -1775.87
+              ],
+              [
+                "FISV",
+                -1749.14
+              ],
+              [
+                "BSX",
+                -1525.41
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                30901.31
+              ],
+              [
+                "Computers",
+                17044.51
+              ],
+              [
+                "Telecommunications",
+                12444.54
+              ],
+              [
+                "Banks",
+                9772.52
+              ],
+              [
+                "Oil&Gas",
+                8034.58
+              ]
+            ]
+          },
+          "oc": {
+            "n": 111720,
+            "mean": 1.1589,
+            "median": 0.5757,
+            "std": 10.2368,
+            "win_rate": 0.5317,
+            "t_stat": 37.84,
+            "unique_tickers": 490,
+            "unique_industries": 58,
+            "top1_ticker_share_of_abs": 0.0176,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                5167.04
+              ],
+              [
+                "LITE",
+                5021.76
+              ],
+              [
+                "WDC",
+                4866.53
+              ],
+              [
+                "INTC",
+                4245.32
+              ],
+              [
+                "STX",
+                4230.06
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "TTD",
+                -2455.76
+              ],
+              [
+                "CSGP",
+                -1930.27
+              ],
+              [
+                "INTU",
+                -1732.2
+              ],
+              [
+                "FISV",
+                -1687.11
+              ],
+              [
+                "BSX",
+                -1517.23
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                29940.8
+              ],
+              [
+                "Computers",
+                16491.48
+              ],
+              [
+                "Telecommunications",
+                11997.14
+              ],
+              [
+                "Banks",
+                9683.08
+              ],
+              [
+                "Oil&Gas",
+                7862.36
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top10": {
+      "avg_candidates_per_day": 10.0,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 2245,
+            "mean": 0.2702,
+            "median": 0.1193,
+            "std": 3.6904,
+            "win_rate": 0.522,
+            "t_stat": 3.469,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.0578,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                82.41
+              ],
+              [
+                "AMD",
+                68.45
+              ],
+              [
+                "LITE",
+                54.5
+              ],
+              [
+                "SATS",
+                53.26
+              ],
+              [
+                "STX",
+                44.77
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -28.8
+              ],
+              [
+                "HOOD",
+                -23.17
+              ],
+              [
+                "EXPE",
+                -20.75
+              ],
+              [
+                "AXON",
+                -18.73
+              ],
+              [
+                "ORCL",
+                -16.79
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                224.72
+              ],
+              [
+                "Computers",
+                155.57
+              ],
+              [
+                "Telecommunications",
+                98.82
+              ],
+              [
+                "Oil&Gas",
+                46.8
+              ],
+              [
+                "Healthcare-Services",
+                37.52
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2245,
+            "mean": 0.1082,
+            "median": 0.0519,
+            "std": 2.974,
+            "win_rate": 0.5087,
+            "t_stat": 1.723,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.046,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                53.49
+              ],
+              [
+                "FTNT",
+                28.61
+              ],
+              [
+                "MRNA",
+                28.58
+              ],
+              [
+                "ALB",
+                26.09
+              ],
+              [
+                "WBD",
+                24.56
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ORCL",
+                -24.55
+              ],
+              [
+                "HOOD",
+                -22.66
+              ],
+              [
+                "SMCI",
+                -21.81
+              ],
+              [
+                "HPE",
+                -17.52
+              ],
+              [
+                "MU",
+                -16.44
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                93.8
+              ],
+              [
+                "Oil&Gas",
+                45.6
+              ],
+              [
+                "Healthcare-Services",
+                33.5
+              ],
+              [
+                "Biotechnology",
+                32.33
+              ],
+              [
+                "Pharmaceuticals",
+                27.49
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 2235,
+            "mean": 1.1435,
+            "median": 0.6822,
+            "std": 8.1535,
+            "win_rate": 0.5445,
+            "t_stat": 6.63,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.0832,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                521.55
+              ],
+              [
+                "INTC",
+                386.85
+              ],
+              [
+                "AMD",
+                324.68
+              ],
+              [
+                "MU",
+                171.91
+              ],
+              [
+                "STX",
+                146.04
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -208.88
+              ],
+              [
+                "AXON",
+                -120.9
+              ],
+              [
+                "COHR",
+                -99.04
+              ],
+              [
+                "HOOD",
+                -86.32
+              ],
+              [
+                "ORCL",
+                -75.46
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1387.19
+              ],
+              [
+                "Computers",
+                781.73
+              ],
+              [
+                "Telecommunications",
+                386.93
+              ],
+              [
+                "Oil&Gas",
+                204.69
+              ],
+              [
+                "Biotechnology",
+                132.28
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2235,
+            "mean": 0.9834,
+            "median": 0.526,
+            "std": 7.864,
+            "win_rate": 0.5369,
+            "t_stat": 5.912,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.0806,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                468.85
+              ],
+              [
+                "INTC",
+                358.64
+              ],
+              [
+                "AMD",
+                275.08
+              ],
+              [
+                "MU",
+                150.12
+              ],
+              [
+                "AMAT",
+                135.44
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -202.37
+              ],
+              [
+                "AXON",
+                -115.11
+              ],
+              [
+                "COHR",
+                -95.73
+              ],
+              [
+                "HOOD",
+                -86.43
+              ],
+              [
+                "ORCL",
+                -83.64
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1258.38
+              ],
+              [
+                "Computers",
+                620.76
+              ],
+              [
+                "Telecommunications",
+                316.27
+              ],
+              [
+                "Oil&Gas",
+                204.22
+              ],
+              [
+                "Biotechnology",
+                128.73
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 2193,
+            "mean": 2.4329,
+            "median": 1.5105,
+            "std": 10.9972,
+            "win_rate": 0.5682,
+            "t_stat": 10.36,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.0846,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                955.35
+              ],
+              [
+                "INTC",
+                733.84
+              ],
+              [
+                "MU",
+                626.46
+              ],
+              [
+                "AMD",
+                579.11
+              ],
+              [
+                "WDC",
+                338.6
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -311.34
+              ],
+              [
+                "COIN",
+                -175.06
+              ],
+              [
+                "AXON",
+                -174.28
+              ],
+              [
+                "HOOD",
+                -123.46
+              ],
+              [
+                "FSLR",
+                -112.26
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2753.13
+              ],
+              [
+                "Computers",
+                1576.36
+              ],
+              [
+                "Telecommunications",
+                740.75
+              ],
+              [
+                "Healthcare-Services",
+                374.95
+              ],
+              [
+                "Chemicals",
+                213.82
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2193,
+            "mean": 2.2604,
+            "median": 1.4034,
+            "std": 10.8597,
+            "win_rate": 0.5581,
+            "t_stat": 9.747,
+            "unique_tickers": 213,
+            "unique_industries": 47,
+            "top1_ticker_share_of_abs": 0.0829,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                902.01
+              ],
+              [
+                "INTC",
+                707.37
+              ],
+              [
+                "MU",
+                589.91
+              ],
+              [
+                "AMD",
+                531.48
+              ],
+              [
+                "WDC",
+                306.13
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -301.03
+              ],
+              [
+                "COIN",
+                -170.11
+              ],
+              [
+                "AXON",
+                -168.63
+              ],
+              [
+                "HOOD",
+                -125.49
+              ],
+              [
+                "FSLR",
+                -102.9
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2583.5
+              ],
+              [
+                "Computers",
+                1424.07
+              ],
+              [
+                "Telecommunications",
+                671.6
+              ],
+              [
+                "Healthcare-Services",
+                372.64
+              ],
+              [
+                "Chemicals",
+                239.73
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 2104,
+            "mean": 4.7962,
+            "median": 2.2389,
+            "std": 16.8812,
+            "win_rate": 0.5722,
+            "t_stat": 13.032,
+            "unique_tickers": 207,
+            "unique_industries": 46,
+            "top1_ticker_share_of_abs": 0.084,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                1577.01
+              ],
+              [
+                "MU",
+                1524.39
+              ],
+              [
+                "INTC",
+                1421.09
+              ],
+              [
+                "WDC",
+                966.53
+              ],
+              [
+                "AMD",
+                839.68
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -351.81
+              ],
+              [
+                "AXON",
+                -294.0
+              ],
+              [
+                "COIN",
+                -284.01
+              ],
+              [
+                "LUV",
+                -196.11
+              ],
+              [
+                "AKAM",
+                -178.29
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                5255.56
+              ],
+              [
+                "Computers",
+                3636.12
+              ],
+              [
+                "Telecommunications",
+                1314.78
+              ],
+              [
+                "Healthcare-Services",
+                478.93
+              ],
+              [
+                "Chemicals",
+                394.38
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2104,
+            "mean": 4.6031,
+            "median": 1.869,
+            "std": 16.5723,
+            "win_rate": 0.5722,
+            "t_stat": 12.741,
+            "unique_tickers": 207,
+            "unique_industries": 46,
+            "top1_ticker_share_of_abs": 0.0823,
+            "top_contrib_tickers": [
+              [
+                "LITE",
+                1514.33
+              ],
+              [
+                "MU",
+                1479.04
+              ],
+              [
+                "INTC",
+                1386.99
+              ],
+              [
+                "WDC",
+                943.54
+              ],
+              [
+                "AMD",
+                783.94
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -339.94
+              ],
+              [
+                "AXON",
+                -289.56
+              ],
+              [
+                "COIN",
+                -279.53
+              ],
+              [
+                "LUV",
+                -202.1
+              ],
+              [
+                "AKAM",
+                -172.59
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                5072.48
+              ],
+              [
+                "Computers",
+                3478.72
+              ],
+              [
+                "Telecommunications",
+                1241.76
+              ],
+              [
+                "Healthcare-Services",
+                475.32
+              ],
+              [
+                "Chemicals",
+                419.47
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "irc_top10_industry": {
+      "avg_candidates_per_day": 92.52,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 21902,
+            "mean": 0.0745,
+            "median": 0.0304,
+            "std": 2.5279,
+            "win_rate": 0.5065,
+            "t_stat": 4.362,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0232,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                132.75
+              ],
+              [
+                "AMD",
+                130.86
+              ],
+              [
+                "INTC",
+                99.3
+              ],
+              [
+                "FIX",
+                94.91
+              ],
+              [
+                "SATS",
+                94.56
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -65.44
+              ],
+              [
+                "ACN",
+                -44.89
+              ],
+              [
+                "LDOS",
+                -43.59
+              ],
+              [
+                "FICO",
+                -42.57
+              ],
+              [
+                "IT",
+                -38.11
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                713.41
+              ],
+              [
+                "Banks",
+                444.11
+              ],
+              [
+                "Telecommunications",
+                201.34
+              ],
+              [
+                "Computers",
+                194.63
+              ],
+              [
+                "Chemicals",
+                135.74
+              ]
+            ]
+          },
+          "oc": {
+            "n": 21902,
+            "mean": -0.0155,
+            "median": -0.0106,
+            "std": 1.9717,
+            "win_rate": 0.4944,
+            "t_stat": -1.166,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0122,
+            "top_contrib_tickers": [
+              [
+                "FTNT",
+                49.37
+              ],
+              [
+                "AMD",
+                45.24
+              ],
+              [
+                "PANW",
+                43.15
+              ],
+              [
+                "NCLH",
+                34.41
+              ],
+              [
+                "AKAM",
+                33.41
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -41.02
+              ],
+              [
+                "FICO",
+                -38.38
+              ],
+              [
+                "AVGO",
+                -37.29
+              ],
+              [
+                "DASH",
+                -35.61
+              ],
+              [
+                "LDOS",
+                -35.42
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Banks",
+                200.12
+              ],
+              [
+                "Chemicals",
+                113.8
+              ],
+              [
+                "Oil&Gas",
+                79.1
+              ],
+              [
+                "Airlines",
+                69.7
+              ],
+              [
+                "Leisure Time",
+                59.73
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 21809,
+            "mean": 0.4339,
+            "median": 0.1279,
+            "std": 5.6826,
+            "win_rate": 0.5138,
+            "t_stat": 11.277,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0331,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                862.32
+              ],
+              [
+                "AMD",
+                635.98
+              ],
+              [
+                "SATS",
+                544.01
+              ],
+              [
+                "FIX",
+                500.55
+              ],
+              [
+                "INTC",
+                493.93
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -188.41
+              ],
+              [
+                "ACN",
+                -180.5
+              ],
+              [
+                "LDOS",
+                -140.66
+              ],
+              [
+                "IT",
+                -139.79
+              ],
+              [
+                "FICO",
+                -137.97
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4007.53
+              ],
+              [
+                "Banks",
+                1843.12
+              ],
+              [
+                "Computers",
+                1702.34
+              ],
+              [
+                "Telecommunications",
+                975.36
+              ],
+              [
+                "Machinery-Constr&Mining",
+                793.91
+              ]
+            ]
+          },
+          "oc": {
+            "n": 21809,
+            "mean": 0.3392,
+            "median": 0.0659,
+            "std": 5.3695,
+            "win_rate": 0.5065,
+            "t_stat": 9.328,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0315,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                743.17
+              ],
+              [
+                "AMD",
+                543.88
+              ],
+              [
+                "FIX",
+                418.72
+              ],
+              [
+                "SATS",
+                415.19
+              ],
+              [
+                "INTC",
+                414.52
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "EPAM",
+                -164.92
+              ],
+              [
+                "ACN",
+                -156.73
+              ],
+              [
+                "FICO",
+                -134.5
+              ],
+              [
+                "LDOS",
+                -132.52
+              ],
+              [
+                "IT",
+                -132.07
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                3280.76
+              ],
+              [
+                "Banks",
+                1594.49
+              ],
+              [
+                "Computers",
+                1324.02
+              ],
+              [
+                "Telecommunications",
+                809.68
+              ],
+              [
+                "Machinery-Constr&Mining",
+                662.52
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 21468,
+            "mean": 1.0277,
+            "median": 0.2808,
+            "std": 8.3849,
+            "win_rate": 0.5218,
+            "t_stat": 17.959,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0362,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1796.48
+              ],
+              [
+                "SATS",
+                1313.15
+              ],
+              [
+                "AMD",
+                1230.7
+              ],
+              [
+                "INTC",
+                1025.93
+              ],
+              [
+                "WDC",
+                910.59
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ACN",
+                -265.45
+              ],
+              [
+                "LDOS",
+                -227.75
+              ],
+              [
+                "NOW",
+                -221.88
+              ],
+              [
+                "IT",
+                -214.02
+              ],
+              [
+                "INTU",
+                -211.3
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9212.4
+              ],
+              [
+                "Computers",
+                3875.72
+              ],
+              [
+                "Telecommunications",
+                2459.11
+              ],
+              [
+                "Banks",
+                2438.58
+              ],
+              [
+                "Machinery-Constr&Mining",
+                1626.19
+              ]
+            ]
+          },
+          "oc": {
+            "n": 21468,
+            "mean": 0.9266,
+            "median": 0.2211,
+            "std": 8.1424,
+            "win_rate": 0.5177,
+            "t_stat": 16.673,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0354,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1670.19
+              ],
+              [
+                "SATS",
+                1160.92
+              ],
+              [
+                "AMD",
+                1132.92
+              ],
+              [
+                "INTC",
+                936.39
+              ],
+              [
+                "WDC",
+                834.84
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ACN",
+                -240.53
+              ],
+              [
+                "NOW",
+                -221.63
+              ],
+              [
+                "LDOS",
+                -220.01
+              ],
+              [
+                "IT",
+                -206.37
+              ],
+              [
+                "INTU",
+                -201.76
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                8399.83
+              ],
+              [
+                "Computers",
+                3535.54
+              ],
+              [
+                "Telecommunications",
+                2266.74
+              ],
+              [
+                "Banks",
+                2197.34
+              ],
+              [
+                "Oil&Gas",
+                1529.27
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 20507,
+            "mean": 2.5121,
+            "median": 0.8039,
+            "std": 12.4735,
+            "win_rate": 0.5446,
+            "t_stat": 28.84,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0426,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3774.56
+              ],
+              [
+                "SATS",
+                2361.16
+              ],
+              [
+                "AMD",
+                2231.62
+              ],
+              [
+                "INTC",
+                2229.49
+              ],
+              [
+                "TER",
+                1923.77
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LDOS",
+                -331.74
+              ],
+              [
+                "INTU",
+                -322.47
+              ],
+              [
+                "TMUS",
+                -314.22
+              ],
+              [
+                "COIN",
+                -299.73
+              ],
+              [
+                "IT",
+                -282.82
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                18619.9
+              ],
+              [
+                "Computers",
+                8788.32
+              ],
+              [
+                "Telecommunications",
+                4754.76
+              ],
+              [
+                "Internet",
+                3152.91
+              ],
+              [
+                "Oil&Gas",
+                2964.63
+              ]
+            ]
+          },
+          "oc": {
+            "n": 20507,
+            "mean": 2.4113,
+            "median": 0.7454,
+            "std": 12.2528,
+            "win_rate": 0.5427,
+            "t_stat": 28.182,
+            "unique_tickers": 468,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0419,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3621.18
+              ],
+              [
+                "SATS",
+                2228.12
+              ],
+              [
+                "INTC",
+                2120.91
+              ],
+              [
+                "AMD",
+                2113.51
+              ],
+              [
+                "TER",
+                1851.19
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LDOS",
+                -327.07
+              ],
+              [
+                "COIN",
+                -316.94
+              ],
+              [
+                "INTU",
+                -312.91
+              ],
+              [
+                "TMUS",
+                -311.01
+              ],
+              [
+                "IT",
+                -282.56
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                17649.11
+              ],
+              [
+                "Computers",
+                8421.45
+              ],
+              [
+                "Telecommunications",
+                4580.82
+              ],
+              [
+                "Internet",
+                3137.25
+              ],
+              [
+                "Oil&Gas",
+                2959.43
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top10_x_irc_top10": {
+      "avg_candidates_per_day": 4.61,
+      "days_zero_candidates": 3,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 1044,
+            "mean": 0.3094,
+            "median": 0.2046,
+            "std": 3.8694,
+            "win_rate": 0.5326,
+            "t_stat": 2.583,
+            "unique_tickers": 143,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0986,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                75.16
+              ],
+              [
+                "AMD",
+                64.6
+              ],
+              [
+                "SATS",
+                29.16
+              ],
+              [
+                "WDC",
+                25.38
+              ],
+              [
+                "GNRC",
+                22.81
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "CF",
+                -13.23
+              ],
+              [
+                "HOOD",
+                -12.95
+              ],
+              [
+                "HAL",
+                -11.56
+              ],
+              [
+                "LITE",
+                -10.32
+              ],
+              [
+                "DOW",
+                -10.08
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                153.45
+              ],
+              [
+                "Computers",
+                49.47
+              ],
+              [
+                "Telecommunications",
+                49.18
+              ],
+              [
+                "Oil&Gas",
+                39.45
+              ],
+              [
+                "Pharmaceuticals",
+                24.8
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1044,
+            "mean": 0.0803,
+            "median": 0.025,
+            "std": 2.9775,
+            "win_rate": 0.5048,
+            "t_stat": 0.871,
+            "unique_tickers": 143,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.0832,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                56.79
+              ],
+              [
+                "FTNT",
+                28.61
+              ],
+              [
+                "AMD",
+                21.4
+              ],
+              [
+                "APA",
+                18.95
+              ],
+              [
+                "GNRC",
+                18.41
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "LITE",
+                -28.66
+              ],
+              [
+                "HPE",
+                -25.24
+              ],
+              [
+                "MU",
+                -16.85
+              ],
+              [
+                "SMCI",
+                -13.55
+              ],
+              [
+                "MCHP",
+                -11.44
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                61.09
+              ],
+              [
+                "Oil&Gas",
+                40.97
+              ],
+              [
+                "Pharmaceuticals",
+                27.87
+              ],
+              [
+                "Electrical Compo&Equip",
+                18.41
+              ],
+              [
+                "Electronics",
+                12.87
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 1041,
+            "mean": 1.6828,
+            "median": 0.9525,
+            "std": 8.7485,
+            "win_rate": 0.562,
+            "t_stat": 6.206,
+            "unique_tickers": 142,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1112,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                373.11
+              ],
+              [
+                "AMD",
+                302.96
+              ],
+              [
+                "MU",
+                159.33
+              ],
+              [
+                "LITE",
+                151.79
+              ],
+              [
+                "ON",
+                107.75
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -177.18
+              ],
+              [
+                "HOOD",
+                -44.11
+              ],
+              [
+                "COHR",
+                -39.49
+              ],
+              [
+                "XYZ",
+                -39.43
+              ],
+              [
+                "IBM",
+                -36.59
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1221.56
+              ],
+              [
+                "Computers",
+                212.91
+              ],
+              [
+                "Telecommunications",
+                196.55
+              ],
+              [
+                "Oil&Gas",
+                196.09
+              ],
+              [
+                "Pharmaceuticals",
+                71.69
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1041,
+            "mean": 1.4619,
+            "median": 0.7818,
+            "std": 8.5109,
+            "win_rate": 0.5543,
+            "t_stat": 5.542,
+            "unique_tickers": 142,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.113,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                354.75
+              ],
+              [
+                "AMD",
+                258.1
+              ],
+              [
+                "MU",
+                150.22
+              ],
+              [
+                "LITE",
+                133.82
+              ],
+              [
+                "FTNT",
+                97.23
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -181.45
+              ],
+              [
+                "IBM",
+                -45.14
+              ],
+              [
+                "HOOD",
+                -39.43
+              ],
+              [
+                "NOW",
+                -36.94
+              ],
+              [
+                "COHR",
+                -36.55
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1135.45
+              ],
+              [
+                "Oil&Gas",
+                198.36
+              ],
+              [
+                "Telecommunications",
+                154.87
+              ],
+              [
+                "Computers",
+                108.44
+              ],
+              [
+                "Pharmaceuticals",
+                74.83
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 1025,
+            "mean": 3.2435,
+            "median": 2.0043,
+            "std": 11.5985,
+            "win_rate": 0.5932,
+            "t_stat": 8.953,
+            "unique_tickers": 141,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1247,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                734.09
+              ],
+              [
+                "MU",
+                551.08
+              ],
+              [
+                "AMD",
+                547.72
+              ],
+              [
+                "LITE",
+                412.39
+              ],
+              [
+                "CIEN",
+                184.43
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -270.84
+              ],
+              [
+                "IBM",
+                -72.34
+              ],
+              [
+                "NOW",
+                -52.43
+              ],
+              [
+                "XYZ",
+                -49.66
+              ],
+              [
+                "HOOD",
+                -48.66
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2470.06
+              ],
+              [
+                "Computers",
+                391.24
+              ],
+              [
+                "Telecommunications",
+                337.93
+              ],
+              [
+                "Oil&Gas",
+                180.16
+              ],
+              [
+                "Machinery-Constr&Mining",
+                128.78
+              ]
+            ]
+          },
+          "oc": {
+            "n": 1025,
+            "mean": 2.9938,
+            "median": 1.9093,
+            "std": 11.5468,
+            "win_rate": 0.5776,
+            "t_stat": 8.301,
+            "unique_tickers": 141,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1264,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                711.49
+              ],
+              [
+                "MU",
+                533.25
+              ],
+              [
+                "AMD",
+                505.09
+              ],
+              [
+                "LITE",
+                392.55
+              ],
+              [
+                "FTNT",
+                182.61
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -269.89
+              ],
+              [
+                "IBM",
+                -80.24
+              ],
+              [
+                "NOW",
+                -54.89
+              ],
+              [
+                "LUV",
+                -48.99
+              ],
+              [
+                "XYZ",
+                -46.89
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2342.6
+              ],
+              [
+                "Computers",
+                297.13
+              ],
+              [
+                "Telecommunications",
+                294.33
+              ],
+              [
+                "Oil&Gas",
+                182.64
+              ],
+              [
+                "Machinery-Constr&Mining",
+                120.82
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 984,
+            "mean": 6.6753,
+            "median": 3.9777,
+            "std": 18.1584,
+            "win_rate": 0.6311,
+            "t_stat": 11.532,
+            "unique_tickers": 140,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1285,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                1307.0
+              ],
+              [
+                "MU",
+                1200.9
+              ],
+              [
+                "AMD",
+                804.42
+              ],
+              [
+                "LITE",
+                649.18
+              ],
+              [
+                "CIEN",
+                462.15
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -306.21
+              ],
+              [
+                "SW",
+                -92.95
+              ],
+              [
+                "AXON",
+                -72.23
+              ],
+              [
+                "RCL",
+                -70.33
+              ],
+              [
+                "OXY",
+                -70.3
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4604.23
+              ],
+              [
+                "Computers",
+                1362.67
+              ],
+              [
+                "Telecommunications",
+                587.47
+              ],
+              [
+                "Oil&Gas Services",
+                183.99
+              ],
+              [
+                "Electronics",
+                160.53
+              ]
+            ]
+          },
+          "oc": {
+            "n": 984,
+            "mean": 6.3898,
+            "median": 3.8296,
+            "std": 17.9066,
+            "win_rate": 0.627,
+            "t_stat": 11.194,
+            "unique_tickers": 140,
+            "unique_industries": 35,
+            "top1_ticker_share_of_abs": 0.1295,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                1277.57
+              ],
+              [
+                "MU",
+                1172.22
+              ],
+              [
+                "AMD",
+                753.79
+              ],
+              [
+                "LITE",
+                628.76
+              ],
+              [
+                "CIEN",
+                446.77
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -302.14
+              ],
+              [
+                "SW",
+                -90.42
+              ],
+              [
+                "AXON",
+                -69.77
+              ],
+              [
+                "INTU",
+                -68.08
+              ],
+              [
+                "RCL",
+                -67.73
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4443.18
+              ],
+              [
+                "Computers",
+                1280.72
+              ],
+              [
+                "Telecommunications",
+                542.97
+              ],
+              [
+                "Oil&Gas Services",
+                179.49
+              ],
+              [
+                "Electronics",
+                167.52
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top25_x_irc_top10": {
+      "avg_candidates_per_day": 11.09,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 2551,
+            "mean": 0.2437,
+            "median": 0.0781,
+            "std": 3.4838,
+            "win_rate": 0.5127,
+            "t_stat": 3.533,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0551,
+            "top_contrib_tickers": [
+              [
+                "AMD",
+                80.65
+              ],
+              [
+                "INTC",
+                68.75
+              ],
+              [
+                "MU",
+                59.67
+              ],
+              [
+                "DELL",
+                43.03
+              ],
+              [
+                "STX",
+                36.86
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "ORCL",
+                -18.73
+              ],
+              [
+                "CF",
+                -15.04
+              ],
+              [
+                "LYB",
+                -14.98
+              ],
+              [
+                "ANET",
+                -13.63
+              ],
+              [
+                "BKR",
+                -12.18
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                304.78
+              ],
+              [
+                "Computers",
+                200.57
+              ],
+              [
+                "Telecommunications",
+                52.24
+              ],
+              [
+                "Oil&Gas",
+                28.26
+              ],
+              [
+                "Airlines",
+                28.11
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2551,
+            "mean": 0.0981,
+            "median": 0.0155,
+            "std": 2.6285,
+            "win_rate": 0.5025,
+            "t_stat": 1.884,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0491,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                57.83
+              ],
+              [
+                "AMD",
+                39.83
+              ],
+              [
+                "WDC",
+                37.14
+              ],
+              [
+                "MPWR",
+                29.24
+              ],
+              [
+                "FTNT",
+                29.21
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "VRT",
+                -27.26
+              ],
+              [
+                "LITE",
+                -21.98
+              ],
+              [
+                "HOOD",
+                -17.13
+              ],
+              [
+                "ORCL",
+                -13.77
+              ],
+              [
+                "NOW",
+                -13.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                167.01
+              ],
+              [
+                "Oil&Gas",
+                57.49
+              ],
+              [
+                "Computers",
+                46.09
+              ],
+              [
+                "Electrical Compo&Equip",
+                23.12
+              ],
+              [
+                "Biotechnology",
+                22.23
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 2544,
+            "mean": 1.1744,
+            "median": 0.4926,
+            "std": 7.949,
+            "win_rate": 0.5381,
+            "t_stat": 7.452,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0835,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                512.23
+              ],
+              [
+                "INTC",
+                391.89
+              ],
+              [
+                "AMD",
+                345.86
+              ],
+              [
+                "DELL",
+                245.41
+              ],
+              [
+                "HPE",
+                203.3
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -114.11
+              ],
+              [
+                "HOOD",
+                -84.45
+              ],
+              [
+                "NOW",
+                -67.28
+              ],
+              [
+                "ORCL",
+                -62.36
+              ],
+              [
+                "XYZ",
+                -39.43
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1953.99
+              ],
+              [
+                "Computers",
+                777.09
+              ],
+              [
+                "Oil&Gas",
+                260.11
+              ],
+              [
+                "Telecommunications",
+                227.89
+              ],
+              [
+                "Aerospace/Defense",
+                109.11
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2544,
+            "mean": 1.023,
+            "median": 0.2885,
+            "std": 7.5246,
+            "win_rate": 0.5275,
+            "t_stat": 6.857,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.0828,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                463.26
+              ],
+              [
+                "INTC",
+                381.75
+              ],
+              [
+                "AMD",
+                301.05
+              ],
+              [
+                "DELL",
+                196.28
+              ],
+              [
+                "HPE",
+                160.94
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -119.98
+              ],
+              [
+                "HOOD",
+                -92.5
+              ],
+              [
+                "NOW",
+                -70.46
+              ],
+              [
+                "ORCL",
+                -58.19
+              ],
+              [
+                "COHR",
+                -44.94
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                1815.66
+              ],
+              [
+                "Computers",
+                614.33
+              ],
+              [
+                "Oil&Gas",
+                289.65
+              ],
+              [
+                "Telecommunications",
+                185.88
+              ],
+              [
+                "Aerospace/Defense",
+                98.51
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 2506,
+            "mean": 2.6643,
+            "median": 1.2722,
+            "std": 11.015,
+            "win_rate": 0.5698,
+            "t_stat": 12.109,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.111,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1245.95
+              ],
+              [
+                "INTC",
+                734.76
+              ],
+              [
+                "AMD",
+                726.38
+              ],
+              [
+                "LITE",
+                457.83
+              ],
+              [
+                "DELL",
+                423.02
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -117.72
+              ],
+              [
+                "LUV",
+                -92.02
+              ],
+              [
+                "ORCL",
+                -87.84
+              ],
+              [
+                "HOOD",
+                -75.64
+              ],
+              [
+                "HPQ",
+                -73.46
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                3963.24
+              ],
+              [
+                "Computers",
+                1682.35
+              ],
+              [
+                "Telecommunications",
+                454.96
+              ],
+              [
+                "Machinery-Constr&Mining",
+                356.54
+              ],
+              [
+                "Oil&Gas",
+                275.04
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2506,
+            "mean": 2.5031,
+            "median": 1.1387,
+            "std": 10.9059,
+            "win_rate": 0.5611,
+            "t_stat": 11.49,
+            "unique_tickers": 255,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.1104,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1192.28
+              ],
+              [
+                "INTC",
+                720.2
+              ],
+              [
+                "AMD",
+                676.09
+              ],
+              [
+                "LITE",
+                419.45
+              ],
+              [
+                "DELL",
+                380.75
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -120.52
+              ],
+              [
+                "LUV",
+                -101.41
+              ],
+              [
+                "ORCL",
+                -83.87
+              ],
+              [
+                "HOOD",
+                -82.52
+              ],
+              [
+                "HPQ",
+                -79.44
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                3770.63
+              ],
+              [
+                "Computers",
+                1553.67
+              ],
+              [
+                "Telecommunications",
+                412.33
+              ],
+              [
+                "Machinery-Constr&Mining",
+                322.47
+              ],
+              [
+                "Oil&Gas",
+                304.47
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 2412,
+            "mean": 4.9927,
+            "median": 2.2981,
+            "std": 16.3414,
+            "win_rate": 0.5916,
+            "t_stat": 15.005,
+            "unique_tickers": 251,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.1285,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2515.08
+              ],
+              [
+                "INTC",
+                1362.41
+              ],
+              [
+                "AMD",
+                1214.34
+              ],
+              [
+                "LITE",
+                710.22
+              ],
+              [
+                "CIEN",
+                675.43
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -208.52
+              ],
+              [
+                "NOW",
+                -176.42
+              ],
+              [
+                "RCL",
+                -128.91
+              ],
+              [
+                "INTU",
+                -122.5
+              ],
+              [
+                "HPQ",
+                -121.19
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7464.18
+              ],
+              [
+                "Computers",
+                2712.68
+              ],
+              [
+                "Telecommunications",
+                952.24
+              ],
+              [
+                "Machinery-Constr&Mining",
+                455.34
+              ],
+              [
+                "Oil&Gas Services",
+                379.65
+              ]
+            ]
+          },
+          "oc": {
+            "n": 2412,
+            "mean": 4.8107,
+            "median": 2.1843,
+            "std": 16.1429,
+            "win_rate": 0.5875,
+            "t_stat": 14.636,
+            "unique_tickers": 251,
+            "unique_industries": 41,
+            "top1_ticker_share_of_abs": 0.1277,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                2442.75
+              ],
+              [
+                "INTC",
+                1341.19
+              ],
+              [
+                "AMD",
+                1154.27
+              ],
+              [
+                "WDC",
+                676.27
+              ],
+              [
+                "LITE",
+                667.31
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SMCI",
+                -203.72
+              ],
+              [
+                "NOW",
+                -179.29
+              ],
+              [
+                "HPQ",
+                -128.1
+              ],
+              [
+                "RCL",
+                -125.44
+              ],
+              [
+                "INTU",
+                -123.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                7215.09
+              ],
+              [
+                "Computers",
+                2585.73
+              ],
+              [
+                "Telecommunications",
+                917.4
+              ],
+              [
+                "Machinery-Constr&Mining",
+                422.2
+              ],
+              [
+                "Oil&Gas Services",
+                375.79
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "mle_top50_x_irc_top10": {
+      "avg_candidates_per_day": 20.48,
+      "days_zero_candidates": 0,
+      "horizons": {
+        "1D": {
+          "cc": {
+            "n": 4772,
+            "mean": 0.129,
+            "median": 0.0368,
+            "std": 3.131,
+            "win_rate": 0.5065,
+            "t_stat": 2.845,
+            "unique_tickers": 365,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0511,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                112.94
+              ],
+              [
+                "AMD",
+                69.61
+              ],
+              [
+                "INTC",
+                54.52
+              ],
+              [
+                "WDC",
+                50.58
+              ],
+              [
+                "HPE",
+                49.41
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "SWKS",
+                -24.03
+              ],
+              [
+                "SMCI",
+                -21.35
+              ],
+              [
+                "ANET",
+                -20.76
+              ],
+              [
+                "NVDA",
+                -19.58
+              ],
+              [
+                "NOW",
+                -18.25
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                305.19
+              ],
+              [
+                "Computers",
+                230.83
+              ],
+              [
+                "Telecommunications",
+                59.82
+              ],
+              [
+                "Oil&Gas",
+                56.46
+              ],
+              [
+                "Airlines",
+                39.95
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4772,
+            "mean": 0.0123,
+            "median": -0.0111,
+            "std": 2.4112,
+            "win_rate": 0.4946,
+            "t_stat": 0.353,
+            "unique_tickers": 365,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0227,
+            "top_contrib_tickers": [
+              [
+                "INTC",
+                39.87
+              ],
+              [
+                "AMD",
+                33.72
+              ],
+              [
+                "PANW",
+                31.37
+              ],
+              [
+                "FTNT",
+                28.41
+              ],
+              [
+                "APA",
+                25.58
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "VRT",
+                -26.48
+              ],
+              [
+                "GEV",
+                -23.43
+              ],
+              [
+                "LRCX",
+                -23.25
+              ],
+              [
+                "NVDA",
+                -21.09
+              ],
+              [
+                "NOW",
+                -21.0
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Oil&Gas",
+                85.79
+              ],
+              [
+                "Semiconductors",
+                63.2
+              ],
+              [
+                "Computers",
+                45.72
+              ],
+              [
+                "Leisure Time",
+                32.6
+              ],
+              [
+                "Airlines",
+                31.37
+              ]
+            ]
+          }
+        },
+        "5D": {
+          "cc": {
+            "n": 4756,
+            "mean": 0.8235,
+            "median": 0.2904,
+            "std": 7.0693,
+            "win_rate": 0.5282,
+            "t_stat": 8.034,
+            "unique_tickers": 365,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0744,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                693.99
+              ],
+              [
+                "AMD",
+                371.82
+              ],
+              [
+                "INTC",
+                356.84
+              ],
+              [
+                "DELL",
+                352.26
+              ],
+              [
+                "HPE",
+                273.14
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -97.15
+              ],
+              [
+                "FICO",
+                -90.7
+              ],
+              [
+                "CHRW",
+                -79.95
+              ],
+              [
+                "ORCL",
+                -76.97
+              ],
+              [
+                "SMCI",
+                -66.54
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2285.27
+              ],
+              [
+                "Computers",
+                1234.15
+              ],
+              [
+                "Oil&Gas",
+                419.97
+              ],
+              [
+                "Telecommunications",
+                343.65
+              ],
+              [
+                "Banks",
+                177.49
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4756,
+            "mean": 0.6997,
+            "median": 0.1837,
+            "std": 6.6882,
+            "win_rate": 0.5185,
+            "t_stat": 7.215,
+            "unique_tickers": 365,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0701,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                598.58
+              ],
+              [
+                "INTC",
+                342.82
+              ],
+              [
+                "AMD",
+                331.8
+              ],
+              [
+                "DELL",
+                307.82
+              ],
+              [
+                "HPE",
+                222.27
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -98.84
+              ],
+              [
+                "FICO",
+                -86.11
+              ],
+              [
+                "CHRW",
+                -77.95
+              ],
+              [
+                "HOOD",
+                -74.55
+              ],
+              [
+                "ORCL",
+                -70.53
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                2036.37
+              ],
+              [
+                "Computers",
+                1037.07
+              ],
+              [
+                "Oil&Gas",
+                450.31
+              ],
+              [
+                "Telecommunications",
+                279.84
+              ],
+              [
+                "Aerospace/Defense",
+                157.2
+              ]
+            ]
+          }
+        },
+        "10D": {
+          "cc": {
+            "n": 4678,
+            "mean": 2.0144,
+            "median": 0.8837,
+            "std": 10.2285,
+            "win_rate": 0.5498,
+            "t_stat": 13.47,
+            "unique_tickers": 362,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0936,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1601.98
+              ],
+              [
+                "AMD",
+                767.14
+              ],
+              [
+                "DELL",
+                723.54
+              ],
+              [
+                "INTC",
+                688.54
+              ],
+              [
+                "WDC",
+                499.99
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -162.77
+              ],
+              [
+                "ORCL",
+                -136.92
+              ],
+              [
+                "TEL",
+                -108.32
+              ],
+              [
+                "WDAY",
+                -97.52
+              ],
+              [
+                "LUV",
+                -95.6
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4988.1
+              ],
+              [
+                "Computers",
+                2702.31
+              ],
+              [
+                "Oil&Gas",
+                589.19
+              ],
+              [
+                "Telecommunications",
+                585.82
+              ],
+              [
+                "Machinery-Constr&Mining",
+                489.51
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4678,
+            "mean": 1.8768,
+            "median": 0.7067,
+            "std": 10.055,
+            "win_rate": 0.5453,
+            "t_stat": 12.766,
+            "unique_tickers": 362,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.0915,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                1498.55
+              ],
+              [
+                "AMD",
+                721.97
+              ],
+              [
+                "DELL",
+                684.83
+              ],
+              [
+                "INTC",
+                670.79
+              ],
+              [
+                "WDC",
+                470.47
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -163.56
+              ],
+              [
+                "ORCL",
+                -130.5
+              ],
+              [
+                "LUV",
+                -97.49
+              ],
+              [
+                "TEL",
+                -97.31
+              ],
+              [
+                "WDAY",
+                -91.27
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                4674.69
+              ],
+              [
+                "Computers",
+                2540.13
+              ],
+              [
+                "Oil&Gas",
+                617.55
+              ],
+              [
+                "Telecommunications",
+                520.43
+              ],
+              [
+                "Machinery-Constr&Mining",
+                448.24
+              ]
+            ]
+          }
+        },
+        "20D": {
+          "cc": {
+            "n": 4487,
+            "mean": 3.8012,
+            "median": 1.6845,
+            "std": 15.0484,
+            "win_rate": 0.567,
+            "t_stat": 16.92,
+            "unique_tickers": 357,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.1037,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3169.66
+              ],
+              [
+                "INTC",
+                1414.58
+              ],
+              [
+                "AMD",
+                1330.7
+              ],
+              [
+                "WDC",
+                1107.93
+              ],
+              [
+                "DELL",
+                1072.69
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -223.71
+              ],
+              [
+                "SMCI",
+                -187.78
+              ],
+              [
+                "CEG",
+                -184.28
+              ],
+              [
+                "RCL",
+                -152.09
+              ],
+              [
+                "INTU",
+                -151.01
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9755.69
+              ],
+              [
+                "Computers",
+                4196.94
+              ],
+              [
+                "Telecommunications",
+                1256.46
+              ],
+              [
+                "Machinery-Constr&Mining",
+                900.47
+              ],
+              [
+                "Oil&Gas Services",
+                554.94
+              ]
+            ]
+          },
+          "oc": {
+            "n": 4487,
+            "mean": 3.6469,
+            "median": 1.5035,
+            "std": 14.804,
+            "win_rate": 0.5639,
+            "t_stat": 16.501,
+            "unique_tickers": 357,
+            "unique_industries": 44,
+            "top1_ticker_share_of_abs": 0.1024,
+            "top_contrib_tickers": [
+              [
+                "MU",
+                3043.62
+              ],
+              [
+                "INTC",
+                1388.94
+              ],
+              [
+                "AMD",
+                1269.46
+              ],
+              [
+                "WDC",
+                1080.65
+              ],
+              [
+                "DELL",
+                1027.47
+              ]
+            ],
+            "worst_contrib_tickers": [
+              [
+                "NOW",
+                -224.23
+              ],
+              [
+                "SMCI",
+                -182.62
+              ],
+              [
+                "CEG",
+                -177.92
+              ],
+              [
+                "INTU",
+                -151.3
+              ],
+              [
+                "RCL",
+                -150.58
+              ]
+            ],
+            "top_contrib_industries": [
+              [
+                "Semiconductors",
+                9351.55
+              ],
+              [
+                "Computers",
+                4033.93
+              ],
+              [
+                "Telecommunications",
+                1198.49
+              ],
+              [
+                "Machinery-Constr&Mining",
+                859.33
+              ],
+              [
+                "Oil&Gas Services",
+                541.54
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "uplifts": {
+    "1D": {
+      "all": {
+        "edge_mean": 0.3361,
+        "mle_mean": 0.3454,
+        "irc_mean": 0.0804,
+        "baseline_mean": 0.0652,
+        "uplift_vs_mle": -0.0093,
+        "uplift_vs_irc": 0.2557,
+        "uplift_vs_baseline": 0.2709
+      },
+      "ex": {
+        "edge_mean": 0.3094,
+        "mle_mean": 0.2702,
+        "irc_mean": 0.0745,
+        "baseline_mean": 0.0615,
+        "uplift_vs_mle": 0.0392,
+        "uplift_vs_irc": 0.2349,
+        "uplift_vs_baseline": 0.2479
+      }
+    },
+    "5D": {
+      "all": {
+        "edge_mean": 1.9395,
+        "mle_mean": 1.5855,
+        "irc_mean": 0.4765,
+        "baseline_mean": 0.3337,
+        "uplift_vs_mle": 0.354,
+        "uplift_vs_irc": 1.463,
+        "uplift_vs_baseline": 1.6058
+      },
+      "ex": {
+        "edge_mean": 1.6828,
+        "mle_mean": 1.1435,
+        "irc_mean": 0.4339,
+        "baseline_mean": 0.3147,
+        "uplift_vs_mle": 0.5393,
+        "uplift_vs_irc": 1.2489,
+        "uplift_vs_baseline": 1.3681
+      }
+    },
+    "10D": {
+      "all": {
+        "edge_mean": 4.0117,
+        "mle_mean": 3.3135,
+        "irc_mean": 1.1387,
+        "baseline_mean": 0.6462,
+        "uplift_vs_mle": 0.6982,
+        "uplift_vs_irc": 2.873,
+        "uplift_vs_baseline": 3.3655
+      },
+      "ex": {
+        "edge_mean": 3.2435,
+        "mle_mean": 2.4329,
+        "irc_mean": 1.0277,
+        "baseline_mean": 0.6043,
+        "uplift_vs_mle": 0.8106,
+        "uplift_vs_irc": 2.2158,
+        "uplift_vs_baseline": 2.6392
+      }
+    },
+    "20D": {
+      "all": {
+        "edge_mean": 8.1684,
+        "mle_mean": 6.632,
+        "irc_mean": 2.7532,
+        "baseline_mean": 1.3012,
+        "uplift_vs_mle": 1.5364,
+        "uplift_vs_irc": 5.4152,
+        "uplift_vs_baseline": 6.8672
+      },
+      "ex": {
+        "edge_mean": 6.6753,
+        "mle_mean": 4.7962,
+        "irc_mean": 2.5121,
+        "baseline_mean": 1.2023,
+        "uplift_vs_mle": 1.8791,
+        "uplift_vs_irc": 4.1632,
+        "uplift_vs_baseline": 5.473
+      }
+    }
+  },
+  "edge_beats_mle_5_10_20": [
+    true,
+    true,
+    true
+  ],
+  "edge_beats_mle_ex_5_10_20": [
+    true,
+    true,
+    true
+  ],
+  "concentrated_10D": false
+}

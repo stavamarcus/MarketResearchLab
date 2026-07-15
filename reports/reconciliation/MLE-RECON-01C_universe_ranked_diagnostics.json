@@ -1,0 +1,182 @@
+{
+  "input_window": {
+    "mle_original": "run_date - 45 kalendarnich dni (extended_start .. run_date)",
+    "mle_recon01": "cela DATA-06 serie per ticker (bez oriznuti okna)",
+    "difference": "recon posila FULL series, MLE original 45d slice",
+    "methodological_note": "recon full-series muze dat rank tickerum, ktere MLE original v 45d okne vyloucil (nedostatek historie) -> ranking universe mismatch",
+    "classification": "METHODOLOGICAL_DIFFERENCE_RECON"
+  },
+  "recon_only_tickers": {
+    "BF.B": {
+      "ticker": "BF.B",
+      "conid": "4931",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 76,
+      "data06_file_exists": true,
+      "data06_first": "1997-12-31",
+      "data06_last": "2026-07-02",
+      "data06_rows": 7169,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2024-07-01",
+      "mdsm_last": "2026-07-02",
+      "mdsm_rows": 503,
+      "in_archive": true,
+      "alt_formats_in_archive": {
+        "BF-B": false,
+        "BFB": false,
+        "BF.B": true
+      }
+    },
+    "BRK.B": {
+      "ticker": "BRK.B",
+      "conid": "72063691",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 61,
+      "data06_file_exists": true,
+      "data06_first": "1997-12-31",
+      "data06_last": "2026-07-02",
+      "data06_rows": 7169,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2024-07-01",
+      "mdsm_last": "2026-07-02",
+      "mdsm_rows": 503,
+      "in_archive": true,
+      "alt_formats_in_archive": {
+        "BRK-B": false,
+        "BRKB": false,
+        "BRK.B": true
+      }
+    },
+    "EXE": {
+      "ticker": "EXE",
+      "conid": "470458975",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 187,
+      "data06_file_exists": true,
+      "data06_first": "2021-02-10",
+      "data06_last": "2026-07-02",
+      "data06_rows": 1354,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2025-12-15",
+      "mdsm_last": "2026-05-12",
+      "mdsm_rows": 102,
+      "in_archive": false,
+      "alt_formats_in_archive": {}
+    },
+    "PSKY": {
+      "ticker": "PSKY",
+      "conid": "804144296",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 358,
+      "data06_file_exists": true,
+      "data06_first": "1997-12-31",
+      "data06_last": "2026-07-02",
+      "data06_rows": 7169,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2025-12-15",
+      "mdsm_last": "2026-05-12",
+      "mdsm_rows": 102,
+      "in_archive": false,
+      "alt_formats_in_archive": {}
+    },
+    "Q": {
+      "ticker": "Q",
+      "conid": "824788107",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 385,
+      "data06_file_exists": true,
+      "data06_first": "2025-11-03",
+      "data06_last": "2026-07-02",
+      "data06_rows": 166,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2025-10-27",
+      "mdsm_last": "2026-05-12",
+      "mdsm_rows": 136,
+      "in_archive": false,
+      "alt_formats_in_archive": {}
+    },
+    "SNDK": {
+      "ticker": "SNDK",
+      "conid": "760250490",
+      "in_universe": true,
+      "active_flag": true,
+      "universe_order": 404,
+      "data06_file_exists": true,
+      "data06_first": "2025-02-24",
+      "data06_last": "2026-07-02",
+      "data06_rows": 341,
+      "mdsm_file_exists": true,
+      "mdsm_first": "2025-12-15",
+      "mdsm_last": "2026-05-12",
+      "mdsm_rows": 102,
+      "in_archive": false,
+      "alt_formats_in_archive": {}
+    }
+  },
+  "per_date_check": {
+    "full_ranked_count": 503,
+    "sliced_ranked_count": 503,
+    "full_only_ranked": [],
+    "recon_only_detail": {
+      "BF.B": {
+        "in_full_ranked": true,
+        "full_rank": 445,
+        "in_sliced_ranked": true,
+        "sliced_rank": 445,
+        "has_close_now": true,
+        "n_days_available_full": 7098,
+        "n_days_available_sliced": 33
+      },
+      "BRK.B": {
+        "in_full_ranked": true,
+        "full_rank": 199,
+        "in_sliced_ranked": true,
+        "sliced_rank": 199,
+        "has_close_now": true,
+        "n_days_available_full": 7098,
+        "n_days_available_sliced": 33
+      },
+      "EXE": {
+        "in_full_ranked": true,
+        "full_rank": 66,
+        "in_sliced_ranked": true,
+        "sliced_rank": 66,
+        "has_close_now": true,
+        "n_days_available_full": 1283,
+        "n_days_available_sliced": 33
+      },
+      "PSKY": {
+        "in_full_ranked": true,
+        "full_rank": 502,
+        "in_sliced_ranked": true,
+        "sliced_rank": 502,
+        "has_close_now": true,
+        "n_days_available_full": 7098,
+        "n_days_available_sliced": 33
+      },
+      "Q": {
+        "in_full_ranked": true,
+        "full_rank": 148,
+        "in_sliced_ranked": true,
+        "sliced_rank": 148,
+        "has_close_now": true,
+        "n_days_available_full": 95,
+        "n_days_available_sliced": 33
+      },
+      "SNDK": {
+        "in_full_ranked": true,
+        "full_rank": 1,
+        "in_sliced_ranked": true,
+        "sliced_rank": 1,
+        "has_close_now": true,
+        "n_days_available_full": 270,
+        "n_days_available_sliced": 33
+      }
+    }
+  }
+}

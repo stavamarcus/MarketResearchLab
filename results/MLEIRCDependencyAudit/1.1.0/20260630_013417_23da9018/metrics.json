@@ -1,0 +1,22 @@
+{
+  "n_records_total": 4380,
+  "n_eligible_days": 219,
+  "mle_rank_field": "MLE_Rank_10d",
+  "mle_rank_max": 20,
+  "irc_rank_max": 10,
+  "primary_window_d": 30,
+  "primary_metric": "alpha_vs_spy",
+  "mle_all_median_alpha_30d": 0.6221,
+  "mle_irc_top10_median_alpha": 1.4129,
+  "mle_headwind_median_alpha": 0.1298,
+  "mle_irc_top10_wr_alpha": 0.5509,
+  "mle_headwind_wr_alpha": 0.505,
+  "diff_top10_vs_headwind": 1.2831,
+  "h_supported": true,
+  "MLE_IRC_TOP10_n": 1984,
+  "MLE_IRC_TOP10_median_alpha_30d": 1.4129,
+  "MLE_IRC_TOP10_wr_alpha_30d": 0.5509,
+  "MLE_HEADWIND_n": 2396,
+  "MLE_HEADWIND_median_alpha_30d": 0.1298,
+  "MLE_HEADWIND_wr_alpha_30d": 0.505
+}

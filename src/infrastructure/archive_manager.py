@@ -122,9 +122,12 @@ class ArchiveManager:
         # artifacts/ — libovolné výstupy
         for artifact_name, artifact_data in result.artifacts.items():
             artifact_path = run_path / "artifacts" / artifact_name
-            if isinstance(artifact_data, (str, bytes)):
-                mode = "wb" if isinstance(artifact_data, bytes) else "w"
-                artifact_path.open(mode).write(artifact_data)
+            if isinstance(artifact_data, bytes):
+                artifact_path.write_bytes(artifact_data)
+            elif isinstance(artifact_data, str):
+                # explicitní UTF-8 — default Windows cp1252 padá na
+                # ne-ASCII znacích (UnicodeEncodeError); FUND-05 bugfix
+                artifact_path.write_text(artifact_data, encoding="utf-8")
             else:
                 artifact_path.with_suffix(".json").write_text(
                     json.dumps(artifact_data, default=str), encoding="utf-8"

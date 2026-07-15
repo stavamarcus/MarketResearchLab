@@ -1,0 +1,5 @@
+,bucket,nominal_N,unique_conids,avg_per_conid,top_conids
+0,Mega,263,32,8.22,"AMD(44), MU(43), INTC(38)"
+1,Large-high,355,64,5.55,"STX(21), VRT(19), INTC(16)"
+2,Large-low,487,77,6.32,"TER(22), GNRC(21), LITE(20)"
+3,Mid,18,7,2.57,"APA(6), NCLH(4), CRL(3)"

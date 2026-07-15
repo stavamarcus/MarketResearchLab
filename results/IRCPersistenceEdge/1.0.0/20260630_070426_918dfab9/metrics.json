@@ -1,0 +1,23 @@
+{
+  "n_records_total": 1950,
+  "n_eligible_dates": 195,
+  "n_unique_industries": 44,
+  "primary_window_d": 30,
+  "primary_metric": "alpha_vs_spy",
+  "new_top10_median_alpha": -1.0868,
+  "persistent_top10_median_alpha": -0.0021,
+  "diff_persistent_vs_new": 1.0847,
+  "h_supported": true,
+  "NEW_TOP10_n": 209,
+  "NEW_TOP10_median_alpha_30d": -1.0868,
+  "NEW_TOP10_wr_alpha_30d": 0.4115,
+  "EMERGING_TOP10_n": 302,
+  "EMERGING_TOP10_median_alpha_30d": -0.6639,
+  "EMERGING_TOP10_wr_alpha_30d": 0.4536,
+  "PERSISTENT_TOP10_n": 887,
+  "PERSISTENT_TOP10_median_alpha_30d": -0.0021,
+  "PERSISTENT_TOP10_wr_alpha_30d": 0.4994,
+  "EXTENDED_TOP10_n": 552,
+  "EXTENDED_TOP10_median_alpha_30d": -0.0717,
+  "EXTENDED_TOP10_wr_alpha_30d": 0.4909
+}

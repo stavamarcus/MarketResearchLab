@@ -1,0 +1,6 @@
+date_from: '2025-07-09'
+date_to: '2026-06-29'
+notes: MLE x IRC Dependency Audit — first run
+parameters: {}
+random_seed: null
+universe: sp500_rank_calendar

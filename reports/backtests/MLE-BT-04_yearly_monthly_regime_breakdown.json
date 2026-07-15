@@ -1,0 +1,6343 @@
+{
+  "sim_start": "2021-07-01",
+  "sim_end": "2026-07-02",
+  "sim_days": 1256,
+  "signal_days": 1256,
+  "cost_bps": 15,
+  "SURVIVORSHIP_WARNING": "current 503 universe, survivorship bias.",
+  "benchmark_yearly": {
+    "2021": 8.911,
+    "2022": -11.767,
+    "2023": 20.635,
+    "2024": 17.807,
+    "2025": 13.732,
+    "2026": 10.458
+  },
+  "benchmark_monthly": {
+    "2021-07": 0.857,
+    "2021-08": 2.832,
+    "2021-09": -4.055,
+    "2021-10": 4.592,
+    "2021-11": -2.995,
+    "2021-12": 7.499,
+    "2022-01": -4.897,
+    "2022-02": -2.262,
+    "2022-03": 5.093,
+    "2022-04": -7.323,
+    "2022-05": 0.436,
+    "2022-06": -8.385,
+    "2022-07": 8.109,
+    "2022-08": -2.613,
+    "2022-09": -9.174,
+    "2022-10": 6.709,
+    "2022-11": 6.408,
+    "2022-12": -5.35,
+    "2023-01": 7.674,
+    "2023-02": -3.718,
+    "2023-03": 0.488,
+    "2023-04": 0.221,
+    "2023-05": -2.403,
+    "2023-06": 7.23,
+    "2023-07": 3.607,
+    "2023-08": -2.29,
+    "2023-09": -5.096,
+    "2023-10": -2.766,
+    "2023-11": 8.94,
+    "2023-12": 5.094,
+    "2024-01": -0.082,
+    "2024-02": 3.932,
+    "2024-03": 3.9,
+    "2024-04": -4.009,
+    "2024-05": 3.421,
+    "2024-06": 0.46,
+    "2024-07": 4.889,
+    "2024-08": 3.946,
+    "2024-09": 4.265,
+    "2024-10": -0.68,
+    "2024-11": 7.228,
+    "2024-12": -6.16,
+    "2025-01": 4.121,
+    "2025-02": -0.278,
+    "2025-03": -2.851,
+    "2025-04": -1.861,
+    "2025-05": 4.895,
+    "2025-06": 3.636,
+    "2025-07": 0.334,
+    "2025-08": 3.998,
+    "2025-09": 2.169,
+    "2025-10": -0.98,
+    "2025-11": 2.303,
+    "2025-12": 1.196,
+    "2026-01": 2.482,
+    "2026-02": 2.779,
+    "2026-03": -5.808,
+    "2026-04": 5.348,
+    "2026-05": 2.144,
+    "2026-06": 1.689,
+    "2026-07": 0.87
+  },
+  "variants": {
+    "baseline_hold10": {
+      "overall": {
+        "total_return_pct": 325.796,
+        "max_drawdown_pct": -36.583,
+        "sharpe": 1.034,
+        "volatility_pct": 33.637,
+        "calmar": 8.906,
+        "avg_exposure": 0.999,
+        "avg_positions": 9.99,
+        "n_days": 1256,
+        "trades": 1260,
+        "avg_trade_net": 1.412,
+        "median_trade_net": 0.59,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 69.0199% (pnl 18849.84)",
+        "worst_trade": "PSKY -28.2789% (pnl -10002.72)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            54591.0
+          ],
+          [
+            "CVNA",
+            52227.0
+          ],
+          [
+            "APP",
+            37214.0
+          ],
+          [
+            "LITE",
+            30697.0
+          ],
+          [
+            "DDOG",
+            20222.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "SMCI",
+            -20740.0
+          ],
+          [
+            "PSKY",
+            -15179.0
+          ],
+          [
+            "TTD",
+            -13739.0
+          ],
+          [
+            "F",
+            -8598.0
+          ],
+          [
+            "TER",
+            -8138.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            109279.0
+          ],
+          [
+            "Retail",
+            54413.0
+          ],
+          [
+            "Semiconductors",
+            50073.0
+          ],
+          [
+            "Software",
+            39609.0
+          ],
+          [
+            "Internet",
+            38535.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Media",
+            -22034.0
+          ],
+          [
+            "Advertising",
+            -16114.0
+          ],
+          [
+            "Auto Manufacturers",
+            -9706.0
+          ],
+          [
+            "Chemicals",
+            -9379.0
+          ],
+          [
+            "Electrical Compo&Equip",
+            -5799.0
+          ]
+        ]
+      },
+      "yearly": {
+        "2021": {
+          "total_return_pct": 5.072,
+          "max_drawdown_pct": -12.178,
+          "sharpe": 0.543,
+          "volatility_pct": 22.93,
+          "calmar": 0.416,
+          "avg_exposure": 0.992,
+          "avg_positions": 9.92,
+          "n_days": 128,
+          "trades": 120,
+          "avg_trade_net": 0.474,
+          "median_trade_net": 0.543,
+          "win_rate": 0.558,
+          "best_trade": "MRNA 33.1859% (pnl 3318.59)",
+          "worst_trade": "FANG -25.2452% (pnl -2524.52)",
+          "top_contrib_tickers": [
+            [
+              "MRNA",
+              5115.0
+            ],
+            [
+              "AMD",
+              1974.0
+            ],
+            [
+              "APA",
+              1437.0
+            ],
+            [
+              "MOS",
+              1227.0
+            ],
+            [
+              "COP",
+              1161.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "FANG",
+              -2176.0
+            ],
+            [
+              "FSLR",
+              -1779.0
+            ],
+            [
+              "TTD",
+              -1664.0
+            ],
+            [
+              "OXY",
+              -1639.0
+            ],
+            [
+              "LVS",
+              -1198.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Biotechnology",
+              5972.0
+            ],
+            [
+              "Semiconductors",
+              2721.0
+            ],
+            [
+              "Software",
+              2159.0
+            ],
+            [
+              "REITS",
+              1787.0
+            ],
+            [
+              "Chemicals",
+              1632.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Computers",
+              -1815.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              -1779.0
+            ],
+            [
+              "Advertising",
+              -1664.0
+            ],
+            [
+              "Lodging",
+              -1198.0
+            ],
+            [
+              "Media",
+              -1143.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2022": {
+          "total_return_pct": -24.266,
+          "max_drawdown_pct": -33.001,
+          "sharpe": -0.547,
+          "volatility_pct": 37.973,
+          "calmar": -0.735,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 251,
+          "trades": 250,
+          "avg_trade_net": -0.805,
+          "median_trade_net": -0.576,
+          "win_rate": 0.484,
+          "best_trade": "CVNA 91.5387% (pnl 7721.57)",
+          "worst_trade": "CVNA -30.3225% (pnl -3104.85)",
+          "top_contrib_tickers": [
+            [
+              "CVNA",
+              4152.0
+            ],
+            [
+              "SMCI",
+              3965.0
+            ],
+            [
+              "SLB",
+              3303.0
+            ],
+            [
+              "FSLR",
+              3255.0
+            ],
+            [
+              "HAL",
+              2480.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "COIN",
+              -7086.0
+            ],
+            [
+              "DDOG",
+              -3457.0
+            ],
+            [
+              "HOOD",
+              -3372.0
+            ],
+            [
+              "TTD",
+              -3044.0
+            ],
+            [
+              "UBER",
+              -2685.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas Services",
+              7421.0
+            ],
+            [
+              "Oil&Gas",
+              5548.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              3255.0
+            ],
+            [
+              "Biotechnology",
+              2750.0
+            ],
+            [
+              "Commercial Services",
+              2066.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Internet",
+              -13419.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -7900.0
+            ],
+            [
+              "Chemicals",
+              -5478.0
+            ],
+            [
+              "Auto Manufacturers",
+              -5195.0
+            ],
+            [
+              "Semiconductors",
+              -4693.0
+            ]
+          ],
+          "regime_pct_on": 0.339
+        },
+        "2023": {
+          "total_return_pct": 113.217,
+          "max_drawdown_pct": -18.462,
+          "sharpe": 2.69,
+          "volatility_pct": 30.202,
+          "calmar": 6.133,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 250,
+          "trades": 250,
+          "avg_trade_net": 3.31,
+          "median_trade_net": 1.475,
+          "win_rate": 0.592,
+          "best_trade": "CVNA 122.1454% (pnl 10994.52)",
+          "worst_trade": "SMCI -24.049% (pnl -3488.4)",
+          "top_contrib_tickers": [
+            [
+              "CVNA",
+              26557.0
+            ],
+            [
+              "COIN",
+              13720.0
+            ],
+            [
+              "PLTR",
+              7778.0
+            ],
+            [
+              "APP",
+              5817.0
+            ],
+            [
+              "HOOD",
+              5325.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "SATS",
+              -4291.0
+            ],
+            [
+              "MOS",
+              -2484.0
+            ],
+            [
+              "ABNB",
+              -2114.0
+            ],
+            [
+              "MRNA",
+              -1619.0
+            ],
+            [
+              "LYV",
+              -1400.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Retail",
+              29486.0
+            ],
+            [
+              "Internet",
+              15788.0
+            ],
+            [
+              "Diversified Finan Serv",
+              13720.0
+            ],
+            [
+              "Leisure Time",
+              8594.0
+            ],
+            [
+              "Software",
+              7543.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Telecommunications",
+              -4592.0
+            ],
+            [
+              "Oil&Gas",
+              -3422.0
+            ],
+            [
+              "Chemicals",
+              -2864.0
+            ],
+            [
+              "Banks",
+              -2453.0
+            ],
+            [
+              "Biotechnology",
+              -1623.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2024": {
+          "total_return_pct": 39.049,
+          "max_drawdown_pct": -17.169,
+          "sharpe": 1.316,
+          "volatility_pct": 28.182,
+          "calmar": 2.274,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 252,
+          "trades": 250,
+          "avg_trade_net": 1.662,
+          "median_trade_net": 1.602,
+          "win_rate": 0.548,
+          "best_trade": "APP 83.9247% (pnl 16550.19)",
+          "worst_trade": "SMCI -45.1551% (pnl -9456.15)",
+          "top_contrib_tickers": [
+            [
+              "APP",
+              25835.0
+            ],
+            [
+              "CVNA",
+              14847.0
+            ],
+            [
+              "HOOD",
+              11685.0
+            ],
+            [
+              "TSLA",
+              11262.0
+            ],
+            [
+              "UAL",
+              9611.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "SMCI",
+              -19265.0
+            ],
+            [
+              "DELL",
+              -7753.0
+            ],
+            [
+              "ALB",
+              -4866.0
+            ],
+            [
+              "AMD",
+              -4233.0
+            ],
+            [
+              "F",
+              -3744.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Internet",
+              40404.0
+            ],
+            [
+              "Retail",
+              16218.0
+            ],
+            [
+              "Airlines",
+              10227.0
+            ],
+            [
+              "Electric",
+              9563.0
+            ],
+            [
+              "Software",
+              7958.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Computers",
+              -29404.0
+            ],
+            [
+              "Chemicals",
+              -6437.0
+            ],
+            [
+              "Biotechnology",
+              -3432.0
+            ],
+            [
+              "Lodging",
+              -2881.0
+            ],
+            [
+              "Pharmaceuticals",
+              -2476.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2025": {
+          "total_return_pct": 17.091,
+          "max_drawdown_pct": -33.654,
+          "sharpe": 0.628,
+          "volatility_pct": 35.825,
+          "calmar": 0.508,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 250,
+          "trades": 250,
+          "avg_trade_net": 0.725,
+          "median_trade_net": -0.069,
+          "win_rate": 0.496,
+          "best_trade": "PLTR 55.2989% (pnl 12432.96)",
+          "worst_trade": "APP -36.4444% (pnl -8830.17)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              23711.0
+            ],
+            [
+              "LITE",
+              16326.0
+            ],
+            [
+              "CVNA",
+              10181.0
+            ],
+            [
+              "PLTR",
+              9951.0
+            ],
+            [
+              "STX",
+              7822.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "INTC",
+              -10634.0
+            ],
+            [
+              "SMCI",
+              -9225.0
+            ],
+            [
+              "TSLA",
+              -6124.0
+            ],
+            [
+              "MRNA",
+              -5497.0
+            ],
+            [
+              "GNRC",
+              -5363.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              44753.0
+            ],
+            [
+              "Retail",
+              12825.0
+            ],
+            [
+              "Software",
+              6558.0
+            ],
+            [
+              "Machinery-Constr&Mining",
+              5690.0
+            ],
+            [
+              "Transportation",
+              3251.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Media",
+              -9828.0
+            ],
+            [
+              "Biotechnology",
+              -6642.0
+            ],
+            [
+              "Auto Manufacturers",
+              -6124.0
+            ],
+            [
+              "Healthcare-Services",
+              -5576.0
+            ],
+            [
+              "Electrical Compo&Equip",
+              -5363.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2026": {
+          "total_return_pct": 51.608,
+          "max_drawdown_pct": -21.147,
+          "sharpe": 2.17,
+          "volatility_pct": 43.345,
+          "calmar": 2.44,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 125,
+          "trades": 140,
+          "avg_trade_net": 3.562,
+          "median_trade_net": 0.763,
+          "win_rate": 0.536,
+          "best_trade": "SNDK 69.0199% (pnl 18849.84)",
+          "worst_trade": "PSKY -28.2789% (pnl -10002.72)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              30880.0
+            ],
+            [
+              "INTC",
+              25735.0
+            ],
+            [
+              "DDOG",
+              21696.0
+            ],
+            [
+              "MRNA",
+              19147.0
+            ],
+            [
+              "LITE",
+              17391.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "PSKY",
+              -10003.0
+            ],
+            [
+              "TER",
+              -8944.0
+            ],
+            [
+              "CASY",
+              -6909.0
+            ],
+            [
+              "COHR",
+              -5852.0
+            ],
+            [
+              "TTD",
+              -5426.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              90312.0
+            ],
+            [
+              "Semiconductors",
+              54896.0
+            ],
+            [
+              "Healthcare-Services",
+              23058.0
+            ],
+            [
+              "Biotechnology",
+              22337.0
+            ],
+            [
+              "Software",
+              18721.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Media",
+              -10083.0
+            ],
+            [
+              "Advertising",
+              -7800.0
+            ],
+            [
+              "Oil&Gas",
+              -7471.0
+            ],
+            [
+              "Auto Manufacturers",
+              -6066.0
+            ],
+            [
+              "Internet",
+              -5588.0
+            ]
+          ],
+          "regime_pct_on": 0.984
+        }
+      },
+      "monthly": {
+        "2021-07": {
+          "return_pct": -1.653,
+          "intramonth_max_dd_pct": -5.395,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 0.952,
+          "regime_pct_on": 1.0
+        },
+        "2021-08": {
+          "return_pct": -1.177,
+          "intramonth_max_dd_pct": -8.839,
+          "trades": 30,
+          "win_rate": 0.667,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-09": {
+          "return_pct": -7.005,
+          "intramonth_max_dd_pct": -8.246,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-10": {
+          "return_pct": 7.994,
+          "intramonth_max_dd_pct": -2.153,
+          "trades": 20,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-11": {
+          "return_pct": 1.569,
+          "intramonth_max_dd_pct": -5.046,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-12": {
+          "return_pct": 2.331,
+          "intramonth_max_dd_pct": -3.986,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2022-01": {
+          "return_pct": -4.401,
+          "intramonth_max_dd_pct": -12.197,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.75
+        },
+        "2022-02": {
+          "return_pct": -2.903,
+          "intramonth_max_dd_pct": -11.486,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.579
+        },
+        "2022-03": {
+          "return_pct": -11.003,
+          "intramonth_max_dd_pct": -20.585,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.478
+        },
+        "2022-04": {
+          "return_pct": -4.026,
+          "intramonth_max_dd_pct": -10.275,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.65
+        },
+        "2022-05": {
+          "return_pct": 5.652,
+          "intramonth_max_dd_pct": -9.034,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-06": {
+          "return_pct": -12.716,
+          "intramonth_max_dd_pct": -17.104,
+          "trades": 30,
+          "win_rate": 0.467,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-07": {
+          "return_pct": 9.526,
+          "intramonth_max_dd_pct": -5.155,
+          "trades": 20,
+          "win_rate": 0.85,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-08": {
+          "return_pct": 0.051,
+          "intramonth_max_dd_pct": -16.629,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.348
+        },
+        "2022-09": {
+          "return_pct": -12.102,
+          "intramonth_max_dd_pct": -16.013,
+          "trades": 20,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-10": {
+          "return_pct": 10.64,
+          "intramonth_max_dd_pct": -5.865,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-11": {
+          "return_pct": 3.43,
+          "intramonth_max_dd_pct": -5.003,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.667
+        },
+        "2022-12": {
+          "return_pct": -9.067,
+          "intramonth_max_dd_pct": -10.988,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2023-01": {
+          "return_pct": 23.259,
+          "intramonth_max_dd_pct": -4.558,
+          "trades": 20,
+          "win_rate": 0.85,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-02": {
+          "return_pct": -1.99,
+          "intramonth_max_dd_pct": -10.653,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-03": {
+          "return_pct": -2.31,
+          "intramonth_max_dd_pct": -8.018,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.783
+        },
+        "2023-04": {
+          "return_pct": -2.186,
+          "intramonth_max_dd_pct": -4.943,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-05": {
+          "return_pct": 11.713,
+          "intramonth_max_dd_pct": -2.244,
+          "trades": 30,
+          "win_rate": 0.533,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-06": {
+          "return_pct": 13.797,
+          "intramonth_max_dd_pct": -6.006,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-07": {
+          "return_pct": 9.144,
+          "intramonth_max_dd_pct": -5.291,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-08": {
+          "return_pct": -1.85,
+          "intramonth_max_dd_pct": -6.537,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-09": {
+          "return_pct": -8.843,
+          "intramonth_max_dd_pct": -8.915,
+          "trades": 20,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-10": {
+          "return_pct": -2.298,
+          "intramonth_max_dd_pct": -9.175,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.182
+        },
+        "2023-11": {
+          "return_pct": 15.275,
+          "intramonth_max_dd_pct": -4.148,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2023-12": {
+          "return_pct": 17.271,
+          "intramonth_max_dd_pct": -3.449,
+          "trades": 20,
+          "win_rate": 0.95,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-01": {
+          "return_pct": -8.649,
+          "intramonth_max_dd_pct": -8.649,
+          "trades": 20,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-02": {
+          "return_pct": 14.854,
+          "intramonth_max_dd_pct": -11.21,
+          "trades": 20,
+          "win_rate": 0.85,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-03": {
+          "return_pct": 6.566,
+          "intramonth_max_dd_pct": -3.33,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-04": {
+          "return_pct": -2.953,
+          "intramonth_max_dd_pct": -6.771,
+          "trades": 30,
+          "win_rate": 0.467,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-05": {
+          "return_pct": 5.616,
+          "intramonth_max_dd_pct": -5.663,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-06": {
+          "return_pct": 3.496,
+          "intramonth_max_dd_pct": -3.09,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-07": {
+          "return_pct": -0.597,
+          "intramonth_max_dd_pct": -9.354,
+          "trades": 20,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-08": {
+          "return_pct": -0.012,
+          "intramonth_max_dd_pct": -4.724,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-09": {
+          "return_pct": 3.736,
+          "intramonth_max_dd_pct": -4.123,
+          "trades": 20,
+          "win_rate": 0.25,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-10": {
+          "return_pct": -0.722,
+          "intramonth_max_dd_pct": -7.357,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-11": {
+          "return_pct": 22.201,
+          "intramonth_max_dd_pct": -3.143,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-12": {
+          "return_pct": -4.295,
+          "intramonth_max_dd_pct": -11.233,
+          "trades": 20,
+          "win_rate": 0.75,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-01": {
+          "return_pct": -2.746,
+          "intramonth_max_dd_pct": -15.726,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-02": {
+          "return_pct": -7.641,
+          "intramonth_max_dd_pct": -15.954,
+          "trades": 20,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-03": {
+          "return_pct": -8.47,
+          "intramonth_max_dd_pct": -10.043,
+          "trades": 20,
+          "win_rate": 0.25,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2025-04": {
+          "return_pct": 0.7,
+          "intramonth_max_dd_pct": -13.3,
+          "trades": 30,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.048
+        },
+        "2025-05": {
+          "return_pct": 13.988,
+          "intramonth_max_dd_pct": -3.567,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.667
+        },
+        "2025-06": {
+          "return_pct": 3.479,
+          "intramonth_max_dd_pct": -2.858,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-07": {
+          "return_pct": 1.088,
+          "intramonth_max_dd_pct": -5.395,
+          "trades": 20,
+          "win_rate": 0.75,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-08": {
+          "return_pct": -5.429,
+          "intramonth_max_dd_pct": -8.296,
+          "trades": 20,
+          "win_rate": 0.25,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-09": {
+          "return_pct": 16.344,
+          "intramonth_max_dd_pct": -4.016,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-10": {
+          "return_pct": -0.765,
+          "intramonth_max_dd_pct": -8.467,
+          "trades": 20,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-11": {
+          "return_pct": 13.128,
+          "intramonth_max_dd_pct": -8.197,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-12": {
+          "return_pct": -1.786,
+          "intramonth_max_dd_pct": -8.87,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-01": {
+          "return_pct": 11.489,
+          "intramonth_max_dd_pct": -4.801,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-02": {
+          "return_pct": 8.632,
+          "intramonth_max_dd_pct": -2.911,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-03": {
+          "return_pct": -15.59,
+          "intramonth_max_dd_pct": -15.894,
+          "trades": 30,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.909
+        },
+        "2026-04": {
+          "return_pct": 11.834,
+          "intramonth_max_dd_pct": -6.28,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-05": {
+          "return_pct": 36.325,
+          "intramonth_max_dd_pct": -5.095,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-06": {
+          "return_pct": -0.131,
+          "intramonth_max_dd_pct": -12.532,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-07": {
+          "return_pct": -6.547,
+          "intramonth_max_dd_pct": -6.547,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        }
+      },
+      "drawdown_episodes": [
+        {
+          "start_date": "2024-12-06",
+          "trough_date": "2025-04-21",
+          "recovery_date": "2025-11-07",
+          "depth_pct": -36.583,
+          "duration_days": 230,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.769,
+          "loss_tickers": [
+            [
+              "APP",
+              -8830.0
+            ],
+            [
+              "SMCI",
+              -8650.0
+            ],
+            [
+              "HOOD",
+              -6756.0
+            ],
+            [
+              "INTC",
+              -6046.0
+            ],
+            [
+              "MU",
+              -6007.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Internet",
+              -22135.0
+            ],
+            [
+              "Semiconductors",
+              -14219.0
+            ],
+            [
+              "Computers",
+              -7735.0
+            ],
+            [
+              "Biotechnology",
+              -7059.0
+            ],
+            [
+              "Healthcare-Services",
+              -7006.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2021-11-29",
+          "trough_date": "2022-10-14",
+          "recovery_date": "2023-02-02",
+          "depth_pct": -33.384,
+          "duration_days": 296,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.369,
+          "loss_tickers": [
+            [
+              "COIN",
+              -7086.0
+            ],
+            [
+              "DDOG",
+              -3457.0
+            ],
+            [
+              "TTD",
+              -3044.0
+            ],
+            [
+              "UBER",
+              -2685.0
+            ],
+            [
+              "EXPE",
+              -2599.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Internet",
+              -9754.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -7718.0
+            ],
+            [
+              "Chemicals",
+              -5478.0
+            ],
+            [
+              "Auto Manufacturers",
+              -5195.0
+            ],
+            [
+              "Semiconductors",
+              -4675.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2026-03-02",
+          "trough_date": "2026-04-15",
+          "recovery_date": "2026-05-08",
+          "depth_pct": -21.147,
+          "duration_days": 48,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.938,
+          "loss_tickers": [
+            [
+              "PSKY",
+              -10003.0
+            ],
+            [
+              "COHR",
+              -5852.0
+            ],
+            [
+              "TTD",
+              -5426.0
+            ],
+            [
+              "APA",
+              -5142.0
+            ],
+            [
+              "OXY",
+              -4954.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Oil&Gas",
+              -15772.0
+            ],
+            [
+              "Media",
+              -10003.0
+            ],
+            [
+              "Electronics",
+              -7869.0
+            ],
+            [
+              "Advertising",
+              -7800.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -4516.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2023-07-19",
+          "trough_date": "2023-11-09",
+          "recovery_date": "2023-12-06",
+          "depth_pct": -18.462,
+          "duration_days": 98,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.679,
+          "loss_tickers": [
+            [
+              "SMCI",
+              -4841.0
+            ],
+            [
+              "SATS",
+              -3460.0
+            ],
+            [
+              "CVNA",
+              -2090.0
+            ],
+            [
+              "WBD",
+              -1739.0
+            ],
+            [
+              "INTC",
+              -1450.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -5877.0
+            ],
+            [
+              "Telecommunications",
+              -4103.0
+            ],
+            [
+              "Semiconductors",
+              -3314.0
+            ],
+            [
+              "Banks",
+              -1854.0
+            ],
+            [
+              "Oil&Gas",
+              -1813.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2024-07-16",
+          "trough_date": "2024-09-06",
+          "recovery_date": "2024-11-08",
+          "depth_pct": -17.169,
+          "duration_days": 82,
+          "recovered": true,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [
+            [
+              "SMCI",
+              -6838.0
+            ],
+            [
+              "NVDA",
+              -3215.0
+            ],
+            [
+              "COHR",
+              -2232.0
+            ],
+            [
+              "HBAN",
+              -1864.0
+            ],
+            [
+              "CFG",
+              -1852.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -7894.0
+            ],
+            [
+              "Banks",
+              -5097.0
+            ],
+            [
+              "Electronics",
+              -3607.0
+            ],
+            [
+              "Semiconductors",
+              -3215.0
+            ],
+            [
+              "Retail",
+              -1121.0
+            ]
+          ]
+        }
+      ]
+    },
+    "regime200_hold10": {
+      "overall": {
+        "total_return_pct": 375.283,
+        "max_drawdown_pct": -25.431,
+        "sharpe": 1.197,
+        "volatility_pct": 29.899,
+        "calmar": 14.757,
+        "avg_exposure": 0.864,
+        "avg_positions": 8.64,
+        "n_days": 1256,
+        "trades": 1090,
+        "avg_trade_net": 1.644,
+        "median_trade_net": 0.455,
+        "win_rate": 0.528,
+        "best_trade": "DDOG 57.2706% (pnl 20970.21)",
+        "worst_trade": "SNDK -19.7056% (pnl -10137.38)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            64463.0
+          ],
+          [
+            "INTC",
+            28558.0
+          ],
+          [
+            "DDOG",
+            25894.0
+          ],
+          [
+            "APP",
+            24114.0
+          ],
+          [
+            "CVNA",
+            21431.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "TER",
+            -13279.0
+          ],
+          [
+            "OXY",
+            -9274.0
+          ],
+          [
+            "WBD",
+            -8063.0
+          ],
+          [
+            "DVN",
+            -7668.0
+          ],
+          [
+            "MOS",
+            -7422.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            131771.0
+          ],
+          [
+            "Semiconductors",
+            58176.0
+          ],
+          [
+            "Internet",
+            44141.0
+          ],
+          [
+            "Software",
+            37073.0
+          ],
+          [
+            "Healthcare-Services",
+            28891.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Media",
+            -11883.0
+          ],
+          [
+            "Advertising",
+            -8064.0
+          ],
+          [
+            "Lodging",
+            -5928.0
+          ],
+          [
+            "Building Materials",
+            -5670.0
+          ],
+          [
+            "Auto Manufacturers",
+            -4959.0
+          ]
+        ]
+      },
+      "yearly": {
+        "2021": {
+          "total_return_pct": 5.072,
+          "max_drawdown_pct": -12.178,
+          "sharpe": 0.543,
+          "volatility_pct": 22.93,
+          "calmar": 0.416,
+          "avg_exposure": 0.992,
+          "avg_positions": 9.92,
+          "n_days": 128,
+          "trades": 120,
+          "avg_trade_net": 0.474,
+          "median_trade_net": 0.543,
+          "win_rate": 0.558,
+          "best_trade": "MRNA 33.1859% (pnl 3318.59)",
+          "worst_trade": "FANG -25.2452% (pnl -2524.52)",
+          "top_contrib_tickers": [
+            [
+              "MRNA",
+              5115.0
+            ],
+            [
+              "AMD",
+              1974.0
+            ],
+            [
+              "APA",
+              1437.0
+            ],
+            [
+              "MOS",
+              1227.0
+            ],
+            [
+              "COP",
+              1161.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "FANG",
+              -2176.0
+            ],
+            [
+              "FSLR",
+              -1779.0
+            ],
+            [
+              "TTD",
+              -1664.0
+            ],
+            [
+              "OXY",
+              -1639.0
+            ],
+            [
+              "LVS",
+              -1198.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Biotechnology",
+              5972.0
+            ],
+            [
+              "Semiconductors",
+              2721.0
+            ],
+            [
+              "Software",
+              2159.0
+            ],
+            [
+              "REITS",
+              1787.0
+            ],
+            [
+              "Chemicals",
+              1632.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Computers",
+              -1815.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              -1779.0
+            ],
+            [
+              "Advertising",
+              -1664.0
+            ],
+            [
+              "Lodging",
+              -1198.0
+            ],
+            [
+              "Media",
+              -1143.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2022": {
+          "total_return_pct": -18.006,
+          "max_drawdown_pct": -24.79,
+          "sharpe": -0.858,
+          "volatility_pct": 20.794,
+          "calmar": -0.726,
+          "avg_exposure": 0.458,
+          "avg_positions": 4.58,
+          "n_days": 251,
+          "trades": 120,
+          "avg_trade_net": -1.427,
+          "median_trade_net": -1.559,
+          "win_rate": 0.417,
+          "best_trade": "EQT 23.8551% (pnl 2590.71)",
+          "worst_trade": "HOOD -25.013% (pnl -2659.22)",
+          "top_contrib_tickers": [
+            [
+              "SMCI",
+              2893.0
+            ],
+            [
+              "FSLR",
+              2205.0
+            ],
+            [
+              "SLB",
+              1815.0
+            ],
+            [
+              "EQT",
+              1761.0
+            ],
+            [
+              "XOM",
+              1561.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "COIN",
+              -2632.0
+            ],
+            [
+              "MOS",
+              -2606.0
+            ],
+            [
+              "TSLA",
+              -2395.0
+            ],
+            [
+              "TTD",
+              -2386.0
+            ],
+            [
+              "CVNA",
+              -2318.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas Services",
+              3902.0
+            ],
+            [
+              "Oil&Gas",
+              3006.0
+            ],
+            [
+              "Computers",
+              2973.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              2205.0
+            ],
+            [
+              "Food",
+              762.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Auto Manufacturers",
+              -5760.0
+            ],
+            [
+              "Internet",
+              -3807.0
+            ],
+            [
+              "Pharmaceuticals",
+              -3088.0
+            ],
+            [
+              "Chemicals",
+              -2990.0
+            ],
+            [
+              "Retail",
+              -2835.0
+            ]
+          ],
+          "regime_pct_on": 0.339
+        },
+        "2023": {
+          "total_return_pct": 82.791,
+          "max_drawdown_pct": -20.795,
+          "sharpe": 2.199,
+          "volatility_pct": 29.804,
+          "calmar": 3.981,
+          "avg_exposure": 0.948,
+          "avg_positions": 9.48,
+          "n_days": 250,
+          "trades": 230,
+          "avg_trade_net": 2.619,
+          "median_trade_net": 0.914,
+          "win_rate": 0.574,
+          "best_trade": "CVNA 57.2571% (pnl 7505.2)",
+          "worst_trade": "CVNA -25.8763% (pnl -2600.76)",
+          "top_contrib_tickers": [
+            [
+              "CVNA",
+              11104.0
+            ],
+            [
+              "SMCI",
+              8731.0
+            ],
+            [
+              "COIN",
+              6251.0
+            ],
+            [
+              "CCL",
+              4652.0
+            ],
+            [
+              "COHR",
+              3948.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "ABNB",
+              -2356.0
+            ],
+            [
+              "EPAM",
+              -1901.0
+            ],
+            [
+              "STX",
+              -1691.0
+            ],
+            [
+              "DUK",
+              -1375.0
+            ],
+            [
+              "BX",
+              -1356.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Retail",
+              10551.0
+            ],
+            [
+              "Internet",
+              10117.0
+            ],
+            [
+              "Software",
+              9089.0
+            ],
+            [
+              "Diversified Finan Serv",
+              8793.0
+            ],
+            [
+              "Computers",
+              6197.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Oil&Gas",
+              -2963.0
+            ],
+            [
+              "Electric",
+              -2723.0
+            ],
+            [
+              "Private Equity",
+              -1356.0
+            ],
+            [
+              "Toys/Games/Hobbies",
+              -1311.0
+            ],
+            [
+              "Lodging",
+              -1253.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2024": {
+          "total_return_pct": 29.086,
+          "max_drawdown_pct": -23.973,
+          "sharpe": 1.025,
+          "volatility_pct": 29.186,
+          "calmar": 1.213,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 252,
+          "trades": 260,
+          "avg_trade_net": 1.219,
+          "median_trade_net": 0.172,
+          "win_rate": 0.519,
+          "best_trade": "SMCI 85.6472% (pnl 12932.99)",
+          "worst_trade": "SMCI -38.6878% (pnl -7039.07)",
+          "top_contrib_tickers": [
+            [
+              "APP",
+              16588.0
+            ],
+            [
+              "VST",
+              12906.0
+            ],
+            [
+              "HOOD",
+              12551.0
+            ],
+            [
+              "SMCI",
+              11986.0
+            ],
+            [
+              "CVNA",
+              8962.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "DELL",
+              -5929.0
+            ],
+            [
+              "WBD",
+              -4712.0
+            ],
+            [
+              "AMD",
+              -4654.0
+            ],
+            [
+              "TPL",
+              -4339.0
+            ],
+            [
+              "MRNA",
+              -3344.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Internet",
+              28971.0
+            ],
+            [
+              "Electric",
+              12723.0
+            ],
+            [
+              "Retail",
+              9418.0
+            ],
+            [
+              "Machinery-Constr&Mining",
+              8506.0
+            ],
+            [
+              "Diversified Finan Serv",
+              6781.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Semiconductors",
+              -13538.0
+            ],
+            [
+              "Media",
+              -8357.0
+            ],
+            [
+              "Banks",
+              -5413.0
+            ],
+            [
+              "Electronics",
+              -3419.0
+            ],
+            [
+              "Chemicals",
+              -3271.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2025": {
+          "total_return_pct": 37.295,
+          "max_drawdown_pct": -24.919,
+          "sharpe": 1.173,
+          "volatility_pct": 31.665,
+          "calmar": 1.497,
+          "avg_exposure": 0.924,
+          "avg_positions": 9.24,
+          "n_days": 250,
+          "trades": 230,
+          "avg_trade_net": 1.619,
+          "median_trade_net": 0.541,
+          "win_rate": 0.526,
+          "best_trade": "SNDK 55.5981% (pnl 11429.24)",
+          "worst_trade": "PLTR -29.3512% (pnl -6078.68)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              32925.0
+            ],
+            [
+              "ALB",
+              10172.0
+            ],
+            [
+              "LITE",
+              9303.0
+            ],
+            [
+              "CIEN",
+              6961.0
+            ],
+            [
+              "SATS",
+              5337.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "MRNA",
+              -6962.0
+            ],
+            [
+              "AVGO",
+              -4475.0
+            ],
+            [
+              "MGM",
+              -4055.0
+            ],
+            [
+              "GNRC",
+              -3670.0
+            ],
+            [
+              "DDOG",
+              -3577.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              45771.0
+            ],
+            [
+              "Chemicals",
+              10906.0
+            ],
+            [
+              "Telecommunications",
+              10702.0
+            ],
+            [
+              "Internet",
+              8452.0
+            ],
+            [
+              "Electronics",
+              6069.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Biotechnology",
+              -6962.0
+            ],
+            [
+              "Electrical Compo&Equip",
+              -3670.0
+            ],
+            [
+              "Mining",
+              -3480.0
+            ],
+            [
+              "Oil&Gas",
+              -2658.0
+            ],
+            [
+              "Miscellaneous Manufactur",
+              -2484.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2026": {
+          "total_return_pct": 69.464,
+          "max_drawdown_pct": -13.855,
+          "sharpe": 2.632,
+          "volatility_pct": 44.562,
+          "calmar": 5.014,
+          "avg_exposure": 0.984,
+          "avg_positions": 9.84,
+          "n_days": 125,
+          "trades": 130,
+          "avg_trade_net": 4.727,
+          "median_trade_net": 2.517,
+          "win_rate": 0.546,
+          "best_trade": "DDOG 57.2706% (pnl 20970.21)",
+          "worst_trade": "SNDK -19.7056% (pnl -10137.38)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              31537.0
+            ],
+            [
+              "INTC",
+              28869.0
+            ],
+            [
+              "DDOG",
+              26692.0
+            ],
+            [
+              "MRNA",
+              23239.0
+            ],
+            [
+              "DELL",
+              19882.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "TER",
+              -10207.0
+            ],
+            [
+              "CASY",
+              -7712.0
+            ],
+            [
+              "MOS",
+              -6777.0
+            ],
+            [
+              "CRWD",
+              -5687.0
+            ],
+            [
+              "OXY",
+              -5530.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              78104.0
+            ],
+            [
+              "Semiconductors",
+              66829.0
+            ],
+            [
+              "Healthcare-Services",
+              27783.0
+            ],
+            [
+              "Software",
+              23371.0
+            ],
+            [
+              "Biotechnology",
+              23239.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Electronics",
+              -7058.0
+            ],
+            [
+              "Airlines",
+              -4331.0
+            ],
+            [
+              "Auto Manufacturers",
+              -3559.0
+            ],
+            [
+              "Chemicals",
+              -3023.0
+            ],
+            [
+              "Media",
+              -2493.0
+            ]
+          ],
+          "regime_pct_on": 0.984
+        }
+      },
+      "monthly": {
+        "2021-07": {
+          "return_pct": -1.653,
+          "intramonth_max_dd_pct": -5.395,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 0.952,
+          "regime_pct_on": 1.0
+        },
+        "2021-08": {
+          "return_pct": -1.177,
+          "intramonth_max_dd_pct": -8.839,
+          "trades": 30,
+          "win_rate": 0.667,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-09": {
+          "return_pct": -7.005,
+          "intramonth_max_dd_pct": -8.246,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-10": {
+          "return_pct": 7.994,
+          "intramonth_max_dd_pct": -2.153,
+          "trades": 20,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-11": {
+          "return_pct": 1.569,
+          "intramonth_max_dd_pct": -5.046,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-12": {
+          "return_pct": 2.331,
+          "intramonth_max_dd_pct": -3.986,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2022-01": {
+          "return_pct": -4.386,
+          "intramonth_max_dd_pct": -10.653,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 0.95,
+          "regime_pct_on": 0.75
+        },
+        "2022-02": {
+          "return_pct": -0.254,
+          "intramonth_max_dd_pct": -6.4,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 0.737,
+          "regime_pct_on": 0.579
+        },
+        "2022-03": {
+          "return_pct": 3.843,
+          "intramonth_max_dd_pct": -4.004,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 0.478,
+          "regime_pct_on": 0.478
+        },
+        "2022-04": {
+          "return_pct": -9.838,
+          "intramonth_max_dd_pct": -12.667,
+          "trades": 20,
+          "win_rate": 0.2,
+          "avg_exposure": 0.95,
+          "regime_pct_on": 0.65
+        },
+        "2022-05": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-06": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-07": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-08": {
+          "return_pct": -11.024,
+          "intramonth_max_dd_pct": -11.381,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 0.652,
+          "regime_pct_on": 0.348
+        },
+        "2022-09": {
+          "return_pct": 4.134,
+          "intramonth_max_dd_pct": -2.592,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 0.238,
+          "regime_pct_on": 0.0
+        },
+        "2022-10": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-11": {
+          "return_pct": 6.494,
+          "intramonth_max_dd_pct": -1.793,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 0.667,
+          "regime_pct_on": 0.667
+        },
+        "2022-12": {
+          "return_pct": -7.615,
+          "intramonth_max_dd_pct": -8.671,
+          "trades": 20,
+          "win_rate": 0.15,
+          "avg_exposure": 0.857,
+          "regime_pct_on": 0.619
+        },
+        "2023-01": {
+          "return_pct": 14.685,
+          "intramonth_max_dd_pct": -5.806,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-02": {
+          "return_pct": -2.41,
+          "intramonth_max_dd_pct": -9.775,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-03": {
+          "return_pct": 2.808,
+          "intramonth_max_dd_pct": -6.406,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.783
+        },
+        "2023-04": {
+          "return_pct": -9.08,
+          "intramonth_max_dd_pct": -10.834,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-05": {
+          "return_pct": 15.38,
+          "intramonth_max_dd_pct": -3.977,
+          "trades": 20,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-06": {
+          "return_pct": 16.149,
+          "intramonth_max_dd_pct": -9.123,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-07": {
+          "return_pct": 20.607,
+          "intramonth_max_dd_pct": -4.628,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-08": {
+          "return_pct": -2.489,
+          "intramonth_max_dd_pct": -6.166,
+          "trades": 20,
+          "win_rate": 0.35,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-09": {
+          "return_pct": -9.76,
+          "intramonth_max_dd_pct": -9.839,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-10": {
+          "return_pct": -5.863,
+          "intramonth_max_dd_pct": -7.954,
+          "trades": 20,
+          "win_rate": 0.2,
+          "avg_exposure": 0.5,
+          "regime_pct_on": 0.182
+        },
+        "2023-11": {
+          "return_pct": 10.123,
+          "intramonth_max_dd_pct": -1.739,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 0.905,
+          "regime_pct_on": 0.619
+        },
+        "2023-12": {
+          "return_pct": 10.881,
+          "intramonth_max_dd_pct": -3.343,
+          "trades": 20,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-01": {
+          "return_pct": -3.509,
+          "intramonth_max_dd_pct": -8.854,
+          "trades": 20,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-02": {
+          "return_pct": 14.974,
+          "intramonth_max_dd_pct": -6.969,
+          "trades": 20,
+          "win_rate": 0.75,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-03": {
+          "return_pct": 8.569,
+          "intramonth_max_dd_pct": -3.036,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-04": {
+          "return_pct": -10.526,
+          "intramonth_max_dd_pct": -11.677,
+          "trades": 30,
+          "win_rate": 0.433,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-05": {
+          "return_pct": 2.881,
+          "intramonth_max_dd_pct": -4.597,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-06": {
+          "return_pct": 5.297,
+          "intramonth_max_dd_pct": -3.688,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-07": {
+          "return_pct": -4.763,
+          "intramonth_max_dd_pct": -9.636,
+          "trades": 20,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-08": {
+          "return_pct": -6.337,
+          "intramonth_max_dd_pct": -7.404,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-09": {
+          "return_pct": 2.735,
+          "intramonth_max_dd_pct": -5.302,
+          "trades": 20,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-10": {
+          "return_pct": 3.304,
+          "intramonth_max_dd_pct": -3.612,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-11": {
+          "return_pct": 22.456,
+          "intramonth_max_dd_pct": -3.401,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-12": {
+          "return_pct": -6.332,
+          "intramonth_max_dd_pct": -9.711,
+          "trades": 30,
+          "win_rate": 0.533,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-01": {
+          "return_pct": -2.428,
+          "intramonth_max_dd_pct": -11.023,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-02": {
+          "return_pct": -3.25,
+          "intramonth_max_dd_pct": -15.147,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-03": {
+          "return_pct": 0.241,
+          "intramonth_max_dd_pct": -4.534,
+          "trades": 30,
+          "win_rate": 0.367,
+          "avg_exposure": 0.952,
+          "regime_pct_on": 0.619
+        },
+        "2025-04": {
+          "return_pct": -1.944,
+          "intramonth_max_dd_pct": -12.155,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 0.476,
+          "regime_pct_on": 0.048
+        },
+        "2025-05": {
+          "return_pct": -0.093,
+          "intramonth_max_dd_pct": -3.339,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 0.667,
+          "regime_pct_on": 0.667
+        },
+        "2025-06": {
+          "return_pct": 10.393,
+          "intramonth_max_dd_pct": -2.056,
+          "trades": 20,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-07": {
+          "return_pct": 9.724,
+          "intramonth_max_dd_pct": -2.051,
+          "trades": 20,
+          "win_rate": 0.75,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-08": {
+          "return_pct": -1.203,
+          "intramonth_max_dd_pct": -5.562,
+          "trades": 20,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-09": {
+          "return_pct": 25.266,
+          "intramonth_max_dd_pct": -2.065,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-10": {
+          "return_pct": -0.936,
+          "intramonth_max_dd_pct": -8.377,
+          "trades": 30,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-11": {
+          "return_pct": 7.162,
+          "intramonth_max_dd_pct": -8.3,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-12": {
+          "return_pct": -3.248,
+          "intramonth_max_dd_pct": -10.483,
+          "trades": 30,
+          "win_rate": 0.467,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-01": {
+          "return_pct": 11.89,
+          "intramonth_max_dd_pct": -5.669,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-02": {
+          "return_pct": 7.099,
+          "intramonth_max_dd_pct": -7.298,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-03": {
+          "return_pct": -3.778,
+          "intramonth_max_dd_pct": -9.654,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 0.909,
+          "regime_pct_on": 0.909
+        },
+        "2026-04": {
+          "return_pct": 11.834,
+          "intramonth_max_dd_pct": -6.28,
+          "trades": 20,
+          "win_rate": 0.45,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-05": {
+          "return_pct": 36.325,
+          "intramonth_max_dd_pct": -5.095,
+          "trades": 20,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-06": {
+          "return_pct": -0.131,
+          "intramonth_max_dd_pct": -12.532,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-07": {
+          "return_pct": -6.547,
+          "intramonth_max_dd_pct": -6.547,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        }
+      },
+      "drawdown_episodes": [
+        {
+          "start_date": "2024-12-06",
+          "trough_date": "2025-04-08",
+          "recovery_date": "2025-09-09",
+          "depth_pct": -25.431,
+          "duration_days": 187,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.843,
+          "loss_tickers": [
+            [
+              "MRNA",
+              -7260.0
+            ],
+            [
+              "APP",
+              -5979.0
+            ],
+            [
+              "MU",
+              -5075.0
+            ],
+            [
+              "MGM",
+              -4055.0
+            ],
+            [
+              "WBD",
+              -3975.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Semiconductors",
+              -9005.0
+            ],
+            [
+              "Biotechnology",
+              -7260.0
+            ],
+            [
+              "Internet",
+              -5608.0
+            ],
+            [
+              "Computers",
+              -5376.0
+            ],
+            [
+              "Lodging",
+              -5211.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2022-04-04",
+          "trough_date": "2022-09-07",
+          "recovery_date": "2023-06-08",
+          "depth_pct": -24.79,
+          "duration_days": 296,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.185,
+          "loss_tickers": [
+            [
+              "COIN",
+              -2632.0
+            ],
+            [
+              "MOS",
+              -2606.0
+            ],
+            [
+              "CVNA",
+              -2318.0
+            ],
+            [
+              "OXY",
+              -1226.0
+            ],
+            [
+              "TTD",
+              -1118.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Oil&Gas",
+              -3376.0
+            ],
+            [
+              "Chemicals",
+              -3372.0
+            ],
+            [
+              "Retail",
+              -3070.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -2632.0
+            ],
+            [
+              "Advertising",
+              -1118.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2024-07-16",
+          "trough_date": "2024-09-06",
+          "recovery_date": "2024-11-22",
+          "depth_pct": -23.973,
+          "duration_days": 92,
+          "recovered": true,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [
+            [
+              "SMCI",
+              -7039.0
+            ],
+            [
+              "NVDA",
+              -3826.0
+            ],
+            [
+              "MU",
+              -3791.0
+            ],
+            [
+              "MPWR",
+              -2753.0
+            ],
+            [
+              "COHR",
+              -2630.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -10444.0
+            ],
+            [
+              "Semiconductors",
+              -10370.0
+            ],
+            [
+              "Electronics",
+              -4351.0
+            ],
+            [
+              "Banks",
+              -3896.0
+            ],
+            [
+              "Media",
+              -2915.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2023-07-19",
+          "trough_date": "2023-10-20",
+          "recovery_date": "2023-12-19",
+          "depth_pct": -20.795,
+          "duration_days": 107,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.806,
+          "loss_tickers": [
+            [
+              "STX",
+              -2160.0
+            ],
+            [
+              "ABNB",
+              -1826.0
+            ],
+            [
+              "WDC",
+              -1664.0
+            ],
+            [
+              "HOOD",
+              -1596.0
+            ],
+            [
+              "COIN",
+              -1526.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -4093.0
+            ],
+            [
+              "Internet",
+              -2497.0
+            ],
+            [
+              "Retail",
+              -1799.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -1709.0
+            ],
+            [
+              "Oil&Gas",
+              -1397.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2026-06-02",
+          "trough_date": "2026-07-02",
+          "recovery_date": null,
+          "depth_pct": -13.855,
+          "duration_days": 21,
+          "recovered": false,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [
+            [
+              "SNDK",
+              -10137.0
+            ],
+            [
+              "TER",
+              -9675.0
+            ],
+            [
+              "WDC",
+              -8636.0
+            ],
+            [
+              "CASY",
+              -7712.0
+            ],
+            [
+              "MU",
+              -7451.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Semiconductors",
+              -20377.0
+            ],
+            [
+              "Computers",
+              -16170.0
+            ],
+            [
+              "Telecommunications",
+              -6402.0
+            ],
+            [
+              "Airlines",
+              -2385.0
+            ],
+            [
+              "Retail",
+              -364.0
+            ]
+          ]
+        }
+      ]
+    },
+    "baseline_hold20": {
+      "overall": {
+        "total_return_pct": 431.696,
+        "max_drawdown_pct": -39.037,
+        "sharpe": 1.223,
+        "volatility_pct": 31.485,
+        "calmar": 11.059,
+        "avg_exposure": 0.999,
+        "avg_positions": 9.99,
+        "n_days": 1256,
+        "trades": 630,
+        "avg_trade_net": 3.137,
+        "median_trade_net": 0.914,
+        "win_rate": 0.544,
+        "best_trade": "INTC 88.2597% (pnl 30647.7)",
+        "worst_trade": "IP -23.6524% (pnl -8295.26)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            74084.0
+          ],
+          [
+            "APP",
+            47146.0
+          ],
+          [
+            "MU",
+            41438.0
+          ],
+          [
+            "INTC",
+            29464.0
+          ],
+          [
+            "CVNA",
+            25719.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "GNRC",
+            -11682.0
+          ],
+          [
+            "EL",
+            -9877.0
+          ],
+          [
+            "TTD",
+            -8852.0
+          ],
+          [
+            "IP",
+            -8285.0
+          ],
+          [
+            "AKAM",
+            -6834.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            141438.0
+          ],
+          [
+            "Semiconductors",
+            111377.0
+          ],
+          [
+            "Internet",
+            55376.0
+          ],
+          [
+            "Retail",
+            41945.0
+          ],
+          [
+            "Electronics",
+            21590.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Electrical Compo&Equip",
+            -11682.0
+          ],
+          [
+            "Advertising",
+            -8852.0
+          ],
+          [
+            "Cosmetics/Personal Care",
+            -8344.0
+          ],
+          [
+            "Forest Products&Paper",
+            -8285.0
+          ],
+          [
+            "Packaging&Containers",
+            -7392.0
+          ]
+        ]
+      },
+      "yearly": {
+        "2021": {
+          "total_return_pct": 8.361,
+          "max_drawdown_pct": -10.484,
+          "sharpe": 0.832,
+          "volatility_pct": 22.087,
+          "calmar": 0.797,
+          "avg_exposure": 0.992,
+          "avg_positions": 9.92,
+          "n_days": 128,
+          "trades": 60,
+          "avg_trade_net": 1.492,
+          "median_trade_net": 0.821,
+          "win_rate": 0.55,
+          "best_trade": "MRNA 47.2099% (pnl 4720.99)",
+          "worst_trade": "FANG -21.6091% (pnl -2160.91)",
+          "top_contrib_tickers": [
+            [
+              "MRNA",
+              3934.0
+            ],
+            [
+              "AMD",
+              2866.0
+            ],
+            [
+              "DECK",
+              1936.0
+            ],
+            [
+              "APA",
+              1790.0
+            ],
+            [
+              "DVN",
+              1635.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "LVS",
+              -1625.0
+            ],
+            [
+              "CRWD",
+              -1611.0
+            ],
+            [
+              "TPR",
+              -1200.0
+            ],
+            [
+              "SATS",
+              -1032.0
+            ],
+            [
+              "NVDA",
+              -993.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas",
+              4958.0
+            ],
+            [
+              "Biotechnology",
+              3934.0
+            ],
+            [
+              "Semiconductors",
+              3546.0
+            ],
+            [
+              "Chemicals",
+              1781.0
+            ],
+            [
+              "Apparel",
+              1387.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Software",
+              -2071.0
+            ],
+            [
+              "Computers",
+              -1918.0
+            ],
+            [
+              "Lodging",
+              -1625.0
+            ],
+            [
+              "Telecommunications",
+              -1032.0
+            ],
+            [
+              "Electrical Compo&Equip",
+              -988.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2022": {
+          "total_return_pct": -22.291,
+          "max_drawdown_pct": -37.474,
+          "sharpe": -0.459,
+          "volatility_pct": 38.894,
+          "calmar": -0.595,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 251,
+          "trades": 120,
+          "avg_trade_net": -1.371,
+          "median_trade_net": -0.302,
+          "win_rate": 0.492,
+          "best_trade": "TPL 35.5635% (pnl 2652.96)",
+          "worst_trade": "CVNA -27.4317% (pnl -2797.28)",
+          "top_contrib_tickers": [
+            [
+              "HAL",
+              3863.0
+            ],
+            [
+              "SLB",
+              2889.0
+            ],
+            [
+              "TPL",
+              2527.0
+            ],
+            [
+              "WYNN",
+              1860.0
+            ],
+            [
+              "WSM",
+              1813.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "CVNA",
+              -4208.0
+            ],
+            [
+              "HOOD",
+              -3656.0
+            ],
+            [
+              "UBER",
+              -2748.0
+            ],
+            [
+              "DDOG",
+              -2623.0
+            ],
+            [
+              "NUE",
+              -2451.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas Services",
+              5828.0
+            ],
+            [
+              "Oil&Gas",
+              4636.0
+            ],
+            [
+              "Lodging",
+              2647.0
+            ],
+            [
+              "Home Builders",
+              1586.0
+            ],
+            [
+              "Mining",
+              1518.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Internet",
+              -7251.0
+            ],
+            [
+              "Retail",
+              -5656.0
+            ],
+            [
+              "Chemicals",
+              -3981.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -2955.0
+            ],
+            [
+              "Leisure Time",
+              -2599.0
+            ]
+          ],
+          "regime_pct_on": 0.339
+        },
+        "2023": {
+          "total_return_pct": 66.565,
+          "max_drawdown_pct": -19.212,
+          "sharpe": 1.957,
+          "volatility_pct": 28.479,
+          "calmar": 3.465,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 250,
+          "trades": 130,
+          "avg_trade_net": 4.379,
+          "median_trade_net": 0.416,
+          "win_rate": 0.523,
+          "best_trade": "CVNA 196.2698% (pnl 17254.46)",
+          "worst_trade": "CVNA -29.758% (pnl -3634.49)",
+          "top_contrib_tickers": [
+            [
+              "CVNA",
+              16827.0
+            ],
+            [
+              "COIN",
+              8918.0
+            ],
+            [
+              "APP",
+              5888.0
+            ],
+            [
+              "VRT",
+              5637.0
+            ],
+            [
+              "ALGN",
+              4255.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "SMCI",
+              -2756.0
+            ],
+            [
+              "APA",
+              -2494.0
+            ],
+            [
+              "CFG",
+              -2304.0
+            ],
+            [
+              "MOS",
+              -2103.0
+            ],
+            [
+              "AMD",
+              -1833.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Retail",
+              18553.0
+            ],
+            [
+              "Internet",
+              9777.0
+            ],
+            [
+              "Diversified Finan Serv",
+              8918.0
+            ],
+            [
+              "Machinery-Constr&Mining",
+              5637.0
+            ],
+            [
+              "Media",
+              4977.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Oil&Gas",
+              -4242.0
+            ],
+            [
+              "Banks",
+              -4006.0
+            ],
+            [
+              "Computers",
+              -2473.0
+            ],
+            [
+              "Chemicals",
+              -2183.0
+            ],
+            [
+              "Telecommunications",
+              -1749.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2024": {
+          "total_return_pct": 35.326,
+          "max_drawdown_pct": -17.621,
+          "sharpe": 1.283,
+          "volatility_pct": 26.386,
+          "calmar": 2.005,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 252,
+          "trades": 120,
+          "avg_trade_net": 3.43,
+          "median_trade_net": 1.127,
+          "win_rate": 0.55,
+          "best_trade": "APP 126.2335% (pnl 20954.54)",
+          "worst_trade": "EL -31.3569% (pnl -5423.39)",
+          "top_contrib_tickers": [
+            [
+              "APP",
+              31020.0
+            ],
+            [
+              "UAL",
+              9821.0
+            ],
+            [
+              "TPL",
+              6135.0
+            ],
+            [
+              "NRG",
+              4806.0
+            ],
+            [
+              "CVNA",
+              4501.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "EL",
+              -5423.0
+            ],
+            [
+              "F",
+              -4736.0
+            ],
+            [
+              "LITE",
+              -4713.0
+            ],
+            [
+              "ALB",
+              -3108.0
+            ],
+            [
+              "GLW",
+              -2902.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Internet",
+              35273.0
+            ],
+            [
+              "Airlines",
+              10440.0
+            ],
+            [
+              "Oil&Gas",
+              4603.0
+            ],
+            [
+              "Mining",
+              4464.0
+            ],
+            [
+              "Retail",
+              3864.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Cosmetics/Personal Care",
+              -3891.0
+            ],
+            [
+              "Chemicals",
+              -3108.0
+            ],
+            [
+              "Media",
+              -3106.0
+            ],
+            [
+              "Lodging",
+              -2745.0
+            ],
+            [
+              "Healthcare-Products",
+              -2551.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2025": {
+          "total_return_pct": 56.387,
+          "max_drawdown_pct": -22.033,
+          "sharpe": 1.722,
+          "volatility_pct": 28.677,
+          "calmar": 2.559,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 250,
+          "trades": 130,
+          "avg_trade_net": 3.359,
+          "median_trade_net": 2.015,
+          "win_rate": 0.577,
+          "best_trade": "SNDK 67.6926% (pnl 19214.1)",
+          "worst_trade": "GNRC -26.5787% (pnl -7544.18)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              21848.0
+            ],
+            [
+              "LITE",
+              11947.0
+            ],
+            [
+              "APP",
+              10474.0
+            ],
+            [
+              "VRT",
+              10146.0
+            ],
+            [
+              "CVNA",
+              9623.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "GNRC",
+              -7544.0
+            ],
+            [
+              "MRNA",
+              -4982.0
+            ],
+            [
+              "EL",
+              -4453.0
+            ],
+            [
+              "RCL",
+              -3416.0
+            ],
+            [
+              "IVZ",
+              -3087.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              33918.0
+            ],
+            [
+              "Semiconductors",
+              25286.0
+            ],
+            [
+              "Retail",
+              19550.0
+            ],
+            [
+              "Internet",
+              18843.0
+            ],
+            [
+              "Machinery-Constr&Mining",
+              10097.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Electrical Compo&Equip",
+              -7544.0
+            ],
+            [
+              "Biotechnology",
+              -7487.0
+            ],
+            [
+              "Cosmetics/Personal Care",
+              -4453.0
+            ],
+            [
+              "Leisure Time",
+              -3416.0
+            ],
+            [
+              "Pharmaceuticals",
+              -3222.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2026": {
+          "total_return_pct": 75.279,
+          "max_drawdown_pct": -13.879,
+          "sharpe": 2.971,
+          "volatility_pct": 41.341,
+          "calmar": 5.424,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 125,
+          "trades": 70,
+          "avg_trade_net": 9.053,
+          "median_trade_net": 2.748,
+          "win_rate": 0.6,
+          "best_trade": "INTC 88.2597% (pnl 30647.7)",
+          "worst_trade": "IP -23.6524% (pnl -8295.26)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              52236.0
+            ],
+            [
+              "MU",
+              36935.0
+            ],
+            [
+              "INTC",
+              25698.0
+            ],
+            [
+              "STX",
+              21986.0
+            ],
+            [
+              "WDC",
+              20555.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "IP",
+              -8295.0
+            ],
+            [
+              "SW",
+              -7151.0
+            ],
+            [
+              "CASY",
+              -6900.0
+            ],
+            [
+              "AKAM",
+              -6873.0
+            ],
+            [
+              "TTD",
+              -6172.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              113505.0
+            ],
+            [
+              "Semiconductors",
+              80299.0
+            ],
+            [
+              "Miscellaneous Manufactur",
+              17641.0
+            ],
+            [
+              "Biotechnology",
+              13830.0
+            ],
+            [
+              "Electronics",
+              9925.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Forest Products&Paper",
+              -8295.0
+            ],
+            [
+              "Packaging&Containers",
+              -7151.0
+            ],
+            [
+              "Advertising",
+              -6172.0
+            ],
+            [
+              "Building Materials",
+              -3615.0
+            ],
+            [
+              "Auto Manufacturers",
+              -3229.0
+            ]
+          ],
+          "regime_pct_on": 0.984
+        }
+      },
+      "monthly": {
+        "2021-07": {
+          "return_pct": 1.778,
+          "intramonth_max_dd_pct": -5.698,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.952,
+          "regime_pct_on": 1.0
+        },
+        "2021-08": {
+          "return_pct": 2.294,
+          "intramonth_max_dd_pct": -5.9,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-09": {
+          "return_pct": -8.428,
+          "intramonth_max_dd_pct": -9.65,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-10": {
+          "return_pct": 8.103,
+          "intramonth_max_dd_pct": -1.718,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-11": {
+          "return_pct": 1.634,
+          "intramonth_max_dd_pct": -3.349,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-12": {
+          "return_pct": -0.59,
+          "intramonth_max_dd_pct": -5.641,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2022-01": {
+          "return_pct": -3.23,
+          "intramonth_max_dd_pct": -9.544,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.75
+        },
+        "2022-02": {
+          "return_pct": -3.025,
+          "intramonth_max_dd_pct": -11.49,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.579
+        },
+        "2022-03": {
+          "return_pct": -2.795,
+          "intramonth_max_dd_pct": -18.682,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.478
+        },
+        "2022-04": {
+          "return_pct": -16.147,
+          "intramonth_max_dd_pct": -19.186,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.65
+        },
+        "2022-05": {
+          "return_pct": -0.852,
+          "intramonth_max_dd_pct": -10.498,
+          "trades": 10,
+          "win_rate": 0.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-06": {
+          "return_pct": -12.01,
+          "intramonth_max_dd_pct": -17.022,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-07": {
+          "return_pct": 5.286,
+          "intramonth_max_dd_pct": -3.112,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-08": {
+          "return_pct": -7.397,
+          "intramonth_max_dd_pct": -11.296,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.348
+        },
+        "2022-09": {
+          "return_pct": -4.791,
+          "intramonth_max_dd_pct": -14.419,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-10": {
+          "return_pct": 13.548,
+          "intramonth_max_dd_pct": -8.279,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-11": {
+          "return_pct": 8.492,
+          "intramonth_max_dd_pct": -4.661,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.667
+        },
+        "2022-12": {
+          "return_pct": -6.341,
+          "intramonth_max_dd_pct": -8.842,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2023-01": {
+          "return_pct": 27.167,
+          "intramonth_max_dd_pct": -4.558,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-02": {
+          "return_pct": -2.963,
+          "intramonth_max_dd_pct": -12.763,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-03": {
+          "return_pct": 1.313,
+          "intramonth_max_dd_pct": -8.582,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.783
+        },
+        "2023-04": {
+          "return_pct": -4.182,
+          "intramonth_max_dd_pct": -7.639,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-05": {
+          "return_pct": 0.116,
+          "intramonth_max_dd_pct": -3.257,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-06": {
+          "return_pct": 7.035,
+          "intramonth_max_dd_pct": -7.59,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-07": {
+          "return_pct": 8.705,
+          "intramonth_max_dd_pct": -7.092,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-08": {
+          "return_pct": -3.983,
+          "intramonth_max_dd_pct": -8.093,
+          "trades": 10,
+          "win_rate": 0.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-09": {
+          "return_pct": -9.238,
+          "intramonth_max_dd_pct": -9.238,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-10": {
+          "return_pct": 2.877,
+          "intramonth_max_dd_pct": -4.264,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.182
+        },
+        "2023-11": {
+          "return_pct": 7.714,
+          "intramonth_max_dd_pct": -4.576,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2023-12": {
+          "return_pct": 11.953,
+          "intramonth_max_dd_pct": -3.449,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-01": {
+          "return_pct": 1.2,
+          "intramonth_max_dd_pct": -5.145,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-02": {
+          "return_pct": 14.546,
+          "intramonth_max_dd_pct": -7.767,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-03": {
+          "return_pct": 7.061,
+          "intramonth_max_dd_pct": -3.653,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-04": {
+          "return_pct": -2.979,
+          "intramonth_max_dd_pct": -6.518,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-05": {
+          "return_pct": 2.994,
+          "intramonth_max_dd_pct": -4.549,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-06": {
+          "return_pct": -0.116,
+          "intramonth_max_dd_pct": -3.09,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-07": {
+          "return_pct": -1.47,
+          "intramonth_max_dd_pct": -10.157,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-08": {
+          "return_pct": 2.74,
+          "intramonth_max_dd_pct": -6.713,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-09": {
+          "return_pct": 3.81,
+          "intramonth_max_dd_pct": -1.627,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-10": {
+          "return_pct": -4.888,
+          "intramonth_max_dd_pct": -5.152,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-11": {
+          "return_pct": 21.829,
+          "intramonth_max_dd_pct": -3.143,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-12": {
+          "return_pct": -5.795,
+          "intramonth_max_dd_pct": -11.402,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-01": {
+          "return_pct": 2.461,
+          "intramonth_max_dd_pct": -1.402,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-02": {
+          "return_pct": -2.937,
+          "intramonth_max_dd_pct": -10.436,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-03": {
+          "return_pct": -1.055,
+          "intramonth_max_dd_pct": -4.442,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2025-04": {
+          "return_pct": 5.467,
+          "intramonth_max_dd_pct": -13.119,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.048
+        },
+        "2025-05": {
+          "return_pct": 15.281,
+          "intramonth_max_dd_pct": -2.903,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.667
+        },
+        "2025-06": {
+          "return_pct": 6.184,
+          "intramonth_max_dd_pct": -1.929,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-07": {
+          "return_pct": 5.946,
+          "intramonth_max_dd_pct": -3.68,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-08": {
+          "return_pct": 2.448,
+          "intramonth_max_dd_pct": -2.913,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-09": {
+          "return_pct": 6.179,
+          "intramonth_max_dd_pct": -4.502,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-10": {
+          "return_pct": 4.317,
+          "intramonth_max_dd_pct": -6.467,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-11": {
+          "return_pct": 7.214,
+          "intramonth_max_dd_pct": -9.106,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-12": {
+          "return_pct": -2.13,
+          "intramonth_max_dd_pct": -5.152,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-01": {
+          "return_pct": 12.357,
+          "intramonth_max_dd_pct": -4.801,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-02": {
+          "return_pct": 6.714,
+          "intramonth_max_dd_pct": -7.589,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-03": {
+          "return_pct": -11.037,
+          "intramonth_max_dd_pct": -13.216,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.909
+        },
+        "2026-04": {
+          "return_pct": 18.378,
+          "intramonth_max_dd_pct": -4.979,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-05": {
+          "return_pct": 28.494,
+          "intramonth_max_dd_pct": -7.188,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-06": {
+          "return_pct": 0.444,
+          "intramonth_max_dd_pct": -12.022,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-07": {
+          "return_pct": -2.921,
+          "intramonth_max_dd_pct": -2.921,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        }
+      },
+      "drawdown_episodes": [
+        {
+          "start_date": "2021-11-29",
+          "trough_date": "2022-09-30",
+          "recovery_date": "2023-02-01",
+          "depth_pct": -39.037,
+          "duration_days": 295,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.387,
+          "loss_tickers": [
+            [
+              "CVNA",
+              -4208.0
+            ],
+            [
+              "UBER",
+              -2748.0
+            ],
+            [
+              "DDOG",
+              -2623.0
+            ],
+            [
+              "NUE",
+              -2451.0
+            ],
+            [
+              "TTD",
+              -2281.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Retail",
+              -5656.0
+            ],
+            [
+              "Internet",
+              -5131.0
+            ],
+            [
+              "Chemicals",
+              -3981.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -2975.0
+            ],
+            [
+              "Leisure Time",
+              -2599.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2024-12-06",
+          "trough_date": "2025-04-08",
+          "recovery_date": "2025-05-13",
+          "depth_pct": -23.275,
+          "duration_days": 106,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.843,
+          "loss_tickers": [
+            [
+              "MRNA",
+              -4029.0
+            ],
+            [
+              "IVZ",
+              -2879.0
+            ],
+            [
+              "RCL",
+              -2347.0
+            ],
+            [
+              "BEN",
+              -2191.0
+            ],
+            [
+              "FOXA",
+              -2153.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Diversified Finan Serv",
+              -6142.0
+            ],
+            [
+              "Biotechnology",
+              -4994.0
+            ],
+            [
+              "Media",
+              -4304.0
+            ],
+            [
+              "Oil&Gas",
+              -3198.0
+            ],
+            [
+              "Leisure Time",
+              -2347.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2023-07-19",
+          "trough_date": "2023-10-03",
+          "recovery_date": "2023-12-14",
+          "depth_pct": -19.212,
+          "duration_days": 104,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.926,
+          "loss_tickers": [
+            [
+              "SMCI",
+              -3214.0
+            ],
+            [
+              "CFG",
+              -2304.0
+            ],
+            [
+              "KEY",
+              -1702.0
+            ],
+            [
+              "MRNA",
+              -1671.0
+            ],
+            [
+              "NVDA",
+              -1255.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Banks",
+              -4006.0
+            ],
+            [
+              "Computers",
+              -3214.0
+            ],
+            [
+              "Biotechnology",
+              -1658.0
+            ],
+            [
+              "Semiconductors",
+              -1255.0
+            ],
+            [
+              "Electrical Compo&Equip",
+              -849.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2024-07-16",
+          "trough_date": "2024-08-07",
+          "recovery_date": "2024-11-11",
+          "depth_pct": -17.621,
+          "duration_days": 83,
+          "recovered": true,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [],
+          "loss_industries": []
+        },
+        {
+          "start_date": "2023-02-15",
+          "trough_date": "2023-04-26",
+          "recovery_date": "2023-07-13",
+          "depth_pct": -17.36,
+          "duration_days": 101,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.898,
+          "loss_tickers": [
+            [
+              "CVNA",
+              -2905.0
+            ],
+            [
+              "TSLA",
+              -2296.0
+            ],
+            [
+              "MOS",
+              -2103.0
+            ],
+            [
+              "APA",
+              -1183.0
+            ],
+            [
+              "SATS",
+              -930.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Retail",
+              -2399.0
+            ],
+            [
+              "Auto Manufacturers",
+              -2296.0
+            ],
+            [
+              "Chemicals",
+              -2183.0
+            ],
+            [
+              "Oil&Gas",
+              -1183.0
+            ],
+            [
+              "Telecommunications",
+              -930.0
+            ]
+          ]
+        }
+      ]
+    },
+    "regime200_hold20": {
+      "overall": {
+        "total_return_pct": 401.452,
+        "max_drawdown_pct": -29.298,
+        "sharpe": 1.236,
+        "volatility_pct": 29.816,
+        "calmar": 13.702,
+        "avg_exposure": 0.88,
+        "avg_positions": 8.8,
+        "n_days": 1256,
+        "trades": 560,
+        "avg_trade_net": 3.376,
+        "median_trade_net": 1.012,
+        "win_rate": 0.527,
+        "best_trade": "SNDK 119.0148% (pnl 43167.9)",
+        "worst_trade": "ON -27.9403% (pnl -15277.73)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            70941.0
+          ],
+          [
+            "LITE",
+            31510.0
+          ],
+          [
+            "DDOG",
+            29265.0
+          ],
+          [
+            "AMD",
+            27701.0
+          ],
+          [
+            "HOOD",
+            27408.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "AXON",
+            -11550.0
+          ],
+          [
+            "FSLR",
+            -7302.0
+          ],
+          [
+            "HPQ",
+            -7151.0
+          ],
+          [
+            "F",
+            -6054.0
+          ],
+          [
+            "GNRC",
+            -5720.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            135444.0
+          ],
+          [
+            "Semiconductors",
+            75392.0
+          ],
+          [
+            "Internet",
+            38158.0
+          ],
+          [
+            "Software",
+            32198.0
+          ],
+          [
+            "Healthcare-Services",
+            27386.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Miscellaneous Manufactur",
+            -11579.0
+          ],
+          [
+            "Media",
+            -9528.0
+          ],
+          [
+            "Oil&Gas",
+            -8419.0
+          ],
+          [
+            "Advertising",
+            -7428.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -7302.0
+          ]
+        ]
+      },
+      "yearly": {
+        "2021": {
+          "total_return_pct": 8.361,
+          "max_drawdown_pct": -10.484,
+          "sharpe": 0.832,
+          "volatility_pct": 22.087,
+          "calmar": 0.797,
+          "avg_exposure": 0.992,
+          "avg_positions": 9.92,
+          "n_days": 128,
+          "trades": 60,
+          "avg_trade_net": 1.492,
+          "median_trade_net": 0.821,
+          "win_rate": 0.55,
+          "best_trade": "MRNA 47.2099% (pnl 4720.99)",
+          "worst_trade": "FANG -21.6091% (pnl -2160.91)",
+          "top_contrib_tickers": [
+            [
+              "MRNA",
+              3934.0
+            ],
+            [
+              "AMD",
+              2866.0
+            ],
+            [
+              "DECK",
+              1936.0
+            ],
+            [
+              "APA",
+              1790.0
+            ],
+            [
+              "DVN",
+              1635.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "LVS",
+              -1625.0
+            ],
+            [
+              "CRWD",
+              -1611.0
+            ],
+            [
+              "TPR",
+              -1200.0
+            ],
+            [
+              "SATS",
+              -1032.0
+            ],
+            [
+              "NVDA",
+              -993.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas",
+              4958.0
+            ],
+            [
+              "Biotechnology",
+              3934.0
+            ],
+            [
+              "Semiconductors",
+              3546.0
+            ],
+            [
+              "Chemicals",
+              1781.0
+            ],
+            [
+              "Apparel",
+              1387.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Software",
+              -2071.0
+            ],
+            [
+              "Computers",
+              -1918.0
+            ],
+            [
+              "Lodging",
+              -1625.0
+            ],
+            [
+              "Telecommunications",
+              -1032.0
+            ],
+            [
+              "Electrical Compo&Equip",
+              -988.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2022": {
+          "total_return_pct": -15.206,
+          "max_drawdown_pct": -27.731,
+          "sharpe": -0.719,
+          "volatility_pct": 20.251,
+          "calmar": -0.548,
+          "avg_exposure": 0.51,
+          "avg_positions": 5.1,
+          "n_days": 251,
+          "trades": 60,
+          "avg_trade_net": -1.851,
+          "median_trade_net": -1.85,
+          "win_rate": 0.467,
+          "best_trade": "HAL 17.9604% (pnl 1821.56)",
+          "worst_trade": "NUE -24.6268% (pnl -2772.59)",
+          "top_contrib_tickers": [
+            [
+              "HAL",
+              1822.0
+            ],
+            [
+              "WYNN",
+              1694.0
+            ],
+            [
+              "FSLR",
+              1463.0
+            ],
+            [
+              "EOG",
+              1231.0
+            ],
+            [
+              "SLB",
+              1207.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "NUE",
+              -2773.0
+            ],
+            [
+              "CVNA",
+              -2692.0
+            ],
+            [
+              "UBER",
+              -1991.0
+            ],
+            [
+              "MOS",
+              -1875.0
+            ],
+            [
+              "COIN",
+              -1676.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Oil&Gas Services",
+              3975.0
+            ],
+            [
+              "Lodging",
+              2298.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              1463.0
+            ],
+            [
+              "Commercial Services",
+              1175.0
+            ],
+            [
+              "Food",
+              902.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Retail",
+              -4568.0
+            ],
+            [
+              "Internet",
+              -3081.0
+            ],
+            [
+              "Iron/Steel",
+              -2773.0
+            ],
+            [
+              "Chemicals",
+              -2696.0
+            ],
+            [
+              "Pharmaceuticals",
+              -2529.0
+            ]
+          ],
+          "regime_pct_on": 0.339
+        },
+        "2023": {
+          "total_return_pct": 62.122,
+          "max_drawdown_pct": -19.633,
+          "sharpe": 1.918,
+          "volatility_pct": 27.475,
+          "calmar": 3.164,
+          "avg_exposure": 0.976,
+          "avg_positions": 9.76,
+          "n_days": 250,
+          "trades": 120,
+          "avg_trade_net": 3.738,
+          "median_trade_net": 1.465,
+          "win_rate": 0.533,
+          "best_trade": "COIN 68.1329% (pnl 8476.16)",
+          "worst_trade": "CVNA -35.1742% (pnl -3917.88)",
+          "top_contrib_tickers": [
+            [
+              "VRT",
+              11532.0
+            ],
+            [
+              "COIN",
+              8741.0
+            ],
+            [
+              "SMCI",
+              7442.0
+            ],
+            [
+              "RCL",
+              4632.0
+            ],
+            [
+              "COHR",
+              4414.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "GNRC",
+              -2927.0
+            ],
+            [
+              "NCLH",
+              -1885.0
+            ],
+            [
+              "MRNA",
+              -1869.0
+            ],
+            [
+              "CRH",
+              -1568.0
+            ],
+            [
+              "FIX",
+              -1409.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Machinery-Constr&Mining",
+              11532.0
+            ],
+            [
+              "Computers",
+              8788.0
+            ],
+            [
+              "Diversified Finan Serv",
+              8741.0
+            ],
+            [
+              "Electronics",
+              6289.0
+            ],
+            [
+              "Leisure Time",
+              4376.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Electrical Compo&Equip",
+              -2927.0
+            ],
+            [
+              "Biotechnology",
+              -2333.0
+            ],
+            [
+              "Engineering&Construction",
+              -1695.0
+            ],
+            [
+              "Healthcare-Products",
+              -1575.0
+            ],
+            [
+              "Banks",
+              -1415.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2024": {
+          "total_return_pct": 64.999,
+          "max_drawdown_pct": -20.835,
+          "sharpe": 1.784,
+          "volatility_pct": 30.85,
+          "calmar": 3.12,
+          "avg_exposure": 1.0,
+          "avg_positions": 10.0,
+          "n_days": 252,
+          "trades": 130,
+          "avg_trade_net": 4.89,
+          "median_trade_net": 2.983,
+          "win_rate": 0.585,
+          "best_trade": "TSLA 48.8637% (pnl 10679.41)",
+          "worst_trade": "SMCI -27.4537% (pnl -4499.53)",
+          "top_contrib_tickers": [
+            [
+              "HOOD",
+              19318.0
+            ],
+            [
+              "APP",
+              15940.0
+            ],
+            [
+              "COIN",
+              11391.0
+            ],
+            [
+              "PLTR",
+              10712.0
+            ],
+            [
+              "TSLA",
+              10679.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "MRNA",
+              -5939.0
+            ],
+            [
+              "PSKY",
+              -5117.0
+            ],
+            [
+              "MU",
+              -3443.0
+            ],
+            [
+              "DELL",
+              -2396.0
+            ],
+            [
+              "RMD",
+              -1724.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Internet",
+              36126.0
+            ],
+            [
+              "Diversified Finan Serv",
+              14305.0
+            ],
+            [
+              "Electric",
+              13750.0
+            ],
+            [
+              "Auto Manufacturers",
+              12096.0
+            ],
+            [
+              "Machinery-Constr&Mining",
+              11107.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Media",
+              -6138.0
+            ],
+            [
+              "Biotechnology",
+              -4773.0
+            ],
+            [
+              "Semiconductors",
+              -3645.0
+            ],
+            [
+              "Pharmaceuticals",
+              -3605.0
+            ],
+            [
+              "Chemicals",
+              -1777.0
+            ]
+          ],
+          "regime_pct_on": 1.0
+        },
+        "2025": {
+          "total_return_pct": 46.134,
+          "max_drawdown_pct": -29.298,
+          "sharpe": 1.318,
+          "volatility_pct": 33.425,
+          "calmar": 1.575,
+          "avg_exposure": 0.924,
+          "avg_positions": 9.24,
+          "n_days": 250,
+          "trades": 120,
+          "avg_trade_net": 3.494,
+          "median_trade_net": 1.502,
+          "win_rate": 0.533,
+          "best_trade": "SNDK 95.4834% (pnl 21892.32)",
+          "worst_trade": "APP -35.3007% (pnl -9091.42)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              30152.0
+            ],
+            [
+              "LITE",
+              26728.0
+            ],
+            [
+              "WDC",
+              16472.0
+            ],
+            [
+              "STX",
+              9778.0
+            ],
+            [
+              "HOOD",
+              9179.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "PLTR",
+              -12355.0
+            ],
+            [
+              "MRNA",
+              -10198.0
+            ],
+            [
+              "MU",
+              -5595.0
+            ],
+            [
+              "MGM",
+              -5524.0
+            ],
+            [
+              "WBD",
+              -5431.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Computers",
+              80457.0
+            ],
+            [
+              "Semiconductors",
+              12719.0
+            ],
+            [
+              "Pharmaceuticals",
+              8715.0
+            ],
+            [
+              "Retail",
+              7942.0
+            ],
+            [
+              "Telecommunications",
+              7484.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Biotechnology",
+              -10198.0
+            ],
+            [
+              "Software",
+              -5884.0
+            ],
+            [
+              "Media",
+              -5431.0
+            ],
+            [
+              "Miscellaneous Manufactur",
+              -3782.0
+            ],
+            [
+              "Apparel",
+              -3360.0
+            ]
+          ],
+          "regime_pct_on": 0.86
+        },
+        "2026": {
+          "total_return_pct": 35.386,
+          "max_drawdown_pct": -21.684,
+          "sharpe": 1.634,
+          "volatility_pct": 43.537,
+          "calmar": 1.632,
+          "avg_exposure": 0.984,
+          "avg_positions": 9.84,
+          "n_days": 125,
+          "trades": 70,
+          "avg_trade_net": 5.84,
+          "median_trade_net": -2.016,
+          "win_rate": 0.429,
+          "best_trade": "SNDK 119.0148% (pnl 43167.9)",
+          "worst_trade": "ON -27.9403% (pnl -15277.73)",
+          "top_contrib_tickers": [
+            [
+              "SNDK",
+              40789.0
+            ],
+            [
+              "DDOG",
+              30845.0
+            ],
+            [
+              "AMD",
+              24835.0
+            ],
+            [
+              "MU",
+              18371.0
+            ],
+            [
+              "HUM",
+              17826.0
+            ]
+          ],
+          "worst_contrib_tickers": [
+            [
+              "TER",
+              -10208.0
+            ],
+            [
+              "WDC",
+              -10018.0
+            ],
+            [
+              "AXON",
+              -9831.0
+            ],
+            [
+              "FSLR",
+              -7324.0
+            ],
+            [
+              "HPQ",
+              -7151.0
+            ]
+          ],
+          "top_industries": [
+            [
+              "Semiconductors",
+              62524.0
+            ],
+            [
+              "Computers",
+              42833.0
+            ],
+            [
+              "Software",
+              30845.0
+            ],
+            [
+              "Healthcare-Services",
+              26608.0
+            ],
+            [
+              "Biotechnology",
+              16321.0
+            ]
+          ],
+          "worst_industries": [
+            [
+              "Oil&Gas",
+              -10964.0
+            ],
+            [
+              "Miscellaneous Manufactur",
+              -9831.0
+            ],
+            [
+              "Energy-Alternate Sources",
+              -7324.0
+            ],
+            [
+              "Auto Manufacturers",
+              -6054.0
+            ],
+            [
+              "Advertising",
+              -4631.0
+            ]
+          ],
+          "regime_pct_on": 0.984
+        }
+      },
+      "monthly": {
+        "2021-07": {
+          "return_pct": 1.778,
+          "intramonth_max_dd_pct": -5.698,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.952,
+          "regime_pct_on": 1.0
+        },
+        "2021-08": {
+          "return_pct": 2.294,
+          "intramonth_max_dd_pct": -5.9,
+          "trades": 20,
+          "win_rate": 0.65,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-09": {
+          "return_pct": -8.428,
+          "intramonth_max_dd_pct": -9.65,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-10": {
+          "return_pct": 8.103,
+          "intramonth_max_dd_pct": -1.718,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-11": {
+          "return_pct": 1.634,
+          "intramonth_max_dd_pct": -3.349,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2021-12": {
+          "return_pct": -0.59,
+          "intramonth_max_dd_pct": -5.641,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2022-01": {
+          "return_pct": -3.215,
+          "intramonth_max_dd_pct": -7.954,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 0.95,
+          "regime_pct_on": 0.75
+        },
+        "2022-02": {
+          "return_pct": 0.339,
+          "intramonth_max_dd_pct": -3.008,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 0.737,
+          "regime_pct_on": 0.579
+        },
+        "2022-03": {
+          "return_pct": 5.046,
+          "intramonth_max_dd_pct": -2.892,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.478,
+          "regime_pct_on": 0.478
+        },
+        "2022-04": {
+          "return_pct": -8.321,
+          "intramonth_max_dd_pct": -9.536,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.65
+        },
+        "2022-05": {
+          "return_pct": -4.652,
+          "intramonth_max_dd_pct": -10.84,
+          "trades": 10,
+          "win_rate": 0.0,
+          "avg_exposure": 0.429,
+          "regime_pct_on": 0.0
+        },
+        "2022-06": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-07": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-08": {
+          "return_pct": -10.859,
+          "intramonth_max_dd_pct": -11.838,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.652,
+          "regime_pct_on": 0.348
+        },
+        "2022-09": {
+          "return_pct": 8.94,
+          "intramonth_max_dd_pct": -2.035,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 0.238,
+          "regime_pct_on": 0.0
+        },
+        "2022-10": {
+          "return_pct": 0.0,
+          "intramonth_max_dd_pct": 0.0,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.0,
+          "regime_pct_on": 0.0
+        },
+        "2022-11": {
+          "return_pct": 4.997,
+          "intramonth_max_dd_pct": -1.66,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.667,
+          "regime_pct_on": 0.667
+        },
+        "2022-12": {
+          "return_pct": -5.663,
+          "intramonth_max_dd_pct": -8.136,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2023-01": {
+          "return_pct": 15.853,
+          "intramonth_max_dd_pct": -3.868,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-02": {
+          "return_pct": -8.721,
+          "intramonth_max_dd_pct": -13.722,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-03": {
+          "return_pct": -1.417,
+          "intramonth_max_dd_pct": -12.243,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.783
+        },
+        "2023-04": {
+          "return_pct": -3.431,
+          "intramonth_max_dd_pct": -6.554,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-05": {
+          "return_pct": 9.271,
+          "intramonth_max_dd_pct": -2.821,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-06": {
+          "return_pct": 21.762,
+          "intramonth_max_dd_pct": -8.173,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-07": {
+          "return_pct": 6.457,
+          "intramonth_max_dd_pct": -3.317,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-08": {
+          "return_pct": -0.178,
+          "intramonth_max_dd_pct": -5.95,
+          "trades": 20,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2023-09": {
+          "return_pct": -8.136,
+          "intramonth_max_dd_pct": -10.836,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.9
+        },
+        "2023-10": {
+          "return_pct": 0.126,
+          "intramonth_max_dd_pct": -4.538,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 0.818,
+          "regime_pct_on": 0.182
+        },
+        "2023-11": {
+          "return_pct": 10.603,
+          "intramonth_max_dd_pct": -1.739,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.905,
+          "regime_pct_on": 0.619
+        },
+        "2023-12": {
+          "return_pct": 8.395,
+          "intramonth_max_dd_pct": -1.952,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-01": {
+          "return_pct": -7.626,
+          "intramonth_max_dd_pct": -7.626,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-02": {
+          "return_pct": 4.756,
+          "intramonth_max_dd_pct": -6.858,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-03": {
+          "return_pct": 11.071,
+          "intramonth_max_dd_pct": -3.036,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-04": {
+          "return_pct": -5.136,
+          "intramonth_max_dd_pct": -9.211,
+          "trades": 20,
+          "win_rate": 0.55,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-05": {
+          "return_pct": 3.879,
+          "intramonth_max_dd_pct": -5.246,
+          "trades": 10,
+          "win_rate": 0.7,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-06": {
+          "return_pct": -0.393,
+          "intramonth_max_dd_pct": -6.122,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-07": {
+          "return_pct": 1.194,
+          "intramonth_max_dd_pct": -6.855,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-08": {
+          "return_pct": -6.298,
+          "intramonth_max_dd_pct": -7.365,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-09": {
+          "return_pct": 19.239,
+          "intramonth_max_dd_pct": -4.803,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-10": {
+          "return_pct": 6.426,
+          "intramonth_max_dd_pct": -3.612,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-11": {
+          "return_pct": 27.772,
+          "intramonth_max_dd_pct": -2.213,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2024-12": {
+          "return_pct": 2.762,
+          "intramonth_max_dd_pct": -6.793,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-01": {
+          "return_pct": -1.322,
+          "intramonth_max_dd_pct": -11.023,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-02": {
+          "return_pct": -4.706,
+          "intramonth_max_dd_pct": -15.147,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-03": {
+          "return_pct": -2.321,
+          "intramonth_max_dd_pct": -8.424,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 0.619
+        },
+        "2025-04": {
+          "return_pct": -4.113,
+          "intramonth_max_dd_pct": -13.189,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 0.429,
+          "regime_pct_on": 0.048
+        },
+        "2025-05": {
+          "return_pct": 1.484,
+          "intramonth_max_dd_pct": -3.339,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 0.667,
+          "regime_pct_on": 0.667
+        },
+        "2025-06": {
+          "return_pct": 11.204,
+          "intramonth_max_dd_pct": -1.151,
+          "trades": 10,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-07": {
+          "return_pct": 5.176,
+          "intramonth_max_dd_pct": -3.061,
+          "trades": 10,
+          "win_rate": 0.9,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-08": {
+          "return_pct": -5.126,
+          "intramonth_max_dd_pct": -6.307,
+          "trades": 10,
+          "win_rate": 0.3,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-09": {
+          "return_pct": 21.844,
+          "intramonth_max_dd_pct": -3.772,
+          "trades": 10,
+          "win_rate": 0.5,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-10": {
+          "return_pct": 9.283,
+          "intramonth_max_dd_pct": -8.76,
+          "trades": 20,
+          "win_rate": 0.85,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-11": {
+          "return_pct": 10.986,
+          "intramonth_max_dd_pct": -9.576,
+          "trades": 0,
+          "win_rate": null,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2025-12": {
+          "return_pct": 1.431,
+          "intramonth_max_dd_pct": -9.013,
+          "trades": 20,
+          "win_rate": 0.6,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-01": {
+          "return_pct": 15.431,
+          "intramonth_max_dd_pct": -4.518,
+          "trades": 10,
+          "win_rate": 0.8,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-02": {
+          "return_pct": 8.545,
+          "intramonth_max_dd_pct": -7.298,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-03": {
+          "return_pct": -13.397,
+          "intramonth_max_dd_pct": -13.617,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 0.909,
+          "regime_pct_on": 0.909
+        },
+        "2026-04": {
+          "return_pct": 4.506,
+          "intramonth_max_dd_pct": -9.044,
+          "trades": 10,
+          "win_rate": 0.2,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-05": {
+          "return_pct": 33.791,
+          "intramonth_max_dd_pct": -2.629,
+          "trades": 10,
+          "win_rate": 1.0,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-06": {
+          "return_pct": -7.552,
+          "intramonth_max_dd_pct": -14.416,
+          "trades": 10,
+          "win_rate": 0.4,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        },
+        "2026-07": {
+          "return_pct": -6.547,
+          "intramonth_max_dd_pct": -6.547,
+          "trades": 10,
+          "win_rate": 0.1,
+          "avg_exposure": 1.0,
+          "regime_pct_on": 1.0
+        }
+      },
+      "drawdown_episodes": [
+        {
+          "start_date": "2025-02-18",
+          "trough_date": "2025-04-08",
+          "recovery_date": "2025-09-19",
+          "depth_pct": -29.298,
+          "duration_days": 148,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.639,
+          "loss_tickers": [
+            [
+              "SNDK",
+              -8626.0
+            ],
+            [
+              "MU",
+              -6620.0
+            ],
+            [
+              "MRNA",
+              -5123.0
+            ],
+            [
+              "AES",
+              -3522.0
+            ],
+            [
+              "CCI",
+              -840.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -8626.0
+            ],
+            [
+              "Semiconductors",
+              -6620.0
+            ],
+            [
+              "Biotechnology",
+              -5123.0
+            ],
+            [
+              "Electric",
+              -3522.0
+            ],
+            [
+              "REITS",
+              -840.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2022-03-29",
+          "trough_date": "2022-09-06",
+          "recovery_date": "2023-06-08",
+          "depth_pct": -27.731,
+          "duration_days": 300,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.216,
+          "loss_tickers": [
+            [
+              "NUE",
+              -2773.0
+            ],
+            [
+              "CVNA",
+              -2692.0
+            ],
+            [
+              "MOS",
+              -1875.0
+            ],
+            [
+              "COIN",
+              -1676.0
+            ],
+            [
+              "VRTX",
+              -1672.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Retail",
+              -4568.0
+            ],
+            [
+              "Iron/Steel",
+              -2773.0
+            ],
+            [
+              "Chemicals",
+              -2265.0
+            ],
+            [
+              "Diversified Finan Serv",
+              -1676.0
+            ],
+            [
+              "Biotechnology",
+              -1672.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2026-03-04",
+          "trough_date": "2026-04-17",
+          "recovery_date": "2026-05-08",
+          "depth_pct": -21.684,
+          "duration_days": 46,
+          "recovered": true,
+          "regime_pct_on_during_dd": 0.938,
+          "loss_tickers": [
+            [
+              "LYB",
+              -4840.0
+            ],
+            [
+              "OXY",
+              -3563.0
+            ],
+            [
+              "APA",
+              -3350.0
+            ],
+            [
+              "CF",
+              -3041.0
+            ],
+            [
+              "EOG",
+              -3002.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Oil&Gas",
+              -10505.0
+            ],
+            [
+              "Chemicals",
+              -10210.0
+            ],
+            [
+              "Beverages",
+              -2962.0
+            ],
+            [
+              "Oil&Gas Services",
+              5467.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2024-05-20",
+          "trough_date": "2024-09-06",
+          "recovery_date": "2024-10-02",
+          "depth_pct": -20.835,
+          "duration_days": 93,
+          "recovered": true,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [
+            [
+              "SMCI",
+              -4500.0
+            ],
+            [
+              "MRNA",
+              -4172.0
+            ],
+            [
+              "MU",
+              -2736.0
+            ],
+            [
+              "DELL",
+              -2396.0
+            ],
+            [
+              "FSLR",
+              -1807.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Computers",
+              -6367.0
+            ],
+            [
+              "Biotechnology",
+              -4172.0
+            ],
+            [
+              "Semiconductors",
+              -2938.0
+            ],
+            [
+              "Telecommunications",
+              -1948.0
+            ],
+            [
+              "Banks",
+              -1863.0
+            ]
+          ]
+        },
+        {
+          "start_date": "2026-06-02",
+          "trough_date": "2026-07-02",
+          "recovery_date": null,
+          "depth_pct": -20.256,
+          "duration_days": 21,
+          "recovered": false,
+          "regime_pct_on_during_dd": 1.0,
+          "loss_tickers": [
+            [
+              "SNDK",
+              -10696.0
+            ],
+            [
+              "TER",
+              -10208.0
+            ],
+            [
+              "WDC",
+              -9111.0
+            ],
+            [
+              "MU",
+              -7861.0
+            ],
+            [
+              "GLW",
+              -6755.0
+            ]
+          ],
+          "loss_industries": [
+            [
+              "Semiconductors",
+              -21499.0
+            ],
+            [
+              "Computers",
+              -19807.0
+            ],
+            [
+              "Telecommunications",
+              -6755.0
+            ],
+            [
+              "Airlines",
+              -2516.0
+            ],
+            [
+              "Healthcare-Products",
+              -97.0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "regime_effectiveness": {
+    "hold10": {
+      "yearly_comparison": {
+        "2021": {
+          "baseline_return": 5.072,
+          "regime_return": 5.072,
+          "baseline_maxdd": -12.178,
+          "regime_maxdd": -12.178,
+          "regime_pct_on": 1.0,
+          "return_diff": 0.0,
+          "dd_improvement": 0.0
+        },
+        "2022": {
+          "baseline_return": -24.266,
+          "regime_return": -18.006,
+          "baseline_maxdd": -33.001,
+          "regime_maxdd": -24.79,
+          "regime_pct_on": 0.339,
+          "return_diff": 6.26,
+          "dd_improvement": 8.211
+        },
+        "2023": {
+          "baseline_return": 113.217,
+          "regime_return": 82.791,
+          "baseline_maxdd": -18.462,
+          "regime_maxdd": -20.795,
+          "regime_pct_on": 0.86,
+          "return_diff": -30.426,
+          "dd_improvement": -2.333
+        },
+        "2024": {
+          "baseline_return": 39.049,
+          "regime_return": 29.086,
+          "baseline_maxdd": -17.169,
+          "regime_maxdd": -23.973,
+          "regime_pct_on": 1.0,
+          "return_diff": -9.963,
+          "dd_improvement": -6.804
+        },
+        "2025": {
+          "baseline_return": 17.091,
+          "regime_return": 37.295,
+          "baseline_maxdd": -33.654,
+          "regime_maxdd": -24.919,
+          "regime_pct_on": 0.86,
+          "return_diff": 20.204,
+          "dd_improvement": 8.735
+        },
+        "2026": {
+          "baseline_return": 51.608,
+          "regime_return": 69.464,
+          "baseline_maxdd": -21.147,
+          "regime_maxdd": -13.855,
+          "regime_pct_on": 0.984,
+          "return_diff": 17.856,
+          "dd_improvement": 7.292
+        }
+      },
+      "good_months_missed_by_regime": 0,
+      "bad_months_avoided_by_regime": 2,
+      "baseline_overall": {
+        "total_return_pct": 325.796,
+        "max_drawdown_pct": -36.583,
+        "sharpe": 1.034,
+        "calmar": 8.906,
+        "avg_exposure": 0.999
+      },
+      "regime_overall": {
+        "total_return_pct": 375.283,
+        "max_drawdown_pct": -25.431,
+        "sharpe": 1.197,
+        "calmar": 14.757,
+        "avg_exposure": 0.864
+      }
+    },
+    "hold20": {
+      "yearly_comparison": {
+        "2021": {
+          "baseline_return": 8.361,
+          "regime_return": 8.361,
+          "baseline_maxdd": -10.484,
+          "regime_maxdd": -10.484,
+          "regime_pct_on": 1.0,
+          "return_diff": 0.0,
+          "dd_improvement": 0.0
+        },
+        "2022": {
+          "baseline_return": -22.291,
+          "regime_return": -15.206,
+          "baseline_maxdd": -37.474,
+          "regime_maxdd": -27.731,
+          "regime_pct_on": 0.339,
+          "return_diff": 7.085,
+          "dd_improvement": 9.743
+        },
+        "2023": {
+          "baseline_return": 66.565,
+          "regime_return": 62.122,
+          "baseline_maxdd": -19.212,
+          "regime_maxdd": -19.633,
+          "regime_pct_on": 0.86,
+          "return_diff": -4.443,
+          "dd_improvement": -0.421
+        },
+        "2024": {
+          "baseline_return": 35.326,
+          "regime_return": 64.999,
+          "baseline_maxdd": -17.621,
+          "regime_maxdd": -20.835,
+          "regime_pct_on": 1.0,
+          "return_diff": 29.673,
+          "dd_improvement": -3.214
+        },
+        "2025": {
+          "baseline_return": 56.387,
+          "regime_return": 46.134,
+          "baseline_maxdd": -22.033,
+          "regime_maxdd": -29.298,
+          "regime_pct_on": 0.86,
+          "return_diff": -10.253,
+          "dd_improvement": -7.265
+        },
+        "2026": {
+          "baseline_return": 75.279,
+          "regime_return": 35.386,
+          "baseline_maxdd": -13.879,
+          "regime_maxdd": -21.684,
+          "regime_pct_on": 0.984,
+          "return_diff": -39.893,
+          "dd_improvement": -7.805
+        }
+      },
+      "good_months_missed_by_regime": 2,
+      "bad_months_avoided_by_regime": 2,
+      "baseline_overall": {
+        "total_return_pct": 431.696,
+        "max_drawdown_pct": -39.037,
+        "sharpe": 1.223,
+        "calmar": 11.059,
+        "avg_exposure": 0.999
+      },
+      "regime_overall": {
+        "total_return_pct": 401.452,
+        "max_drawdown_pct": -29.298,
+        "sharpe": 1.236,
+        "calmar": 13.702,
+        "avg_exposure": 0.88
+      }
+    }
+  },
+  "special_checks": {
+    "baseline_hold10": {
+      "special_tickers": {
+        "CVNA": {
+          "pnl": 52227.0,
+          "pct_of_total": 15.68
+        },
+        "SMCI": {
+          "pnl": -20740.0,
+          "pct_of_total": -6.23
+        },
+        "SNDK": {
+          "pnl": 54591.0,
+          "pct_of_total": 16.39
+        },
+        "INTC": {
+          "pnl": 14688.0,
+          "pct_of_total": 4.41
+        }
+      },
+      "total_pnl": 333119.0,
+      "top5_tickers_pnl": [
+        [
+          "SNDK",
+          54591.0
+        ],
+        [
+          "CVNA",
+          52227.0
+        ],
+        [
+          "APP",
+          37214.0
+        ],
+        [
+          "LITE",
+          30697.0
+        ],
+        [
+          "DDOG",
+          20222.0
+        ]
+      ],
+      "top5_share_pct": 58.52
+    },
+    "regime200_hold10": {
+      "special_tickers": {
+        "CVNA": {
+          "pnl": 21431.0,
+          "pct_of_total": 5.59
+        },
+        "SMCI": {
+          "pnl": 20811.0,
+          "pct_of_total": 5.43
+        },
+        "SNDK": {
+          "pnl": 64463.0,
+          "pct_of_total": 16.81
+        },
+        "INTC": {
+          "pnl": 28558.0,
+          "pct_of_total": 7.45
+        }
+      },
+      "total_pnl": 383458.0,
+      "top5_tickers_pnl": [
+        [
+          "SNDK",
+          64463.0
+        ],
+        [
+          "INTC",
+          28558.0
+        ],
+        [
+          "DDOG",
+          25894.0
+        ],
+        [
+          "APP",
+          24114.0
+        ],
+        [
+          "CVNA",
+          21431.0
+        ]
+      ],
+      "top5_share_pct": 42.89
+    },
+    "baseline_hold20": {
+      "special_tickers": {
+        "CVNA": {
+          "pnl": 25719.0,
+          "pct_of_total": 5.83
+        },
+        "SMCI": {
+          "pnl": -2839.0,
+          "pct_of_total": -0.64
+        },
+        "SNDK": {
+          "pnl": 74084.0,
+          "pct_of_total": 16.81
+        },
+        "INTC": {
+          "pnl": 29464.0,
+          "pct_of_total": 6.68
+        }
+      },
+      "total_pnl": 440841.0,
+      "top5_tickers_pnl": [
+        [
+          "SNDK",
+          74084.0
+        ],
+        [
+          "APP",
+          47146.0
+        ],
+        [
+          "MU",
+          41438.0
+        ],
+        [
+          "INTC",
+          29464.0
+        ],
+        [
+          "CVNA",
+          25719.0
+        ]
+      ],
+      "top5_share_pct": 49.42
+    },
+    "regime200_hold20": {
+      "special_tickers": {
+        "CVNA": {
+          "pnl": 10764.0,
+          "pct_of_total": 2.62
+        },
+        "SMCI": {
+          "pnl": 10354.0,
+          "pct_of_total": 2.52
+        },
+        "SNDK": {
+          "pnl": 70941.0,
+          "pct_of_total": 17.3
+        },
+        "INTC": {
+          "pnl": 17155.0,
+          "pct_of_total": 4.18
+        }
+      },
+      "total_pnl": 410077.0,
+      "top5_tickers_pnl": [
+        [
+          "SNDK",
+          70941.0
+        ],
+        [
+          "LITE",
+          31510.0
+        ],
+        [
+          "DDOG",
+          29265.0
+        ],
+        [
+          "AMD",
+          27701.0
+        ],
+        [
+          "HOOD",
+          27408.0
+        ]
+      ],
+      "top5_share_pct": 45.56
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "checks": {
+    "universe": {
+      "columns": [
+        "conid",
+        "ticker",
+        "exchange",
+        "currency",
+        "instrument_type",
+        "sector",
+        "industry",
+        "subcategory",
+        "active_flag"
+      ],
+      "row_count": 503,
+      "required_columns_present": true,
+      "active_flag_values": {
+        "1": 503
+      },
+      "active_count": 503,
+      "inactive_count": 0,
+      "duplicate_conid": 0,
+      "duplicate_ticker": 0,
+      "missing_conid": 0,
+      "missing_ticker": 0,
+      "order_preserved": true,
+      "first_5_order": [
+        {
+          "order": 0,
+          "conid": "9720",
+          "ticker": "MMM"
+        },
+        {
+          "order": 1,
+          "conid": "12225",
+          "ticker": "AOS"
+        },
+        {
+          "order": 2,
+          "conid": "4065",
+          "ticker": "ABT"
+        },
+        {
+          "order": 3,
+          "conid": "118089500",
+          "ticker": "ABBV"
+        },
+        {
+          "order": 4,
+          "conid": "67889930",
+          "ticker": "ACN"
+        }
+      ]
+    },
+    "data06_coverage": {
+      "view_exists": true,
+      "view_files": 503,
+      "active_covered_in_view": 503,
+      "active_missing_in_view": 0,
+      "missing_conids": [],
+      "missing_sample": []
+    },
+    "archive_coverage": {
+      "archive_exists": true,
+      "archive_rows": 124247,
+      "archive_unique_tickers": 499,
+      "archive_date_min": "2025-07-09",
+      "archive_date_max": "2026-07-04",
+      "rows_per_date_min": 493,
+      "rows_per_date_median": 497,
+      "rows_per_date_max": 499,
+      "archive_tickers_not_in_active_universe": [],
+      "n_archive_not_universe": 0,
+      "active_universe_not_in_archive": [
+        "EXE",
+        "PSKY",
+        "Q",
+        "SNDK"
+      ],
+      "n_active_not_archive": 4,
+      "archive_tickers_not_in_view": [],
+      "n_archive_not_in_view": 0
+    },
+    "exceptions": {
+      "alias_in_universe": {
+        "129348130": {
+          "desc": "NWS->NWSA",
+          "in_active_universe": true
+        },
+        "208813720": {
+          "desc": "GOOG->GOOGL",
+          "in_active_universe": true
+        },
+        "356858007": {
+          "desc": "FOX->FOXA",
+          "in_active_universe": true
+        }
+      },
+      "manual_review_in_universe": {
+        "4886": {
+          "desc": "BDX boundary 2026-02-10",
+          "in_active_universe": true
+        }
+      }
+    }
+  },
+  "verdict": "WARN",
+  "warnings": [],
+  "fails": []
+}

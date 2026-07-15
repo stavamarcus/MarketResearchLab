@@ -1,0 +1,17 @@
+{
+  "overall_result": "COMPLETED",
+  "candidate_days": 1144,
+  "baseline_median_20d": 2.4037,
+  "baseline_hit_20d": 0.5995,
+  "entry_price_missing": 3,
+  "status_Mega": "PASS",
+  "status_Large-high": "FAIL",
+  "status_Large-low": "PASS",
+  "status_Mid": "INCONCLUSIVE",
+  "status_Small": "NOT_INTERPRETED",
+  "status_UNBUCKETED": "NOT_INTERPRETED",
+  "median_20d_Mega": 6.8871,
+  "median_20d_Large-high": 3.6541,
+  "median_20d_Large-low": 0.0652,
+  "median_20d_Mid": 4.8227
+}

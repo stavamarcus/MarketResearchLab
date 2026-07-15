@@ -1,0 +1,16 @@
+{
+  "n_windows_total": 8,
+  "n_windows_valid": 8,
+  "n_windows_skipped": 0,
+  "window_size_days": 60,
+  "step_days": 20,
+  "min_signals_per_window": 100,
+  "n_windows_positive_diff": 6,
+  "pct_windows_positive": 0.75,
+  "median_window_diff": 1.4078,
+  "min_window_diff": -0.6624,
+  "max_window_diff": 2.8491,
+  "h_pct_supported": true,
+  "h_median_supported": true,
+  "h_supported": true
+}

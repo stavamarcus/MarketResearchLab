@@ -1,0 +1,45 @@
+# EXIT_001 — preregistrace RP-0011-EXIT-TIMING
+# ZAMČENO 2026-07-02 (PM approval). Neupravovat podle výsledku.
+#
+# Launcher před během ověří shodu tohoto souboru s LOCKED_PARAMS
+# v exit_timing_edge.py — divergence = abort (integrita preregistrace).
+
+experiment: ExitTimingEdge
+version: "1.0.0"
+research_project: RP-0011-EXIT-TIMING
+locked: "2026-07-02"
+
+params:
+  mle_top: 10
+  irc_top: 10
+  irc_lookback: 20
+  hold_days: 20
+  min_future_days: 22
+  primary_ema: 20
+  sensitivity_emas: [10, 30]
+  h1b_time_stop: 60
+  h1b_min_future: 62
+  bootstrap_b: 10000
+  bootstrap_seed: 42
+  min_observations: 100
+  entry: "close(D)"
+  ema_seed: "SMA"
+  ema_alpha: "2/(n+1)"
+  warmup_mult: 3
+
+decision_criterion:
+  hypothesis: H1a
+  variant: EMA_20
+  test: "paired diff (EMA_20 - TIME_20), ticker-clustered bootstrap"
+  pass: "95% CI cele > 0"
+
+non_hypotheses:
+  - "EMA_10, EMA_30: sensitivity only, zadny a-posteriori vyber periody"
+  - "H1b (uncapped + time-stop 60D): deskriptivni, bez kriteria"
+
+locks:
+  - matched comparison, stejni kandidati, stejne 20D okno, cash 0 % po exitu
+  - signal na close, fill next open (EMA); baseline TIME_20 close-to-close
+  - spolecny warmup 90 baru (3x EMA30) pro identicky matched set
+  - CACHE_ONLY, zadny window sweep, regime split DEFERRED
+  - deterministic result_hash (fixni seed)

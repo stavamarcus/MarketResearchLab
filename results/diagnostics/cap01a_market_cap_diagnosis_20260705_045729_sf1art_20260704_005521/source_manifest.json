@@ -1,0 +1,20 @@
+{
+  "run_id": "cap01a_market_cap_diagnosis_20260705_045729_sf1art_20260704_005521",
+  "snapshot_id": "sf1art_20260704_005521",
+  "input": {
+    "path": "results\\diagnostics\\fund03_candidate_days_20260704_225140\\candidate_days.csv",
+    "rows": 1144
+  },
+  "result": "ANCHOR_DATE_MISMATCH",
+  "notes": [
+    "suspect ratio_candidate \u22481: 0.0%",
+    "anchor_adjusted \u22481: 96.3%",
+    "sharefactor\u00d7 \u22481: 0.0% | sharefactor/ \u22481: 0.0%"
+  ],
+  "correlations": {
+    "relative_diff_pct~staleness_days": 0.2132,
+    "ratio_candidate~price_ratio": 0.2717
+  },
+  "forward_returns_used": false,
+  "cap01_formula_changed": false
+}

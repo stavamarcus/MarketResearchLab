@@ -1,0 +1,8 @@
+date_from: '2025-07-09'
+date_to: '2026-08-01'
+notes: MRL-FUND-05 first signal-level MLE x IRC x fundamentals run
+parameters:
+  candidate_days_csv: C:\Users\stava\Projects\MarketResearchLab\results\diagnostics\fund03_candidate_days_20260704_225140\candidate_days.csv
+  candidate_days_sha256: 31747e692a7ab72c38ea5e88569c949ea91038b1e5f692da937583c09e186dd1
+random_seed: null
+universe: sp500_rank_calendar

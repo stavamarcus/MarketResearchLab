@@ -1,0 +1,277 @@
+{
+  "variant": "regime200_hold10",
+  "n_trades": 1090,
+  "sim": [
+    "2021-07-01",
+    "2026-07-02"
+  ],
+  "losers": {
+    "label": "losers_bottom20pct",
+    "n": 218,
+    "entry_price_mean": 162.77,
+    "entry_price_median": 90.78,
+    "vol_20d_mean": 4.077,
+    "mom_rank_mean": 5.19,
+    "hist_days_mean": 4326.0,
+    "hist_days_median": 4934.0,
+    "top_sectors": {
+      "Technology": 65,
+      "Communications": 37,
+      "Consumer, Cyclical": 33,
+      "Energy": 21,
+      "Consumer, Non-cyclical": 20
+    },
+    "top_industries": {
+      "Computers": 31,
+      "Semiconductors": 23,
+      "Internet": 18,
+      "Oil&Gas": 17,
+      "Retail": 11
+    },
+    "avg_net_ret": -11.19,
+    "worst_examples": [
+      [
+        "SMCI",
+        -38.6878,
+        62.94,
+        6.097,
+        4380
+      ],
+      [
+        "PLTR",
+        -29.3512,
+        117.9,
+        6.012,
+        1099
+      ],
+      [
+        "APP",
+        -28.8719,
+        473.56,
+        6.104,
+        964
+      ],
+      [
+        "COIN",
+        -26.7218,
+        97.25,
+        9.817,
+        335
+      ],
+      [
+        "HOOD",
+        -26.041,
+        63.3,
+        4.297,
+        891
+      ],
+      [
+        "CVNA",
+        -25.8763,
+        2.03,
+        6.698,
+        1498
+      ],
+      [
+        "FANG",
+        -25.2452,
+        97.76,
+        2.853,
+        2193
+      ],
+      [
+        "HOOD",
+        -25.013,
+        15.06,
+        5.46,
+        133
+      ],
+      [
+        "AMD",
+        -24.9673,
+        184.07,
+        2.386,
+        6673
+      ],
+      [
+        "TPL",
+        -24.2933,
+        534.57,
+        4.583,
+        6773
+      ]
+    ]
+  },
+  "winners": {
+    "label": "winners_top20pct",
+    "n": 218,
+    "entry_price_mean": 148.47,
+    "entry_price_median": 87.09,
+    "vol_20d_mean": 4.383,
+    "mom_rank_mean": 5.08,
+    "hist_days_mean": 4061.0,
+    "hist_days_median": 4151.0,
+    "top_sectors": {
+      "Technology": 75,
+      "Communications": 37,
+      "Consumer, Cyclical": 26,
+      "Energy": 20,
+      "Consumer, Non-cyclical": 18
+    },
+    "top_industries": {
+      "Computers": 37,
+      "Internet": 26,
+      "Semiconductors": 26,
+      "Oil&Gas": 14,
+      "Software": 12
+    },
+    "avg_net_ret": 17.606,
+    "worst_examples": [
+      [
+        "SATS",
+        7.7929,
+        67.13,
+        15.892,
+        4447
+      ],
+      [
+        "PWR",
+        7.9188,
+        121.77,
+        3.407,
+        6063
+      ],
+      [
+        "GEV",
+        7.956,
+        305.0,
+        1.866,
+        149
+      ],
+      [
+        "DASH",
+        7.9923,
+        88.05,
+        4.626,
+        730
+      ],
+      [
+        "APTV",
+        8.0143,
+        74.36,
+        2.559,
+        3458
+      ],
+      [
+        "FICO",
+        8.0218,
+        1448.94,
+        1.914,
+        6663
+      ],
+      [
+        "DOW",
+        8.1136,
+        37.7,
+        3.174,
+        1746
+      ],
+      [
+        "DVA",
+        8.1237,
+        144.34,
+        5.244,
+        7072
+      ],
+      [
+        "VRTX",
+        8.1309,
+        205.71,
+        2.585,
+        6024
+      ],
+      [
+        "HAL",
+        8.1309,
+        35.33,
+        2.487,
+        6420
+      ]
+    ]
+  },
+  "correlations_with_net_ret": {
+    "entry_price": {
+      "pearson": -0.0299,
+      "spearman": 0.0207,
+      "n": 1090
+    },
+    "vol_20d_pct": {
+      "pearson": 0.1037,
+      "spearman": 0.0503,
+      "n": 1090
+    },
+    "mom_rank": {
+      "pearson": -0.0398,
+      "spearman": -0.0001,
+      "n": 1090
+    },
+    "hist_days": {
+      "pearson": -0.0875,
+      "spearman": -0.0326,
+      "n": 1090
+    }
+  },
+  "price_quintiles": [
+    {
+      "quintile": 1,
+      "price_range": [
+        1.48,
+        41.19
+      ],
+      "avg_net_ret": 2.734,
+      "win_rate": 0.5,
+      "n": 218
+    },
+    {
+      "quintile": 2,
+      "price_range": [
+        41.21,
+        75.9
+      ],
+      "avg_net_ret": 0.939,
+      "win_rate": 0.491,
+      "n": 218
+    },
+    {
+      "quintile": 3,
+      "price_range": [
+        76.48,
+        130.35
+      ],
+      "avg_net_ret": 1.128,
+      "win_rate": 0.509,
+      "n": 218
+    },
+    {
+      "quintile": 4,
+      "price_range": [
+        130.95,
+        232.26
+      ],
+      "avg_net_ret": 2.092,
+      "win_rate": 0.564,
+      "n": 218
+    },
+    {
+      "quintile": 5,
+      "price_range": [
+        232.45,
+        5705.14
+      ],
+      "avg_net_ret": 1.325,
+      "win_rate": 0.578,
+      "n": 218
+    }
+  ],
+  "WARNING": "IN-SAMPLE deskripce, NE filtr. Survivorship: losery=prezivsi klesajici akcie. Nominalni cena obvykle neni prima pricina rizika."
+}

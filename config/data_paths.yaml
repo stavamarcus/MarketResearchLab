@@ -20,6 +20,11 @@ mdsm:
     IRC:     C:\Users\stava\Projects\industry_rank_calendar\output\archive
     breadth: C:\Users\stava\Projects\market_breadth\output
 
-# Sharadar — budoucí implementace (stejný interface)
-# sharadar:
-#   data_dir: C:\Users\stava\Data\Sharadar
+# Sharadar fundamentals (sharadar_mdsm_adapter v1.0) — MRL-FUND-01
+# Optional sekce: bez ní (nebo s enabled: false) MRL funguje beze změny.
+# snapshot_id musí být pinovaný — "latest" jen pro lokální debug
+# (allow_latest=True v kódu), nikdy pro experimenty.
+sharadar_fundamentals:
+  enabled: false
+  adapter_config: C:\Users\stava\Projects\sharadar_mdsm_adapter\config\adapter_config.yaml
+  snapshot_id: sf1art_20260704_005521

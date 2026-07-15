@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-07-04T22:51:40.060802+00:00",
+  "params": {
+    "mle_top": 10,
+    "irc_top": 10,
+    "irc_lookback": 20
+  },
+  "sources": {
+    "mle_archive": {
+      "path": "C:\\Users\\stava\\Projects\\MarketLeadershipEngine\\output\\archive\\rank_matrix_archive.csv",
+      "sha256": "3cceae3b606ef3c1710e0920ddebe03800026c12f7a18d14558cc8a97cdb5419"
+    },
+    "irc_archive": {
+      "path": "C:\\Users\\stava\\Projects\\industry_rank_calendar\\output\\archive\\industry_rank_calendar_archive.csv",
+      "sha256": "f32275fabc06a71646dd3574b9c127eb8b5a1a950faa36d7c3b0995a8679fe60"
+    },
+    "universe": {
+      "path": "C:\\Users\\stava\\Projects\\MDSM-Lite\\data\\universe\\sp500_rank_calendar_universe.csv",
+      "sha256": "17951e8bc821bf3cf70159ed99f51e5f9fc83f34af6b14bdaec3d5696cee96f5"
+    }
+  },
+  "stats": {
+    "definition": "MLE_TOP10xIRC_TOP10_20d",
+    "mle_rows_total": 123750,
+    "mle_top_rows": 2450,
+    "common_dates": 245,
+    "date_range": [
+      "2025-07-09",
+      "2026-06-27"
+    ],
+    "unmapped_tickers": [],
+    "unmapped_rows": 0,
+    "rows_without_irc_rank": 0,
+    "candidate_days": 1144,
+    "unique_conids": 151,
+    "candidate_date_range": [
+      "2025-07-09",
+      "2026-06-27"
+    ]
+  },
+  "output_sha256": "31747e692a7ab72c38ea5e88569c949ea91038b1e5f692da937583c09e186dd1",
+  "forward_returns_used": false
+}
