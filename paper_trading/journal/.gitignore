@@ -1,0 +1,4 @@
+# TRADING-JOURNAL-01 — auditní data se NEVERZUJÍ (necommitovaná auditní stopa).
+# Verzuje se pouze kód v journal/, ne data v journal_data/.
+../journal_data/
+journal_data/

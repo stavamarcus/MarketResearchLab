@@ -1,0 +1,1040 @@
+{
+  "task": "MLE-BT-06 diagnostic addendum",
+  "annual": {
+    "3000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.355,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.646,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 14.487,
+          "avg_exposure": 0.7524,
+          "cash_drag": 0.2476,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -21.435,
+          "avg_exposure": 0.3363,
+          "cash_drag": 0.6637,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 78.826,
+          "avg_exposure": 0.7565,
+          "cash_drag": 0.2435,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 44.756,
+          "avg_exposure": 0.8118,
+          "cash_drag": 0.1882,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 21.74,
+          "avg_exposure": 0.7343,
+          "cash_drag": 0.2657,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 44.783,
+          "avg_exposure": 0.8038,
+          "cash_drag": 0.1962,
+          "days": 125
+        }
+      }
+    },
+    "5000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.355,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 9.493,
+          "avg_exposure": 0.8088,
+          "cash_drag": 0.1912,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -26.657,
+          "avg_exposure": 0.3741,
+          "cash_drag": 0.6259,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 57.986,
+          "avg_exposure": 0.807,
+          "cash_drag": 0.193,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 60.731,
+          "avg_exposure": 0.833,
+          "cash_drag": 0.167,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 25.616,
+          "avg_exposure": 0.7516,
+          "cash_drag": 0.2484,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 37.375,
+          "avg_exposure": 0.8199,
+          "cash_drag": 0.1801,
+          "days": 125
+        }
+      }
+    },
+    "10000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 14.525,
+          "avg_exposure": 0.8384,
+          "cash_drag": 0.1616,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -24.075,
+          "avg_exposure": 0.3917,
+          "cash_drag": 0.6083,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 70.232,
+          "avg_exposure": 0.8499,
+          "cash_drag": 0.1501,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 37.716,
+          "avg_exposure": 0.8701,
+          "cash_drag": 0.1299,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 37.696,
+          "avg_exposure": 0.7799,
+          "cash_drag": 0.2201,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 50.245,
+          "avg_exposure": 0.8562,
+          "cash_drag": 0.1438,
+          "days": 125
+        }
+      }
+    },
+    "25000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 14.594,
+          "avg_exposure": 0.8797,
+          "cash_drag": 0.1203,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.475,
+          "avg_exposure": 0.407,
+          "cash_drag": 0.593,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.292,
+          "avg_exposure": 0.8758,
+          "cash_drag": 0.1242,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 38.55,
+          "avg_exposure": 0.893,
+          "cash_drag": 0.107,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 38.423,
+          "avg_exposure": 0.7991,
+          "cash_drag": 0.2009,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.209,
+          "avg_exposure": 0.8768,
+          "cash_drag": 0.1232,
+          "days": 125
+        }
+      }
+    },
+    "30000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 14.638,
+          "avg_exposure": 0.8802,
+          "cash_drag": 0.1198,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.575,
+          "avg_exposure": 0.4087,
+          "cash_drag": 0.5913,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 70.964,
+          "avg_exposure": 0.8803,
+          "cash_drag": 0.1197,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.178,
+          "avg_exposure": 0.894,
+          "cash_drag": 0.106,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 38.572,
+          "avg_exposure": 0.8013,
+          "cash_drag": 0.1987,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.381,
+          "avg_exposure": 0.8787,
+          "cash_drag": 0.1213,
+          "days": 125
+        }
+      }
+    },
+    "50000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 15.915,
+          "avg_exposure": 0.8916,
+          "cash_drag": 0.1084,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -24.921,
+          "avg_exposure": 0.4122,
+          "cash_drag": 0.5878,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.279,
+          "avg_exposure": 0.8864,
+          "cash_drag": 0.1136,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.304,
+          "avg_exposure": 0.9014,
+          "cash_drag": 0.0986,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.021,
+          "avg_exposure": 0.806,
+          "cash_drag": 0.194,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.258,
+          "avg_exposure": 0.8816,
+          "cash_drag": 0.1184,
+          "days": 125
+        }
+      }
+    },
+    "100000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 16.137,
+          "avg_exposure": 0.8994,
+          "cash_drag": 0.1006,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.066,
+          "avg_exposure": 0.4151,
+          "cash_drag": 0.5849,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.295,
+          "avg_exposure": 0.8913,
+          "cash_drag": 0.1087,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.194,
+          "avg_exposure": 0.905,
+          "cash_drag": 0.095,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.109,
+          "avg_exposure": 0.8087,
+          "cash_drag": 0.1913,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.623,
+          "avg_exposure": 0.8851,
+          "cash_drag": 0.1149,
+          "days": 125
+        }
+      }
+    },
+    "250000": {
+      "fractional": {
+        "2021": {
+          "return_pct": 16.295,
+          "avg_exposure": 0.9062,
+          "cash_drag": 0.0938,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.255,
+          "avg_exposure": 0.4183,
+          "cash_drag": 0.5817,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.354,
+          "avg_exposure": 0.8959,
+          "cash_drag": 0.1041,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.195,
+          "avg_exposure": 0.9086,
+          "cash_drag": 0.0914,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.2,
+          "avg_exposure": 0.8119,
+          "cash_drag": 0.1881,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.645,
+          "avg_exposure": 0.8879,
+          "cash_drag": 0.1121,
+          "days": 125
+        }
+      },
+      "whole_share": {
+        "2021": {
+          "return_pct": 16.264,
+          "avg_exposure": 0.9035,
+          "cash_drag": 0.0965,
+          "days": 128
+        },
+        "2022": {
+          "return_pct": -25.203,
+          "avg_exposure": 0.4173,
+          "cash_drag": 0.5827,
+          "days": 251
+        },
+        "2023": {
+          "return_pct": 71.278,
+          "avg_exposure": 0.8943,
+          "cash_drag": 0.1057,
+          "days": 250
+        },
+        "2024": {
+          "return_pct": 39.153,
+          "avg_exposure": 0.9071,
+          "cash_drag": 0.0929,
+          "days": 252
+        },
+        "2025": {
+          "return_pct": 39.139,
+          "avg_exposure": 0.8107,
+          "cash_drag": 0.1893,
+          "days": 250
+        },
+        "2026": {
+          "return_pct": 51.517,
+          "avg_exposure": 0.8869,
+          "cash_drag": 0.1131,
+          "days": 125
+        }
+      }
+    }
+  },
+  "skipped_tickers": {
+    "3000": [
+      [
+        "FICO",
+        22
+      ],
+      [
+        "LULU",
+        19
+      ],
+      [
+        "LLY",
+        14
+      ],
+      [
+        "MRNA",
+        12
+      ],
+      [
+        "TSLA",
+        12
+      ],
+      [
+        "MPWR",
+        11
+      ],
+      [
+        "SNDK",
+        10
+      ],
+      [
+        "EPAM",
+        8
+      ],
+      [
+        "URI",
+        8
+      ],
+      [
+        "WST",
+        7
+      ],
+      [
+        "FIX",
+        6
+      ],
+      [
+        "ALGN",
+        5
+      ],
+      [
+        "INTU",
+        5
+      ],
+      [
+        "MTD",
+        4
+      ],
+      [
+        "SBAC",
+        3
+      ]
+    ],
+    "5000": [
+      [
+        "FICO",
+        16
+      ],
+      [
+        "INTU",
+        4
+      ],
+      [
+        "MTD",
+        4
+      ],
+      [
+        "REGN",
+        3
+      ],
+      [
+        "EPAM",
+        3
+      ],
+      [
+        "LLY",
+        3
+      ],
+      [
+        "MPWR",
+        3
+      ],
+      [
+        "SNDK",
+        3
+      ],
+      [
+        "POOL",
+        1
+      ],
+      [
+        "NVR",
+        1
+      ],
+      [
+        "DE",
+        1
+      ],
+      [
+        "MSCI",
+        1
+      ],
+      [
+        "UNH",
+        1
+      ],
+      [
+        "URI",
+        1
+      ]
+    ],
+    "10000": [
+      [
+        "NVR",
+        2
+      ],
+      [
+        "AZO",
+        1
+      ]
+    ],
+    "25000": [
+      [
+        "NVR",
+        1
+      ]
+    ],
+    "30000": [
+      [
+        "NVR",
+        1
+      ]
+    ],
+    "50000": [],
+    "100000": [],
+    "250000": []
+  },
+  "missed_attribution": {
+    "3000": {
+      "n_missed": 456,
+      "missed_pnl_total": 3339.17,
+      "top_missed": [
+        [
+          "INTC",
+          "2026-04-17",
+          "2026-05-01",
+          508.47
+        ],
+        [
+          "AMD",
+          "2026-05-19",
+          "2026-06-03",
+          425.75
+        ],
+        [
+          "SNDK",
+          "2026-06-04",
+          "2026-06-18",
+          391.59
+        ],
+        [
+          "APA",
+          "2026-03-13",
+          "2026-03-27",
+          363.8
+        ],
+        [
+          "LITE",
+          "2026-02-10",
+          "2026-02-25",
+          340.37
+        ],
+        [
+          "SNDK",
+          "2025-10-20",
+          "2025-11-03",
+          315.01
+        ],
+        [
+          "DDOG",
+          "2026-05-19",
+          "2026-06-03",
+          258.1
+        ],
+        [
+          "SNDK",
+          "2025-11-04",
+          "2025-11-18",
+          235.7
+        ],
+        [
+          "MU",
+          "2025-12-22",
+          "2026-01-07",
+          199.86
+        ],
+        [
+          "FTNT",
+          "2026-05-19",
+          "2026-06-03",
+          197.35
+        ],
+        [
+          "AKAM",
+          "2026-05-19",
+          "2026-06-03",
+          166.19
+        ],
+        [
+          "COHR",
+          "2026-02-10",
+          "2026-02-25",
+          162.97
+        ]
+      ]
+    },
+    "5000": {
+      "n_missed": 170,
+      "missed_pnl_total": 1595.6,
+      "top_missed": [
+        [
+          "GLW",
+          "2026-02-10",
+          "2026-02-25",
+          431.75
+        ],
+        [
+          "MU",
+          "2025-12-22",
+          "2026-01-07",
+          333.09
+        ],
+        [
+          "HOOD",
+          "2025-01-30",
+          "2025-02-13",
+          229.69
+        ],
+        [
+          "TPL",
+          "2024-11-07",
+          "2024-11-21",
+          210.37
+        ],
+        [
+          "TPL",
+          "2024-10-23",
+          "2024-11-06",
+          204.8
+        ],
+        [
+          "MPC",
+          "2026-03-13",
+          "2026-03-27",
+          188.68
+        ],
+        [
+          "TSLA",
+          "2024-11-07",
+          "2024-11-21",
+          177.45
+        ],
+        [
+          "COIN",
+          "2024-02-28",
+          "2024-03-13",
+          176.56
+        ],
+        [
+          "PSX",
+          "2026-03-13",
+          "2026-03-27",
+          160.9
+        ],
+        [
+          "AES",
+          "2024-05-01",
+          "2024-05-15",
+          157.46
+        ],
+        [
+          "SATS",
+          "2024-09-06",
+          "2024-09-20",
+          145.28
+        ],
+        [
+          "APA",
+          "2021-10-06",
+          "2021-10-20",
+          143.42
+        ]
+      ]
+    },
+    "10000": {
+      "n_missed": 6,
+      "missed_pnl_total": -7.6,
+      "top_missed": [
+        [
+          "OXY",
+          "2022-01-10",
+          "2022-01-25",
+          122.37
+        ],
+        [
+          "NVR",
+          "2021-12-08",
+          "2021-12-22",
+          20.3
+        ],
+        [
+          "JBL",
+          "2021-12-23",
+          "2022-01-07",
+          4.64
+        ],
+        [
+          "AZO",
+          "2021-12-08",
+          "2021-12-22",
+          4.26
+        ],
+        [
+          "CIEN",
+          "2021-12-23",
+          "2022-01-07",
+          -44.8
+        ],
+        [
+          "PSKY",
+          "2022-01-10",
+          "2022-01-25",
+          -114.37
+        ]
+      ]
+    },
+    "25000": {
+      "n_missed": 3,
+      "missed_pnl_total": 368.29,
+      "top_missed": [
+        [
+          "OXY",
+          "2022-01-10",
+          "2022-01-25",
+          305.94
+        ],
+        [
+          "NVR",
+          "2021-12-08",
+          "2021-12-22",
+          50.76
+        ],
+        [
+          "JBL",
+          "2021-12-23",
+          "2022-01-07",
+          11.59
+        ]
+      ]
+    },
+    "30000": {
+      "n_missed": 3,
+      "missed_pnl_total": 441.94,
+      "top_missed": [
+        [
+          "OXY",
+          "2022-01-10",
+          "2022-01-25",
+          367.12
+        ],
+        [
+          "NVR",
+          "2021-12-08",
+          "2021-12-22",
+          60.91
+        ],
+        [
+          "JBL",
+          "2021-12-23",
+          "2022-01-07",
+          13.91
+        ]
+      ]
+    },
+    "50000": {
+      "n_missed": 0,
+      "missed_pnl_total": 0,
+      "top_missed": []
+    },
+    "100000": {
+      "n_missed": 0,
+      "missed_pnl_total": 0,
+      "top_missed": []
+    },
+    "250000": {
+      "n_missed": 0,
+      "missed_pnl_total": 0,
+      "top_missed": []
+    }
+  },
+  "min_operational_bucket": 10000
+}

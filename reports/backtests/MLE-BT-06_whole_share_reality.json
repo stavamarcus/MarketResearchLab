@@ -1,0 +1,1968 @@
+{
+  "task": "MLE-BT-06 Whole-Share Execution Reality",
+  "engine": "MLE-BT-04R run_causal (import) + local whole-share copy",
+  "pandas_version": "3.0.3",
+  "sim_start": "2021-07-01",
+  "sim_end": "2026-07-02",
+  "sim_days": 1256,
+  "capitals": [
+    3000,
+    5000,
+    10000,
+    25000,
+    30000,
+    50000,
+    100000,
+    250000
+  ],
+  "modes": [
+    "fractional",
+    "whole_share"
+  ],
+  "gate": {
+    "ran": true,
+    "anchor_reproduces_bt04r": true,
+    "local_copy_faithful": true,
+    "ledger_identical": true,
+    "min_cash_fractional_100k": 6.464062,
+    "anchor_metrics": {
+      "total_return_pct": 337.652,
+      "cagr_pct": 34.504,
+      "max_drawdown_pct": -32.7,
+      "sharpe": 1.182,
+      "trades": 990,
+      "avg_exposure": 0.787
+    },
+    "PASS": true
+  },
+  "audit": {
+    "gate_ledger_identical": true,
+    "min_cash_over_all_runs": 0.193922,
+    "min_cash_nonneg": true
+  },
+  "results": {
+    "3000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 514.48)",
+        "worst_trade": "SMCI -32.3596% (pnl -500.7)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            2111.0
+          ],
+          [
+            "LITE",
+            970.0
+          ],
+          [
+            "AMD",
+            968.0
+          ],
+          [
+            "CVNA",
+            651.0
+          ],
+          [
+            "MU",
+            501.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -328.0
+          ],
+          [
+            "IBM",
+            -308.0
+          ],
+          [
+            "APTV",
+            -279.0
+          ],
+          [
+            "FSLR",
+            -277.0
+          ],
+          [
+            "TTD",
+            -246.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            2837.0
+          ],
+          [
+            "Semiconductors",
+            2453.0
+          ],
+          [
+            "Retail",
+            997.0
+          ],
+          [
+            "Internet",
+            754.0
+          ],
+          [
+            "Leisure Time",
+            660.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -302.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -279.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -277.0
+          ],
+          [
+            "Advertising",
+            -255.0
+          ],
+          [
+            "Media",
+            -194.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 310.393,
+        "max_drawdown_pct": -30.087,
+        "sharpe": 1.233,
+        "volatility_pct": 25.677,
+        "calmar": 10.317,
+        "avg_exposure": 0.683,
+        "avg_positions": 7.71,
+        "n_days": 1256,
+        "trades": 972,
+        "avg_trade_net": 1.779,
+        "median_trade_net": 1.004,
+        "win_rate": 0.538,
+        "best_trade": "SNDK 80.7187% (pnl 503.29)",
+        "worst_trade": "SMCI -32.3596% (pnl -439.71)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            1555.0
+          ],
+          [
+            "CVNA",
+            1042.0
+          ],
+          [
+            "LITE",
+            864.0
+          ],
+          [
+            "APP",
+            742.0
+          ],
+          [
+            "SMCI",
+            552.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "TTD",
+            -469.0
+          ],
+          [
+            "APA",
+            -249.0
+          ],
+          [
+            "APTV",
+            -245.0
+          ],
+          [
+            "GLW",
+            -235.0
+          ],
+          [
+            "FSLR",
+            -199.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            3441.0
+          ],
+          [
+            "Retail",
+            1402.0
+          ],
+          [
+            "Semiconductors",
+            1303.0
+          ],
+          [
+            "Internet",
+            706.0
+          ],
+          [
+            "Diversified Finan Serv",
+            555.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Advertising",
+            -520.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -245.0
+          ],
+          [
+            "Oil&Gas",
+            -219.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -199.0
+          ],
+          [
+            "Media",
+            -143.0
+          ]
+        ],
+        "cagr_pct": 32.779,
+        "cash_drag": 0.317,
+        "deployment_ratio": 0.683,
+        "days_10_of_10": 530,
+        "days_under_10": 726,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 170,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 170
+      }
+    },
+    "5000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 857.47)",
+        "worst_trade": "SMCI -32.3596% (pnl -834.5)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            3519.0
+          ],
+          [
+            "LITE",
+            1616.0
+          ],
+          [
+            "AMD",
+            1613.0
+          ],
+          [
+            "CVNA",
+            1086.0
+          ],
+          [
+            "MU",
+            835.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -547.0
+          ],
+          [
+            "IBM",
+            -514.0
+          ],
+          [
+            "APTV",
+            -464.0
+          ],
+          [
+            "FSLR",
+            -461.0
+          ],
+          [
+            "TTD",
+            -410.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            4728.0
+          ],
+          [
+            "Semiconductors",
+            4088.0
+          ],
+          [
+            "Retail",
+            1662.0
+          ],
+          [
+            "Internet",
+            1257.0
+          ],
+          [
+            "Leisure Time",
+            1101.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -504.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -464.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -461.0
+          ],
+          [
+            "Advertising",
+            -425.0
+          ],
+          [
+            "Media",
+            -323.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 251.895,
+        "max_drawdown_pct": -33.922,
+        "sharpe": 1.096,
+        "volatility_pct": 26.188,
+        "calmar": 7.426,
+        "avg_exposure": 0.716,
+        "avg_positions": 7.84,
+        "n_days": 1256,
+        "trades": 987,
+        "avg_trade_net": 1.574,
+        "median_trade_net": 0.724,
+        "win_rate": 0.531,
+        "best_trade": "SNDK 80.7187% (pnl 754.93)",
+        "worst_trade": "SMCI -32.3596% (pnl -630.25)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            3016.0
+          ],
+          [
+            "LITE",
+            1139.0
+          ],
+          [
+            "AMD",
+            1135.0
+          ],
+          [
+            "COIN",
+            897.0
+          ],
+          [
+            "APP",
+            811.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "PSKY",
+            -754.0
+          ],
+          [
+            "TTD",
+            -611.0
+          ],
+          [
+            "MOS",
+            -478.0
+          ],
+          [
+            "IBM",
+            -372.0
+          ],
+          [
+            "APTV",
+            -362.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            4286.0
+          ],
+          [
+            "Semiconductors",
+            3043.0
+          ],
+          [
+            "Internet",
+            1025.0
+          ],
+          [
+            "Diversified Finan Serv",
+            983.0
+          ],
+          [
+            "Retail",
+            967.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Media",
+            -861.0
+          ],
+          [
+            "Advertising",
+            -611.0
+          ],
+          [
+            "Chemicals",
+            -420.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -362.0
+          ],
+          [
+            "Electrical Compo&Equip",
+            -310.0
+          ]
+        ],
+        "cagr_pct": 28.741,
+        "cash_drag": 0.284,
+        "deployment_ratio": 0.716,
+        "days_10_of_10": 796,
+        "days_under_10": 460,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 45,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 45
+      }
+    },
+    "10000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 1714.94)",
+        "worst_trade": "SMCI -32.3596% (pnl -1669.0)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            7038.0
+          ],
+          [
+            "LITE",
+            3232.0
+          ],
+          [
+            "AMD",
+            3226.0
+          ],
+          [
+            "CVNA",
+            2171.0
+          ],
+          [
+            "MU",
+            1669.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -1093.0
+          ],
+          [
+            "IBM",
+            -1027.0
+          ],
+          [
+            "APTV",
+            -928.0
+          ],
+          [
+            "FSLR",
+            -922.0
+          ],
+          [
+            "TTD",
+            -820.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            9455.0
+          ],
+          [
+            "Semiconductors",
+            8176.0
+          ],
+          [
+            "Retail",
+            3323.0
+          ],
+          [
+            "Internet",
+            2513.0
+          ],
+          [
+            "Leisure Time",
+            2201.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -1008.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -928.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -922.0
+          ],
+          [
+            "Advertising",
+            -850.0
+          ],
+          [
+            "Media",
+            -645.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 321.726,
+        "max_drawdown_pct": -31.127,
+        "sharpe": 1.197,
+        "volatility_pct": 27.236,
+        "calmar": 10.336,
+        "avg_exposure": 0.748,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.531,
+        "best_trade": "SNDK 80.7187% (pnl 1677.62)",
+        "worst_trade": "SMCI -32.3596% (pnl -1582.95)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            6560.0
+          ],
+          [
+            "LITE",
+            3020.0
+          ],
+          [
+            "AMD",
+            2982.0
+          ],
+          [
+            "CVNA",
+            2155.0
+          ],
+          [
+            "COIN",
+            1510.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -1052.0
+          ],
+          [
+            "IBM",
+            -923.0
+          ],
+          [
+            "APTV",
+            -877.0
+          ],
+          [
+            "FSLR",
+            -821.0
+          ],
+          [
+            "TTD",
+            -781.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            9069.0
+          ],
+          [
+            "Semiconductors",
+            7688.0
+          ],
+          [
+            "Retail",
+            3241.0
+          ],
+          [
+            "Internet",
+            2335.0
+          ],
+          [
+            "Leisure Time",
+            2135.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -953.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -877.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -821.0
+          ],
+          [
+            "Advertising",
+            -809.0
+          ],
+          [
+            "Banks",
+            -621.0
+          ]
+        ],
+        "cagr_pct": 33.507,
+        "cash_drag": 0.252,
+        "deployment_ratio": 0.748,
+        "days_10_of_10": 982,
+        "days_under_10": 274,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 3,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 3
+      }
+    },
+    "25000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 4287.35)",
+        "worst_trade": "SMCI -32.3596% (pnl -4172.51)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            17596.0
+          ],
+          [
+            "LITE",
+            8081.0
+          ],
+          [
+            "AMD",
+            8064.0
+          ],
+          [
+            "CVNA",
+            5429.0
+          ],
+          [
+            "MU",
+            4173.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -2733.0
+          ],
+          [
+            "IBM",
+            -2568.0
+          ],
+          [
+            "APTV",
+            -2321.0
+          ],
+          [
+            "FSLR",
+            -2305.0
+          ],
+          [
+            "TTD",
+            -2050.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            23639.0
+          ],
+          [
+            "Semiconductors",
+            20439.0
+          ],
+          [
+            "Retail",
+            8308.0
+          ],
+          [
+            "Internet",
+            6283.0
+          ],
+          [
+            "Leisure Time",
+            5503.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -2520.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -2321.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -2305.0
+          ],
+          [
+            "Advertising",
+            -2126.0
+          ],
+          [
+            "Media",
+            -1614.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 324.223,
+        "max_drawdown_pct": -33.169,
+        "sharpe": 1.175,
+        "volatility_pct": 28.038,
+        "calmar": 9.775,
+        "avg_exposure": 0.771,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.663,
+        "median_trade_net": 0.586,
+        "win_rate": 0.531,
+        "best_trade": "SNDK 80.7187% (pnl 4152.12)",
+        "worst_trade": "SMCI -32.3596% (pnl -4016.0)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            16768.0
+          ],
+          [
+            "AMD",
+            7687.0
+          ],
+          [
+            "LITE",
+            7661.0
+          ],
+          [
+            "CVNA",
+            5309.0
+          ],
+          [
+            "COIN",
+            3980.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -2641.0
+          ],
+          [
+            "IBM",
+            -2450.0
+          ],
+          [
+            "APTV",
+            -2239.0
+          ],
+          [
+            "FSLR",
+            -2196.0
+          ],
+          [
+            "TTD",
+            -1999.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            22696.0
+          ],
+          [
+            "Semiconductors",
+            19661.0
+          ],
+          [
+            "Retail",
+            8072.0
+          ],
+          [
+            "Internet",
+            6018.0
+          ],
+          [
+            "Leisure Time",
+            5366.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -2398.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -2239.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -2196.0
+          ],
+          [
+            "Advertising",
+            -2071.0
+          ],
+          [
+            "Media",
+            -1551.0
+          ]
+        ],
+        "cagr_pct": 33.665,
+        "cash_drag": 0.229,
+        "deployment_ratio": 0.771,
+        "days_10_of_10": 985,
+        "days_under_10": 271,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 1,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 1
+      }
+    },
+    "30000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 5144.82)",
+        "worst_trade": "SMCI -32.3596% (pnl -5007.01)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            21115.0
+          ],
+          [
+            "LITE",
+            9697.0
+          ],
+          [
+            "AMD",
+            9677.0
+          ],
+          [
+            "CVNA",
+            6514.0
+          ],
+          [
+            "MU",
+            5008.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -3280.0
+          ],
+          [
+            "IBM",
+            -3081.0
+          ],
+          [
+            "APTV",
+            -2785.0
+          ],
+          [
+            "FSLR",
+            -2766.0
+          ],
+          [
+            "TTD",
+            -2460.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            28367.0
+          ],
+          [
+            "Semiconductors",
+            24527.0
+          ],
+          [
+            "Retail",
+            9969.0
+          ],
+          [
+            "Internet",
+            7540.0
+          ],
+          [
+            "Leisure Time",
+            6604.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -3023.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -2785.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -2766.0
+          ],
+          [
+            "Advertising",
+            -2551.0
+          ],
+          [
+            "Media",
+            -1936.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 325.863,
+        "max_drawdown_pct": -33.433,
+        "sharpe": 1.176,
+        "volatility_pct": 28.088,
+        "calmar": 9.747,
+        "avg_exposure": 0.773,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.663,
+        "median_trade_net": 0.586,
+        "win_rate": 0.531,
+        "best_trade": "SNDK 80.7187% (pnl 4990.93)",
+        "worst_trade": "SMCI -32.3596% (pnl -4851.45)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            20061.0
+          ],
+          [
+            "LITE",
+            9341.0
+          ],
+          [
+            "AMD",
+            9292.0
+          ],
+          [
+            "CVNA",
+            6370.0
+          ],
+          [
+            "COIN",
+            4763.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -3178.0
+          ],
+          [
+            "IBM",
+            -2940.0
+          ],
+          [
+            "APTV",
+            -2690.0
+          ],
+          [
+            "FSLR",
+            -2667.0
+          ],
+          [
+            "TTD",
+            -2388.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            27410.0
+          ],
+          [
+            "Semiconductors",
+            23727.0
+          ],
+          [
+            "Retail",
+            9734.0
+          ],
+          [
+            "Internet",
+            7294.0
+          ],
+          [
+            "Leisure Time",
+            6442.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -2892.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -2690.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -2667.0
+          ],
+          [
+            "Advertising",
+            -2474.0
+          ],
+          [
+            "Media",
+            -1862.0
+          ]
+        ],
+        "cagr_pct": 33.769,
+        "cash_drag": 0.227,
+        "deployment_ratio": 0.773,
+        "days_10_of_10": 985,
+        "days_under_10": 271,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 1,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 1
+      }
+    },
+    "50000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 8574.69)",
+        "worst_trade": "SMCI -32.3596% (pnl -8345.01)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            35191.0
+          ],
+          [
+            "LITE",
+            16161.0
+          ],
+          [
+            "AMD",
+            16129.0
+          ],
+          [
+            "CVNA",
+            10857.0
+          ],
+          [
+            "MU",
+            8347.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -5466.0
+          ],
+          [
+            "IBM",
+            -5136.0
+          ],
+          [
+            "APTV",
+            -4642.0
+          ],
+          [
+            "FSLR",
+            -4610.0
+          ],
+          [
+            "TTD",
+            -4100.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            47278.0
+          ],
+          [
+            "Semiconductors",
+            40878.0
+          ],
+          [
+            "Retail",
+            16615.0
+          ],
+          [
+            "Internet",
+            12566.0
+          ],
+          [
+            "Leisure Time",
+            11007.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -5039.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -4642.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -4610.0
+          ],
+          [
+            "Advertising",
+            -4251.0
+          ],
+          [
+            "Media",
+            -3227.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 336.639,
+        "max_drawdown_pct": -32.305,
+        "sharpe": 1.188,
+        "volatility_pct": 28.272,
+        "calmar": 10.42,
+        "avg_exposure": 0.779,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 8555.88)",
+        "worst_trade": "SMCI -32.3596% (pnl -8310.48)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            34650.0
+          ],
+          [
+            "LITE",
+            16055.0
+          ],
+          [
+            "AMD",
+            15961.0
+          ],
+          [
+            "CVNA",
+            10860.0
+          ],
+          [
+            "COIN",
+            8288.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -5454.0
+          ],
+          [
+            "IBM",
+            -5086.0
+          ],
+          [
+            "APTV",
+            -4612.0
+          ],
+          [
+            "FSLR",
+            -4590.0
+          ],
+          [
+            "TTD",
+            -4081.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            47051.0
+          ],
+          [
+            "Semiconductors",
+            40645.0
+          ],
+          [
+            "Retail",
+            16618.0
+          ],
+          [
+            "Internet",
+            12572.0
+          ],
+          [
+            "Leisure Time",
+            10989.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -5007.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -4612.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -4590.0
+          ],
+          [
+            "Advertising",
+            -4230.0
+          ],
+          [
+            "Media",
+            -3202.0
+          ]
+        ],
+        "cagr_pct": 34.442,
+        "cash_drag": 0.221,
+        "deployment_ratio": 0.779,
+        "days_10_of_10": 988,
+        "days_under_10": 268,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 0,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 0
+      }
+    },
+    "100000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 17149.39)",
+        "worst_trade": "SMCI -32.3596% (pnl -16690.03)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            70383.0
+          ],
+          [
+            "LITE",
+            32323.0
+          ],
+          [
+            "AMD",
+            32257.0
+          ],
+          [
+            "CVNA",
+            21714.0
+          ],
+          [
+            "MU",
+            16694.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -10932.0
+          ],
+          [
+            "IBM",
+            -10271.0
+          ],
+          [
+            "APTV",
+            -9284.0
+          ],
+          [
+            "FSLR",
+            -9219.0
+          ],
+          [
+            "TTD",
+            -8201.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            94555.0
+          ],
+          [
+            "Semiconductors",
+            81756.0
+          ],
+          [
+            "Retail",
+            33230.0
+          ],
+          [
+            "Internet",
+            25132.0
+          ],
+          [
+            "Leisure Time",
+            22013.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -10078.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -9284.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -9219.0
+          ],
+          [
+            "Advertising",
+            -8503.0
+          ],
+          [
+            "Media",
+            -6455.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 337.658,
+        "max_drawdown_pct": -32.489,
+        "sharpe": 1.186,
+        "volatility_pct": 28.388,
+        "calmar": 10.393,
+        "avg_exposure": 0.783,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 17153.7)",
+        "worst_trade": "SMCI -32.3596% (pnl -16650.28)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            70259.0
+          ],
+          [
+            "LITE",
+            32243.0
+          ],
+          [
+            "AMD",
+            32151.0
+          ],
+          [
+            "CVNA",
+            21728.0
+          ],
+          [
+            "COIN",
+            16608.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -10922.0
+          ],
+          [
+            "IBM",
+            -10230.0
+          ],
+          [
+            "APTV",
+            -9265.0
+          ],
+          [
+            "FSLR",
+            -9176.0
+          ],
+          [
+            "TTD",
+            -8167.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            94784.0
+          ],
+          [
+            "Semiconductors",
+            81572.0
+          ],
+          [
+            "Retail",
+            33231.0
+          ],
+          [
+            "Internet",
+            25081.0
+          ],
+          [
+            "Leisure Time",
+            22019.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -10043.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -9265.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -9176.0
+          ],
+          [
+            "Advertising",
+            -8466.0
+          ],
+          [
+            "Media",
+            -6425.0
+          ]
+        ],
+        "cagr_pct": 34.505,
+        "cash_drag": 0.217,
+        "deployment_ratio": 0.783,
+        "days_10_of_10": 988,
+        "days_under_10": 268,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 0,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 0
+      }
+    },
+    "250000": {
+      "fractional": {
+        "total_return_pct": 337.652,
+        "max_drawdown_pct": -32.7,
+        "sharpe": 1.182,
+        "volatility_pct": 28.513,
+        "calmar": 10.326,
+        "avg_exposure": 0.787,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 42873.46)",
+        "worst_trade": "SMCI -32.3596% (pnl -41725.07)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            175957.0
+          ],
+          [
+            "LITE",
+            80807.0
+          ],
+          [
+            "AMD",
+            80644.0
+          ],
+          [
+            "CVNA",
+            54286.0
+          ],
+          [
+            "MU",
+            41735.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -27331.0
+          ],
+          [
+            "IBM",
+            -25678.0
+          ],
+          [
+            "APTV",
+            -23209.0
+          ],
+          [
+            "FSLR",
+            -23048.0
+          ],
+          [
+            "TTD",
+            -20502.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            236388.0
+          ],
+          [
+            "Semiconductors",
+            204391.0
+          ],
+          [
+            "Retail",
+            83076.0
+          ],
+          [
+            "Internet",
+            62830.0
+          ],
+          [
+            "Leisure Time",
+            55033.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -25196.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -23209.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -23048.0
+          ],
+          [
+            "Advertising",
+            -21257.0
+          ],
+          [
+            "Media",
+            -16137.0
+          ]
+        ],
+        "cagr_pct": 34.504,
+        "cash_drag": 0.213,
+        "deployment_ratio": 0.787,
+        "days_10_of_10": 988,
+        "days_under_10": 268
+      },
+      "whole_share": {
+        "total_return_pct": 336.952,
+        "max_drawdown_pct": -32.631,
+        "sharpe": 1.183,
+        "volatility_pct": 28.468,
+        "calmar": 10.326,
+        "avg_exposure": 0.785,
+        "avg_positions": 7.87,
+        "n_days": 1256,
+        "trades": 990,
+        "avg_trade_net": 1.684,
+        "median_trade_net": 0.651,
+        "win_rate": 0.533,
+        "best_trade": "SNDK 80.7187% (pnl 42821.33)",
+        "worst_trade": "SMCI -32.3596% (pnl -41655.02)",
+        "top_contrib_tickers": [
+          [
+            "SNDK",
+            175044.0
+          ],
+          [
+            "LITE",
+            80574.0
+          ],
+          [
+            "AMD",
+            80508.0
+          ],
+          [
+            "CVNA",
+            54269.0
+          ],
+          [
+            "MU",
+            41533.0
+          ]
+        ],
+        "worst_contrib_tickers": [
+          [
+            "MOS",
+            -27301.0
+          ],
+          [
+            "IBM",
+            -25610.0
+          ],
+          [
+            "APTV",
+            -23163.0
+          ],
+          [
+            "FSLR",
+            -23002.0
+          ],
+          [
+            "TTD",
+            -20468.0
+          ]
+        ],
+        "top_industries": [
+          [
+            "Computers",
+            235588.0
+          ],
+          [
+            "Semiconductors",
+            204031.0
+          ],
+          [
+            "Retail",
+            83040.0
+          ],
+          [
+            "Internet",
+            62690.0
+          ],
+          [
+            "Leisure Time",
+            54989.0
+          ]
+        ],
+        "worst_industries": [
+          [
+            "Chemicals",
+            -25152.0
+          ],
+          [
+            "Auto Parts&Equipment",
+            -23163.0
+          ],
+          [
+            "Energy-Alternate Sources",
+            -23002.0
+          ],
+          [
+            "Advertising",
+            -21220.0
+          ],
+          [
+            "Media",
+            -16107.0
+          ]
+        ],
+        "cagr_pct": 34.461,
+        "cash_drag": 0.215,
+        "deployment_ratio": 0.785,
+        "days_10_of_10": 988,
+        "days_under_10": 268,
+        "skips": {
+          "TOO_EXPENSIVE_FOR_TARGET": 0,
+          "INSUFFICIENT_CASH": 0,
+          "DATA_MISSING": 0
+        },
+        "skips_total": 0
+      }
+    }
+  },
+  "deltas": {
+    "3000": {
+      "total_return_pct": -27.259,
+      "cagr_pct": -1.725,
+      "max_drawdown_pct": 2.613,
+      "sharpe": 0.051,
+      "trades": -18,
+      "avg_exposure": -0.104,
+      "cash_drag": 0.104,
+      "deployment_ratio": -0.104,
+      "avg_positions": -0.16,
+      "days_10_of_10": -458,
+      "days_under_10": 458
+    },
+    "5000": {
+      "total_return_pct": -85.757,
+      "cagr_pct": -5.763,
+      "max_drawdown_pct": -1.222,
+      "sharpe": -0.086,
+      "trades": -3,
+      "avg_exposure": -0.071,
+      "cash_drag": 0.071,
+      "deployment_ratio": -0.071,
+      "avg_positions": -0.03,
+      "days_10_of_10": -192,
+      "days_under_10": 192
+    },
+    "10000": {
+      "total_return_pct": -15.926,
+      "cagr_pct": -0.997,
+      "max_drawdown_pct": 1.573,
+      "sharpe": 0.015,
+      "trades": 0,
+      "avg_exposure": -0.039,
+      "cash_drag": 0.039,
+      "deployment_ratio": -0.039,
+      "avg_positions": 0.0,
+      "days_10_of_10": -6,
+      "days_under_10": 6
+    },
+    "25000": {
+      "total_return_pct": -13.429,
+      "cagr_pct": -0.839,
+      "max_drawdown_pct": -0.469,
+      "sharpe": -0.007,
+      "trades": 0,
+      "avg_exposure": -0.016,
+      "cash_drag": 0.016,
+      "deployment_ratio": -0.016,
+      "avg_positions": 0.0,
+      "days_10_of_10": -3,
+      "days_under_10": 3
+    },
+    "30000": {
+      "total_return_pct": -11.789,
+      "cagr_pct": -0.735,
+      "max_drawdown_pct": -0.733,
+      "sharpe": -0.006,
+      "trades": 0,
+      "avg_exposure": -0.014,
+      "cash_drag": 0.014,
+      "deployment_ratio": -0.014,
+      "avg_positions": 0.0,
+      "days_10_of_10": -3,
+      "days_under_10": 3
+    },
+    "50000": {
+      "total_return_pct": -1.013,
+      "cagr_pct": -0.062,
+      "max_drawdown_pct": 0.395,
+      "sharpe": 0.006,
+      "trades": 0,
+      "avg_exposure": -0.008,
+      "cash_drag": 0.008,
+      "deployment_ratio": -0.008,
+      "avg_positions": 0.0,
+      "days_10_of_10": 0,
+      "days_under_10": 0
+    },
+    "100000": {
+      "total_return_pct": 0.006,
+      "cagr_pct": 0.001,
+      "max_drawdown_pct": 0.211,
+      "sharpe": 0.004,
+      "trades": 0,
+      "avg_exposure": -0.004,
+      "cash_drag": 0.004,
+      "deployment_ratio": -0.004,
+      "avg_positions": 0.0,
+      "days_10_of_10": 0,
+      "days_under_10": 0
+    },
+    "250000": {
+      "total_return_pct": -0.7,
+      "cagr_pct": -0.043,
+      "max_drawdown_pct": 0.069,
+      "sharpe": 0.001,
+      "trades": 0,
+      "avg_exposure": -0.002,
+      "cash_drag": 0.002,
+      "deployment_ratio": -0.002,
+      "avg_positions": 0.0,
+      "days_10_of_10": 0,
+      "days_under_10": 0
+    }
+  },
+  "published_bt04r": {
+    "total_return_pct": 337.652,
+    "cagr_pct": 34.504,
+    "max_drawdown_pct": -32.7,
+    "sharpe": 1.182,
+    "trades": 990,
+    "avg_exposure": 0.787
+  },
+  "VERDICT": "OK"
+}

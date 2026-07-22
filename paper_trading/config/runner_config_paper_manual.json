@@ -1,0 +1,19 @@
+{
+  "strategy_id": "MLE-REGIME200-HOLD10-01",
+  "mode": "paper_manual",
+  "data_source": "MDSM",
+  "universe_path": "C:\\Users\\stava\\Projects\\MDSM-Lite\\data\\universe\\sp500_rank_calendar_universe.csv",
+  "data06_view_dir": "C:\\Users\\stava\\Projects\\sharadar_snapshot_store\\snapshots\\sharadar_full_equity_v20260705_01\\derived\\mdsm_price_view",
+  "mle_project_path": "C:\\Users\\stava\\Projects\\MarketLeadershipEngine",
+  "signal_cache_path": null,
+  "recompute_signals": false,
+  "starting_equity": 30000,
+  "max_positions": 10,
+  "target_weight": 0.1,
+  "state_path": "runtime_state/mle_paper_01/paper_manual/state.json",
+  "order_plans_dir": "order_plans/mle_paper_01/paper_manual",
+  "reports_dir": "reports/mle_paper_01/paper_manual",
+  "journal_base_dir": "journal_data",
+  "account_label": "DU-PAPER (paper_manual)",
+  "mdsm_project_path": "C:\\Users\\stava\\Projects\\MDSM-Lite"
+}

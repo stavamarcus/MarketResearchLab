@@ -17,3 +17,11 @@ paper_trading/logs/
 data/cache/
 **/data/cache/
 *.tmp
+
+# paper_manual runtime outputs - neverzovano
+paper_trading/journal_data/
+paper_trading/runtime_state/
+paper_trading/order_plans/
+paper_trading/reports/
+paper_trading/parity_out.txt
+*.bak
