@@ -7,10 +7,108 @@ must not silently collapse into a single ticket row.
 """
 from decimal import Decimal
 
-from .states import (AMBIGUOUS_MATCH, FOREIGN_ACCOUNT, ImportError_,
+from .states import (AMBIGUOUS_MATCH, DUPLICATE_PLAN_ROW,
+                     DUPLICATE_TICKET_ROW, FOREIGN_ACCOUNT, ImportError_,
+                     PLAN_ROW_MISSING_IN_TICKET, TICKET_ROW_NOT_IN_PLAN,
                      PARTIAL_FINAL, MATCHED, MISSING, PARTIAL_UNRESOLVED,
-                     QUANTITY_OVER_PLAN, SIDE_MISMATCH, TICKER_CONID_MISMATCH,
+                     PLAN_TICKET_QUANTITY_MISMATCH, QUANTITY_OVER_PLAN,
+                     SIDE_MISMATCH, TICKER_CONID_MISMATCH,
                      UNMATCHED_BROKER_ORDER)
+
+
+# Akce, ktere se skutecne zadavaji do TWS. DO_NOTHING je auditni radek,
+# do one-to-one kontraktu nepatri.
+EXECUTABLE_ACTIONS = ("BUY", "EXIT", "SELL")
+
+
+def _qty(raw):
+    raw = (raw or "").strip()
+    if not raw:
+        return None
+    try:
+        return Decimal(raw)
+    except Exception:
+        return None
+
+
+def _is_executable(action, qty) -> bool:
+    return (action or "").strip().upper() in EXECUTABLE_ACTIONS and \
+        qty is not None and qty > 0
+
+
+def is_p5_plan(plan_rows) -> bool:
+    """Novy kontrakt poznam podle pritomnosti plan-reference sloupcu."""
+    if not plan_rows:
+        return False
+    keys = set(plan_rows[0].keys())
+    return bool(keys & {"ref_price", "ref_price_date", "max_price_for_qty",
+                        "planned_exit_if_filled"})
+
+
+def check_plan_ticket_contract(plan_rows, ticket_rows) -> None:
+    """Obousmerna one-to-one kontrola plan vs ticket (P5 kontrakt).
+
+    Identita je target_date + conid + action. Ticker je krizova kontrola,
+    ne identita - conid je stabilni, ticker se muze zmenit.
+
+    Bezi jen pro novy plan; stary plan bez plan-reference sloupcu zustava
+    v legacy rezimu, kde je jedinym zdrojem planovaneho mnozstvi ticket.
+
+    UNMATCHED_BROKER_ORDER tuhle kontrolu nenahrazuje - ta porovnava az
+    broker exekuce proti UZ overenemu plan-ticket kontraktu.
+    """
+    if not is_p5_plan(plan_rows):
+        return
+
+    def index(rows, date_key, action_key, qty_key, dup_code, what):
+        out = {}
+        for r in rows:
+            action = (r.get(action_key) or "").strip().upper()
+            qty = _qty(r.get(qty_key))
+            if not _is_executable(action, qty):
+                continue
+            key = ((r.get(date_key) or "").strip(),
+                   str(r.get("conid") or "").strip(), action)
+            if key in out:
+                raise ImportError_(
+                    dup_code,
+                    f"{what} obsahuje dva executable radky se stejnou "
+                    f"identitou {key}")
+            out[key] = (r, qty)
+        return out
+
+    plan_idx = index(plan_rows, "date", "action", "quantity",
+                     DUPLICATE_PLAN_ROW, "orders_plan")
+    tick_idx = index(ticket_rows, "target_date", "side", "planned_quantity",
+                     DUPLICATE_TICKET_ROW, "ticket")
+
+    for key, (r, _q) in sorted(plan_idx.items()):
+        if key not in tick_idx:
+            raise ImportError_(
+                PLAN_ROW_MISSING_IN_TICKET,
+                f"plan ma executable radek {r.get('ticker')} {key}, "
+                f"ticket odpovidajici radek nema")
+    for key, (r, _q) in sorted(tick_idx.items()):
+        if key not in plan_idx:
+            raise ImportError_(
+                TICKET_ROW_NOT_IN_PLAN,
+                f"ticket ma executable radek {r.get('ticker')} {key}, "
+                f"plan odpovidajici radek nema")
+
+    for key in sorted(plan_idx):
+        pr, pq = plan_idx[key]
+        tr, tq = tick_idx[key]
+        if pq != tq:
+            raise ImportError_(
+                PLAN_TICKET_QUANTITY_MISMATCH,
+                f"{pr.get('ticker')}: orders_plan.quantity {pq} != "
+                f"ticket.planned_quantity {tq}")
+        pt = (pr.get("ticker") or "").strip()
+        tt = (tr.get("ticker") or "").strip()
+        if pt and tt and pt != tt:
+            raise ImportError_(
+                TICKER_CONID_MISMATCH,
+                f"conid {key[1]}: plan rika {pt}, ticket {tt}")
 
 
 def match(groups, plan_rows, ticket_rows, expected_account,
@@ -22,11 +120,39 @@ def match(groups, plan_rows, ticket_rows, expected_account,
     """
     terminality_assertions = terminality_assertions or {}
 
-    planned_qty = {}
+    # Planovane mnozstvi: NOVY plan je autoritativni zdroj. Ticket zustava
+    # exekucnim artefaktem. Starsi plany maji quantity prazdnou - tam se
+    # legacy fallbackem cte dal z ticketu.
+    ticket_qty = {}
     for tr in ticket_rows:
         raw = (tr.get("planned_quantity") or "").strip()
-        planned_qty[(tr.get("ticker") or "").strip()] = (
+        ticket_qty[(tr.get("ticker") or "").strip()] = (
             Decimal(raw) if raw else None)
+
+    planned_qty, plan_qty_source = {}, {}
+    for pr in plan_rows:
+        tk = (pr.get("ticker") or "").strip()
+        if not tk:
+            continue
+        raw = (pr.get("quantity") or "").strip()
+        if raw:
+            planned_qty[tk] = Decimal(raw)
+            plan_qty_source[tk] = "PLAN"
+        else:
+            planned_qty[tk] = ticket_qty.get(tk)
+            plan_qty_source[tk] = "TICKET_LEGACY"
+
+    # Kdyz mnozstvi zna plan i ticket a nesouhlasi, nevime ktere plati.
+    # Hadat je horsi nez zastavit - ticket se nesmi zmenit.
+    for tk, src in plan_qty_source.items():
+        if src != "PLAN":
+            continue
+        tq = ticket_qty.get(tk)
+        if tq is not None and tq != planned_qty[tk]:
+            raise ImportError_(
+                PLAN_TICKET_QUANTITY_MISMATCH,
+                f"{tk}: orders_plan.quantity {planned_qty[tk]} != "
+                f"ticket.planned_quantity {tq}")
 
     claims = {}          # plan_row_index -> [perm_id]
     group_claims = {}    # perm_id -> [plan_row_index]

@@ -19,8 +19,11 @@ from pathlib import Path
 
 from .fills import artifact as art
 from .fills import matcher, normalize
-from .fills.states import (Diagnostic, ImportError_, LATE_ENTRY, MISSING,
-                           PARTIAL_FINAL)
+from .fills.states import (COMPLETENESS_FULL, COMPLETENESS_NONE,
+                           COMPLETENESS_PARTIAL, Diagnostic, ImportError_,
+                           LATE_ENTRY, MISSING, MISSING_MAX_PRICE_FOR_QTY,
+                           MISSING_REF_PRICE, PARTIAL_FINAL,
+                           PLAN_PRICE_DEVIATION, PRICE_CAP_EXCEEDED)
 from .fills.ticket_writer import (PLANNED_COLUMNS, build_row_values,
                                   detect_conflicts, read_ticket, write_ticket)
 
@@ -63,7 +66,9 @@ def _minutes_after_open(ts_et: str) -> int | None:
 
 def build_artifact(dump_path, plan_path, ticket_path, target_date,
                    expected_account, root, groups, matched, plan_states,
-                   diagnostics, assertions, plan_reference_source):
+                   diagnostics, assertions, plan_reference_source,
+                   plan_reference_completeness="NONE",
+                   missing_ref_price=0, missing_max_price_for_qty=0):
     header, ticket_rows = read_ticket(ticket_path)
     orders = []
     for idx, g, state in matched:
@@ -105,6 +110,7 @@ def build_artifact(dump_path, plan_path, ticket_path, target_date,
             "ticket_planned_projection_sha256":
                 _planned_projection_sha256(header, ticket_rows),
             "plan_reference_source": plan_reference_source,
+            "plan_reference_completeness": plan_reference_completeness,
             "account": expected_account,
         },
         "operator_assertions": assertions,
@@ -120,6 +126,8 @@ def build_artifact(dump_path, plan_path, ticket_path, target_date,
                                      if p["state"] == MISSING),
             "partial_final": sum(1 for _, _, s in matched
                                  if s == PARTIAL_FINAL),
+            "missing_ref_price": missing_ref_price,
+            "missing_max_price_for_qty": missing_max_price_for_qty,
         },
         "non_canonical_metadata": {
             "ticket_sha256_before_import": art.sha256_file(ticket_path),
@@ -135,6 +143,10 @@ def run(dump_path, plan_path, ticket_path, out_path, target_date,
     plan_reference_source = ("OPERATOR_ASSERTION"
                              if assertions.get("plan_reference")
                              else "UNAVAILABLE")
+    # Zdroj a uplnost jsou dve ruzne veci: plan muze mit nove sloupce
+    # a presto u nekterych radku hodnotu nemit.
+    plan_reference_completeness = COMPLETENESS_NONE
+    missing_ref_price = missing_max_price_for_qty = 0
     groups, matched, plan_states = [], [], []
     blocking = None
 
@@ -144,12 +156,67 @@ def run(dump_path, plan_path, ticket_path, out_path, target_date,
         plan_rows = _plan_rows(plan_path)
         header, ticket_rows = read_ticket(ticket_path)
         matcher.side_mismatch_check(groups, plan_rows)
+        # One-to-one kontrakt plan vs ticket musi projit DRIV, nez se
+        # zacnou parovat broker exekuce - jinak by se overovalo proti
+        # neoverenemu zakladu.
+        matcher.check_plan_ticket_contract(plan_rows, ticket_rows)
         matched, plan_states = matcher.match(
             groups, plan_rows, ticket_rows, expected_account,
             assertions.get("terminality"))
 
         proposed = {idx: build_row_values(g, s) for idx, g, s in matched}
         diagnostics.extend(detect_conflicts(ticket_rows, proposed))
+
+        # Cenove odchylky se pocitaji VYHRADNE ze strojovych poli planu.
+        # Markdown report se nikdy neparsuje - prehozeny sloupec by tise
+        # zmenil vysledek.
+        if matcher.is_p5_plan(plan_rows):
+            plan_reference_source = "ORDERS_PLAN"
+            by_idx = {i: plan_rows[i] for i in range(len(plan_rows))}
+            have_ref = have_cap = 0
+            for idx, g, _st in matched:
+                pr = by_idx.get(idx, {})
+                avg = g["avg_fill_price"]
+                cap = (pr.get("max_price_for_qty") or "").strip()
+                ref = (pr.get("ref_price") or "").strip()
+                # Chybejici hodnota u jednoho radku nesmi zablokovat vypocet
+                # u ostatnich - hlasi se, ale ostatni radky se pocitaji dal.
+                if cap:
+                    have_cap += 1
+                    if avg > Decimal(cap):
+                        excess = (avg - Decimal(cap)) / Decimal(cap) * 100
+                        diagnostics.append(Diagnostic(
+                            PRICE_CAP_EXCEEDED,
+                            f"{g['ticker']}: fill {avg} > max_price_for_qty "
+                            f"{cap} (+{excess:.2f} %)", plan_row_index=idx,
+                            perm_id=str(g["perm_id"])))
+                else:
+                    diagnostics.append(Diagnostic(
+                        MISSING_MAX_PRICE_FOR_QTY,
+                        f"{g['ticker']}: plan nema max_price_for_qty, "
+                        f"cenovy strop se neoveruje", plan_row_index=idx,
+                        perm_id=str(g["perm_id"])))
+                if ref and Decimal(ref) != 0:
+                    have_ref += 1
+                    bps = (avg - Decimal(ref)) / Decimal(ref) * 10000
+                    diagnostics.append(Diagnostic(
+                        PLAN_PRICE_DEVIATION,
+                        f"{g['ticker']}: fill {avg} vs plan ref {ref} "
+                        f"({bps:+.1f} bps)", plan_row_index=idx,
+                        perm_id=str(g["perm_id"])))
+                else:
+                    diagnostics.append(Diagnostic(
+                        MISSING_REF_PRICE,
+                        f"{g['ticker']}: plan nema ref_price, odchylka proti "
+                        f"planu se nepocita", plan_row_index=idx,
+                        perm_id=str(g["perm_id"])))
+            n = len(matched)
+            if n and have_ref == n and have_cap == n:
+                plan_reference_completeness = COMPLETENESS_FULL
+            elif have_ref or have_cap:
+                plan_reference_completeness = COMPLETENESS_PARTIAL
+            missing_ref_price = n - have_ref
+            missing_max_price_for_qty = n - have_cap
 
         # LATE_ENTRY is computed from execution timestamps only (decision 3)
         if matched:
@@ -172,7 +239,9 @@ def run(dump_path, plan_path, ticket_path, out_path, target_date,
     payload = build_artifact(dump_path, plan_path, ticket_path, target_date,
                              expected_account, root, groups, matched,
                              plan_states, diagnostics, assertions,
-                             plan_reference_source)
+                             plan_reference_source,
+                             plan_reference_completeness,
+                             missing_ref_price, missing_max_price_for_qty)
     artifact_state = art.write_artifact(payload, out_path,
                                         conflict_artifact=conflict_artifact)
 

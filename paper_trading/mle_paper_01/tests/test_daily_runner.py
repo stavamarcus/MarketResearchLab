@@ -111,7 +111,27 @@ def test_resolver_passthrough_parity(tmp_path):
 
     runner_rows = list(csv.DictReader(open(res.orders_plan_path, encoding="utf-8")))
     direct_rows = list(csv.DictReader(open(direct_path, encoding="utf-8")))
-    assert runner_rows == direct_rows  # runner did not change resolver output
+
+    # ZMENENO: plan nove nese i strojova plan-reference pole (ref_price,
+    # ref_price_date, max_price_for_qty, planned_exit_if_filled) a u BUY
+    # i quantity z feasibility. Ta NEPOCHAZEJI z resolveru, takze porovnavat
+    # cele radky by uz netestovalo to, co ma - tedy ze runner nemeni
+    # strategicke rozhodnuti. Porovnavaji se proto resolverova pole.
+    RESOLVER_FIELDS = ("date", "ticker", "conid", "action", "target_value",
+                       "reason", "price_source")
+
+    def resolver_view(rows):
+        out = []
+        for r in rows:
+            v = {k: r[k] for k in RESOLVER_FIELDS}
+            if r["action"] != "BUY":
+                v["quantity"] = r["quantity"]   # EXIT qty je z resolveru
+            out.append(v)
+        return out
+
+    assert resolver_view(runner_rows) == resolver_view(direct_rows)
+    # a pro jistotu: stejna jmena ve stejnem poradi
+    assert [r["ticker"] for r in runner_rows] == [r["ticker"] for r in direct_rows]
 
 
 # ---------------------------------------------------------------- manual report
@@ -124,7 +144,7 @@ def test_manual_report_mirrors_decisions(tmp_path):
     for h in ("## 1. Header", "## 2. Account", "## 3. Regime",
               "## 4. BUY orders", "## 5. EXIT orders", "## 6. HOLD positions",
               "## 7. Capital Feasibility", "## 8. Manual execution checklist",
-              "## 9. Fill recording template"):
+              "## 9. Processing the actual executions"):
         assert h in text
     assert "AAPL" in text and "NVDA" in text
     assert "BUY = target_date OPEN" in text

@@ -21,7 +21,7 @@ from typing import Callable, List, Optional
 from .models import Action, PortfolioState, RegimeState, MAX_POSITIONS
 from .decision_resolver import resolve
 from .portfolio_state import mark_to_market
-from .order_planner import write_orders_plan
+from .order_planner import plan_rows, write_orders_plan
 from . import capital_feasibility, manual_report, runtime_state
 from .calendar_util import next_session_xnys, add_sessions, sessions_until
 from .data_source import DataSourceProfile, PriceDataSource, build_data_source
@@ -231,20 +231,25 @@ class DailyOfflineRunner:
                 buys=buys, ref_prices=buy_ref_prices)
             warnings.extend(feasibility.warnings)
 
-            # 6) orders_plan_<D+1>.csv (frozen order_planner convention)
-            plan_path = write_orders_plan(decisions, self.cfg.order_plans_dir)
-
-            # 7) manual report + optional fillable ticket (render-only)
-            # 7) Daily Trade Plan + optional fillable ticket (render-only).
-            # Calendar-derived values computed here (manual_report stays
-            # calendar-free): estimated exit-if-filled = D+1 entry + 10 XNYS
-            # sessions (frozen hold10); per-hold days_remaining in sessions.
+            # Calendar-derived value musi vzniknout PRED planem, protoze
+            # planned_exit_if_filled je nove i sloupcem orders_plan CSV.
             HOLD_PERIOD = 10
             try:
                 estimated_exit_if_filled = add_sessions(
                     self.next_session_fn, target_date, HOLD_PERIOD)
             except Exception:
                 estimated_exit_if_filled = None  # advisory estimate only
+
+            # 6) orders_plan_<D+1>.csv (frozen order_planner convention)
+            # Plan-rows se spocitaji JEDNOU a projdou do CSV i do markdownu,
+            # aby mezi obema vystupy nemohl vzniknout rozdil.
+            rows = plan_rows(decisions, feasibility=feasibility,
+                             ref_price_date=D,
+                             planned_exit_if_filled=estimated_exit_if_filled)
+            plan_path = write_orders_plan(decisions, self.cfg.order_plans_dir,
+                                          rows=rows)
+
+            # 7) Daily Trade Plan + optional fillable ticket (render-only).
             holds_days_remaining = {}
             for p in state.open_positions():
                 try:
@@ -267,6 +272,7 @@ class DailyOfflineRunner:
                     strategy_id=self.cfg.strategy_id,
                     portfolio_state_source=portfolio_state_source,
                     estimated_exit_if_filled=estimated_exit_if_filled,
+                    plan_rows=rows,
                     holds_days_remaining=holds_days_remaining,
                     max_positions=MAX_POSITIONS)
             if self.write_manual_ticket:

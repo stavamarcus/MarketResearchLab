@@ -67,7 +67,9 @@ def test_nine_sections_present():
               "## 3. Regime", "## 4. BUY orders", "## 5. EXIT orders",
               "## 6. HOLD positions", "## 7. Capital Feasibility",
               "## 8. Manual execution checklist",
-              "## 9. Fill recording template"):
+              # ZMENENO: sekce 9 uz neni "Fill recording template" - ticket
+              # plni importer, rucni vyplnovani bylo zruseno v P2
+              "## 9. Processing the actual executions"):
         assert h in txt
     # timing statements
     assert "BUY = target_date OPEN" in txt
@@ -119,13 +121,22 @@ def test_hold_days_remaining():
                for c in ln.strip()[1:-1].split("|"))
 
 
-def test_fill_recording_blank_and_ticket_columns(tmp_path):
+def test_section9_points_to_importer_not_manual_entry(tmp_path):
+    """ZMENENO: drive test_fill_recording_blank_and_ticket_columns.
+
+    Sekce 9 driv obsahovala tabulku k rucnimu vyplneni fillu. Od P2 ticket
+    plni importer (volba 3) a rucni editace je zakazana, takze pokyn
+    neodpovidal skutecnosti.
+    """
     buys = [_buy("AAPL", 1, 3000.0)]
     feas = cf.evaluate_plan(30000.0, 30000.0, buys, {"AAPL": 200.0})
     txt = _render(_state(30000, 30000), buys, [_cand("AAPL", 1, 1)],
                   _regime(True), feas)
-    # fill template row: conid + planned_side + planned_qty filled, actuals blank
-    assert _has_row(txt, ["AAPL", "1", "BUY", "14", "", "", "", "", "", ""])
+    assert "Import broker fills" in txt
+    assert "Do not edit it by hand" in txt
+    for gone in ("Fill recording template", "fill in AFTER execution",
+                 "record actual fills on the ticket"):
+        assert gone not in txt, gone
     # ticket columns: planning + blank actual-fill; execution_mode/notes gone
     path = mr.write_ticket(D1, buys, tmp_path, feasibility=feas)
     header = next(csv.reader(open(path, encoding="utf-8")))

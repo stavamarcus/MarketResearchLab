@@ -107,7 +107,8 @@ def render_report(*, business_date: str, target_date: str,
                   portfolio_state_source: str | None = None,
                   estimated_exit_if_filled: str | None = None,
                   holds_days_remaining: Optional[Dict[str, int]] = None,
-                  max_positions: int = 10) -> str:
+                  max_positions: int = 10,
+                  plan_rows: Optional[Sequence[dict]] = None) -> str:
     """Render the Daily Trade Plan as Markdown (deterministic, render-only)."""
     buys = [d for d in decisions if d.action == Action.BUY]
     exits = [d for d in decisions if d.action == Action.EXIT]
@@ -118,6 +119,10 @@ def render_report(*, business_date: str, target_date: str,
     holds = [p for p in open_pos if p.ticker not in exit_tickers]
     rank_of = {c.ticker: c.rank_10d for c in candidates}
     fb = {b.ticker: b for b in feasibility.per_buy} if feasibility else {}
+    # Sekce 4 se renderuje z TYCHZ plan-row objektu, ze kterych vznika CSV.
+    # Kdyz je volajici neposle (starsi volani), pouzije se feasibility jako
+    # fallback - nikdy ne druha vlastni vypocetni cesta.
+    pr = {r["ticker"]: r for r in (plan_rows or []) if r.get("ticker")}
     days_rem = holds_days_remaining or {}
 
     bought = {d.ticker for d in buys}
@@ -202,17 +207,24 @@ def render_report(*, business_date: str, target_date: str,
         for d in sorted(buys, key=lambda x: rank_of.get(x.ticker, 999)):
             b = fb.get(d.ticker)
             rk = rank_of.get(d.ticker, "?")
+            row = pr.get(d.ticker, {})
+            v_ref = row.get("ref_price") or (b.ref_price if b else "?")
+            v_cap = row.get("max_price_for_qty") or (
+                b.max_price_for_estimated_qty if b and b.executable else None)
+            v_exit = row.get("planned_exit_if_filled") or (
+                estimated_exit_if_filled or "?")
+            v_qty = row.get("quantity") or (
+                b.indicative_qty if b and b.executable else 0)
             if b and b.executable:
                 L.append(f"| {rk} | {d.ticker} | {d.conid} | "
-                         f"{d.target_value:.2f} | {b.ref_price} | "
-                         f"{b.indicative_qty} | {b.estimated_debit:.2f} | "
-                         f"{b.max_price_for_estimated_qty} | "
-                         f"{estimated_exit_if_filled or '?'} |  |")
+                         f"{d.target_value:.2f} | {v_ref} | "
+                         f"{v_qty} | {b.estimated_debit:.2f} | "
+                         f"{v_cap} | {v_exit} |  |")
             else:
                 reason = b.non_executable_reason if b else "?"
                 L.append(f"| {rk} | {d.ticker} | {d.conid} | "
-                         f"{d.target_value:.2f} | {b.ref_price if b else '?'} | "
-                         f"0 | 0.00 | — | {estimated_exit_if_filled or '?'} | "
+                         f"{d.target_value:.2f} | {v_ref} | "
+                         f"0 | 0.00 | — | {v_exit} | "
                          f"**DO NOT BUY — {reason}** |")
         L.append("")
         L.append("_indicative_qty & planned_exit_if_filled are ESTIMATES from D "
@@ -320,31 +332,30 @@ def render_report(*, business_date: str, target_date: str,
     L.append("- [ ] no rank-11 substitutions (do not add names below the plan)")
     L.append("- [ ] no manual ticker picking — trade only what this plan lists")
     L.append("- [ ] BUY at target_date OPEN; EXIT at planned_exit_date CLOSE")
-    L.append("- [ ] record actual fills on the ticket after execution")
+    L.append("- [ ] after execution, import the fills with launcher option 3 "
+             "(do not hand-write them)")
     L.append("")
 
-    # ---- 9. Fill recording template ----------------------------------
-    L.append("## 9. Fill recording template (fill in AFTER execution)")
+    # ---- 9. Processing the actual executions --------------------------
+    # Drive tu byla "Fill recording template" s vyzvou vyplnit ticket rucne.
+    # Od P2 ticket plni importer a rucni editace je zakazana - pokyn tedy
+    # neodpovidal skutecnosti a operator by delal praci, kterou dela systém.
+    L.append("## 9. Processing the actual executions")
     L.append("")
-    L.append("Record each actual fill here (or on the ticket CSV). The "
-             "actual-fill fields are **blank** until you execute — they are not "
-             "planned values.")
+    L.append("After placing the orders in TWS:")
     L.append("")
-    L.append("| ticker | conid | planned_side | planned_qty | actual_qty | "
-             "actual_fill_price | timestamp | commission_fees | order_id | "
-             "status |")
-    L.append("|---|---|---|---|---|---|---|---|---|---|")
-    for d in buys:
-        b = fb.get(d.ticker)
-        pq = b.indicative_qty if (b and b.executable) else ""
-        L.append(f"| {d.ticker} | {d.conid} | BUY | {pq} |  |  |  |  |  | |")
-    for d in exits:
-        L.append(f"| {d.ticker} | {d.conid} | EXIT | {d.quantity:.6f} "
-                 f"|  |  |  |  |  | |")
+    L.append("1. Launcher **3. Import broker fills** - reads the read-only "
+             "execution dump and fills the ticket.")
+    L.append("2. Check the import summary (matched / missing / diagnostics).")
+    L.append("3. Launcher **4. Reconcile - VALIDATE**.")
+    L.append("4. After PASS, launcher **5. Reconcile - APPLY**.")
     L.append("")
-    L.append("_status in {filled, partial, cancelled}. The reconciliation step "
-             "later ingests the completed ticket into the journal "
-             "(execution_mode = MANUAL). Do not modify the strategy decisions._")
+    L.append("**The ticket CSV is an internal system artifact. Do not edit it "
+             "by hand.**")
+    L.append("")
+    L.append("_Planned quantities for this session are in section 4 and in "
+             "`orders_plan_<target_date>.csv`; the reconciliation step ingests "
+             "the ticket into the journal (execution_mode = MANUAL)._")
     L.append("")
 
     # ---- Appendix -----------------------------------------------------

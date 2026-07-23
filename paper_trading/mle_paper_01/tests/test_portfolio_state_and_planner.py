@@ -166,9 +166,14 @@ class TestOrderPlanner(unittest.TestCase):
                          conid=999, quantity=12.5,
                          price_source=PriceSource.CLOSE)]
         rows = plan_rows(decs)
+        # ZMENENO: schema rozsireno o strojove citelna plan-reference pole.
+        # Driv zily ref_price a max_price_for_qty jen v markdown reportu,
+        # takze je reconcile ani importer nemely odkud vzit.
         self.assertEqual(list(rows[0].keys()),
                          ["date", "ticker", "conid", "action", "quantity",
-                          "target_value", "reason", "price_source"])
+                          "target_value", "reason", "price_source",
+                          "ref_price", "ref_price_date", "max_price_for_qty",
+                          "planned_exit_if_filled"])
         b, e = rows[0], rows[1]
         self.assertEqual((b["action"], b["target_value"], b["quantity"]),
                          ("BUY", "10000", ""))
