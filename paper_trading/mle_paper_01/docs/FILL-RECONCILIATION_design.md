@@ -93,6 +93,51 @@ If validation FAILS, apply is refused and nothing is written.
 - **`cancelled`** — `actual_quantity` must be `0` or blank; **no cash/state
   change**. A cancelled row carrying a quantity or price → warning (or FAIL if
   inconsistent).
+- **`rejected`** — the broker refused the order. Same handling as `cancelled`.
+- **`not_submitted`** — the order was never sent. Same handling as `cancelled`.
+
+`cancelled` / `rejected` / `not_submitted` are **explicit terminal states**: a
+deliberate record that this order produced no execution. A **blank** row is not
+one of them — see §6b.
+
+## 6b. Whole-ticket completeness invariant [P1 — 2026-07-22]
+
+Per-row validation is not sufficient. Before this section existed, the verdict
+was defined as *"no row failed"*, so a ticket of ten blank rows was
+indistinguishable from ten successfully applied fills: validation returned PASS,
+`--apply` ran as a no-op and reported success, while the broker held ten
+unrecorded positions. This was observed live on 2026-07-22.
+
+**Invariant.** Every planned order must end in an explicit state. A blank row is
+a *missing datum*, never a legitimate skip — the system cannot tell the
+difference between "this order was never placed" and "this order filled and
+nobody wrote it down".
+
+The verdict is computed over the whole ticket, in this order of precedence:
+
+| Condition | Verdict | Apply |
+|---|---|---|
+| ticket has no planned rows | `PASS_ZERO_TRADE` | no-op, not APPLIED |
+| at least one per-row FAIL | `FAIL` | **BLOCKED** |
+| at least one blank row | `INCOMPLETE_TICKET` | **BLOCKED** |
+| at least one applicable fill, no blanks | `PASS` | permitted |
+| every fill already recorded previously | `PASS_ALREADY_APPLIED` | no-op, not APPLIED |
+| all rows explicitly cancelled/rejected/not_submitted | `PASS_NO_EXECUTIONS` | no-op, not APPLIED |
+
+Consequences, all mandatory:
+
+- **Only `PASS` authorises a write.** The gate is evaluated *before* the state
+  backup, before `save_state()` and before any journal write — a blocked apply
+  must leave no `.bak`, no state change, no journal row and no audit entry.
+- **`applied_count == 0` must never be reported as `APPLIED`.** A blocked apply
+  is reported as phase `APPLY BLOCKED`.
+- **A partially executed plan is legitimate only when every unexecuted order
+  carries an explicit terminal status.** There is no override for blank rows:
+  no `PASS_WITH_BLANKS`, no `--allow-partial-ticket`. Allowing one would restore
+  exactly the failure this invariant exists to prevent.
+- Downstream consumers (e.g. the launcher status view) must read the verdict
+  from the report **content**; the filename carries only the date and cannot
+  distinguish a successful run from a no-op.
 
 ## 7. State update
 

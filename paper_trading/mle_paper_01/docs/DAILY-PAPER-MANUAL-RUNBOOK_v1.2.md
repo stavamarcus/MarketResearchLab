@@ -1,4 +1,4 @@
-# Daily Paper Manual Runbook v1.1
+# Daily Paper Manual Runbook v1.2
 
 Status: **APPROVED (v1.0 approved with the required `paper_manual` patch; patch
 applied here).** Operator procedure for one end-to-end **paper/manual** trading
@@ -105,18 +105,32 @@ Follow the Trade Plan exactly. Do not improvise.
 - [ ] **EXIT** the planned exits near the **CLOSE**; sell the **full** position
 - [ ] Double-check symbol, side, quantity on every ticket before submitting
 
-## 6. Fill the ticket (record actuals)
+## 6. Import broker fills (launcher option 3)
 
-Open `order_plans\mle_paper_01\paper_manual\manual_order_ticket_<target_date>.csv`
-and for each executed order fill the blank actual columns:
+The ticket is an **internal system file**. Do not open or edit it by hand.
 
-- [ ] `actual_quantity`, `actual_fill_price`
-- [ ] `timestamp` (must be the **target_date** session)
-- [ ] `commission_fees`, `order_id`
-- [ ] `status` = `filled` / `partial` / `cancelled`
+    python dump_broker_executions.py --expected-account <ACCT> --port 7497 --client-id 102
+    python -m mle_paper_01.import_fills --dump order_plans\\mle_paper_01\\paper_manual\\broker_executions_<target_date>_cid102.json --plan order_plans\\mle_paper_01\\paper_manual\\orders_plan_<target_date>.csv --ticket order_plans\\mle_paper_01\\paper_manual\\manual_order_ticket_<target_date>.csv --out order_plans\\mle_paper_01\\paper_manual\\normalized_fills_<target_date>.json --target-date <target_date> --account <ACCT> --root .
 
-Leave un-executed rows blank (skipped as "no fill recorded"). Do **not** edit
-planned columns.
+The importer reads the dump, the plan and the ticket; it writes the normalized
+artifact and the ticket fill columns. It never reads the journal, never calls
+TWS and never touches PortfolioState.
+
+- [ ] `broker orders`, `executions` and `matched` are what you expect
+- [ ] `missing plan rows: 0` - a missing row stays blank and blocks apply
+- [ ] any `[CODE]` line is understood
+
+**IMPORT BLOCKED** -> the ticket is left byte-identical and the artifact carries
+the diagnostics. Fix the cause and re-run; never edit the ticket by hand.
+
+Blocking conditions include a missing commission report
+(`COMMISSION_PENDING` - re-run the dump later), a short fill whose remainder is
+not confirmed terminal (`PARTIAL_UNRESOLVED`), executions spanning sessions
+(`CROSS_SESSION_ORDER`) and any non one-to-one match (`AMBIGUOUS_MATCH`).
+
+Manual recovery, when the broker data cannot be obtained at all, is the only
+path that writes a ticket row without broker identity; such a row carries a
+generated `fill_id` and never reuses `order_id` as an identity.
 
 ## 7. Reconciliation - VALIDATE (read-only first)
 
@@ -124,7 +138,7 @@ planned columns.
 
 Check `reconciliation_report_<target_date>.md`:
 
-- [ ] **result: PASS** (validate-only writes nothing)
+- [ ] **result: PASS** (validate-only writes nothing). `INCOMPLETE_TICKET` = a planned order has no recorded outcome; the broker may hold an unrecorded position. Do **not** re-place orders - complete the ticket.
 - [ ] Applied rows are the fills you intend to book
 - [ ] no unexpected FAILED rows / Skipped duplicates
 - [ ] deviations / warnings understood
@@ -133,13 +147,52 @@ Check `reconciliation_report_<target_date>.md`:
 
 ## 8. Reconciliation - APPLY (write state + journal)
 
-Only after a PASS validate:
+Only after a PASS validate. Two steps: preview, then confirm.
 
-    python -m mle_paper_01.reconcile --ticket order_plans\mle_paper_01\paper_manual\manual_order_ticket_<target_date>.csv --plan order_plans\mle_paper_01\paper_manual\orders_plan_<target_date>.csv --state runtime_state\mle_paper_01\paper_manual\state.json --journal-dir journal_data --mode paper_manual --out reports\mle_paper_01\paper_manual --apply
+**8a. Preview** - computes the impact with the same reconciliation logic the
+write will use, but changes nothing and does not touch the reconciliation
+report:
+
+    python -m mle_paper_01.reconcile --ticket order_plans\\mle_paper_01\\paper_manual\\manual_order_ticket_<target_date>.csv --plan order_plans\\mle_paper_01\\paper_manual\\orders_plan_<target_date>.csv --state runtime_state\\mle_paper_01\\paper_manual\\state.json --journal-dir journal_data --mode paper_manual --out reports\\mle_paper_01\\paper_manual --artifact order_plans\\mle_paper_01\\paper_manual\\normalized_fills_<target_date>.json --preview-out reports\\mle_paper_01\\paper_manual\\apply_preview_<target_date>.json
+
+Read the summary before confirming:
+
+- [ ] broker account and strategy_id are the ones you expect
+- [ ] target_date is the session you mean to write
+- [ ] number of new fills matches the ticket
+- [ ] cash before / delta / after are plausible
+- [ ] positions before -> after
+- [ ] the audit events listed are the ones you expect
+
+**8b. Write** - only after reading the preview:
+
+    python -m mle_paper_01.reconcile <same arguments> --preview reports\\mle_paper_01\\paper_manual\\apply_preview_<target_date>.json --apply
+
+The write verifies that the ticket, the normalized artifact, the
+PortfolioState and the journal's applied keys are unchanged since the
+preview. If any of them moved, the run stops with `PREVIEW_STALE` and writes
+nothing - take a new preview and confirm again.
+
+In the launcher this is one step: option 5 shows the preview and asks
+`Potvrdit zapis? [y/N]`. Anything other than `y` or `Y`, including a bare
+Enter, cancels the write. This replaced the old `APPLY_PAPER_MANUAL`
+phrase, which proved error-prone and protected nothing that the code does
+not already enforce.
 
 - [ ] report shows **APPLIED** + a **state backup** path
 - [ ] journal `fills` written (`execution_mode = MANUAL`) + RECONCILIATION event
 - [ ] equity flagged **provisional** (next runner re-marks to close)
+
+Report phases and what they mean:
+
+| phase | meaning |
+|---|---|
+| `APPLIED` | new fills were written |
+| `NOTHING_TO_APPLY` | legitimate no-op - state already matches, nothing to fix |
+| `APPLY_BLOCKED` | a real error, or `PREVIEW_STALE`; nothing was written |
+| `VALIDATE-ONLY` | no write was attempted |
+
+Only `APPLY_BLOCKED` means something needs fixing.
 
 ## 9. After the run
 

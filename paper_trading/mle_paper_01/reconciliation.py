@@ -17,9 +17,11 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import shutil
 import sys
 from dataclasses import dataclass, field, replace
+from decimal import Decimal, InvalidOperation
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -30,8 +32,35 @@ from .portfolio_state import (load_state, save_state, validate_state,
 from .calendar_util import next_session_xnys, add_sessions
 
 HOLD_PERIOD = 10
-VALID_STATUS = {"filled", "partial", "cancelled"}
-FAIL, APPLY, SKIP = "FAIL", "APPLY", "SKIP"
+# Explicitne terminalni stavy bez exekuce. Radek s timto stavem je vedomym
+# zaznamem "tento order neprobehl", NE chybejicim udajem.
+TERMINAL_NO_EXEC = {"cancelled", "rejected", "not_submitted"}
+VALID_STATUS = {"filled", "partial"} | TERMINAL_NO_EXEC
+FAIL, APPLY, SKIP, BLANK = "FAIL", "APPLY", "SKIP", "BLANK"
+
+# Duvody pro SKIP (rozlisuji legitimni no-op scenare v celoticketovem verdiktu)
+CODE_DUPLICATE = "DUPLICATE"
+CODE_NO_EXEC = "NO_EXEC"
+
+# P2 ticket schema (FILL-IMPORT_design.md). Vsech pet sloupcu, nebo zadny.
+P2_COLUMNS = ("broker_account", "perm_id", "fill_id", "execution_ids",
+              "gross_notional")
+SCHEMA_P2 = "P2"
+SCHEMA_LEGACY = "LEGACY"
+SCHEMA_INVALID = "INVALID"
+D0 = Decimal("0")
+
+# Celoticketove verdikty (spec: FILL-RECONCILIATION_design.md, invariant uplnosti)
+V_PASS = "PASS"                              # >=1 aplikovatelny fill, zadny blank
+V_PASS_ZERO_TRADE = "PASS_ZERO_TRADE"        # ticket bez planovanych radku
+V_PASS_NO_EXECUTIONS = "PASS_NO_EXECUTIONS"  # vse explicitne cancelled/rejected/not_submitted
+V_PASS_ALREADY_APPLIED = "PASS_ALREADY_APPLIED"  # vse uz zapsano drive (idempotence)
+V_FAIL = "FAIL"                              # >=1 per-row FAIL
+V_INCOMPLETE = "INCOMPLETE_TICKET"           # >=1 blank radek
+
+# Verdikty, ktere NEJSOU chybou. Jen V_PASS opravnuje k zapisu.
+PASS_FAMILY = {V_PASS, V_PASS_ZERO_TRADE, V_PASS_NO_EXECUTIONS,
+               V_PASS_ALREADY_APPLIED}
 
 
 # --------------------------------------------------------------------- data
@@ -40,15 +69,29 @@ class FillRow:
     ticker: str
     conid: Optional[str]
     side: str
-    planned_quantity: Optional[float]
-    actual_quantity: float
-    actual_fill_price: float
+    planned_quantity: Optional[Decimal]
+    actual_quantity: Decimal
+    actual_fill_price: Decimal
     timestamp: str
-    commission_fees: float
+    commission_fees: Decimal
     order_id: str
     status: str
     override_reason: str = ""
     plan_date: str = ""      # ticket's target_date column (fallback for dating)
+    # --- P2 columns (FILL-IMPORT_design.md) ---
+    broker_account: str = ""
+    perm_id: str = ""
+    fill_id: str = ""
+    execution_ids: str = ""
+    gross_notional: Optional[Decimal] = None
+
+    @property
+    def notional(self) -> Decimal:
+        """Exact broker notional. gross_notional wins; legacy falls back to
+        quantity * price (which re-derives it and can round)."""
+        if self.gross_notional is not None:
+            return self.gross_notional
+        return self.actual_quantity * self.actual_fill_price
 
 
 @dataclass
@@ -58,6 +101,7 @@ class Disposition:
     issues: List[str] = field(default_factory=list)     # FAIL/warn messages
     deviations: List[str] = field(default_factory=list)  # STRATEGY_DEVIATION
     entry_date: Optional[str] = None                     # resolved session date
+    code: str = ""                                       # CODE_DUPLICATE / CODE_NO_EXEC
 
 
 @dataclass
@@ -67,8 +111,38 @@ class ReconReport:
     warnings: List[str] = field(default_factory=list)
 
     @property
+    def verdict(self) -> str:
+        """Celoticketovy verdikt.
+
+        Per-row kontroly nestaci: deset preskocenych radku je bez tohoto
+        invariantu nerozlisitelnych od deseti aplikovanych fillu. Poradi
+        podminek je zavazne - FAIL ma prednost pred blankem.
+        """
+        if not self.dispositions:
+            return V_PASS_ZERO_TRADE
+        if self.by(FAIL):
+            return V_FAIL
+        if self.by(BLANK):
+            return V_INCOMPLETE
+        if self.by(APPLY):
+            return V_PASS
+        if any(d.code == CODE_DUPLICATE for d in self.dispositions):
+            return V_PASS_ALREADY_APPLIED
+        return V_PASS_NO_EXECUTIONS
+
+    @property
+    def apply_allowed(self) -> bool:
+        """Zapis do stavu/journalu je pripustny VYHRADNE pri V_PASS.
+
+        Zero-trade, no-execution i already-applied jsou legitimni, ale jsou to
+        no-opy - nesmi vyrobit zalohu, prepsat state ani zapsat do journalu.
+        """
+        return self.verdict == V_PASS
+
+    @property
     def passed(self) -> bool:
-        return all(d.action != FAIL for d in self.dispositions)
+        """Zpetna kompatibilita: 'neni to chyba'. NEOPRAVNUJE k zapisu."""
+        return self.verdict in PASS_FAMILY
 
     def by(self, action: str) -> List[Disposition]:
         return [d for d in self.dispositions if d.action == action]
@@ -85,6 +159,37 @@ def _f(v, default=0.0):
         return default
 
 
+def _d(v, default: Decimal = D0) -> Decimal:
+    """Decimal z CSV. Vzdy Decimal(str(...)) - nikdy Decimal(float),
+    ktery by pretahl binarni reprezentacni chybu do penezni matematiky."""
+    if v is None:
+        return default
+    t = str(v).strip()
+    if t == "":
+        return default
+    try:
+        return Decimal(t)
+    except InvalidOperation:
+        return default
+
+
+def ticket_schema(path: str | Path) -> str:
+    """P2 / LEGACY / INVALID podle hlavicky ticketu.
+
+    Vsech pet P2 sloupcu -> P2. Zadny -> LEGACY. Cast -> INVALID
+    (castecna hlavicka znamena, ze nekdo schema rozbil rucne nebo pri
+    migraci; hadat, co chybi, je horsi nez to odmitnout).
+    """
+    with Path(path).open(encoding="utf-8", newline="") as f:
+        header = csv.DictReader(f).fieldnames or []
+    present = [c for c in P2_COLUMNS if c in header]
+    if len(present) == len(P2_COLUMNS):
+        return SCHEMA_P2
+    if not present:
+        return SCHEMA_LEGACY
+    return SCHEMA_INVALID
+
+
 def parse_ticket(path: str | Path) -> List[FillRow]:
     rows: List[FillRow] = []
     with Path(path).open(encoding="utf-8", newline="") as f:
@@ -96,17 +201,24 @@ def parse_ticket(path: str | Path) -> List[FillRow]:
                 side=side,
                 planned_quantity=(None if (r.get("planned_quantity") or
                                            r.get("quantity") or "").strip() == ""
-                                  else _f(r.get("planned_quantity")
+                                  else _d(r.get("planned_quantity")
                                           or r.get("quantity"))),
-                actual_quantity=_f(r.get("actual_quantity")),
-                actual_fill_price=_f(r.get("actual_fill_price")),
+                actual_quantity=_d(r.get("actual_quantity")),
+                actual_fill_price=_d(r.get("actual_fill_price")),
                 timestamp=(r.get("timestamp") or r.get("actual_timestamp")
                            or "").strip(),
-                commission_fees=_f(r.get("commission_fees")),
+                commission_fees=_d(r.get("commission_fees")),
                 order_id=(r.get("order_id") or "").strip(),
                 status=(r.get("status") or "").strip().lower(),
                 override_reason=(r.get("override_reason") or "").strip(),
-                plan_date=(r.get("target_date") or "").strip()))
+                plan_date=(r.get("target_date") or "").strip(),
+                broker_account=(r.get("broker_account") or "").strip(),
+                perm_id=(r.get("perm_id") or "").strip(),
+                fill_id=(r.get("fill_id") or "").strip(),
+                execution_ids=(r.get("execution_ids") or "").strip(),
+                gross_notional=(None
+                                if (r.get("gross_notional") or "").strip() == ""
+                                else _d(r.get("gross_notional")))))
     return rows
 
 
@@ -138,9 +250,47 @@ def do_not_buy_from_ticket(rows: List[FillRow]) -> set:
     return dnb
 
 
-def fill_key(row: FillRow, target_date: str) -> str:
-    """Idempotence key: order_id if present, else deterministic hash."""
-    if row.order_id:
+class InvalidFillIdentity(Exception):
+    """P2 radek bez pouzitelne identity. Nikdy nespadne na legacy hash."""
+
+
+def _valid_id(v) -> bool:
+    """0, "0", "", None a necislo NEJSOU identifikatory.
+
+    IBKR vraci orderId = 0 u rucne zadanych orderu. Bez teto kontroly by
+    deset radku dostalo klic order:0, prvni by se zapsal a devet by se
+    tise preskocilo jako duplicity.
+    """
+    if v is None:
+        return False
+    t = str(v).strip()
+    if not t or t.lower() in ("none", "nan", "null"):
+        return False
+    try:
+        return Decimal(t) != 0            # "0", "0.0", "00" -> neplatne
+    except InvalidOperation:
+        return True                       # necislo, ale neprazdne -> platne
+
+
+def fill_key(row: FillRow, target_date: str, schema: str = SCHEMA_LEGACY) -> str:
+    """Idempotence key, scopeovany uctem.
+
+    P2:     ibkr:<account>:perm:<perm_id>   nebo   fill:<uuid>
+    LEGACY: navic ibkr:<account>:order:<id>, jinak deterministicky hash
+    """
+    acct = (row.broker_account or "").strip()
+    if acct and _valid_id(row.perm_id):
+        return f"ibkr:{acct}:perm:{row.perm_id}"
+    if row.fill_id:
+        return f"fill:{row.fill_id}"
+    if schema == SCHEMA_P2:
+        # order_id zustava ulozeny jako broker fakt, ale neni P2 identitou
+        raise InvalidFillIdentity(row.ticker)
+    # LEGACY vetev zustava BYTOVE ve starem tvaru "order:<id>" / "hash:...".
+    # Scopovani uctem by zmenilo klice, ktere uz jsou zapsane v journalu,
+    # a driv aplikovane filly by se prestaly poznat jako duplicity.
+    # Jedina zmena proti puvodnimu chovani je nulova zarazka _valid_id().
+    if _valid_id(row.order_id):
         return f"order:{row.order_id}"
     raw = "|".join(str(x) for x in [target_date, row.ticker, row.conid,
                                     row.side, row.actual_quantity,
@@ -170,6 +320,150 @@ def applied_keys_from_journal(journal_dir: str | Path, mode: str) -> set:
     return keys
 
 
+# ------------------------------------------------- execution deviation events
+EVENT_EXECUTION_DEVIATION = "EXECUTION_DEVIATION"
+DEV_LATE_ENTRY = "LATE_ENTRY"
+SESSION_OPEN_ET = (9, 30)
+
+
+def deviation_key(strategy_id: str, mode: str, target_date: str, code: str,
+                  artifact_hash: str) -> str:
+    """Deterministic identity of a deviation event.
+
+    Repeating APPLY over the same artifact must not append a second copy of
+    the same record, so the key is a pure function of what the event asserts.
+    """
+    return (f"execution_deviation:{strategy_id}:{mode}:{target_date}:"
+            f"{code}:{artifact_hash}")
+
+
+def deviation_keys_from_journal(journal_dir: str | Path, mode: str) -> set:
+    """deviation_key values already present in the journal events."""
+    keys = set()
+    if not journal_dir:
+        return keys
+    base = Path(journal_dir) / mode / "events"
+    if not base.exists():
+        return keys
+    for f in sorted(base.glob("events_*.jsonl")):
+        try:
+            with f.open(encoding="utf-8") as fh:
+                for line in fh:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        rec = json.loads(line)
+                    except ValueError:
+                        continue
+                    if rec.get("deviation_key"):
+                        keys.add(rec["deviation_key"])
+        except OSError:
+            continue
+    return keys
+
+
+def _minutes_after_open(ts_et: str) -> Optional[int]:
+    try:
+        dt = datetime.fromisoformat(ts_et)
+    except (TypeError, ValueError):
+        return None
+    open_dt = dt.replace(hour=SESSION_OPEN_ET[0], minute=SESSION_OPEN_ET[1],
+                         second=0, microsecond=0)
+    return int((dt - open_dt).total_seconds() // 60)
+
+
+def late_entry_event(artifact_path, ticket_path, target_date: str,
+                     strategy_id: str, mode: str) -> Optional[dict]:
+    """Build the LATE_ENTRY event from the normalized artifact.
+
+    Returns None whenever any guard fails - a deviation record that cannot be
+    tied to verified broker data is worse than no record. Values come from the
+    artifact's execution timestamps, never from the diagnostic message text,
+    a markdown report or a hand-entered number.
+    """
+    if not artifact_path:
+        return None
+    path = Path(artifact_path)
+    if not path.exists():
+        return None
+    try:
+        art = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+    # guard: the artifact must describe THIS session
+    if art.get("target_date") != target_date:
+        return None
+
+    # guard: and THIS ticket
+    src = art.get("source") or {}
+    art_ticket = Path(str(src.get("ticket_path_relative") or "")).name
+    if art_ticket and art_ticket != Path(str(ticket_path)).name:
+        return None
+
+    # guard: canonical hash must still match the content
+    stored = art.get("canonical_sha256")
+    if not stored:
+        return None
+    try:
+        from .fills.artifact import canonical_sha256
+        if canonical_sha256(art) != stored:
+            return None
+    except Exception:
+        return None
+
+    # guard: no LATE_ENTRY diagnostic -> no event
+    if not any(d.get("code") == DEV_LATE_ENTRY
+               for d in (art.get("diagnostics") or [])):
+        return None
+
+    orders = art.get("orders") or []
+    if not orders:
+        return None
+    firsts = [o.get("first_fill_timestamp") for o in orders
+              if o.get("first_fill_timestamp")]
+    lasts = [o.get("last_fill_timestamp") for o in orders
+             if o.get("last_fill_timestamp")]
+    if not firsts or not lasts:
+        return None
+    first, last = min(firsts), max(lasts)
+    first_min, last_min = _minutes_after_open(first), _minutes_after_open(last)
+    if first_min is None or last_min is None:
+        return None
+
+    return {
+        "deviation_key": deviation_key(strategy_id, mode, target_date,
+                                       DEV_LATE_ENTRY, stored),
+        "deviation_code": DEV_LATE_ENTRY,
+        "strategy_id": strategy_id,
+        "mode": mode,
+        "target_date": target_date,
+        "planned_execution": "TARGET_DATE_OPEN",
+        "actual_first_fill_timestamp": first,
+        "actual_last_fill_timestamp": last,
+        "first_fill_minutes_after_open": first_min,
+        "last_fill_minutes_after_open": last_min,
+        "reason": "MANUAL_FIRST_CYCLE_EXECUTION",
+        "source": "IBKR_EXECUTION_DUMP",
+        "affected_order_count": len(orders),
+        "affected_tickers": sorted({o.get("ticker") for o in orders
+                                    if o.get("ticker")}),
+        "normalized_artifact_relative_path": _artifact_rel(art, path),
+        "normalized_artifact_canonical_sha256": stored,
+        "source_dump_sha256": src.get("dump_sha256"),
+    }
+
+
+def _artifact_rel(art: dict, path: Path) -> str:
+    """Artifact path relative to the paper_trading root, best effort."""
+    src = art.get("source") or {}
+    ticket_rel = str(src.get("ticket_path_relative") or "")
+    if ticket_rel:
+        return str(Path(ticket_rel).parent / path.name).replace("\\", "/")
+    return path.name
+
+
 # -------------------------------------------------------------- validation
 def _session_of(timestamp: str) -> str:
     return (timestamp or "")[:10]   # ISO date part
@@ -177,7 +471,8 @@ def _session_of(timestamp: str) -> str:
 
 def validate(rows: List[FillRow], plan: Dict[str, dict], state: PortfolioState,
              target_date: str, do_not_buy: set, applied_keys: set,
-             next_session_fn=next_session_xnys) -> ReconReport:
+             next_session_fn=next_session_xnys,
+             schema: str = SCHEMA_LEGACY) -> ReconReport:
     held = {p.ticker: p for p in state.open_positions()}
     dispositions: List[Disposition] = []
     warnings: List[str] = []
@@ -185,11 +480,16 @@ def validate(rows: List[FillRow], plan: Dict[str, dict], state: PortfolioState,
     for row in rows:
         d = Disposition(row=row, entry_date=target_date)
 
-        # blank / unrecorded row (no status, no actual data) -> skip, not fail
+        # Nevyplneny radek. NENI to legitimni preskoceni - je to chybejici
+        # udaj. Kdo order nezadal nebo neprobehl, musi to rici explicitne
+        # (cancelled / rejected / not_submitted), jinak nevime, jestli u
+        # brokera visi nezaznamenana pozice.
         if row.status == "" and row.actual_quantity == 0 \
                 and row.actual_fill_price == 0:
-            d.action = SKIP
-            d.issues.append("no fill recorded (blank) — skipped")
+            d.action = BLANK
+            d.issues.append("no fill recorded (blank) - ticket is incomplete; "
+                            "set status to filled/partial or explicitly to "
+                            "cancelled/rejected/not_submitted")
             dispositions.append(d)
             continue
 
@@ -200,19 +500,36 @@ def validate(rows: List[FillRow], plan: Dict[str, dict], state: PortfolioState,
             dispositions.append(d)
             continue
 
-        # idempotence
-        if fill_key(row, target_date) in applied_keys:
-            d.action = SKIP
-            d.issues.append("duplicate fill (already applied) — skipped")
+        # identita radku (P2 nesmi spadnout na legacy hash)
+        try:
+            key = fill_key(row, target_date, schema)
+        except InvalidFillIdentity:
+            d.action = FAIL
+            d.issues.append(
+                "INVALID_FILL_IDENTITY: P2 broker row needs broker_account + "
+                "perm_id, manual recovery row needs fill_id "
+                "(order_id is a broker fact, not an identity)")
             dispositions.append(d)
             continue
 
-        # cancelled: no state change; must not carry qty/price
-        if row.status == "cancelled":
+        # idempotence
+        if key in applied_keys:
             d.action = SKIP
+            d.code = CODE_DUPLICATE
+            d.issues.append("duplicate fill (already applied) - skipped")
+            dispositions.append(d)
+            continue
+
+        # cancelled / rejected / not_submitted: explicitni "neprobehlo",
+        # zadna zmena stavu; nesmi nest qty/price
+        if row.status in TERMINAL_NO_EXEC:
+            d.action = SKIP
+            d.code = CODE_NO_EXEC
             if row.actual_quantity or row.actual_fill_price:
-                d.issues.append("cancelled row carries quantity/price")
-                warnings.append(f"{row.ticker}: cancelled but has qty/price")
+                d.issues.append(f"{row.status} row carries quantity/price")
+                warnings.append(f"{row.ticker}: {row.status} but has qty/price")
+            else:
+                d.issues.append(f"explicitly {row.status} - no state change")
             dispositions.append(d)
             continue
 
@@ -303,14 +620,15 @@ def validate(rows: List[FillRow], plan: Dict[str, dict], state: PortfolioState,
 # -------------------------------------------------------------- apply state
 def apply_to_state(report: ReconReport, state: PortfolioState,
                    plan: Dict[str, dict],
-                   next_session_fn=next_session_xnys):
+                   next_session_fn=next_session_xnys,
+                   schema: str = SCHEMA_LEGACY):
     """Apply APPLY dispositions with REAL cash math. Returns (new_state,
     fill_rows, summary). Partial EXIT leaves the remainder open."""
     positions = list(state.open_positions())
-    cash = state.cash
+    cash = Decimal(str(state.cash))
     fill_rows: List[dict] = []
     summary = {"buys": 0, "exits": 0, "partial_exits": [],
-               "cash_delta": 0.0}
+               "cash_delta": D0}
 
     for d in report.by(APPLY):
         r = d.row
@@ -319,23 +637,27 @@ def apply_to_state(report: ReconReport, state: PortfolioState,
             planned_exit = add_sessions(next_session_fn, entry_date, HOLD_PERIOD)
             rank = _rank_from_reason(plan.get(r.ticker, {}).get("reason", "")) \
                 if plan.get(r.ticker) else 0
-            debit = r.actual_quantity * r.actual_fill_price + r.commission_fees
+            # BUY: cash_delta = -(gross_notional + commission)
+            debit = r.notional + r.commission_fees
             cash -= debit
             summary["cash_delta"] -= debit
             summary["buys"] += 1
             positions.append(Position(
                 ticker=r.ticker, conid=int(r.conid) if r.conid else 0,
-                shares=r.actual_quantity, entry_date=entry_date,
-                entry_price=r.actual_fill_price, planned_exit_date=planned_exit,
+                # HRANICE Decimal -> float #1: Position je floatovy dataclass
+                shares=float(r.actual_quantity), entry_date=entry_date,
+                entry_price=float(r.actual_fill_price),
+                planned_exit_date=planned_exit,
                 signal_rank=rank))
         else:  # EXIT
-            proceeds = r.actual_quantity * r.actual_fill_price - r.commission_fees
+            # SELL: cash_delta = gross_notional - commission
+            proceeds = r.notional - r.commission_fees
             cash += proceeds
             summary["cash_delta"] += proceeds
             summary["exits"] += 1
             for i, p in enumerate(positions):
                 if p.ticker == r.ticker:
-                    remaining = round(p.shares - r.actual_quantity, 8)
+                    remaining = round(p.shares - float(r.actual_quantity), 8)
                     if remaining <= 1e-9:
                         positions.pop(i)          # full close
                     else:
@@ -344,41 +666,193 @@ def apply_to_state(report: ReconReport, state: PortfolioState,
                             f"{r.ticker}: {remaining} shares still open "
                             f"(planned_exit {p.planned_exit_date})")
                     break
-        fill_rows.append(_fill_record(r, d))
+        fill_rows.append(_fill_record(r, d, schema))
 
     # provisional equity: mark to entry_price (no close mark available here)
-    mv = sum(p.shares * p.entry_price for p in positions)
+    mv = Decimal(str(sum(p.shares * p.entry_price for p in positions)))
     equity = cash + mv
-    new_state = replace(state, cash=round(cash, 6),
-                        positions=tuple(positions), equity=round(equity, 6))
+    # HRANICE Decimal -> float #2: PortfolioState je floatovy
+    new_state = replace(state, cash=float(round(cash, 6)),
+                        positions=tuple(positions),
+                        equity=float(round(equity, 6)))
     validate_state(new_state)
     return new_state, fill_rows, summary
 
 
-def _fill_record(r: FillRow, d: Disposition) -> dict:
+def _fill_record(r: FillRow, d: Disposition, schema: str = SCHEMA_LEGACY) -> dict:
     action = "BUY" if r.side == "BUY" else "EXIT"
     return {
-        "fill_id": fill_key(r, d.entry_date or ""),
+        "fill_id": fill_key(r, d.entry_date or "", schema),
         "order_id": r.order_id, "timestamp": r.timestamp,
         "ticker": r.ticker, "conid": r.conid, "action": action,
-        "quantity": r.actual_quantity, "expected_price": None,
-        "fill_price": r.actual_fill_price, "slippage_bps": None,
-        "commission": r.commission_fees, "fees": 0.0, "total_cost_bps": None,
-        "account_id": None, "broker_order_id": None, "status": r.status,
+        "quantity": float(r.actual_quantity), "expected_price": None,
+        "fill_price": float(r.actual_fill_price), "slippage_bps": None,
+        "commission": float(r.commission_fees), "fees": 0.0,
+        "total_cost_bps": None,
+        "account_id": r.broker_account or None,
+        "broker_order_id": r.perm_id or None, "status": r.status,
         "execution_mode": "MANUAL"}
 
 
+# ------------------------------------------------------- apply preview (P3)
+# Souhrn dopadu PRED zapisem. Nahrazuje opisovani fraze APPLY_PAPER_MANUAL:
+# treni patri do toho, co uzivatel VIDI, ne do toho, co opisuje.
+# Preview pouziva TOTOZNOU reconciliation logiku jako nasledny APPLY - jen
+# nic nezapisuje. Otisk vstupu brani tomu, aby se mezi preview a zapisem
+# neco zmenilo.
+PREVIEW_SCHEMA = "apply_preview/1.0"
+PREVIEW_STALE = "PREVIEW_STALE"
+
+
+def _sha256_file(path) -> Optional[str]:
+    try:
+        h = hashlib.sha256()
+        with Path(path).open("rb") as fh:
+            for chunk in iter(lambda: fh.read(65536), b""):
+                h.update(chunk)
+        return h.hexdigest()
+    except OSError:
+        return None
+
+
+def preview_fingerprint(ticket_path, artifact_path, state_path,
+                        applied_keys) -> dict:
+    """Otisk vsech vstupu, ze kterych preview pocital.
+
+    Kdyz se cokoli z toho mezi preview a zapisem zmeni, cisla v preview uz
+    neplati a zapis se musi odmitnout.
+    """
+    art_hash = None
+    if artifact_path and Path(artifact_path).exists():
+        try:
+            art_hash = json.loads(
+                Path(artifact_path).read_text(encoding="utf-8")
+            ).get("canonical_sha256")
+        except (OSError, ValueError):
+            art_hash = None
+    keys_blob = "\n".join(sorted(str(k) for k in applied_keys))
+    return {
+        "ticket_sha256": _sha256_file(ticket_path),
+        "artifact_canonical_sha256": art_hash,
+        "state_sha256": _sha256_file(state_path),
+        "applied_keys_sha256": hashlib.sha256(
+            keys_blob.encode("utf-8")).hexdigest(),
+    }
+
+
+def render_preview(pv: dict) -> str:
+    """Lidsky citelny souhrn pro konzoli."""
+    L = ["", "=" * 72,
+         "  ZAPIS DO PORTFOLIA A DENIKU - NAHLED",
+         "=" * 72,
+         f"  broker account : {pv['broker_account'] or '(neuveden)'}",
+         f"  strategy_id    : {pv['strategy_id']}",
+         f"  target_date    : {pv['target_date']}",
+         f"  verdikt        : {pv['verdict']}",
+         "",
+         f"  novych fillu   : {pv['new_fills']}",
+         f"  cash pred      : {pv['cash_before']}",
+         f"  cash delta     : {pv['cash_delta']}",
+         f"  cash po        : {pv['cash_after']}",
+         f"  pozic pred/po  : {pv['positions_before']} -> "
+         f"{pv['positions_after']}"]
+    ev = pv.get("events_to_write") or []
+    L.append(f"  auditni eventy : {', '.join(ev) if ev else '(zadne)'}")
+    if not pv["will_write"]:
+        L.append("")
+        L.append("  POZOR: pri tomto verdiktu se NIC nezapise.")
+    L.append("=" * 72)
+    return "\n".join(L)
+
+
 # ------------------------------------------------------------------ report
+# Faze zapisu. Rozlisuje TRI ruzne situace, ktere driv splyvaly do jedne:
+#   APPLIED           - neco noveho se skutecne zapsalo
+#   NOTHING_TO_APPLY  - legitimni no-op, stav je v poradku, neni co opravovat
+#   APPLY_BLOCKED     - skutecna chyba, zapis odmitnut
+# Driv se posledni dve slily do "APPLY BLOCKED" a report u no-opu radil
+# "Fix the ticket and re-run", coz bylo zavadejici.
+PH_APPLIED = "APPLIED"
+PH_NOTHING = "NOTHING_TO_APPLY"
+PH_BLOCKED = "APPLY_BLOCKED"
+PH_VALIDATE = "VALIDATE-ONLY"
+
+# Verdikty, u kterych neni co zapisovat a zadna oprava se nekona.
+NOOP_VERDICTS = {V_PASS_ALREADY_APPLIED, V_PASS_ZERO_TRADE,
+                 V_PASS_NO_EXECUTIONS}
+
+
+def apply_phase(verdict: str, applied: bool, apply_requested: bool) -> str:
+    """Faze zapisu pro dany verdikt.
+
+    Zamerne NEodvozuje fazi z jedineho booleanu: 'zapis neprobehl' ma dva
+    zcela ruzne duvody (nebylo co / neco je spatne) a hlaska pro ne musi
+    byt jina.
+    """
+    if applied:
+        return PH_APPLIED
+    if not apply_requested:
+        return PH_VALIDATE
+    return PH_NOTHING if verdict in NOOP_VERDICTS else PH_BLOCKED
+
+
+def _md_table(header: list, rows: list) -> list:
+    """Markdown tabulka se zarovnanymi sloupci.
+
+    Ciste formatovani - obsah bunek se nemeni, jen se doplni mezery, aby
+    byla tabulka citelna i jako holy text (ne jen ve vykreslenem markdownu).
+    """
+    cols = list(zip(*([header] + rows))) if rows else [[h] for h in header]
+    widths = [max(len(str(c)) for c in col) for col in cols]
+    def line(cells):
+        return "| " + " | ".join(str(c).ljust(w)
+                                 for c, w in zip(cells, widths)) + " |"
+    out = [line(header), "|" + "|".join("-" * (w + 2) for w in widths) + "|"]
+    out += [line(r) for r in rows]
+    return out
+
+
+
+_VERDICT_NOTE = {
+    V_PASS: "at least one valid fill; apply permitted",
+    V_PASS_ZERO_TRADE: "no planned orders in the ticket - legitimate no-op, "
+                       "nothing to apply",
+    V_PASS_NO_EXECUTIONS: "every planned order explicitly cancelled / rejected "
+                          "/ not_submitted - legitimate no-op, nothing to apply",
+    V_PASS_ALREADY_APPLIED: "every fill already recorded in a previous run "
+                            "- idempotent no-op, nothing to apply",
+    V_FAIL: "at least one row failed validation; apply is BLOCKED",
+    V_INCOMPLETE: "at least one planned order has no recorded outcome; the "
+                  "broker may hold an unrecorded position. Apply is BLOCKED "
+                  "until every row has an explicit status.",
+}
+
+
 def render_report(report: ReconReport, applied: bool, summary: Optional[dict],
                   backup_path: Optional[str], strategy_id: str,
-                  mode: str) -> str:
-    L = [f"# Reconciliation Report — {report.target_date}", ""]
+                  mode: str, apply_blocked: bool = False,
+                  audit_events_written: int = 0,
+                  audit_repair: Optional[str] = None) -> str:
+    verdict = report.verdict
+    phase = apply_phase(verdict, applied, applied or apply_blocked)
+    L = [f"# Reconciliation Report - {report.target_date}", ""]
     L.append(f"- strategy: **{strategy_id}**  |  mode: **{mode}**  |  "
-             f"result: **{'PASS' if report.passed else 'FAIL'}**")
-    L.append(f"- phase: **{'APPLIED' if applied else 'VALIDATE-ONLY'}**")
-    if report.passed and summary:
-        L.append(f"- estimated cash impact: {summary['cash_delta']:.2f} "
+             f"result: **{verdict}**")
+    L.append(f"- phase: **{phase}**")
+    L.append(f"- applied: **{len(report.by(APPLY))}**  |  blank: "
+             f"**{len(report.by(BLANK))}**  |  skipped: "
+             f"**{len(report.by(SKIP))}**  |  failed: "
+             f"**{len(report.by(FAIL))}**")
+    L.append(f"- {_VERDICT_NOTE[verdict]}")
+    if applied and summary:
+        L.append(f"- cash impact: {summary['cash_delta']:.2f} "
                  f"(buys {summary['buys']}, exits {summary['exits']})")
+    if audit_events_written:
+        L.append(f"- audit_events_written: **{audit_events_written}**")
+    if audit_repair:
+        L.append(f"- audit_repair: **{audit_repair}_WRITTEN** "
+                 f"(deviation event added; state, positions and fills "
+                 f"unchanged)")
     if backup_path:
         L.append(f"- state backup: `{backup_path}`")
     L.append("")
@@ -386,19 +860,20 @@ def render_report(report: ReconReport, applied: bool, summary: Optional[dict],
     def section(title, disp):
         L.append(f"## {title} ({len(disp)})")
         if disp:
-            L.append("| ticker | side | qty | price | status | notes |")
-            L.append("|---|---|---|---|---|---|")
-            for d in disp:
-                notes = "; ".join(d.issues + d.deviations)
-                L.append(f"| {d.row.ticker} | {d.row.side} | "
-                         f"{d.row.actual_quantity} | {d.row.actual_fill_price} | "
-                         f"{d.row.status} | {notes} |")
+            rows = [[d.row.ticker, d.row.side, d.row.actual_quantity,
+                     d.row.actual_fill_price, d.row.status or "(blank)",
+                     "; ".join(d.issues + d.deviations)] for d in disp]
+            # L.extend, ne L += : uvnitr vnorene funkce by += udelalo z L
+            # lokalni promennou a spadlo to na UnboundLocalError
+            L.extend(_md_table(["ticker", "side", "qty", "price", "status",
+                                "notes"], rows))
         else:
             L.append("_none_")
         L.append("")
 
     section("Applied", report.by(APPLY))
-    section("Skipped (duplicates / cancelled)", report.by(SKIP))
+    section("BLANK - no fill recorded (blocks apply)", report.by(BLANK))
+    section("Skipped (duplicates / no execution)", report.by(SKIP))
     section("FAILED", report.by(FAIL))
 
     devs = [f"{d.row.ticker}: {x}" for d in report.dispositions
@@ -413,14 +888,29 @@ def render_report(report: ReconReport, applied: bool, summary: Optional[dict],
     L.append(f"## Warnings ({len(report.warnings)})")
     L += [f"- {w}" for w in report.warnings] or ["_none_"]
     L.append("")
-    if applied:
+    if phase == PH_APPLIED:
         L.append("_Equity after reconciliation is **provisional** (marked to "
                  "entry price, not to close); the next Daily Runner re-marks it "
                  "to close. cash / positions / shares / entry_price / "
                  "planned_exit_date are authoritative._")
+    elif phase == PH_NOTHING:
+        L.append(f"_**NOTHING TO APPLY** ({verdict}). There was nothing left to "
+                 f"write - the local state already matches. Nothing is wrong "
+                 f"and no correction is needed._")
+    elif phase == PH_BLOCKED:
+        stale = any(w.startswith(PREVIEW_STALE) for w in report.warnings)
+        if stale:
+            L.append(f"_**APPLY BLOCKED** ({PREVIEW_STALE}). The inputs changed "
+                     f"after the preview was taken, so its figures no longer "
+                     f"hold. Nothing was written. Take a new preview and "
+                     f"confirm again._")
+        else:
+            L.append(f"_**APPLY BLOCKED** ({verdict}). No state backup, no "
+                     f"state write, no journal write was performed. Fix the "
+                     f"ticket and re-run._")
     else:
         L.append("_Validate-only: no state or journal change. Re-run with "
-                 "`--apply` to write (only if PASS)._")
+                 "`--apply` to write (only when the verdict is PASS)._")
     L.append("")
     return "\n".join(L)
 
@@ -429,7 +919,9 @@ def render_report(report: ReconReport, applied: bool, summary: Optional[dict],
 def reconcile(ticket_path, plan_path, state_path, journal_dir, mode,
               out_dir, target_date=None, apply=False, strategy_id="",
               account_id="", journal_factory=None,
-              next_session_fn=next_session_xnys):
+              next_session_fn=next_session_xnys, artifact_path=None,
+              preview_out=None, preview_path=None):
+    schema = ticket_schema(ticket_path)
     rows = parse_ticket(ticket_path)
     if target_date is None:
         target_date = (next((r.timestamp[:10] for r in rows if r.timestamp), None)
@@ -439,18 +931,105 @@ def reconcile(ticket_path, plan_path, state_path, journal_dir, mode,
     state = load_state(Path(state_path))
     dnb = do_not_buy_from_ticket(rows)
     applied_keys = applied_keys_from_journal(journal_dir, mode)
-    report = validate(rows, plan, state, target_date, dnb, applied_keys,
-                      next_session_fn)
+    if schema == SCHEMA_INVALID:
+        # Castecna P2 hlavicka: nevime, ktera pole chybi a proc. Nehadame.
+        report = ReconReport(target_date=target_date, dispositions=[
+            Disposition(row=r, action=FAIL, entry_date=target_date,
+                        issues=["INVALID_TICKET_SCHEMA: ticket must contain "
+                                "all five P2 columns or none of them"])
+            for r in rows] or [])
+        if not rows:
+            report = ReconReport(target_date=target_date, dispositions=[])
+    else:
+        report = validate(rows, plan, state, target_date, dnb, applied_keys,
+                          next_session_fn, schema)
 
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     summary = None
     backup_path = None
 
-    do_apply = apply and report.passed
-    if apply and not report.passed:
-        # FAIL -> no write; still emit the report
-        pass
+    # BRANA ZAPISU. Vyhodnocuje se PRED vytvorenim zalohy, pred save_state()
+    # i pred jakymkoli zapisem do journalu. Cokoli jineho nez V_PASS je no-op
+    # nebo chyba - v obou pripadech se na disk zapise pouze report.
+    fingerprint = preview_fingerprint(ticket_path, artifact_path, state_path,
+                                      applied_keys)
+
+    # Preview: spocitej dopad TOUTEZ logikou, ale nic nezapisuj a nesahej
+    # na finalni reconciliation report.
+    if preview_out is not None:
+        pv_state, pv_fills, pv_summary = (None, [], None)
+        if report.apply_allowed:
+            pv_state, pv_fills, pv_summary = apply_to_state(
+                report, state, plan, next_session_fn, schema)
+        dev = late_entry_event(artifact_path, ticket_path, target_date,
+                               strategy_id, mode)
+        if dev is not None and dev["deviation_key"] in \
+                deviation_keys_from_journal(journal_dir, mode):
+            dev = None
+        pv = {
+            "schema": PREVIEW_SCHEMA,
+            "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+            "strategy_id": strategy_id, "mode": mode,
+            "target_date": target_date,
+            "broker_account": next((r.broker_account for r in rows
+                                    if r.broker_account), ""),
+            "verdict": report.verdict,
+            "will_write": bool(report.apply_allowed),
+            "new_fills": len(report.by(APPLY)),
+            "cash_before": str(state.cash),
+            "cash_delta": (str(pv_summary["cash_delta"])
+                           if pv_summary else "0"),
+            "cash_after": str(pv_state.cash if pv_state else state.cash),
+            "positions_before": len(state.positions),
+            "positions_after": len(pv_state.positions if pv_state
+                                   else state.positions),
+            "events_to_write": ([f"EXECUTION_DEVIATION/{dev['deviation_code']}"]
+                                if dev else []),
+            "fingerprint": fingerprint,
+        }
+        Path(preview_out).parent.mkdir(parents=True, exist_ok=True)
+        tmp = Path(str(preview_out) + ".tmp")
+        tmp.write_text(json.dumps(pv, indent=2, ensure_ascii=False),
+                       encoding="utf-8")
+        os.replace(tmp, preview_out)
+        print(render_preview(pv))
+        return report, False, str(preview_out)
+
+    # Zapis smi probehnout jen kdyz se vstupy od preview nezmenily.
+    preview_stale = False
+    if apply and preview_path:
+        try:
+            saved = json.loads(
+                Path(preview_path).read_text(encoding="utf-8")).get(
+                    "fingerprint") or {}
+        except (OSError, ValueError):
+            saved = {}
+        diff = [k for k, v in fingerprint.items() if saved.get(k) != v]
+        if diff or not saved:
+            preview_stale = True
+            report.warnings.append(
+                f"{PREVIEW_STALE}: vstupy se od nahledu zmenily "
+                f"({', '.join(diff) if diff else 'nahled nelze precist'}); "
+                f"vytvor novy nahled")
+
+    do_apply = apply and report.apply_allowed and not preview_stale
+    apply_blocked = apply and not do_apply
+
+    # Deviation event (EXECUTION_DEVIATION / LATE_ENTRY).
+    # Guardy: nikdy pri VALIDATE-only, FAIL, INCOMPLETE_TICKET ani pri
+    # zablokovanem APPLY. Povoleno jen pri V_PASS (spolu s filly) a pri
+    # V_PASS_ALREADY_APPLIED (samotny audit repair, bez zmeny stavu).
+    audit_repair = apply and report.verdict == V_PASS_ALREADY_APPLIED
+    dev_event = None
+    dev_written = 0
+    if (do_apply or audit_repair) and journal_factory is not None:
+        dev_event = late_entry_event(artifact_path, ticket_path, target_date,
+                                     strategy_id, mode)
+        if dev_event is not None and dev_event["deviation_key"] in \
+                deviation_keys_from_journal(journal_dir, mode):
+            dev_event = None            # uz zapsany -> no-op
+
     if do_apply:
         # state backup
         ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
@@ -459,7 +1038,7 @@ def reconcile(ticket_path, plan_path, state_path, journal_dir, mode,
             backup_path = str(sp.with_suffix(sp.suffix + f".{ts}.bak"))
             shutil.copy2(sp, backup_path)
         new_state, fill_rows, summary = apply_to_state(
-            report, state, plan, next_session_fn)
+            report, state, plan, next_session_fn, schema)
         save_state(new_state, sp)
         # journal fills + event
         if journal_factory is not None and fill_rows:
@@ -470,23 +1049,51 @@ def reconcile(ticket_path, plan_path, state_path, journal_dir, mode,
                            applied=len(report.by(APPLY)),
                            skipped=len(report.by(SKIP)),
                            failed=len(report.by(FAIL)))
+            if dev_event is not None:
+                jw.write_event("WARNING", "reconciliation",
+                               EVENT_EXECUTION_DEVIATION,
+                               business_date=target_date,
+                               source_system="RECONCILIATION", **dev_event)
+                dev_written = 1
             jw.close()
         # audit log (append-only)
         _audit(out_dir, target_date, ticket_path, report, summary, backup_path)
 
+    elif audit_repair and dev_event is not None:
+        # Filly uz zapsane byly, chybi jen auditni zaznam odchylky.
+        # Zadna zaloha, zadny save_state, zadny write_fill - pouze event.
+        jw = journal_factory()
+        jw.write_event("WARNING", "reconciliation", EVENT_EXECUTION_DEVIATION,
+                       business_date=target_date,
+                       source_system="RECONCILIATION", **dev_event)
+        jw.close()
+        dev_written = 1
+        _audit(out_dir, target_date, ticket_path, report, None, None,
+               audit_repair=dev_event["deviation_code"])
+
     text = render_report(report, do_apply, summary, backup_path,
-                         strategy_id, mode)
+                         strategy_id, mode, apply_blocked,
+                         audit_events_written=dev_written,
+                         audit_repair=(dev_event["deviation_code"]
+                                       if (audit_repair and dev_written)
+                                       else None))
     report_path = out_dir / f"reconciliation_report_{target_date}.md"
     report_path.write_text(text, encoding="utf-8")
     return report, do_apply, str(report_path)
 
 
-def _audit(out_dir: Path, target_date, ticket_path, report, summary, backup):
+def _audit(out_dir: Path, target_date, ticket_path, report, summary, backup,
+           audit_repair=None):
     rec = {"ts": datetime.now(timezone.utc).isoformat(),
+           "audit_repair": audit_repair,
            "target_date": target_date, "ticket": str(ticket_path),
            "applied": len(report.by(APPLY)), "skipped": len(report.by(SKIP)),
            "failed": len(report.by(FAIL)),
-           "cash_delta": summary.get("cash_delta") if summary else None,
+           "blank": len(report.by(BLANK)), "verdict": report.verdict,
+           # HRANICE Decimal -> float: audit log je JSON
+           "cash_delta": (float(summary["cash_delta"])
+                          if summary and summary.get("cash_delta") is not None
+                          else None),
            "backup": backup}
     with (out_dir / "reconciliation_audit.log").open(
             "a", encoding="utf-8") as f:
@@ -505,6 +1112,12 @@ def main(argv=None):
     ap.add_argument("--strategy-id", default="MLE-REGIME200-HOLD10-01")
     ap.add_argument("--account-id", default="")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--artifact", default=None,
+                    help="normalized fills artifact (source of deviation events)")
+    ap.add_argument("--preview-out", default=None,
+                    help="spocitej dopad a zapis nahled; nic jineho nezapisuj")
+    ap.add_argument("--preview", default=None,
+                    help="nahled, proti kteremu se overi, ze se vstupy nezmenily")
     args = ap.parse_args(argv)
 
     jf = None
@@ -520,10 +1133,31 @@ def main(argv=None):
         args.ticket, args.plan, args.state, args.journal_dir, args.mode,
         args.out, target_date=args.target_date, apply=args.apply,
         strategy_id=args.strategy_id, account_id=args.account_id,
-        journal_factory=jf)
-    print(f"result: {'PASS' if report.passed else 'FAIL'} | "
-          f"{'APPLIED' if applied else 'VALIDATE-ONLY'} | report: {report_path}")
-    return 0 if report.passed else 1
+        journal_factory=jf, artifact_path=args.artifact,
+        preview_out=args.preview_out, preview_path=args.preview)
+    if args.preview_out:
+        print(f"nahled zapsan: {report_path}")
+        return 0
+    verdict = report.verdict
+    phase = apply_phase(verdict, applied, args.apply)
+    print(f"result: {verdict} | {phase} | applied: {len(report.by(APPLY))} | "
+          f"blank: {len(report.by(BLANK))} | report: {report_path}")
+    if any(w.startswith(PREVIEW_STALE) for w in report.warnings):
+        print(f"  {PREVIEW_STALE}: vstupy se od nahledu zmenily, zapis "
+              f"odmitnut. Vytvor novy nahled.")
+        for w in report.warnings:
+            if w.startswith(PREVIEW_STALE):
+                print(f"    {w}")
+        return 3
+    if verdict == V_INCOMPLETE:
+        print("  INCOMPLETE_TICKET: nejmene jeden planovany order nema zadny "
+              "zaznam o vysledku.")
+        print("  U brokera muze viset nezaznamenana pozice. NEZADAVEJ ordery "
+              "znovu - dopln stav kazdeho radku.")
+        return 2
+    if verdict == V_FAIL:
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
